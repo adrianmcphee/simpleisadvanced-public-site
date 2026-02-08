@@ -13,7 +13,7 @@
   var playing = false;
   var titleCard = false;  // true when showing initial title screen
   var timer = null;
-  var wpm = 300;
+  var wpm = 350;
   var chunkSize = 1;
   var orpEnabled = true;
   var theme = "light";
@@ -499,15 +499,20 @@
     return url.toString();
   }
 
-  function shareLink() {
-    var url = buildShareURL();
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(url);
-    }
+  function showToast(msg) {
     var toast = document.getElementById("toast");
-    toast.textContent = "Link copied";
+    toast.textContent = msg;
     toast.classList.remove("hidden");
     setTimeout(function () { toast.classList.add("hidden"); }, 2000);
+  }
+
+  function shareLink() {
+    showToast("Available soon");
+  }
+
+  function comingSoon(e) {
+    e.preventDefault();
+    showToast("Available soon");
   }
 
   // --- Progress bar click ---
@@ -543,7 +548,7 @@
     try {
       var s = JSON.parse(localStorage.getItem("rsvp-settings"));
       if (s) {
-        wpm = s.wpm || 300;
+        wpm = s.wpm || 350;
         chunkSize = s.chunkSize || 1;
         orpEnabled = s.orpEnabled !== false;
         theme = s.theme || "light";
@@ -587,6 +592,9 @@
     document.getElementById("settings-btn").addEventListener("click", shareLink);
     document.getElementById("replay-btn").addEventListener("click", replayChapter);
     document.getElementById("share-btn-footer").addEventListener("click", shareLink);
+    document.getElementById("buy-link").addEventListener("click", comingSoon);
+    document.getElementById("buy-link-toc").addEventListener("click", comingSoon);
+    document.getElementById("cover-thumb").addEventListener("click", comingSoon);
 
     document.getElementById("progress-bar").addEventListener("click", onProgressClick);
 

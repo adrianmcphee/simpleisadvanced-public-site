@@ -44,11 +44,11 @@
       <button id="share-btn" class="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100" aria-label="Share link">
         <i data-lucide="link" class="w-4 h-4 stroke-[1.5]"></i>
       </button>
-      <a id="buy-link" href="https://simpleisadvanced.com/illusions-of-work/buy/" target="_blank" rel="noopener"
-         class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-sm hover:shadow text-xs font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all no-underline">
+      <button id="buy-link"
+         class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-sm hover:shadow text-xs font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all cursor-pointer">
         <i data-lucide="shopping-bag" class="w-3.5 h-3.5 stroke-[1.5]"></i>
         Buy the book
-      </a>
+      </button>
       <button id="settings-btn" class="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100" aria-label="Settings">
         <i data-lucide="send" class="w-5 h-5 stroke-[1.5]"></i>
       </button>
@@ -56,11 +56,10 @@
   </header>
 
   <!-- Floating cover thumbnail -->
-  <a href="https://simpleisadvanced.com/illusions-of-work/buy/" target="_blank" rel="noopener"
-     class="fixed top-20 right-4 sm:right-6 z-40 group pointer-events-auto">
+  <button id="cover-thumb" class="fixed top-20 right-4 sm:right-6 z-40 group pointer-events-auto cursor-pointer bg-transparent border-none p-0">
     <img src="cover.png" alt="Illusions of Work"
          class="w-24 sm:w-28 h-auto rounded shadow-lg ring-1 ring-zinc-200 dark:ring-zinc-700 opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
-  </a>
+  </button>
 
   <!-- Main RSVP display -->
   <main id="display" class="flex-1 flex flex-col items-center justify-center relative w-full max-w-7xl mx-auto px-4 pt-14 pb-40 sm:pb-44 cursor-pointer outline-none" tabindex="0">
@@ -155,11 +154,11 @@
         <div>
           <p class="text-sm font-semibold text-zinc-800 dark:text-zinc-200 leading-tight">Illusions of Work</p>
           <p class="text-[11px] text-zinc-400 mt-0.5">Adrian McPhee</p>
-          <a href="https://simpleisadvanced.com/illusions-of-work/buy/" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-1 mt-1.5 text-[11px] font-medium text-red-500 hover:text-red-600 no-underline">
+          <button id="buy-link-toc"
+             class="inline-flex items-center gap-1 mt-1.5 text-[11px] font-medium text-red-500 hover:text-red-600 cursor-pointer bg-transparent border-none p-0">
             <i data-lucide="shopping-bag" class="w-3 h-3 stroke-[1.5]"></i>
             Buy the book
-          </a>
+          </button>
         </div>
       </div>
       <ul id="toc-list" class="px-2 py-2"></ul>
