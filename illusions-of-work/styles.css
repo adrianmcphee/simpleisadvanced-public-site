@@ -2,17 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* RSVP word sizing by data-fontsize attribute */
-.rsvp-word { font-size: 3.75rem; }    /* default = medium */
-.word-col   { width: 280px; }
+/* Mobile-first: fits ~375px screens */
+.rsvp-word { font-size: 2.25rem; }    /* default = medium */
+.word-col   { width: 140px; }
 
-[data-fontsize="small"]  .rsvp-word { font-size: 2.5rem; }
-[data-fontsize="small"]  .word-col  { width: 200px; }
-[data-fontsize="medium"] .rsvp-word { font-size: 3.75rem; }
-[data-fontsize="medium"] .word-col  { width: 280px; }
-[data-fontsize="large"]  .rsvp-word { font-size: 5rem; }
-[data-fontsize="large"]  .word-col  { width: 360px; }
-[data-fontsize="xlarge"] .rsvp-word { font-size: 6rem; }
-[data-fontsize="xlarge"] .word-col  { width: 440px; }
+[data-fontsize="small"]  .rsvp-word { font-size: 1.75rem; }
+[data-fontsize="small"]  .word-col  { width: 120px; }
+[data-fontsize="medium"] .rsvp-word { font-size: 2.25rem; }
+[data-fontsize="medium"] .word-col  { width: 140px; }
+[data-fontsize="large"]  .rsvp-word { font-size: 3rem; }
+[data-fontsize="large"]  .word-col  { width: 180px; }
+[data-fontsize="xlarge"] .rsvp-word { font-size: 3.75rem; }
+[data-fontsize="xlarge"] .word-col  { width: 220px; }
 
 @media (min-width: 640px) {
   .rsvp-word { font-size: 4.5rem; }

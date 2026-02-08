@@ -56,7 +56,7 @@
   </header>
 
   <!-- Floating cover thumbnail -->
-  <button id="cover-thumb" class="fixed top-20 right-4 sm:right-6 z-40 group pointer-events-auto cursor-pointer bg-transparent border-none p-0">
+  <button id="cover-thumb" class="hidden sm:block fixed top-20 right-4 sm:right-6 z-40 group pointer-events-auto cursor-pointer bg-transparent border-none p-0">
     <img src="cover.png" alt="Illusions of Work"
          class="w-24 sm:w-28 h-auto rounded shadow-lg ring-1 ring-zinc-200 dark:ring-zinc-700 opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
   </button>
@@ -93,7 +93,7 @@
       </div>
 
       <!-- Controls -->
-      <div class="flex items-center justify-between px-3 pb-3 pt-1">
+      <div class="flex items-center justify-between px-2 sm:px-3 pb-3 pt-1">
 
         <!-- WPM (left) -->
         <div class="flex items-center gap-1 bg-zinc-50 dark:bg-zinc-800 rounded-lg p-1 border border-zinc-100 dark:border-zinc-700">
@@ -107,9 +107,9 @@
         </div>
 
         <!-- Playback (center) -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 sm:gap-3">
           <button id="prev-btn" class="text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors active:scale-90" aria-label="Previous chapter">
-            <i data-lucide="skip-back" class="w-5 h-5 stroke-[1.5] fill-current opacity-0 hover:opacity-100"></i>
+            <i data-lucide="skip-back" class="w-5 h-5 stroke-[1.5] fill-current opacity-60 hover:opacity-100"></i>
           </button>
           <button id="back-btn" class="text-zinc-800 dark:text-zinc-200 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors active:scale-90" aria-label="Skip back">
             <i data-lucide="rewind" class="w-6 h-6 stroke-[1.5]"></i>
@@ -122,7 +122,7 @@
             <i data-lucide="fast-forward" class="w-6 h-6 stroke-[1.5]"></i>
           </button>
           <button id="next-btn" class="text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors active:scale-90" aria-label="Next chapter">
-            <i data-lucide="skip-forward" class="w-5 h-5 stroke-[1.5] fill-current opacity-0 hover:opacity-100"></i>
+            <i data-lucide="skip-forward" class="w-5 h-5 stroke-[1.5] fill-current opacity-60 hover:opacity-100"></i>
           </button>
         </div>
 
