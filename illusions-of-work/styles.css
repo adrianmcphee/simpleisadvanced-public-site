@@ -46,6 +46,16 @@
   background-color: rgb(39 39 42); /* zinc-800 */
 }
 
+/* Hide controls briefly after pressing play */
+footer {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+footer.controls-hidden {
+  opacity: 0;
+  transform: translateY(1rem);
+  pointer-events: none;
+}
+
 #toc-list li .toc-part {
   font-size: 0.65rem;
   font-weight: 600;

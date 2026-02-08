@@ -299,6 +299,19 @@
     timeTotal.textContent = formatTime(totalMin);
   }
 
+  // --- Hide controls briefly after play ---
+  var hideTimer = null;
+  function hideControlsBriefly() {
+    var footer = document.querySelector("footer");
+    if (!footer) return;
+    if (hideTimer) clearTimeout(hideTimer);
+    footer.classList.add("controls-hidden");
+    hideTimer = setTimeout(function () {
+      footer.classList.remove("controls-hidden");
+      hideTimer = null;
+    }, 2000);
+  }
+
   // --- Playback ---
   function baseInterval() {
     return 60000 / wpm;
@@ -364,6 +377,7 @@
         playing = true;
         iconPlay.classList.add("hidden");
         iconPause.classList.remove("hidden");
+        hideControlsBriefly();
         startProgressTimer();
         scheduleNext();
       });
@@ -375,6 +389,7 @@
     playing = true;
     iconPlay.classList.add("hidden");
     iconPause.classList.remove("hidden");
+    hideControlsBriefly();
     startProgressTimer();
     scheduleNext();
   }
