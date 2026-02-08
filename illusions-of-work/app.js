@@ -507,7 +507,11 @@
   }
 
   function shareLink() {
-    showToast("Available soon");
+    var url = buildShareURL();
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url);
+    }
+    showToast("Link copied");
   }
 
   function comingSoon(e) {
@@ -589,7 +593,7 @@
     document.getElementById("wpm-up").addEventListener("click", function () { adjustWPM(25); });
     document.getElementById("toc-btn").addEventListener("click", openTOC);
     document.getElementById("share-btn").addEventListener("click", shareLink);
-    document.getElementById("settings-btn").addEventListener("click", shareLink);
+    document.getElementById("settings-btn").addEventListener("click", openSettings);
     document.getElementById("replay-btn").addEventListener("click", replayChapter);
     document.getElementById("share-btn-footer").addEventListener("click", shareLink);
     document.getElementById("buy-link").addEventListener("click", comingSoon);
