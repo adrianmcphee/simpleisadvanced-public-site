@@ -284,7 +284,7 @@
     var ch = currentChapter();
     if (ch) {
       chapterTitle.textContent = ch.chapterNum ? "Chapter " + ch.chapterNum + ": " + ch.title : ch.title;
-      chapterSubtitle.textContent = (ch.id + 1) + " of " + chapters.length;
+      chapterSubtitle.textContent = ch.part || "";
     }
   }
 
