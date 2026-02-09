@@ -600,7 +600,6 @@
     document.getElementById("wpm-down").addEventListener("click", function () { adjustWPM(-25); });
     document.getElementById("wpm-up").addEventListener("click", function () { adjustWPM(25); });
     document.getElementById("toc-btn").addEventListener("click", openTOC);
-    document.getElementById("share-btn").addEventListener("click", shareLink);
     document.getElementById("replay-btn").addEventListener("click", replayChapter);
     document.getElementById("share-btn-footer").addEventListener("click", shareLink);
     document.getElementById("buy-link").addEventListener("click", comingSoon);
