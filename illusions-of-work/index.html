@@ -50,14 +50,14 @@
 <body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased h-screen flex flex-col overflow-hidden selection:bg-red-100 selection:text-red-600">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 h-14 px-4 sm:px-6 flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-md z-50">
-    <div class="flex items-center gap-3">
-      <img src="sia-black.png" alt="SIA" class="h-6 w-6 hidden sm:block dark:invert">
-      <span class="text-xs font-semibold tracking-tight text-zinc-400 uppercase hidden sm:block">Simple is Advanced</span>
+  <header class="fixed top-0 left-0 right-0 h-14 px-4 sm:px-6 flex items-center justify-center sm:justify-between border-b border-zinc-200 dark:border-zinc-800 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-md z-50">
+    <div class="hidden sm:flex items-center gap-3">
+      <img src="sia-black.png" alt="SIA" class="h-6 w-6 dark:invert">
+      <span class="text-xs font-semibold tracking-tight text-zinc-400 uppercase">Simple is Advanced</span>
     </div>
 
-    <button id="toc-btn" class="absolute left-1/2 -translate-x-1/2 text-center px-3 py-1 rounded-md cursor-pointer bg-transparent border-none hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors group">
-      <h1 id="chapter-title" class="text-sm font-medium text-zinc-800 dark:text-zinc-200 tracking-tight">Loading…</h1>
+    <button id="toc-btn" class="sm:absolute sm:left-1/2 sm:-translate-x-1/2 text-center px-3 py-1 rounded-md cursor-pointer bg-transparent border-none hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors group">
+      <h1 id="chapter-title" class="text-sm font-medium text-zinc-800 dark:text-zinc-200 tracking-tight whitespace-nowrap">Loading…</h1>
       <p id="chapter-subtitle" class="text-[10px] text-zinc-400 font-medium uppercase tracking-wider mt-0.5"></p>
     </button>
 
