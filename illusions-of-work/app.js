@@ -182,6 +182,11 @@
     loadSettings();
     applyURLParams();
 
+    if (meta.version) {
+      var vl = document.getElementById("version-label");
+      if (vl) vl.textContent = "v" + meta.version;
+    }
+
     // First visit: show title card instead of Author's Note
     var hasURL = window.location.search.indexOf("ch=") >= 0 || window.location.search.indexOf("w=") >= 0;
     if (pos === 0 && !hasURL) {
@@ -605,6 +610,9 @@
     document.getElementById("buy-link").addEventListener("click", comingSoon);
     document.getElementById("buy-link-toc").addEventListener("click", comingSoon);
     document.getElementById("cover-thumb").addEventListener("click", comingSoon);
+    document.querySelector("header img[alt='SIA']").addEventListener("dblclick", function () {
+      if (meta && meta.version) showToast("v" + meta.version);
+    });
 
     document.getElementById("progress-bar").addEventListener("click", onProgressClick);
 
