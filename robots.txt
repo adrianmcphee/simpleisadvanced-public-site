@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /illusions-of-work/data/
+
+Sitemap: https://simpleisadvanced.com/illusions-of-work/sitemap.xml
