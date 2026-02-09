@@ -528,11 +528,13 @@
     if (navigator.clipboard) {
       navigator.clipboard.writeText(url);
     }
+    track('Share', { chapter: chapterLabel(chapterForPos(pos)) });
     showToast("Link copied");
   }
 
   function comingSoon(e) {
     e.preventDefault();
+    track('Buy Click', { chapter: chapterLabel(chapterForPos(pos)) });
     showToast("Available soon");
   }
 
@@ -610,6 +612,9 @@
     document.getElementById("buy-link").addEventListener("click", comingSoon);
     document.getElementById("buy-link-toc").addEventListener("click", comingSoon);
     document.getElementById("cover-thumb").addEventListener("click", comingSoon);
+    document.getElementById("contact-link").addEventListener("click", function () {
+      track('Contact Click', { chapter: chapterLabel(chapterForPos(pos)) });
+    });
     document.querySelector("header img[alt='SIA']").addEventListener("dblclick", function () {
       if (meta && meta.version) showToast("v" + meta.version);
     });
