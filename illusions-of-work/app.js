@@ -21,7 +21,7 @@
 
   // --- DOM refs ---
   var wordPre, wordOrp, wordPost, chapterTitle, chapterSubtitle,
-      progressFill, playBtn, wpmDisplay, tocOverlay, settingsOverlay,
+      progressFill, playBtn, wpmDisplay, tocOverlay,
       tocList, display, iconPlay, iconPause, timeCurrent, timeTotal;
 
   function cacheDom() {
@@ -34,7 +34,6 @@
     playBtn = document.getElementById("play-btn");
     wpmDisplay = document.getElementById("wpm-display");
     tocOverlay = document.getElementById("toc-overlay");
-    settingsOverlay = document.getElementById("settings-overlay");
     tocList = document.getElementById("toc-list");
     display = document.getElementById("display");
     iconPlay = document.getElementById("icon-play");
@@ -481,8 +480,6 @@
 
   function openTOC() { tocOverlay.classList.remove("hidden"); }
   function closeTOC() { tocOverlay.classList.add("hidden"); }
-  function openSettings() { settingsOverlay.classList.remove("hidden"); }
-  function closeSettings() { settingsOverlay.classList.add("hidden"); }
 
   // --- URL deep linking ---
   function applyURLParams() {
@@ -583,10 +580,6 @@
     applyTheme();
     applyFontSize();
     wpmDisplay.textContent = wpm + " wpm";
-    document.getElementById("theme-select").value = theme;
-    document.getElementById("chunk-select").value = String(chunkSize);
-    document.getElementById("orp-select").value = orpEnabled ? "on" : "off";
-    document.getElementById("fontsize-select").value = fontSize;
   }
 
   function applyTheme() {
@@ -608,7 +601,6 @@
     document.getElementById("wpm-up").addEventListener("click", function () { adjustWPM(25); });
     document.getElementById("toc-btn").addEventListener("click", openTOC);
     document.getElementById("share-btn").addEventListener("click", shareLink);
-    document.getElementById("settings-btn").addEventListener("click", openSettings);
     document.getElementById("replay-btn").addEventListener("click", replayChapter);
     document.getElementById("share-btn-footer").addEventListener("click", shareLink);
     document.getElementById("buy-link").addEventListener("click", comingSoon);
@@ -618,34 +610,11 @@
     document.getElementById("progress-bar").addEventListener("click", onProgressClick);
 
     tocOverlay.querySelector(".close-btn").addEventListener("click", closeTOC);
-    settingsOverlay.querySelector(".close-btn").addEventListener("click", closeSettings);
     tocOverlay.addEventListener("click", function (e) { if (e.target === tocOverlay) closeTOC(); });
-    settingsOverlay.addEventListener("click", function (e) { if (e.target === settingsOverlay) closeSettings(); });
-
-    document.getElementById("theme-select").addEventListener("change", function (e) {
-      theme = e.target.value;
-      applyTheme();
-      saveSettings();
-    });
-    document.getElementById("chunk-select").addEventListener("change", function (e) {
-      chunkSize = parseInt(e.target.value, 10);
-      saveSettings();
-      showWord();
-    });
-    document.getElementById("orp-select").addEventListener("change", function (e) {
-      orpEnabled = e.target.value === "on";
-      saveSettings();
-      showWord();
-    });
-    document.getElementById("fontsize-select").addEventListener("change", function (e) {
-      fontSize = e.target.value;
-      applyFontSize();
-      saveSettings();
-    });
 
     document.addEventListener("keydown", function (e) {
-      if (!tocOverlay.classList.contains("hidden") || !settingsOverlay.classList.contains("hidden")) {
-        if (e.key === "Escape") { closeTOC(); closeSettings(); }
+      if (!tocOverlay.classList.contains("hidden")) {
+        if (e.key === "Escape") { closeTOC(); }
         return;
       }
       switch (e.key) {

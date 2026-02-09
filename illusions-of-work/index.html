@@ -67,9 +67,6 @@
         <i data-lucide="shopping-bag" class="w-3.5 h-3.5 stroke-[1.5]"></i>
         Buy the book
       </button>
-      <button id="settings-btn" class="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md transition-colors text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100" aria-label="Settings">
-        <i data-lucide="settings" class="w-5 h-5 stroke-[1.5]"></i>
-      </button>
     </div>
   </header>
 
@@ -180,51 +177,6 @@
         </div>
       </div>
       <ul id="toc-list" class="px-2 py-2"></ul>
-    </div>
-  </div>
-
-  <!-- Settings overlay -->
-  <div id="settings-overlay" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-start justify-center pt-16 sm:pt-20">
-    <div class="bg-white dark:bg-zinc-900 rounded-xl shadow-2xl max-w-sm w-[90%] overflow-hidden">
-      <div class="flex justify-between items-center px-5 py-4 border-b border-zinc-100 dark:border-zinc-800">
-        <h2 class="text-sm font-semibold text-zinc-800 dark:text-zinc-200">Settings</h2>
-        <button class="close-btn p-1 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" aria-label="Close">
-          <i data-lucide="x" class="w-5 h-5 stroke-[1.5]"></i>
-        </button>
-      </div>
-      <div class="px-5 py-3 space-y-0">
-        <div class="flex justify-between items-center py-3 border-b border-zinc-50 dark:border-zinc-800">
-          <label class="text-sm text-zinc-700 dark:text-zinc-300">Theme</label>
-          <select id="theme-select" class="text-sm px-2 py-1 border border-zinc-200 dark:border-zinc-700 rounded-md bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </div>
-        <div class="flex justify-between items-center py-3 border-b border-zinc-50 dark:border-zinc-800">
-          <label class="text-sm text-zinc-700 dark:text-zinc-300">Chunk size</label>
-          <select id="chunk-select" class="text-sm px-2 py-1 border border-zinc-200 dark:border-zinc-700 rounded-md bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
-            <option value="1">1 word</option>
-            <option value="2">2 words</option>
-            <option value="3">3 words</option>
-          </select>
-        </div>
-        <div class="flex justify-between items-center py-3 border-b border-zinc-50 dark:border-zinc-800">
-          <label class="text-sm text-zinc-700 dark:text-zinc-300">ORP highlight</label>
-          <select id="orp-select" class="text-sm px-2 py-1 border border-zinc-200 dark:border-zinc-700 rounded-md bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
-            <option value="on">On</option>
-            <option value="off">Off</option>
-          </select>
-        </div>
-        <div class="flex justify-between items-center py-3">
-          <label class="text-sm text-zinc-700 dark:text-zinc-300">Font size</label>
-          <select id="fontsize-select" class="text-sm px-2 py-1 border border-zinc-200 dark:border-zinc-700 rounded-md bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="xlarge">Extra Large</option>
-          </select>
-        </div>
-      </div>
     </div>
   </div>
 
