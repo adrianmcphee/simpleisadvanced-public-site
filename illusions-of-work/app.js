@@ -231,12 +231,21 @@
 
     var w = getWord(pos);
     if (!w) {
-      // Chapter not loaded yet — show loading state
-      wordPre.textContent = "";
-      wordOrp.textContent = "";
-      wordPost.textContent = "…";
-      ensureChaptersAround(pos).then(function () { showWord(); });
-      return;
+      var ch = chapterForPos(pos);
+      if (isChapterLoaded(ch)) {
+        // Chapter loaded but word missing — position is stale, reset to chapter start
+        pos = chapterOffsets[ch];
+        w = getWord(pos);
+        if (!w && pos > 0) { pos = 0; w = getWord(pos); }
+        if (!w) return; // give up
+      } else {
+        // Chapter not loaded yet — show loading state
+        wordPre.textContent = "";
+        wordOrp.textContent = "";
+        wordPost.textContent = "…";
+        ensureChaptersAround(pos).then(function () { showWord(); });
+        return;
+      }
     }
 
     var display_words = [];
@@ -564,6 +573,7 @@
   function savePosition() {
     try {
       localStorage.setItem("rsvp-position", String(pos));
+      if (meta && meta.version) localStorage.setItem("rsvp-version", meta.version);
     } catch (e) { /* ignore */ }
   }
 
@@ -580,8 +590,16 @@
     } catch (e) { /* ignore */ }
 
     try {
-      var p = localStorage.getItem("rsvp-position");
-      if (p) pos = Math.min(parseInt(p, 10) || 0, totalWords - 1);
+      var savedVersion = localStorage.getItem("rsvp-version");
+      var currentVersion = meta && meta.version ? meta.version : "";
+      if (savedVersion === currentVersion) {
+        var p = localStorage.getItem("rsvp-position");
+        if (p) pos = Math.min(parseInt(p, 10) || 0, totalWords - 1);
+      } else {
+        // Book version changed — discard stale position
+        localStorage.removeItem("rsvp-position");
+        if (currentVersion) localStorage.setItem("rsvp-version", currentVersion);
+      }
     } catch (e) { /* ignore */ }
 
     applyTheme();
