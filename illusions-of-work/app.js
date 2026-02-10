@@ -573,7 +573,7 @@
   function savePosition() {
     try {
       localStorage.setItem("rsvp-position", String(pos));
-      if (meta && meta.version) localStorage.setItem("rsvp-version", meta.version);
+      localStorage.setItem("rsvp-totalWords", String(totalWords));
     } catch (e) { /* ignore */ }
   }
 
@@ -590,15 +590,14 @@
     } catch (e) { /* ignore */ }
 
     try {
-      var savedVersion = localStorage.getItem("rsvp-version");
-      var currentVersion = meta && meta.version ? meta.version : "";
-      if (savedVersion === currentVersion) {
+      localStorage.removeItem("rsvp-version"); // clean up legacy key
+      var savedTotal = localStorage.getItem("rsvp-totalWords");
+      if (savedTotal && parseInt(savedTotal, 10) === totalWords) {
         var p = localStorage.getItem("rsvp-position");
         if (p) pos = Math.min(parseInt(p, 10) || 0, totalWords - 1);
       } else {
-        // Book version changed — discard stale position
+        // Word count changed — discard stale position
         localStorage.removeItem("rsvp-position");
-        if (currentVersion) localStorage.setItem("rsvp-version", currentVersion);
       }
     } catch (e) { /* ignore */ }
 
