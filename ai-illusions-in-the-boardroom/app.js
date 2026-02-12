@@ -636,8 +636,18 @@
     document.getElementById("contact-link-mobile").addEventListener("click", function () {
       track('Contact Click', { chapter: chapterLabel(chapterForPos(pos)) });
     });
-    document.querySelector("header img[alt='SIA']").addEventListener("dblclick", function () {
-      if (meta && meta.version) showToast("v" + meta.version);
+    var brandClickTimer = null;
+    document.getElementById("sia-brand").addEventListener("click", function () {
+      if (brandClickTimer) {
+        clearTimeout(brandClickTimer);
+        brandClickTimer = null;
+        if (meta && meta.version) showToast("v" + meta.version);
+      } else {
+        brandClickTimer = setTimeout(function () {
+          brandClickTimer = null;
+          window.location.href = "/";
+        }, 300);
+      }
     });
 
     document.getElementById("progress-bar").addEventListener("click", onProgressClick);
