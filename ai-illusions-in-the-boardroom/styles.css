@@ -1,0 +1,67 @@
+/* RSVP Reader — AI Illusions in the Boardroom */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* RSVP word sizing by data-fontsize attribute */
+/* Mobile-first: viewport-relative so words never overflow */
+.rsvp-word { font-size: 7vw; }
+.word-col   { width: 36vw; }
+
+[data-fontsize="small"]  .rsvp-word { font-size: 5.5vw; }
+[data-fontsize="small"]  .word-col  { width: 30vw; }
+[data-fontsize="medium"] .rsvp-word { font-size: 7vw; }
+[data-fontsize="medium"] .word-col  { width: 36vw; }
+[data-fontsize="large"]  .rsvp-word { font-size: 9vw; }
+[data-fontsize="large"]  .word-col  { width: 40vw; }
+[data-fontsize="xlarge"] .rsvp-word { font-size: 11vw; }
+[data-fontsize="xlarge"] .word-col  { width: 44vw; }
+
+@media (min-width: 640px) {
+  .rsvp-word { font-size: 4.5rem; }
+  .word-col  { width: 320px; }
+  [data-fontsize="small"]  .rsvp-word { font-size: 3rem; }
+  [data-fontsize="small"]  .word-col  { width: 240px; }
+  [data-fontsize="medium"] .rsvp-word { font-size: 4.5rem; }
+  [data-fontsize="medium"] .word-col  { width: 320px; }
+  [data-fontsize="large"]  .rsvp-word { font-size: 6rem; }
+  [data-fontsize="large"]  .word-col  { width: 400px; }
+  [data-fontsize="xlarge"] .rsvp-word { font-size: 7.5rem; }
+  [data-fontsize="xlarge"] .word-col  { width: 500px; }
+}
+
+/* TOC list items */
+#toc-list li {
+  padding: 0.5rem 0.75rem;
+  margin: 0.125rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.15s;
+}
+
+#toc-list li:hover {
+  background-color: rgb(244 244 245); /* zinc-100 */
+}
+
+[data-theme="dark"] #toc-list li:hover {
+  background-color: rgb(39 39 42); /* zinc-800 */
+}
+
+/* Hide controls briefly after pressing play */
+footer {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+footer.controls-hidden {
+  opacity: 0;
+  transform: translateY(1rem);
+  pointer-events: none;
+}
+
+#toc-list li .toc-part {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 0.1rem;
+}
