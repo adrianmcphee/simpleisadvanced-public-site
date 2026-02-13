@@ -266,63 +266,56 @@
 </section>
 <h2 class="part">Structural Correction</h2>
 <section id="ch-11">
-<h2><a href="./?ch=11">Chapter 11: Radical Increments</a></h2>
-<p>A principal engineer at a Nordic bank inherits a fifteen-year-old payments reconciliation service. She spent two years building a mental model of its behaviour. The service processes € 4 million in daily settlement. Documentation is partial and outdated. She estimates it would take a new hire eighteen months to reach her level of understanding.</p>
-<p>Her team runs the codebase through an AI analysis tool. In three days, it produces a structured map of the service’s behaviour: 847 code paths, 23 undocumented failure modes, 6 implicit business rules that exist nowhere in any specification. The map is not complete. It is also more comprehensive than any single person’s understanding. The engineer spends a week annotating and correcting it. She now has an artefact that can be shared, tested, and maintained. The knowledge is no longer in her head alone.</p>
-<p>What took two years of accumulated context now takes ten days of structured extraction. That is not an incremental improvement. It is a categorical shift in what is knowable, executed as a bounded, repeatable step.</p>
-<p class="continue"><a href="./?ch=11">Continue reading →</a></p>
-</section>
-<section id="ch-12">
-<h2><a href="./?ch=12">Chapter 12: The Unit That Owns the Truth</a></h2>
+<h2><a href="./?ch=11">Chapter 11: The Unit That Owns the Truth</a></h2>
 <p>The payments unit has nine people. Two senior engineers, three engineers, a domain expert named Marta who spent twelve years in payments operations before joining the unit, a data analyst, a reliability engineer, and a unit lead who was previously a senior architect.</p>
 <p>They own the payments process: premium collection, claims disbursement, broker commission payments, and refunds. They own the services that implement these flows, the data those services produce, and the contracts through which other units interact with them.</p>
 <p>On a Wednesday morning, Marta notices that the refund process has a failure rate that has crept from 0.3\</p>
-<p class="continue"><a href="./?ch=12">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=11">Continue reading →</a></p>
 </section>
-<section id="ch-13">
-<h2><a href="./?ch=13">Chapter 13: Contracts, Not Committees</a></h2>
+<section id="ch-12">
+<h2><a href="./?ch=12">Chapter 12: Contracts, Not Committees</a></h2>
 <p>The payments unit’s contract requires consuming units to submit payment requests with fully validated customer and account data. This is structurally correct: the payments process should not validate data it does not own.</p>
 <p>The consuming units experience this differently. Motor origination finds that validating account data at point of sale adds delay that customers feel. Claims discovers that claimants who have changed banks require a re-verification step that its process definition does not accommodate. Both units face the same incentive: minimise their own validation costs and let the payments unit reject what it cannot process.</p>
 <p>The payments unit tightens its contract: stricter formats, more required fields, faster rejection of anything that does not comply. The consuming units add workarounds and automatic retries to handle the rejections. Within six months, the interaction has produced coordination overhead encoded in contracts rather than in meetings, but coordination overhead nonetheless. Payment failures increase. Resolution times lengthen.</p>
-<p class="continue"><a href="./?ch=13">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=12">Continue reading →</a></p>
 </section>
-<section id="ch-14">
-<h2><a href="./?ch=14">Chapter 14: Data as Outputs, Not a Shared Substrate</a></h2>
+<section id="ch-13">
+<h2><a href="./?ch=13">Chapter 13: Data as Outputs, Not a Shared Substrate</a></h2>
 <p>A data analyst in the central reporting team at a Nordic insurer spent three weeks building the quarterly capital allocation report for the CFO. The report required revenue-per-customer figures across three business lines: motor, property, and commercial. She pulled the numbers from each division’s data warehouse. They did not reconcile.</p>
 <p>Motor counted a customer as a policyholder. Property counted a customer as a household. Commercial counted a customer as a legal entity with an active contract in the trailing twelve months. A single corporate client with a fleet policy, a building policy, and a liability policy appeared as three customers in one view, one customer in another, and either one or zero in the third, depending on the contract renewal date.</p>
 <p>She spent four days in meetings with divisional data owners, trying to agree a common definition. They could not. Each definition was correct within its own process. She built a reconciliation layer: a spreadsheet that mapped between the three definitions using manual rules she documented in a tab labelled “assumptions.” The tab ran to forty rows.</p>
-<p class="continue"><a href="./?ch=14">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=13">Continue reading →</a></p>
 </section>
-<section id="ch-15">
-<h2><a href="./?ch=15">Chapter 15: Innovation Without Exception Budgets</a></h2>
+<section id="ch-14">
+<h2><a href="./?ch=14">Chapter 14: Innovation Without Exception Budgets</a></h2>
 <p>A European media group with roughly 2,000 employees across publishing, broadcast, and digital divisions launches an innovation initiative around content personalisation. A dedicated team of six, operating outside the normal delivery cadence, builds a machine learning model that recommends articles and video based on reading behaviour and engagement patterns. Governance constraints are relaxed. Architectural standards are temporarily suspended. An external AI consultancy is engaged.</p>
 <p>The team delivers in four months. The model works. Users who previously saw a single editorial homepage now receive personalised content streams. Average session duration increases by 18\</p>
 <p>Then the initiative ends. The team is reassigned. The model is handed to the editorial technology team, which did not build it, does not understand its training data, and has no process for retraining it when content patterns and audience behaviour shift.</p>
-<p class="continue"><a href="./?ch=15">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=14">Continue reading →</a></p>
 </section>
-<section id="ch-16">
-<h2><a href="./?ch=16">Chapter 16: What to Demand Before Anything Else</a></h2>
+<section id="ch-15">
+<h2><a href="./?ch=15">Chapter 15: What to Demand Before Anything Else</a></h2>
 <p>The audit committee met quarterly, but this session had an additional agenda item. The chair, a non-executive director who had spent thirty years in operational finance before joining the board, had read the AI readiness report that management had circulated the previous week. Fourteen pages. She had three questions written on a folded sheet of paper in front of her.</p>
 <p>The CTO was present, which was unusual. The CFO sat beside him. The chief risk officer attended by video from Singapore. The committee secretary had reserved ninety minutes. The chair suspected they would need less.</p>
 <p>She opened her folded sheet and read the first question.</p>
-<p class="continue"><a href="./?ch=16">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=15">Continue reading →</a></p>
 </section>
-<section id="ch-17">
-<h2><a href="./?ch=17">Chapter 17: The Transition and Its Failure Modes</a></h2>
+<section id="ch-16">
+<h2><a href="./?ch=16">Chapter 16: The Transition and Its Failure Modes</a></h2>
 <p>Each executive role is affected differently by the structural corrections described in the preceding chapters. What follows describes, for each, what stops being governable by narrative, what new artefacts become decisive, what to stop rewarding, and what to authorise. First: the structural shift that applies to all of them, and the transition itself.</p>
 <p>Most executives reached their position by operating at distance from mechanism: synthesising across functions, weighing trade-offs, allocating capital without holding every operational detail. This distance is how leadership scales. Over time, it becomes identity.</p>
 <p>When processes become explicit and contracts become binding, this pattern changes. Machine-readable artefacts shorten the path between commitment and consequence. The executive who is comfortable experiences it as increased control. The executive who is not experiences it as the loss of interpretive insulation: the capacity to reframe outcomes, diffuse responsibility, and manage contradiction through narrative rather than mechanism. Boards are not always the victims of this resistance. In some organisations, the board is a co-participant: preferring the smoothed narrative because interrogating it would require confronting structural problems the board itself has tolerated.</p>
-<p class="continue"><a href="./?ch=17">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=16">Continue reading →</a></p>
 </section>
-<section id="ch-18">
-<h2><a href="./?ch=18">Chapter 18: What the Sceptical Board Member Asks</a></h2>
+<section id="ch-17">
+<h2><a href="./?ch=17">Chapter 17: What the Sceptical Board Member Asks</a></h2>
 <p>The arguments in this book will face predictable objections. Addressing them directly is more useful than pretending they do not exist.</p>
 <p>“The AI technology is not mature enough.”</p>
 <p>This objection conflates the technology with the artefacts. The technology required for the core synthesis, comparing process definitions against code, detecting contract violations, producing reconciliation reports, is available today as commodity capability. Current large language models can read structured process definitions alongside code and identify where implementation diverges from intent. Checking whether contracts are being honoured is straightforward software, not AI.</p>
-<p class="continue"><a href="./?ch=18">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=17">Continue reading →</a></p>
 </section>
-<section id="ch-19">
-<h2><a href="./?ch=19">Conclusion</a></h2>
+<section id="ch-18">
+<h2><a href="./?ch=18">Conclusion</a></h2>
 <p>\addtocontentstoc\protect\addvspace0.5em</p>
 <p>This book has described a structural problem and a structural solution. The problem is that most large organisations cannot describe themselves clearly enough for AI to produce anything other than faster narrative. The solution is to make the organisation legible: explicit processes, owned boundaries, versioned contracts, and structured artefacts that can be tested against the systems that run the business.</p>
 <p>Chapter 2 described the fork: AI as a writer of narrative, or AI as a reader of systems. The two are contradictory. An organisation that uses AI to generate a board pack claiming a migration is 70\</p>
@@ -344,12 +337,12 @@
 <p>That preference is discoverable. Reconciliation outputs are records. In any subsequent regulatory inquiry, acquisition due diligence, or internal audit, the question is no longer whether the organisation could have verified its own representations. The capability exists. It is available at negligible cost. The question becomes why it was not used, and the board’s answer is now part of the governance record.</p>
 <p>The capacity for structural honesty now exists, and it does not require new technology, a transformation programme, or external validation. It requires a decision by the people with authority over the organisation’s structure. The writer path deepens with every governance cycle. The people who carry the context to make processes explicit are leaving, and each departure destroys knowledge that was never captured in any artefact. Each quarter of informed inaction extends a record the board will eventually be asked to explain. The structural preconditions described in this book take years to build and cannot be purchased when the need becomes urgent. I have worked inside organisations on both sides of this choice, and the difference compounds faster than any board expects. What remains, after the argument is made and the evidence is assembled, is whether the people who govern these organisations are willing to see what is already there, and to act on it before the people who could have helped them are gone.</p>
 </section>
-<section id="ch-20">
-<h2><a href="./?ch=20">About the Author</a></h2>
+<section id="ch-19">
+<h2><a href="./?ch=19">About the Author</a></h2>
 <p>Adrian McPhee has spent more than twenty years as an engineer, architect, and CTO inside software-dependent corporates across fintech, retail, and mobility, including a unicorn fintech, a leading ecommerce marketplace, and a multinational with €10 billion turnover. He has led organisations of up to a thousand people, delivered global platforms, and redirected more than €200M of product and technology investment. He watched the same structural dysfunctions repeat across every organisation he entered, and eventually learned to dismantle them.</p>
 <p>As a founder and entrepreneur, he also designs and delivers platforms from scratch. It is the same discipline this book argues for: explicit structure, reconciled with reality, that a machine can actually read.</p>
 <p>He now works with leadership teams to diagnose and dismantle the patterns described in this book. The operational perspective on these patterns, how processes become implicit, how architecture becomes avoidant, and what changes when they are made explicit, is examined in Illusions of Work, which is written for the CTO and engineering leadership audience that must execute the structural changes this book authorises.</p>
-<p class="continue"><a href="./?ch=20">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=19">Continue reading →</a></p>
 </section>
 
   <div class="cta">
