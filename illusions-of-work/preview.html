@@ -289,43 +289,43 @@
 </section>
 <h2 class="part">The Fix</h2>
 <section id="ch-15">
-<h2><a href="./?ch=15">Chapter 14: The Unit That Owns the Truth</a></h2>
-<p>The payments unit has nine people. Two senior engineers, three engineers, a domain expert named Marta who spent twelve years in payments operations before joining the unit, a data analyst, a reliability engineer, and a unit lead who was previously a senior architect.</p>
-<p>They own the payments process: premium collection, claims disbursement, broker commission payments, and refunds. They own the services that implement these flows, the data those services produce, and the contracts through which other units interact with them.</p>
-<p>On a Wednesday morning, Marta notices that the refund process has a failure rate that has crept from 0.3\</p>
+<h2><a href="./?ch=15">Chapter 14: The Rate Has Changed</a></h2>
+<p>She was thirty-one when the rewrite started and thirty-four when it was quietly abandoned.</p>
+<p>The platform was called Horizon. The name was chosen at a leadership offsite in Lisbon, printed on lanyards at the kick-off, and repeated in every steering committee for three years. The brief was unambiguous: replace the claims management system, a fifteen-year-old monolith written in a language that three people in the company still understood, with a modern, event-driven architecture that would “future-proof the business.”</p>
+<p>Katrin joined as the second senior engineer on the programme. She had spent four years at the company, knew the legacy system better than anyone except the contractor who had left the previous autumn, and believed the rewrite was necessary. The monolith was genuinely painful. Deployments required a four-hour maintenance window. A schema change needed sign-off from two teams that no longer existed in the organisation chart, routed instead through a governance function that reviewed changes it could not evaluate. She had seen three incidents in a single quarter caused by the same race condition in the payment reconciliation path, each time patched differently because no one could hold the full system in their head long enough to fix it properly.</p>
 <p class="continue"><a href="./?ch=15">Continue reading →</a></p>
 </section>
 <section id="ch-16">
-<h2><a href="./?ch=16">Chapter 15: The First Unit</a></h2>
-<p>The model described in this book does not require wholesale restructuring. It does not require the CEO to dismantle the organisation chart, the CTO to rewrite the architecture, or the board to approve a three-year transformation programme before anything changes. It requires one unit, operating with clarity, governed by a charter that makes autonomy real from day one.</p>
-<p>This is not a pilot. A pilot is a temporary experiment, provisionally funded, structurally dependent on the old model for its authority, and designed to be evaluated by the people whose power it threatens. Pilots fail not because the model is wrong but because the organisational immune system has been given an explicit mechanism for rejection: the evaluation gate. The first autonomous unit is a permanent structural change. It operates under its own governance charter, with real authority over its process, its data, its releases, and its priorities. It is evaluated by its outcomes, not by a committee.</p>
-<p>One unit, operating with genuine autonomy, creates the selection pressure described earlier in this book. It makes the cost of the surrounding dysfunction visible by contrast. When a single process runs faster, resolves issues in hours rather than weeks, and produces measurable outcomes without coordination theatre, the adjacent teams do not need a strategy deck to understand what has changed. They can see it. The question shifts from “should we restructure?” to “why does everything else still work the old way?”</p>
+<h2><a href="./?ch=16">Chapter 15: The Unit That Owns the Truth</a></h2>
+<p>The payments unit has nine people. Two senior engineers, three engineers, a domain expert named Marta who spent twelve years in payments operations before joining the unit, a data analyst, a reliability engineer, and a unit lead who was previously a senior architect.</p>
+<p>They own the payments process: premium collection, claims disbursement, broker commission payments, and refunds. They own the services that implement these flows, the data those services produce, and the contracts through which other units interact with them.</p>
+<p>On a Wednesday morning, Marta notices that the refund process has a failure rate that has crept from 0.3\</p>
 <p class="continue"><a href="./?ch=16">Continue reading →</a></p>
 </section>
 <section id="ch-17">
-<h2><a href="./?ch=17">Chapter 16: From Pretence to Autonomy</a></h2>
-<p>The claims management unit ran for fourteen months.</p>
-<p>For the first eight, it was the CTO’s best argument. Resolution times dropped by thirty-one percent. Customer satisfaction scores for the claims process improved from 3.2 to 4.1. The unit’s process definition, versioned and reconciled weekly, had reduced the gap between how claims were supposed to work and how they actually worked to a level the organisation had never achieved. Three other teams had asked how to adopt the model.</p>
-<p>Then the CTO was promoted to a group role. His replacement came from the consulting division. She was capable, respected, and had no investment in the autonomous unit model. She did not oppose it. She simply had other priorities.</p>
+<h2><a href="./?ch=17">Chapter 16: The First Unit</a></h2>
+<p>The model described in this book does not require wholesale restructuring. It does not require the CEO to dismantle the organisation chart, the CTO to rewrite the architecture, or the board to approve a three-year transformation programme before anything changes. It requires one unit, operating with clarity, governed by a charter that makes autonomy real from day one.</p>
+<p>This is not a pilot. A pilot is a temporary experiment, provisionally funded, structurally dependent on the old model for its authority, and designed to be evaluated by the people whose power it threatens. Pilots fail not because the model is wrong but because the organisational immune system has been given an explicit mechanism for rejection: the evaluation gate. The first autonomous unit is a permanent structural change. It operates under its own governance charter, with real authority over its process, its data, its releases, and its priorities. It is evaluated by its outcomes, not by a committee.</p>
+<p>One unit, operating with genuine autonomy, creates the selection pressure described earlier in this book. It makes the cost of the surrounding dysfunction visible by contrast. When a single process runs faster, resolves issues in hours rather than weeks, and produces measurable outcomes without coordination theatre, the adjacent teams do not need a strategy deck to understand what has changed. They can see it. The question shifts from “should we restructure?” to “why does everything else still work the old way?”</p>
 <p class="continue"><a href="./?ch=17">Continue reading →</a></p>
 </section>
 <section id="ch-18">
-<h2><a href="./?ch=18">Chapter 17: Feeding AI, Healing the Organisation</a></h2>
+<h2><a href="./?ch=18">Chapter 17: From Pretence to Autonomy</a></h2>
+<p>The claims management unit ran for fourteen months.</p>
+<p>For the first eight, it was the CTO’s best argument. Resolution times dropped by thirty-one percent. Customer satisfaction scores for the claims process improved from 3.2 to 4.1. The unit’s process definition, versioned and reconciled weekly, had reduced the gap between how claims were supposed to work and how they actually worked to a level the organisation had never achieved. Three other teams had asked how to adopt the model.</p>
+<p>Then the CTO was promoted to a group role. His replacement came from the consulting division. She was capable, respected, and had no investment in the autonomous unit model. She did not oppose it. She simply had other priorities.</p>
+<p class="continue"><a href="./?ch=18">Continue reading →</a></p>
+</section>
+<section id="ch-19">
+<h2><a href="./?ch=19">Chapter 18: Feeding AI, Healing the Organisation</a></h2>
 <p>Once an organisation is decomposed into autonomous business units, a new question becomes unavoidable: how does the organisation remain coherent without reverting to coordination as a surrogate for ownership?</p>
 <p>The answer is synthesis. But synthesis of a specific kind.</p>
 <p>In software-dependent corporates, coherence has traditionally been maintained through meetings, escalation paths, programme management, and social negotiation. These mechanisms are expensive, fragile, and deeply dependent on individual memory. They are also the primary reason illusion scales more easily than reality: social coherence can be maintained through narrative long after structural coherence has collapsed.</p>
-<p class="continue"><a href="./?ch=18">Continue reading →</a></p>
-</section>
-<h2 class="part">What It Looks Like</h2>
-<section id="ch-19">
-<h2><a href="./?ch=19">Chapter 18: What This Looks Like</a></h2>
-<p>This chapter describes a year in the life of an organisation that has made the transition. Not a utopia. A realistic picture, with remaining tensions, trade-offs, and difficulties acknowledged. The point is not to promise perfection. It is to show that the problems change in kind, and that the new problems are the kind that capable people can solve.</p>
-<p>I have seen versions of this transition. The details are composited and fictionalised, as throughout the book, but the pattern, the initial resistance, the contract that replaced coordination, the incident resolved in minutes rather than days, is drawn from real organisations I have worked inside. Not every transition succeeded fully. Some stalled when political will ran out. Some produced partial results that were still better than the status quo. What follows is not aspiration. It is what happens when the commitment holds.</p>
-<p>The transition did not begin with a reorganisation. It began with a single unit. The payments team, seven people at the time, was the first to operate under a governance charter. It was chosen because its process had clear boundaries, measurable outcomes, and a lead who had spent years holding the contradictions between what the organisation said its payments process did and what it actually did. The payments unit’s results over its first six months, resolution times measured in hours rather than weeks, cost per transaction down by a fifth, contract violations detected and resolved without escalation, created the political conditions for the other eleven units to follow. By the time the broader restructuring was announced, the payments unit had already answered the question that every sceptic was asking.</p>
 <p class="continue"><a href="./?ch=19">Continue reading →</a></p>
 </section>
+<h2 class="part">What It Looks Like</h2>
 <section id="ch-20">
-<h2><a href="./?ch=20">Conclusion</a></h2>
+<h2><a href="./?ch=20">Chapter 19: Conclusion</a></h2>
 <p>\addtocontentstoc\protect\addvspace0.5em</p>
 <p>This book has described people.</p>
 <p>Not systems, not architectures, not frameworks. People. The engineer holding two contradictory models in her head at three in the morning, because the diagram describes one system and production runs another. The architect who presents a reference model he knows is fiction, because the alternative is a conversation nobody wants to have. The business analyst translating between three teams who believe they are describing the same process, knowing they are not, knowing she is the only reason anything connects at all. The operations lead who remembers which applications get stuck and why, because no system tracks it, because nobody ever wrote it down.</p>
