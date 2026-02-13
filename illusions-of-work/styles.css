@@ -56,12 +56,14 @@ footer.controls-hidden {
   pointer-events: none;
 }
 
-#toc-list li .toc-part {
+#toc-list li.toc-part-header {
   font-size: 0.65rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.5;
-  display: block;
+  margin-top: 0.5rem;
   margin-bottom: 0.1rem;
+  cursor: default;
+  pointer-events: none;
 }

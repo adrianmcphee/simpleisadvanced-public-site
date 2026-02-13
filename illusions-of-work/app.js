@@ -474,15 +474,17 @@
   // --- TOC ---
   function buildTOC() {
     tocList.innerHTML = "";
+    var currentPart = null;
     for (var i = 0; i < chapters.length; i++) {
       var ch = chapters[i];
-      var li = document.createElement("li");
-      if (ch.part) {
-        var partSpan = document.createElement("span");
-        partSpan.className = "toc-part";
-        partSpan.textContent = ch.part;
-        li.appendChild(partSpan);
+      if (ch.part && ch.part !== currentPart) {
+        currentPart = ch.part;
+        var partLi = document.createElement("li");
+        partLi.className = "toc-part-header";
+        partLi.textContent = ch.part;
+        tocList.appendChild(partLi);
       }
+      var li = document.createElement("li");
       var label = ch.chapterNum ? "Chapter " + ch.chapterNum + ": " + ch.title : ch.title;
       li.appendChild(document.createTextNode(label));
       li.addEventListener("click", (function (id) {
