@@ -174,69 +174,39 @@
 <p>The following week, an engineering lead runs the organisation’s AI synthesis against the code alongside the new document. The synthesis flags three problems. The “existing claims architecture” the PRD references was decommissioned six months ago; the current implementation uses a different service with different data contracts. Two of the described user flows require access to a customer record service that the claims team does not own and has no contract with. The acceptance criteria reference a response time SLA that no system in the current architecture can meet.</p>
 <p>The document sounded precise. The system is not. The AI wrote a convincing description of something that cannot be built as described, and the AI reader caught it in minutes.</p>
 <p>The organisation now has a choice: fix the document to match reality, or suppress the synthesis and ship the document as written. The first is uncomfortable. The second is expensive. Both reveal that the two uses of AI, writing and reading, pull in opposite directions unless the writing is grounded in the same reality the reader inspects.</p>
-<p>The constraint is that the fork is a governance choice, not a technology choice. It asks whether you want AI to help you describe reality or to help you avoid it. The economics of each path diverge rapidly, as the next chapter examines.</p>
-</section>
-<section id="ch-3">
-<h2><a href="./?ch=3">Chapter 3: When Clarity Becomes Cheaper Than Pretence</a></h2>
+<p>The constraint is that the fork is a governance choice, not a technology choice. It asks whether you want AI to help you describe reality or to help you avoid it. The economics of each path have already diverged.</p>
 <p>The CTO of a mid-sized European insurer commissions a quarterly consulting engagement to reconcile the technology estate against the strategy. The engagement takes eight weeks and costs € 180,000. The consultants produce an accurate report. Before the findings reach the board, the CTO reviews them and softens the language. Three months later, the same gaps persist. The next engagement produces the same findings.</p>
 <p>The CTO observes that the cost of knowing has remained constant while the gap has widened. She runs the same analysis using AI synthesis. It takes two days. The output is comparable. She runs it again the following week. The cost of knowing has collapsed. The cost of not knowing has not changed. The asymmetry has reversed.</p>
-<p>For most of the history of large organisations, clarity has been expensive.</p>
-<p>Understanding how a system actually worked required time, access, and experience that could not be short-circuited. The people who could synthesise strategy, architecture, and operational reality were rare, costly, and fragile: when they left, their knowledge left with them.</p>
-<p>This was a rational response to a real cost structure, not a pathology. When synthesis is expensive, you invest in the people who can do it and tolerate the risk that any of them might leave tomorrow and take a piece of the organisation’s self-knowledge with them.</p>
-<p>Pretence, by contrast, was cheap. Vague plans could be approved quickly. Ambiguous ownership avoided conflict. Narrative coherence could be maintained through ritual and repetition. The cost of maintaining the illusion was lower than the cost of replacing it with truth.</p>
-<p>Software-dependent corporates evolved to exploit this asymmetry. They became expert at managing the gap between what was said and what was real. They built entire functions, programme management, portfolio governance, strategy offices, transformation teams, whose purpose was to maintain coherence at the narrative level without requiring coherence at the system level.</p>
-<p>The Introduction described what synthesis costs: gathering the right people, with the right access, in the right room, at a cost measured in weeks and political capital. AI collapses that cost. It reads everything it is given in parallel, produces a synthesis in hours rather than weeks, and can be run continuously rather than annually.</p>
+<p>For most of the history of large organisations, clarity has been expensive. Understanding how a system actually worked required time, access, and experience that could not be short-circuited. Pretence, by contrast, was cheap. Vague plans could be approved quickly. Ambiguous ownership avoided conflict. Narrative coherence could be maintained through ritual and repetition.</p>
+<p>Software-dependent corporates evolved to exploit this asymmetry. They built entire functions, programme management, portfolio governance, strategy offices, transformation teams, whose purpose was to maintain coherence at the narrative level without requiring coherence at the system level.</p>
+<p>AI collapses the cost of synthesis. It reads everything it is given in parallel, produces a synthesis in hours rather than weeks, and can be run continuously rather than annually. When clarity was expensive, organisations optimised for impression management. When clarity is cheap, the shift is from lagging to leading: contradictions surface when they are introduced, not when they cause damage.</p>
 <p>Cheap synthesis only has structural force when someone is accountable for the result. If ownership remains diffuse, AI produces insight without consequence. The contradictions are visible. No one is obligated to resolve them.</p>
-<p>When clarity was expensive, organisations optimised for impression management: rewarding ambiguity, tolerating contradiction, valuing the appearance of understanding over understanding itself. When clarity is cheap, these behaviours become liabilities.</p>
-<p>The shift is from lagging to leading. In the current model, the organisation discovers an unmanaged dependency through an incident, an undocumented process through a regulatory inquiry, a context gap through a departure. Each signal arrives after the damage. Continuous synthesis inverts this. Contradictions surface when they are introduced, not when they cause damage. The organisation that operates through artefacts does not govern more carefully. It sees earlier.</p>
-<p>Ambiguous ownership gains a number. When an AI reader reports that a particular process spans four teams with no single owner, and that this is correlated with an incident rate three times higher than the organisational average, the ambiguity can no longer be managed quietly. It has a number attached to it.</p>
-<p>Unjustified decisions lose cover. When the CFO says “the numbers don’t support this investment,” and the AI reader shows that the investment’s absence has caused € 2 million in incident costs over eighteen months, the CFO’s position weakens. Not because the CFO is wrong about the numbers, but because the numbers are incomplete, and the AI has made the incompleteness visible.</p>
-<p>Organisations that adapt experience a shift. Meetings become shorter because fewer assumptions need to be negotiated. Documents become shorter because they are forced to be precise. Autonomy increases because boundaries are clear. Coordination costs fall because coordination is only necessary when boundaries are ambiguous.</p>
-<p>Organisations that resist attempt to insulate existing structures from exposure. AI is constrained to narrow use cases that do not challenge the organisational model: code generation, documentation drafts, chatbot experiments. The cost of pretence rises as more effort is required to maintain the illusion in the presence of a tool that sees through it. The organisation finds itself spending increasing resources on managing AI rather than benefiting from it.</p>
-<p>The neutralisation tactics are predictable. Sanitising inputs: feeding AI only the artefacts that confirm the narrative. Constraining outputs: requiring human review of synthesis before circulation. Redefining terms: calling existing teams “autonomous” without changing their authority. Adding governance to contracts: creating review boards around the mechanism that was designed to replace review boards. Each tactic preserves the appearance of adoption while preventing the structural consequences. Each is detectable by the reader itself, which is why the reader must have unfiltered access to be effective.</p>
-<p>Selection pressure appears, not from management mandate, but from observable performance. The clear team delivers more, with less effort, and with higher morale. Other teams notice. Talented engineers request transfers. New hires prefer the clear team. The dynamics become self-reinforcing. Clarity attracts capability. Capability produces results. Results attract attention. Attention creates pressure for the rest of the organisation to follow.</p>
-<p>The same dynamic operates between organisations. Consider two insurers of similar scale, same market, same regulation. One makes its core processes machine-readable: autonomous units, versioned contracts, weekly AI synthesis. The other adopts AI as a productivity tool: copilots, chatbots, content generation. The underlying structure remains unchanged.</p>
-<p>After three years, the gap is structural. One adapts in weeks. The other adapts in quarters, if at all. The difference compounds silently in the cost of every decision, every incident, every missed change.</p>
-<p>This comparison assumes that the resisting organisation will eventually lose. That assumption deserves scrutiny.</p>
-<p>In regulated industries with high switching costs, structural inefficiency can persist for decades. An insurer that suppresses clarity does not need to be excellent. It needs to be solvent, compliant, and politically stable. If its customers face significant friction in switching, through long-term policies, embedded group schemes, or regulatory lock-in through approved provider lists, if its regulators evaluate it on capital adequacy and claims ratios rather than internal coherence, and if its competitors operate with the same inherited structures, the selection pressure may not be lethal. It may not even be uncomfortable.</p>
-<p>Suppression in this context is not passive. It is active and sophisticated. AI tools are deployed, but constrained to operate on sanitised artefacts: approved process documents rather than the actual code, curated data feeds rather than raw operational data. When an AI system produces an uncomfortable finding, the response is not to act on it but to adjust the inputs. The AI reader is given less to read. Outputs are filtered through the same narrative layer they were designed to bypass. These are not signs of failure to adapt. They are signs of successful defence of the current power structure. The people who benefit from opacity are not stupid. They understand, often better than the technologists advocating for change, what transparency would cost them.</p>
-<p>There is a reasonable objection to this analysis. The coordination overhead described in this book is not a bug. It is a feature. Ambiguity enables profitable flexibility. The programme manager who negotiates across twelve teams is not wasting time. She is maintaining optionality: the capacity to reframe priorities, absorb contradictions, and keep multiple commitments alive simultaneously without forcing premature decisions. The coordination tax funds this optionality. The meetings, the translation layers, the governance rituals are the price the organisation pays for the ability to change direction without confronting the full cost of each change.</p>
-<p>The argument had force when software was a cost centre. When software mediates every customer interaction, every regulatory obligation, and every revenue-generating process, the flexibility that ambiguity once purchased now purchases delay. The programme manager who maintains twelve dependencies is not preserving optionality. She is preserving a structure in which no one can act. The governance ritual that once allowed the organisation to absorb contradiction now prevents it from resolving contradiction. The cost has not changed. What the cost buys has.</p>
-<p>The durable equilibrium breaks under specific conditions, and the specifics matter more than the abstraction.</p>
-<p>Regulatory mandates are already moving. DORA and operational resilience frameworks require firms to demonstrate traceable, end-to-end understanding of critical business processes. An organisation that governs through narrative cannot produce this evidence cheaply. It must reconstruct the process from institutional memory every time a regulator asks.</p>
-<p>Private equity acquirers expose the gap from a different angle. When a PE firm’s operating partners run technical due diligence, they are asking Peter’s question from Chapter 5 at enterprise scale: which capabilities described in the investment thesis correspond to coherent system boundaries, and which are portfolio labels? The answer reprices the asset.</p>
-<p>Talent flight forces it from below. Experienced engineers who carry irreplaceable context leave for organisations where reality is valued over narrative. Each departure destroys institutional knowledge that was never written down.</p>
-<p>A competitor deploying AI synthesis forces it from outside. When a structurally coherent competitor reconciles its strategy against its systems continuously, the performance gap becomes visible to the market in response times, in product velocity, in the cost of regulatory compliance. The advantage compounds.</p>
-<p>Absent these conditions, the equilibrium holds. The organisation pays the ongoing cost of incoherence, a cost it has been paying for years and has learned to absorb, and directs its political energy towards ensuring that the cost remains invisible.</p>
-<p>The honest position is this: this book cannot promise that clarity wins in every market on every timeline.</p>
-<p>The decision is not symmetric. An organisation that adapts early and discovers the equilibrium persists has still reduced its operating costs, improved its retention, and built structural capability that compounds independently of competitive pressure. An organisation that delays and discovers the equilibrium has broken faces a structural deficit that cannot be closed by purchasing the same tools. The tools require structural preconditions that take years to establish. The gap widens.</p>
-<p>Early adaptation that proves premature still pays for itself. Late adaptation that proves necessary starts years behind. This asymmetry is the argument, not a prediction of which competitors will move first.</p>
-<p>The constraint is economic, not technological. The tools exist, and the remaining obstacle is not capability but willingness.</p>
+<p>The constraint is economic, not technological. The tools exist. The remaining obstacle is not capability but willingness, and the willingness requires structural change, which is the subject of the rest of this book.</p>
 </section>
 <h2 class="part">The Illusion Was Rational</h2>
-<section id="ch-4">
-<h2><a href="./?ch=4">Chapter 4: The Board Narrative and the System</a></h2>
+<section id="ch-3">
+<h2><a href="./?ch=3">Chapter 3: The Board Narrative and the System</a></h2>
 <p>The CEO of a mid-sized European insurer, approximately 4,000 employees with a core policy administration platform dating from 2007, is eighteen months into her tenure. She has done what a competent CEO should do. She hired a respected CTO from a digital-native company. She funded a three-year technology modernisation programme at € 40 million, more than the board wanted, less than the CTO asked for, a reasonable compromise. She approved a new organisational structure: product-aligned teams, a platform group, an architecture function. She attended the first two quarterly reviews personally, to signal commitment.</p>
 <p>The strategy is coherent. The CTO is capable. The funding is real. The board is supportive.</p>
 <p>Two years in, the core measures she cares about have not moved: time to market for new products, operational cost per policy, customer retention. Two major initiatives have been quietly descoped. The CTO reports progress. The CFO reports cost. Neither report contradicts the other. Neither explains why the organisation feels no different.</p>
-<p class="continue"><a href="./?ch=4">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=3">Continue reading →</a></p>
 </section>
-<section id="ch-5">
-<h2><a href="./?ch=5">Chapter 5: Portfolio Labels That Do Not Exist in Code</a></h2>
+<section id="ch-4">
+<h2><a href="./?ch=4">Chapter 4: Portfolio Labels That Do Not Exist in Code</a></h2>
 <p>The product review is held monthly. Each product owner presents to the CPO and a panel of senior stakeholders. Richard, the product owner for “Customer Engagement,” presents third. His slides show a funnel, a set of KPIs, and a roadmap with six items colour-coded by quarter. The presentation is fluent, the narrative confident. Customer Engagement is growing. Retention is improving. The team has delivered twelve features this quarter.</p>
 <p>Then an enterprise architect named Peter asks a question. “Which services comprise Customer Engagement?”</p>
 <p>The room shifts. Richard begins to answer, then pauses. Customer Engagement, it turns out, is not a system. It is a label applied to a collection of features that span four different services, maintained by three different teams, two of which report into a different product area. The notification service is shared with Operations. The recommendation engine sits inside a legacy monolith nominally owned by Transactions. The analytics pipeline runs on infrastructure maintained by a platform team that was recently reorganised.</p>
-<p class="continue"><a href="./?ch=5">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=4">Continue reading →</a></p>
 </section>
-<section id="ch-6">
-<h2><a href="./?ch=6">Chapter 6: Architecture as False Abstraction</a></h2>
+<section id="ch-5">
+<h2><a href="./?ch=5">Chapter 5: Architecture as False Abstraction</a></h2>
 <p>In organisations of this kind, architecture is often presented as a source of control. Diagrams promise clarity and reference models suggest foresight. In practice, much of this architectural activity exists to avoid accountability rather than to produce it.</p>
 <p>Architects are not the problem. Most enterprise architects are deeply skilled, analytically rigorous, and genuinely frustrated by the gap between what they design and what the organisation builds. Architecture, in these organisations, is asked to perform a task it cannot fulfil: to impose coherence without changing the underlying structure of responsibility.</p>
 <p>The distinction that matters is between advisory architecture and binding architecture.</p>
-<p class="continue"><a href="./?ch=6">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=5">Continue reading →</a></p>
 </section>
-<section id="ch-7">
-<h2><a href="./?ch=7">Chapter 7: Splitting the System Without Splitting the Problem</a></h2>
+<section id="ch-6">
+<h2><a href="./?ch=6">Chapter 6: Splitting the System Without Splitting the Problem</a></h2>
 <p>A logistics company needs to add a new delivery status, “held at customs,” to the tracking flow visible to customers. The status already exists in the customs clearance system. It needs to propagate to the shipment tracking service, which feeds the customer-facing portal.</p>
 <p>In a system with real boundaries and owned contracts, this is two days of work. One team adds the status to its published event contract. The consuming team reads the new event and renders it in the portal. Both teams can do this independently, on their own release schedules, with a versioned contract governing the interaction.</p>
 <p>In this organisation, none of that applies.</p>
@@ -266,93 +236,93 @@
 <p>Microservices did not fail because the pattern was wrong. They failed because the organisation adopted the pattern without the design that makes it work: decomposing business processes before decomposing services, defining ownership before distributing execution, establishing contracts before granting independence. Without that design, autonomy cannot exist. The organisation retreats to coordination, and the architecture faithfully reflects the retreat.</p>
 </section>
 <h2 class="part">Capital Mispricing and Structural Risk</h2>
-<section id="ch-8">
-<h2><a href="./?ch=8">Chapter 8: Lag Governance and Capital Mispricing</a></h2>
+<section id="ch-7">
+<h2><a href="./?ch=7">Chapter 7: Lag Governance and Capital Mispricing</a></h2>
 <p>A retail bank with a ten-year-old microservices estate invests € 1.2 million in a shared platform capability: a common communication layer that would let its mortgage, payments, and savings teams exchange information independently, replacing a fragile web of direct connections between systems that causes an average of three incidents per month.</p>
 <p>The platform team delivers a working prototype in four months. It is technically sound. The three consuming teams are willing to migrate. The projected incident reduction is 70--80\</p>
 <p>The CFO kills the investment in the annual budget review. The platform “does not show ROI in year one.” The cost is visible: € 1.2 million in engineering salaries and infrastructure. The benefit is diffuse: fewer incidents, faster change, reduced coordination overhead. None of these benefits appear as a line item in any business unit’s P\&amp;L.</p>
-<p class="continue"><a href="./?ch=8">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=7">Continue reading →</a></p>
 </section>
-<section id="ch-9">
-<h2><a href="./?ch=9">Chapter 9: The Coordination Tax and the Alignment Supply Chain</a></h2>
+<section id="ch-8">
+<h2><a href="./?ch=8">Chapter 8: The Coordination Tax and the Alignment Supply Chain</a></h2>
 <p>The delivery lead’s calendar shows forty-one hours of meetings this week. She has blocked two hours on Thursday morning for “focus time.” By Tuesday afternoon, a programme steering committee has been scheduled over it.</p>
 <p>She does not build anything. She does not decide anything. She translates. She takes what the product manager says the business wants, what the architect says the system can support, and what the engineering teams say they can deliver, and she reconciles them into a plan that satisfies all three. The plan is presented weekly. It is revised weekly. It has never once survived contact with the sprint.</p>
 <p>Her role exists because no one in the organisation can talk directly to anyone else. Product cannot talk to engineering because they do not share a vocabulary. Architecture cannot talk to delivery because their artefacts describe different systems. Engineering cannot talk to the business because the business does not attend their meetings. She is the connective tissue.</p>
-<p class="continue"><a href="./?ch=9">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=8">Continue reading →</a></p>
 </section>
-<section id="ch-10">
-<h2><a href="./?ch=10">Chapter 10: Talent Decay as Structural Fragility</a></h2>
+<section id="ch-9">
+<h2><a href="./?ch=9">Chapter 9: Talent Decay as Structural Fragility</a></h2>
 <p>A principal engineer at an ecommerce marketplace with approximately 1,200 employees and a twelve-year-old order management platform raises a concern about a dependency that will block the roadmap. The concern is noted but not addressed. She flags a risk in an architecture review. The risk is acknowledged but deprioritised. She points out that a commitment made to the board cannot be delivered as described. She is told to find a way.</p>
 <p>After enough of these exchanges, she stops. Not because she has lost the knowledge. She still sees the problems clearly, still traces the dependencies in her head, still knows which parts of the system are fragile and why. The cost of stating what she sees has become higher than the cost of staying silent. The silence is not apathy. It is the particular exhaustion of someone who has been right, repeatedly, to no effect.</p>
 <p>Two years later, she leaves. She takes with her an understanding of the order fulfilment process, the warehouse integration constraints, the payment reconciliation edge cases, and the failure modes of the carrier tracking service that no document in the organisation captures. Her replacement arrives with equivalent credentials and no context. He spends six months learning what she knew on her first day. Some of what she knew, he never learns, because it was never written down.</p>
-<p class="continue"><a href="./?ch=10">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=9">Continue reading →</a></p>
 </section>
-<section id="ch-11">
-<h2><a href="./?ch=11">Chapter 11: Operational and Regulatory Exposure</a></h2>
+<section id="ch-10">
+<h2><a href="./?ch=10">Chapter 10: Operational and Regulatory Exposure</a></h2>
 <p>A European insurer receives notice of a regulatory change: all policies above € 25,000 annual premium must observe a mandatory 48-hour cooling-off period before activation. During this window, payment may be collected, the policy may be cancelled without penalty, claims are not valid, and risk exposure must not be recognised on the balance sheet.</p>
 <p>This is a change to the policy lifecycle, not a feature request.</p>
 <p>The insurer has five hundred services in its technology estate. “Activation” is not one system. It spans five: quoting, payments, the policy record, claims eligibility, and broker commissions. Each of these feeds data to dozens of other systems. The policy record alone is consumed by fifty-seven.</p>
-<p class="continue"><a href="./?ch=11">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=10">Continue reading →</a></p>
 </section>
 <h2 class="part">Structural Correction</h2>
-<section id="ch-12">
-<h2><a href="./?ch=12">Chapter 12: Radical Increments</a></h2>
+<section id="ch-11">
+<h2><a href="./?ch=11">Chapter 11: Radical Increments</a></h2>
 <p>A principal engineer at a Nordic bank inherits a fifteen-year-old payments reconciliation service. She spent two years building a mental model of its behaviour. The service processes € 4 million in daily settlement. Documentation is partial and outdated. She estimates it would take a new hire eighteen months to reach her level of understanding.</p>
 <p>Her team runs the codebase through an AI analysis tool. In three days, it produces a structured map of the service’s behaviour: 847 code paths, 23 undocumented failure modes, 6 implicit business rules that exist nowhere in any specification. The map is not complete. It is also more comprehensive than any single person’s understanding. The engineer spends a week annotating and correcting it. She now has an artefact that can be shared, tested, and maintained. The knowledge is no longer in her head alone.</p>
 <p>What took two years of accumulated context now takes ten days of structured extraction. That is not an incremental improvement. It is a categorical shift in what is knowable, executed as a bounded, repeatable step.</p>
-<p class="continue"><a href="./?ch=12">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=11">Continue reading →</a></p>
 </section>
-<section id="ch-13">
-<h2><a href="./?ch=13">Chapter 13: The Unit That Owns the Truth</a></h2>
+<section id="ch-12">
+<h2><a href="./?ch=12">Chapter 12: The Unit That Owns the Truth</a></h2>
 <p>The payments unit has nine people. Two senior engineers, three engineers, a domain expert named Marta who spent twelve years in payments operations before joining the unit, a data analyst, a reliability engineer, and a unit lead who was previously a senior architect.</p>
 <p>They own the payments process: premium collection, claims disbursement, broker commission payments, and refunds. They own the services that implement these flows, the data those services produce, and the contracts through which other units interact with them.</p>
 <p>On a Wednesday morning, Marta notices that the refund process has a failure rate that has crept from 0.3\</p>
-<p class="continue"><a href="./?ch=13">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=12">Continue reading →</a></p>
 </section>
-<section id="ch-14">
-<h2><a href="./?ch=14">Chapter 14: Contracts, Not Committees</a></h2>
+<section id="ch-13">
+<h2><a href="./?ch=13">Chapter 13: Contracts, Not Committees</a></h2>
 <p>The payments unit’s contract requires consuming units to submit payment requests with fully validated customer and account data. This is structurally correct: the payments process should not validate data it does not own.</p>
 <p>The consuming units experience this differently. Motor origination finds that validating account data at point of sale adds delay that customers feel. Claims discovers that claimants who have changed banks require a re-verification step that its process definition does not accommodate. Both units face the same incentive: minimise their own validation costs and let the payments unit reject what it cannot process.</p>
 <p>The payments unit tightens its contract: stricter formats, more required fields, faster rejection of anything that does not comply. The consuming units add workarounds and automatic retries to handle the rejections. Within six months, the interaction has produced coordination overhead encoded in contracts rather than in meetings, but coordination overhead nonetheless. Payment failures increase. Resolution times lengthen.</p>
-<p class="continue"><a href="./?ch=14">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=13">Continue reading →</a></p>
 </section>
-<section id="ch-15">
-<h2><a href="./?ch=15">Chapter 15: Data as Outputs, Not a Shared Substrate</a></h2>
+<section id="ch-14">
+<h2><a href="./?ch=14">Chapter 14: Data as Outputs, Not a Shared Substrate</a></h2>
 <p>A data analyst in the central reporting team at a Nordic insurer spent three weeks building the quarterly capital allocation report for the CFO. The report required revenue-per-customer figures across three business lines: motor, property, and commercial. She pulled the numbers from each division’s data warehouse. They did not reconcile.</p>
 <p>Motor counted a customer as a policyholder. Property counted a customer as a household. Commercial counted a customer as a legal entity with an active contract in the trailing twelve months. A single corporate client with a fleet policy, a building policy, and a liability policy appeared as three customers in one view, one customer in another, and either one or zero in the third, depending on the contract renewal date.</p>
 <p>She spent four days in meetings with divisional data owners, trying to agree a common definition. They could not. Each definition was correct within its own process. She built a reconciliation layer: a spreadsheet that mapped between the three definitions using manual rules she documented in a tab labelled “assumptions.” The tab ran to forty rows.</p>
-<p class="continue"><a href="./?ch=15">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=14">Continue reading →</a></p>
 </section>
-<section id="ch-16">
-<h2><a href="./?ch=16">Chapter 16: Innovation Without Exception Budgets</a></h2>
+<section id="ch-15">
+<h2><a href="./?ch=15">Chapter 15: Innovation Without Exception Budgets</a></h2>
 <p>A European media group with roughly 2,000 employees across publishing, broadcast, and digital divisions launches an innovation initiative around content personalisation. A dedicated team of six, operating outside the normal delivery cadence, builds a machine learning model that recommends articles and video based on reading behaviour and engagement patterns. Governance constraints are relaxed. Architectural standards are temporarily suspended. An external AI consultancy is engaged.</p>
 <p>The team delivers in four months. The model works. Users who previously saw a single editorial homepage now receive personalised content streams. Average session duration increases by 18\</p>
 <p>Then the initiative ends. The team is reassigned. The model is handed to the editorial technology team, which did not build it, does not understand its training data, and has no process for retraining it when content patterns and audience behaviour shift.</p>
-<p class="continue"><a href="./?ch=16">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=15">Continue reading →</a></p>
 </section>
-<section id="ch-17">
-<h2><a href="./?ch=17">Chapter 17: What to Demand Before Anything Else</a></h2>
+<section id="ch-16">
+<h2><a href="./?ch=16">Chapter 16: What to Demand Before Anything Else</a></h2>
 <p>The audit committee met quarterly, but this session had an additional agenda item. The chair, a non-executive director who had spent thirty years in operational finance before joining the board, had read the AI readiness report that management had circulated the previous week. Fourteen pages. She had three questions written on a folded sheet of paper in front of her.</p>
 <p>The CTO was present, which was unusual. The CFO sat beside him. The chief risk officer attended by video from Singapore. The committee secretary had reserved ninety minutes. The chair suspected they would need less.</p>
 <p>She opened her folded sheet and read the first question.</p>
-<p class="continue"><a href="./?ch=17">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=16">Continue reading →</a></p>
 </section>
-<section id="ch-18">
-<h2><a href="./?ch=18">Chapter 18: The Transition and Its Failure Modes</a></h2>
+<section id="ch-17">
+<h2><a href="./?ch=17">Chapter 17: The Transition and Its Failure Modes</a></h2>
 <p>Each executive role is affected differently by the structural corrections described in the preceding chapters. What follows describes, for each, what stops being governable by narrative, what new artefacts become decisive, what to stop rewarding, and what to authorise. First: the structural shift that applies to all of them, and the transition itself.</p>
 <p>Most executives reached their position by operating at distance from mechanism: synthesising across functions, weighing trade-offs, allocating capital without holding every operational detail. This distance is how leadership scales. Over time, it becomes identity.</p>
 <p>When processes become explicit and contracts become binding, this pattern changes. Machine-readable artefacts shorten the path between commitment and consequence. The executive who is comfortable experiences it as increased control. The executive who is not experiences it as the loss of interpretive insulation: the capacity to reframe outcomes, diffuse responsibility, and manage contradiction through narrative rather than mechanism. Boards are not always the victims of this resistance. In some organisations, the board is a co-participant: preferring the smoothed narrative because interrogating it would require confronting structural problems the board itself has tolerated.</p>
-<p class="continue"><a href="./?ch=18">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=17">Continue reading →</a></p>
 </section>
-<section id="ch-19">
-<h2><a href="./?ch=19">Chapter 19: What the Sceptical Board Member Asks</a></h2>
+<section id="ch-18">
+<h2><a href="./?ch=18">Chapter 18: What the Sceptical Board Member Asks</a></h2>
 <p>The arguments in this book will face predictable objections. Addressing them directly is more useful than pretending they do not exist.</p>
 <p>“The AI technology is not mature enough.”</p>
 <p>This objection conflates the technology with the artefacts. The technology required for the core synthesis, comparing process definitions against code, detecting contract violations, producing reconciliation reports, is available today as commodity capability. Current large language models can read structured process definitions alongside code and identify where implementation diverges from intent. Checking whether contracts are being honoured is straightforward software, not AI.</p>
-<p class="continue"><a href="./?ch=19">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=18">Continue reading →</a></p>
 </section>
-<section id="ch-20">
-<h2><a href="./?ch=20">Conclusion</a></h2>
+<section id="ch-19">
+<h2><a href="./?ch=19">Conclusion</a></h2>
 <p>\addtocontentstoc\protect\addvspace0.5em</p>
 <p>This book has described a structural problem and a structural solution. The problem is that most large organisations cannot describe themselves clearly enough for AI to produce anything other than faster narrative. The solution is to make the organisation legible: explicit processes, owned boundaries, versioned contracts, and structured artefacts that can be tested against the systems that run the business.</p>
 <p>Chapter 2 described the fork: AI as a writer of narrative, or AI as a reader of systems. The two are contradictory. An organisation that uses AI to generate a board pack claiming a migration is 70\</p>
@@ -374,12 +344,12 @@
 <p>That preference is discoverable. Reconciliation outputs are records. In any subsequent regulatory inquiry, acquisition due diligence, or internal audit, the question is no longer whether the organisation could have verified its own representations. The capability exists. It is available at negligible cost. The question becomes why it was not used, and the board’s answer is now part of the governance record.</p>
 <p>The capacity for structural honesty now exists, and it does not require new technology, a transformation programme, or external validation. It requires a decision by the people with authority over the organisation’s structure. The writer path deepens with every governance cycle. The people who carry the context to make processes explicit are leaving, and each departure destroys knowledge that was never captured in any artefact. Each quarter of informed inaction extends a record the board will eventually be asked to explain. The structural preconditions described in this book take years to build and cannot be purchased when the need becomes urgent. I have worked inside organisations on both sides of this choice, and the difference compounds faster than any board expects. What remains, after the argument is made and the evidence is assembled, is whether the people who govern these organisations are willing to see what is already there, and to act on it before the people who could have helped them are gone.</p>
 </section>
-<section id="ch-21">
-<h2><a href="./?ch=21">About the Author</a></h2>
+<section id="ch-20">
+<h2><a href="./?ch=20">About the Author</a></h2>
 <p>Adrian McPhee has spent more than twenty years as an engineer, architect, and CTO inside software-dependent corporates across fintech, retail, and mobility, including a unicorn fintech, a leading ecommerce marketplace, and a multinational with €10 billion turnover. He has led organisations of up to a thousand people, delivered global platforms, and redirected more than €200M of product and technology investment. He watched the same structural dysfunctions repeat across every organisation he entered, and eventually learned to dismantle them.</p>
 <p>As a founder and entrepreneur, he also designs and delivers platforms from scratch. It is the same discipline this book argues for: explicit structure, reconciled with reality, that a machine can actually read.</p>
 <p>He now works with leadership teams to diagnose and dismantle the patterns described in this book. The operational perspective on these patterns, how processes become implicit, how architecture becomes avoidant, and what changes when they are made explicit, is examined in Illusions of Work, which is written for the CTO and engineering leadership audience that must execute the structural changes this book authorises.</p>
-<p class="continue"><a href="./?ch=21">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=20">Continue reading →</a></p>
 </section>
 
   <div class="cta">
