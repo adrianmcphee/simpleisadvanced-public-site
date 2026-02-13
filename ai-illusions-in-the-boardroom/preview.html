@@ -265,108 +265,94 @@
 <p>Change velocity. Every strategic change must negotiate the same dependency structure. The two-day change that takes six weeks is not an outlier. It is the baseline. The board approves a strategic initiative expecting delivery in a quarter. The initiative encounters the same dependency negotiation as every other change. Delivery takes three quarters. The board concludes that engineering is slow, but the constraint is not engineering capability. It is the coupling in the structure.</p>
 <p>Microservices did not fail because the pattern was wrong. They failed because the organisation adopted the pattern without the design that makes it work: decomposing business processes before decomposing services, defining ownership before distributing execution, establishing contracts before granting independence. Without that design, autonomy cannot exist. The organisation retreats to coordination, and the architecture faithfully reflects the retreat.</p>
 </section>
-<section id="ch-8">
-<h2><a href="./?ch=8">Chapter 8: Data Centralisation and Control Illusions</a></h2>
-<p>The renewals team at a Nordic insurer with roughly 3,500 employees and a centralised data platform built over fifteen years needs to track whether customers prefer single-year or multi-year contracts. The field is specific to renewals. No other team uses it. No other team needs it.</p>
-<p>Because the customer record is centralised, shared across onboarding, claims, billing, reporting, and compliance, the field cannot be added without a review. The data governance committee meets fortnightly. The committee determines that any change to the customer record requires impact assessment across all teams that read it. Each team must confirm the change does not affect its processes.</p>
-<p>The assessments take four weeks. None of the five teams identifies any impact, because the field is irrelevant to all of them. The committee approves the change. The total elapsed time from request to deployment is six weeks.</p>
-<p class="continue"><a href="./?ch=8">Continue reading →</a></p>
-</section>
-<section id="ch-9">
-<h2><a href="./?ch=9">Chapter 9: Why Programmes Fail Before They Start</a></h2>
-<p>A multinational financial services company headquartered in Western Europe, approximately 25,000 employees across thirty countries, operates as a federation. Local operating entities across those thirty countries, each with their own P\&amp;L, their own priorities, and their own conviction that their market is uniquely special. Central business owners set strategy and policy but have limited direct control over how the local entities operate. A separate, centralised digital and IT function is expected to build platforms for the entire organisation whilst satisfying the contradictory demands of both the centre and the local markets.</p>
-<p>The central business owners define the aim. They know what the organisation should become. The digital function executes the build. They are technically competent and the platforms they produce are sound. The local entities, however, own the customer relationship. They control adoption. They decide, in practice, whether anything changes.</p>
-<p>The organisation launches a transformation programme. The strategy is clear. The platform is delivered. The local entities do not adopt it. They attend the training, use the new terminology in reporting, and update their dashboards. Nothing changes in how they process transactions, manage client accounts, or serve customers.</p>
-<p class="continue"><a href="./?ch=9">Continue reading →</a></p>
-</section>
 <h2 class="part">Capital Mispricing and Structural Risk</h2>
-<section id="ch-10">
-<h2><a href="./?ch=10">Chapter 10: Lag Governance and Capital Mispricing</a></h2>
+<section id="ch-8">
+<h2><a href="./?ch=8">Chapter 8: Lag Governance and Capital Mispricing</a></h2>
 <p>A retail bank with a ten-year-old microservices estate invests € 1.2 million in a shared platform capability: a common communication layer that would let its mortgage, payments, and savings teams exchange information independently, replacing a fragile web of direct connections between systems that causes an average of three incidents per month.</p>
 <p>The platform team delivers a working prototype in four months. It is technically sound. The three consuming teams are willing to migrate. The projected incident reduction is 70--80\</p>
 <p>The CFO kills the investment in the annual budget review. The platform “does not show ROI in year one.” The cost is visible: € 1.2 million in engineering salaries and infrastructure. The benefit is diffuse: fewer incidents, faster change, reduced coordination overhead. None of these benefits appear as a line item in any business unit’s P\&amp;L.</p>
-<p class="continue"><a href="./?ch=10">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=8">Continue reading →</a></p>
 </section>
-<section id="ch-11">
-<h2><a href="./?ch=11">Chapter 11: The Coordination Tax and the Alignment Supply Chain</a></h2>
+<section id="ch-9">
+<h2><a href="./?ch=9">Chapter 9: The Coordination Tax and the Alignment Supply Chain</a></h2>
 <p>The delivery lead’s calendar shows forty-one hours of meetings this week. She has blocked two hours on Thursday morning for “focus time.” By Tuesday afternoon, a programme steering committee has been scheduled over it.</p>
 <p>She does not build anything. She does not decide anything. She translates. She takes what the product manager says the business wants, what the architect says the system can support, and what the engineering teams say they can deliver, and she reconciles them into a plan that satisfies all three. The plan is presented weekly. It is revised weekly. It has never once survived contact with the sprint.</p>
 <p>Her role exists because no one in the organisation can talk directly to anyone else. Product cannot talk to engineering because they do not share a vocabulary. Architecture cannot talk to delivery because their artefacts describe different systems. Engineering cannot talk to the business because the business does not attend their meetings. She is the connective tissue.</p>
-<p class="continue"><a href="./?ch=11">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=9">Continue reading →</a></p>
 </section>
-<section id="ch-12">
-<h2><a href="./?ch=12">Chapter 12: Talent Decay as Structural Fragility</a></h2>
+<section id="ch-10">
+<h2><a href="./?ch=10">Chapter 10: Talent Decay as Structural Fragility</a></h2>
 <p>A principal engineer at an ecommerce marketplace with approximately 1,200 employees and a twelve-year-old order management platform raises a concern about a dependency that will block the roadmap. The concern is noted but not addressed. She flags a risk in an architecture review. The risk is acknowledged but deprioritised. She points out that a commitment made to the board cannot be delivered as described. She is told to find a way.</p>
 <p>After enough of these exchanges, she stops. Not because she has lost the knowledge. She still sees the problems clearly, still traces the dependencies in her head, still knows which parts of the system are fragile and why. The cost of stating what she sees has become higher than the cost of staying silent. The silence is not apathy. It is the particular exhaustion of someone who has been right, repeatedly, to no effect.</p>
 <p>Two years later, she leaves. She takes with her an understanding of the order fulfilment process, the warehouse integration constraints, the payment reconciliation edge cases, and the failure modes of the carrier tracking service that no document in the organisation captures. Her replacement arrives with equivalent credentials and no context. He spends six months learning what she knew on her first day. Some of what she knew, he never learns, because it was never written down.</p>
-<p class="continue"><a href="./?ch=12">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=10">Continue reading →</a></p>
 </section>
-<section id="ch-13">
-<h2><a href="./?ch=13">Chapter 13: Operational and Regulatory Exposure</a></h2>
+<section id="ch-11">
+<h2><a href="./?ch=11">Chapter 11: Operational and Regulatory Exposure</a></h2>
 <p>A European insurer receives notice of a regulatory change: all policies above € 25,000 annual premium must observe a mandatory 48-hour cooling-off period before activation. During this window, payment may be collected, the policy may be cancelled without penalty, claims are not valid, and risk exposure must not be recognised on the balance sheet.</p>
 <p>This is a change to the policy lifecycle, not a feature request.</p>
 <p>The insurer has five hundred services in its technology estate. “Activation” is not one system. It spans five: quoting, payments, the policy record, claims eligibility, and broker commissions. Each of these feeds data to dozens of other systems. The policy record alone is consumed by fifty-seven.</p>
-<p class="continue"><a href="./?ch=13">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=11">Continue reading →</a></p>
 </section>
 <h2 class="part">Structural Correction</h2>
-<section id="ch-14">
-<h2><a href="./?ch=14">Chapter 14: Radical Increments</a></h2>
+<section id="ch-12">
+<h2><a href="./?ch=12">Chapter 12: Radical Increments</a></h2>
 <p>A principal engineer at a Nordic bank inherits a fifteen-year-old payments reconciliation service. She spent two years building a mental model of its behaviour. The service processes € 4 million in daily settlement. Documentation is partial and outdated. She estimates it would take a new hire eighteen months to reach her level of understanding.</p>
 <p>Her team runs the codebase through an AI analysis tool. In three days, it produces a structured map of the service’s behaviour: 847 code paths, 23 undocumented failure modes, 6 implicit business rules that exist nowhere in any specification. The map is not complete. It is also more comprehensive than any single person’s understanding. The engineer spends a week annotating and correcting it. She now has an artefact that can be shared, tested, and maintained. The knowledge is no longer in her head alone.</p>
 <p>What took two years of accumulated context now takes ten days of structured extraction. That is not an incremental improvement. It is a categorical shift in what is knowable, executed as a bounded, repeatable step.</p>
-<p class="continue"><a href="./?ch=14">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=12">Continue reading →</a></p>
 </section>
-<section id="ch-15">
-<h2><a href="./?ch=15">Chapter 15: The Unit That Owns the Truth</a></h2>
+<section id="ch-13">
+<h2><a href="./?ch=13">Chapter 13: The Unit That Owns the Truth</a></h2>
 <p>The payments unit has nine people. Two senior engineers, three engineers, a domain expert named Marta who spent twelve years in payments operations before joining the unit, a data analyst, a reliability engineer, and a unit lead who was previously a senior architect.</p>
 <p>They own the payments process: premium collection, claims disbursement, broker commission payments, and refunds. They own the services that implement these flows, the data those services produce, and the contracts through which other units interact with them.</p>
 <p>On a Wednesday morning, Marta notices that the refund process has a failure rate that has crept from 0.3\</p>
-<p class="continue"><a href="./?ch=15">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=13">Continue reading →</a></p>
 </section>
-<section id="ch-16">
-<h2><a href="./?ch=16">Chapter 16: Contracts, Not Committees</a></h2>
+<section id="ch-14">
+<h2><a href="./?ch=14">Chapter 14: Contracts, Not Committees</a></h2>
 <p>The payments unit’s contract requires consuming units to submit payment requests with fully validated customer and account data. This is structurally correct: the payments process should not validate data it does not own.</p>
 <p>The consuming units experience this differently. Motor origination finds that validating account data at point of sale adds delay that customers feel. Claims discovers that claimants who have changed banks require a re-verification step that its process definition does not accommodate. Both units face the same incentive: minimise their own validation costs and let the payments unit reject what it cannot process.</p>
 <p>The payments unit tightens its contract: stricter formats, more required fields, faster rejection of anything that does not comply. The consuming units add workarounds and automatic retries to handle the rejections. Within six months, the interaction has produced coordination overhead encoded in contracts rather than in meetings, but coordination overhead nonetheless. Payment failures increase. Resolution times lengthen.</p>
-<p class="continue"><a href="./?ch=16">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=14">Continue reading →</a></p>
 </section>
-<section id="ch-17">
-<h2><a href="./?ch=17">Chapter 17: Data as Outputs, Not a Shared Substrate</a></h2>
-<p>In many large corporates, data is treated as a shared resource. A central data team, a common data model, a central repository that collects everything from everywhere and makes it available to everyone. This feels disciplined. It is also the fastest way to destroy the autonomy that the previous chapters described.</p>
-<p>The problem is not the aspiration. The aspiration, that the organisation should be able to answer questions that span multiple processes, is legitimate. The problem is the mechanism. When data is shared through a common substrate, every unit that reads from or writes to that substrate is coupled to every other unit that does the same. A change to the data structure in one place propagates to every consumer. A performance issue in one pipeline affects every downstream report. The “single source of truth” becomes a single point of coupling for the organisation’s ability to change.</p>
-<p>This chapter makes one argument: data should flow out of autonomous units as a published product, not pool underneath them as a shared substrate. The distinction is structural, not semantic, and it determines whether the organisation can be both autonomous and coherent.</p>
-<p class="continue"><a href="./?ch=17">Continue reading →</a></p>
+<section id="ch-15">
+<h2><a href="./?ch=15">Chapter 15: Data as Outputs, Not a Shared Substrate</a></h2>
+<p>A data analyst in the central reporting team at a Nordic insurer spent three weeks building the quarterly capital allocation report for the CFO. The report required revenue-per-customer figures across three business lines: motor, property, and commercial. She pulled the numbers from each division’s data warehouse. They did not reconcile.</p>
+<p>Motor counted a customer as a policyholder. Property counted a customer as a household. Commercial counted a customer as a legal entity with an active contract in the trailing twelve months. A single corporate client with a fleet policy, a building policy, and a liability policy appeared as three customers in one view, one customer in another, and either one or zero in the third, depending on the contract renewal date.</p>
+<p>She spent four days in meetings with divisional data owners, trying to agree a common definition. They could not. Each definition was correct within its own process. She built a reconciliation layer: a spreadsheet that mapped between the three definitions using manual rules she documented in a tab labelled “assumptions.” The tab ran to forty rows.</p>
+<p class="continue"><a href="./?ch=15">Continue reading →</a></p>
 </section>
-<section id="ch-18">
-<h2><a href="./?ch=18">Chapter 18: Innovation Without Exception Budgets</a></h2>
+<section id="ch-16">
+<h2><a href="./?ch=16">Chapter 16: Innovation Without Exception Budgets</a></h2>
 <p>A European media group with roughly 2,000 employees across publishing, broadcast, and digital divisions launches an innovation initiative around content personalisation. A dedicated team of six, operating outside the normal delivery cadence, builds a machine learning model that recommends articles and video based on reading behaviour and engagement patterns. Governance constraints are relaxed. Architectural standards are temporarily suspended. An external AI consultancy is engaged.</p>
 <p>The team delivers in four months. The model works. Users who previously saw a single editorial homepage now receive personalised content streams. Average session duration increases by 18\</p>
 <p>Then the initiative ends. The team is reassigned. The model is handed to the editorial technology team, which did not build it, does not understand its training data, and has no process for retraining it when content patterns and audience behaviour shift.</p>
-<p class="continue"><a href="./?ch=18">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=16">Continue reading →</a></p>
 </section>
-<section id="ch-19">
-<h2><a href="./?ch=19">Chapter 19: What to Demand Before Anything Else</a></h2>
-<p>The structural corrections described in this Part are not technology projects. They are redistributions of authority, accountability, and information. Before any role-by-role analysis: the following demands apply now, to the next board pack, without waiting for structural change to complete.</p>
-<p>Ask management to bring the following:</p>
-<p>1. A process inventory ranked by business criticality. A list of the organisation’s core business processes, ordered by revenue contribution and risk exposure, with a named owner, key performance indicators, and third-party dependencies for each. Where a third party is involved in delivering a business-critical process, whether through outsourced operations, managed services, or embedded vendor systems, the inventory should identify them explicitly. Third-party involvement in a critical process is outsourcing by another name, and it carries concentration risk, contractual exposure, and regulatory obligations that the board must be able to see. Not a capability map. Not a portfolio taxonomy. A list of processes that the organisation actually operates, with a person accountable for each, measures that show how each is performing, and visibility into where the organisation’s delivery depends on parties it does not control. If the list does not exist, or if most processes have no named owner, that is the finding.</p>
-<p class="continue"><a href="./?ch=19">Continue reading →</a></p>
+<section id="ch-17">
+<h2><a href="./?ch=17">Chapter 17: What to Demand Before Anything Else</a></h2>
+<p>The audit committee met quarterly, but this session had an additional agenda item. The chair, a non-executive director who had spent thirty years in operational finance before joining the board, had read the AI readiness report that management had circulated the previous week. Fourteen pages. She had three questions written on a folded sheet of paper in front of her.</p>
+<p>The CTO was present, which was unusual. The CFO sat beside him. The chief risk officer attended by video from Singapore. The committee secretary had reserved ninety minutes. The chair suspected they would need less.</p>
+<p>She opened her folded sheet and read the first question.</p>
+<p class="continue"><a href="./?ch=17">Continue reading →</a></p>
 </section>
-<section id="ch-20">
-<h2><a href="./?ch=20">Chapter 20: The Transition and Its Failure Modes</a></h2>
+<section id="ch-18">
+<h2><a href="./?ch=18">Chapter 18: The Transition and Its Failure Modes</a></h2>
 <p>Each executive role is affected differently by the structural corrections described in the preceding chapters. What follows describes, for each, what stops being governable by narrative, what new artefacts become decisive, what to stop rewarding, and what to authorise. First: the structural shift that applies to all of them, and the transition itself.</p>
 <p>Most executives reached their position by operating at distance from mechanism: synthesising across functions, weighing trade-offs, allocating capital without holding every operational detail. This distance is how leadership scales. Over time, it becomes identity.</p>
 <p>When processes become explicit and contracts become binding, this pattern changes. Machine-readable artefacts shorten the path between commitment and consequence. The executive who is comfortable experiences it as increased control. The executive who is not experiences it as the loss of interpretive insulation: the capacity to reframe outcomes, diffuse responsibility, and manage contradiction through narrative rather than mechanism. Boards are not always the victims of this resistance. In some organisations, the board is a co-participant: preferring the smoothed narrative because interrogating it would require confronting structural problems the board itself has tolerated.</p>
-<p class="continue"><a href="./?ch=20">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=18">Continue reading →</a></p>
 </section>
-<section id="ch-21">
-<h2><a href="./?ch=21">Chapter 21: What the Sceptical Board Member Asks</a></h2>
+<section id="ch-19">
+<h2><a href="./?ch=19">Chapter 19: What the Sceptical Board Member Asks</a></h2>
 <p>The arguments in this book will face predictable objections. Addressing them directly is more useful than pretending they do not exist.</p>
 <p>“The AI technology is not mature enough.”</p>
 <p>This objection conflates the technology with the artefacts. The technology required for the core synthesis, comparing process definitions against code, detecting contract violations, producing reconciliation reports, is available today as commodity capability. Current large language models can read structured process definitions alongside code and identify where implementation diverges from intent. Checking whether contracts are being honoured is straightforward software, not AI.</p>
-<p class="continue"><a href="./?ch=21">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=19">Continue reading →</a></p>
 </section>
-<section id="ch-22">
-<h2><a href="./?ch=22">Conclusion</a></h2>
+<section id="ch-20">
+<h2><a href="./?ch=20">Conclusion</a></h2>
 <p>\addtocontentstoc\protect\addvspace0.5em</p>
 <p>This book has described a structural problem and a structural solution. The problem is that most large organisations cannot describe themselves clearly enough for AI to produce anything other than faster narrative. The solution is to make the organisation legible: explicit processes, owned boundaries, versioned contracts, and structured artefacts that can be tested against the systems that run the business.</p>
 <p>Chapter 2 described the fork: AI as a writer of narrative, or AI as a reader of systems. The two are contradictory. An organisation that uses AI to generate a board pack claiming a migration is 70\</p>
@@ -388,12 +374,12 @@
 <p>That preference is discoverable. Reconciliation outputs are records. In any subsequent regulatory inquiry, acquisition due diligence, or internal audit, the question is no longer whether the organisation could have verified its own representations. The capability exists. It is available at negligible cost. The question becomes why it was not used, and the board’s answer is now part of the governance record.</p>
 <p>The capacity for structural honesty now exists, and it does not require new technology, a transformation programme, or external validation. It requires a decision by the people with authority over the organisation’s structure. The writer path deepens with every governance cycle. The people who carry the context to make processes explicit are leaving, and each departure destroys knowledge that was never captured in any artefact. Each quarter of informed inaction extends a record the board will eventually be asked to explain. The structural preconditions described in this book take years to build and cannot be purchased when the need becomes urgent. I have worked inside organisations on both sides of this choice, and the difference compounds faster than any board expects. What remains, after the argument is made and the evidence is assembled, is whether the people who govern these organisations are willing to see what is already there, and to act on it before the people who could have helped them are gone.</p>
 </section>
-<section id="ch-23">
-<h2><a href="./?ch=23">About the Author</a></h2>
+<section id="ch-21">
+<h2><a href="./?ch=21">About the Author</a></h2>
 <p>Adrian McPhee has spent more than twenty years as an engineer, architect, and CTO inside software-dependent corporates across fintech, retail, and mobility, including a unicorn fintech, a leading ecommerce marketplace, and a multinational with €10 billion turnover. He has led organisations of up to a thousand people, delivered global platforms, and redirected more than €200M of product and technology investment. He watched the same structural dysfunctions repeat across every organisation he entered, and eventually learned to dismantle them.</p>
 <p>As a founder and entrepreneur, he also designs and delivers platforms from scratch. It is the same discipline this book argues for: explicit structure, reconciled with reality, that a machine can actually read.</p>
 <p>He now works with leadership teams to diagnose and dismantle the patterns described in this book. The operational perspective on these patterns, how processes become implicit, how architecture becomes avoidant, and what changes when they are made explicit, is examined in Illusions of Work, which is written for the CTO and engineering leadership audience that must execute the structural changes this book authorises.</p>
-<p class="continue"><a href="./?ch=23">Continue reading →</a></p>
+<p class="continue"><a href="./?ch=21">Continue reading →</a></p>
 </section>
 
   <div class="cta">
