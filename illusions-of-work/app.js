@@ -541,11 +541,7 @@
     url.search = "";
     url.hash = "";
     if (ch) {
-      if (ch.chapterNum) {
-        url.searchParams.set("ch", ch.chapterNum);
-      } else {
-        url.hash = slugify(ch.title);
-      }
+      url.hash = slugify(ch.title);
       if (pos > chapterOffsets[ch.id] + 5) {
         url.searchParams.set("w", pos);
       }
