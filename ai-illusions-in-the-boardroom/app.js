@@ -188,7 +188,7 @@
     }
 
     // First visit: show title card instead of Author's Note
-    var hasURL = window.location.search.indexOf("ch=") >= 0 || window.location.search.indexOf("w=") >= 0;
+    var hasURL = window.location.hash.length > 1 || window.location.search.indexOf("ch=") >= 0 || window.location.search.indexOf("w=") >= 0;
     if (pos === 0 && !hasURL) {
       titleCard = true;
       showTitleCard();
@@ -498,13 +498,35 @@
   function closeTOC() { tocOverlay.classList.add("hidden"); }
 
   // --- URL deep linking ---
-  function applyURLParams() {
-    var params = new URLSearchParams(window.location.search);
-    if (params.has("ch")) {
-      var chIdx = parseInt(params.get("ch"), 10);
-      if (chIdx >= 0 && chIdx < chapters.length) {
-        pos = chapterOffsets[chIdx];
+  function resolveChapter(value) {
+    // Try slug match first
+    for (var i = 0; i < chapters.length; i++) {
+      if (chapters[i].slug === value) return i;
+    }
+    // Try chapterNum match (human-visible number)
+    var num = parseInt(value, 10);
+    if (!isNaN(num)) {
+      for (var i = 0; i < chapters.length; i++) {
+        if (chapters[i].chapterNum === num) return i;
       }
+      // Fall back to array index (backward compat)
+      if (num >= 0 && num < chapters.length) return num;
+    }
+    return -1;
+  }
+
+  function applyURLParams() {
+    // Hash-based routing: #slug
+    var hash = window.location.hash.replace(/^#/, "");
+    if (hash) {
+      var idx = resolveChapter(hash);
+      if (idx >= 0) pos = chapterOffsets[idx];
+    }
+    // Legacy query param support: ?ch=N
+    var params = new URLSearchParams(window.location.search);
+    if (!hash && params.has("ch")) {
+      var idx = resolveChapter(params.get("ch"));
+      if (idx >= 0) pos = chapterOffsets[idx];
     }
     if (params.has("w")) {
       var wIdx = parseInt(params.get("w"), 10);
@@ -518,11 +540,9 @@
     var ch = currentChapter();
     var url = new URL(window.location.href);
     url.search = "";
-    if (ch) {
-      url.searchParams.set("ch", ch.id);
-      if (pos > chapterOffsets[ch.id] + 5) {
-        url.searchParams.set("w", pos);
-      }
+    url.hash = "";
+    if (ch && ch.slug) {
+      url.hash = ch.slug;
     }
     return url.toString();
   }

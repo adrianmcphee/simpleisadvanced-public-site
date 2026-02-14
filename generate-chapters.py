@@ -78,9 +78,9 @@ def generate_chapter_html(book_meta, chapter, paragraphs, prev_ch, next_ch, book
     display_title = f"Chapter {ch_num}: {title}" if ch_num else title
     page_title = html.escape(f"{display_title} — {book_title} by {author}")
     desc = make_description(paragraphs)
-    ch_slug = slugify(title)
+    ch_slug = chapter.get("slug") or slugify(title)
     canonical = f"{DOMAIN}/{book_slug}/chapters/{ch_slug}/"
-    reader_url = f"/{book_slug}/?ch={ch_id}"
+    reader_url = f"/{book_slug}/#{ch_slug}"
     og_image = f"{DOMAIN}/{book_slug}/og-image.png"
 
     excerpt_html = "\n".join(f"<p>{html.escape(p)}</p>" for p in paragraphs)
@@ -218,7 +218,7 @@ def main():
             prev_ch = chapters[i - 1] if i > 0 else None
             next_ch = chapters[i + 1] if i < len(chapters) - 1 else None
 
-            ch_slug = slugify(ch["title"])
+            ch_slug = ch.get("slug") or slugify(ch["title"])
             ch_dir = os.path.join(chapters_dir, ch_slug)
             os.makedirs(ch_dir, exist_ok=True)
 
