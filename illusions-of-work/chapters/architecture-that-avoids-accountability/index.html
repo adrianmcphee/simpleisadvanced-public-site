@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 5: Architecture That Avoids Accountability — Illusions of Work by Adrian McPhee</title>
+  <meta name="description" content="The architecture review board meets every second Thursday. A team presents a proposal to extract a pricing calculation from a monolith into a dedicated...">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/illusions-of-work/chapters/architecture-that-avoids-accountability/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Chapter 5: Architecture That Avoids Accountability — Illusions of Work by Adrian McPhee">
+  <meta property="og:description" content="The architecture review board meets every second Thursday. A team presents a proposal to extract a pricing calculation from a monolith into a dedicated...">
+  <meta property="og:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <meta property="og:url" content="https://simpleisadvanced.com/illusions-of-work/chapters/architecture-that-avoids-accountability/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chapter 5: Architecture That Avoids Accountability — Illusions of Work by Adrian McPhee">
+  <meta name="twitter:description" content="The architecture review board meets every second Thursday. A team presents a proposal to extract a pricing calculation from a monolith into a dedicated...">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "name": "Chapter 5: Architecture That Avoids Accountability",
+    "isPartOf": {
+        "@type": "Book",
+        "name": "Illusions of Work",
+        "author": {
+            "@type": "Person",
+            "name": "Adrian McPhee",
+            "url": "https://www.linkedin.com/in/adrianmcphee/"
+        },
+        "url": "https://simpleisadvanced.com/illusions-of-work/"
+    },
+    "url": "https://simpleisadvanced.com/illusions-of-work/chapters/architecture-that-avoids-accountability/",
+    "position": 6
+}
+  </script>
+  <script async src="https://plausible.io/js/pa-0ytLBSTECJdL8sUA_8nHO.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .book-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .book-link:hover { color: #222; }
+    p { margin: 0.8em 0; }
+    .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
+    .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
+            border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
+    .cta a { display: inline-block; padding: 0.7em 2em; background: #222; color: #fff;
+             text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9em; }
+    .cta a:hover { background: #444; }
+    .cta p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
+  <p class="part">What the Machines See</p>
+  <h1>Chapter 5: Architecture That Avoids Accountability</h1>
+
+  <p>The architecture review board meets every second Thursday. A team presents a proposal to extract a pricing calculation from a monolith into a dedicated service. The proposal is well-structured. The board evaluates it against a reference model last updated eight months ago. Forty-five minutes are spent debating which bounded context the service belongs in. In the codebase, there are sixty-three services whose boundaries follow a team structure from a reorganisation that predates the reference model by two years. The reference model describes nothing real.</p>
+<p>The board grants conditional approval. The team lead nods. She will name the service to match the model, update the Wiki, and build exactly what she originally proposed. The board will not check. It never does. In software-dependent corporates, architecture is often presented as a source of control. Diagrams promise clarity. Reference models suggest foresight. In practice, much of this architectural activity exists to avoid accountability.</p>
+<p>Most enterprise architects are deeply skilled, analytically rigorous, and genuinely frustrated by the gap between what they design and what the organisation builds. Architecture, in these organisations, is asked to perform a task it cannot fulfil: to impose coherence without changing the underlying structure of responsibility.</p>
+<p>When the business is separated from engineering, architecture becomes a compensatory discipline. It is expected to reconcile abstract intent with concrete systems without having authority over either. It is asked to produce order in a system whose disorder is organisational, not technical. The result is an architecture that looks deliberate while encoding avoidance.</p>
+  <p class="ellipsis">...</p>
+
+  <div class="cta">
+    <p>Continue reading in the interactive reader</p>
+    <a href="/illusions-of-work/#architecture-that-avoids-accountability">Read this chapter</a>
+  </div>
+
+  <div class="nav"><a href="../fake-products-and-the-buffer-class/">&larr; Chapter 4</a><a href="../microservices-without-autonomy/">Chapter 6 &rarr;</a></div>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+</body>
+</html>
