@@ -509,9 +509,12 @@
   function applyURLParams() {
     var params = new URLSearchParams(window.location.search);
     if (params.has("ch")) {
-      var chIdx = parseInt(params.get("ch"), 10);
-      if (chIdx >= 0 && chIdx < chapters.length) {
-        pos = chapterOffsets[chIdx];
+      var chNum = parseInt(params.get("ch"), 10);
+      for (var i = 0; i < chapters.length; i++) {
+        if (chapters[i].chapterNum === chNum) {
+          pos = chapterOffsets[i];
+          break;
+        }
       }
     }
     if (params.has("w")) {
@@ -522,7 +525,7 @@
     }
     // Handle hash fragment deep links (e.g. #the-transition-and-its-failure-modes)
     var hash = window.location.hash.replace(/^#/, "");
-    if (hash) {
+    if (hash && !params.has("ch") && !params.has("w")) {
       for (var i = 0; i < chapters.length; i++) {
         if (slugify(chapters[i].title) === hash) {
           pos = chapterOffsets[i];
@@ -536,8 +539,13 @@
     var ch = currentChapter();
     var url = new URL(window.location.href);
     url.search = "";
+    url.hash = "";
     if (ch) {
-      url.searchParams.set("ch", ch.id);
+      if (ch.chapterNum) {
+        url.searchParams.set("ch", ch.chapterNum);
+      } else {
+        url.hash = slugify(ch.title);
+      }
       if (pos > chapterOffsets[ch.id] + 5) {
         url.searchParams.set("w", pos);
       }
