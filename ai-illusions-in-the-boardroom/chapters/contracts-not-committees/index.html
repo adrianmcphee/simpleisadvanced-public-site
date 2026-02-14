@@ -78,6 +78,7 @@
   <p>The payments unit&#x27;s contract requires consuming units to submit payment requests with fully validated customer and account data. This is structurally correct: the payments process should not validate data it does not own.</p>
 <p>The consuming units experience this differently. Motor origination finds that validating account data at point of sale adds delay that customers feel. Claims discovers that claimants who have changed banks require a re-verification step that its process definition does not accommodate. Both units face the same incentive: minimise their own validation costs and let the payments unit reject what it cannot process.</p>
 <p>The payments unit tightens its contract: stricter formats, more required fields, faster rejection of anything that does not comply. The consuming units add workarounds and automatic retries to handle the rejections. Within six months, the interaction has produced coordination overhead encoded in contracts rather than in meetings, but coordination overhead nonetheless. Payment failures increase. Resolution times lengthen.</p>
+<p>The fix is structural. The three units redesign the contract together. Validation responsibilities are split: each unit validates what it owns. A shared checking step, published by the payments unit, allows other units to verify payment-specific fields before submitting. The arms race stops. The customer experience recovers within a quarter.</p>
   <p class="ellipsis">...</p>
 
   <div class="cta">

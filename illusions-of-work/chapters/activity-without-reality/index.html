@@ -78,6 +78,7 @@
   <p>The migration was supposed to take one sprint. It took eleven weeks.</p>
 <p>A B2B SaaS company with 800 employees, roughly 300 of them in engineering, had committed in its annual roadmap to “modernising the platform.” The commitment originated in a strategy offsite. No engineer attended the offsite. The phrase “modernise the platform” appeared on slide nine of a forty-slide deck, beneath a pillar labelled “Operational Excellence.”</p>
 <p>By the time the phrase reached the engineering organisation, it had been interpreted as a migration from an on-premise message broker to a managed cloud service. The rationale was never written down in a form that connected it to a customer outcome. When a team lead asked what problem the migration solved for customers, he was told it was “a platform concern” and that the business case had already been approved.</p>
+<p>Two teams were assigned. They spent the first three weeks discovering that the existing message broker was entangled with a legacy billing reconciliation service that no one had documented. The reconciliation service used message headers in ways that the cloud service did not support. A third team was pulled in to build an adapter. The adapter required access to a shared schema that a fourth team nominally owned but had not changed in two years.</p>
   <p class="ellipsis">...</p>
 
   <div class="cta">

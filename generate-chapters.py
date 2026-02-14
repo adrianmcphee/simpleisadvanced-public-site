@@ -211,7 +211,7 @@ def main():
                 continue
             with open(ch_file) as f:
                 words = json.load(f)
-            paragraphs = words_to_paragraphs(words, max_paragraphs=3)
+            paragraphs = words_to_paragraphs(words, max_paragraphs=4)
             if not paragraphs:
                 continue
 

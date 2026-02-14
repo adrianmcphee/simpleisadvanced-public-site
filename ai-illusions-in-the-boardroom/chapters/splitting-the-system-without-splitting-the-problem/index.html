@@ -78,6 +78,7 @@
   <p>A logistics company needs to add a new delivery status, “held at customs,” to the tracking flow visible to customers. The status already exists in the customs clearance system. It needs to propagate to the shipment tracking service, which feeds the customer-facing portal.</p>
 <p>In a system with real boundaries and owned contracts, this is two days of work. One team adds the status to its published event contract. The consuming team reads the new event and renders it in the portal. Both teams can do this independently, on their own release schedules, with a versioned contract governing the interaction.</p>
 <p>In this organisation, none of that applies.</p>
+<p>The shipment tracking service does not own its own data model. It reads from a shared database maintained by a “data platform” team. The data platform team has a change request process that requires approval from three service owners, because any change to the database structure affects all consumers. Team A submits a change request. The data platform team determines that the new status value conflicts with a field used by the returns service. They open a discussion with Team B (returns). Team B is mid-cycle on a different priority and cannot engage for two weeks.</p>
   <p class="ellipsis">...</p>
 
   <div class="cta">
