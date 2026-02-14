@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
-"""Generate chapter landing pages for SEO.
-
-Each chapter gets a lightweight HTML page with:
-- 2-3 paragraph excerpt
-- Proper meta tags and JSON-LD
-- CTA to the interactive reader
-- Prev/next navigation
-"""
+"""Generate chapter landing pages for SEO."""
 
 import json
 import os
@@ -30,43 +23,36 @@ def slugify(title):
     return s.strip('-')
 
 
+def fix_hyphens(text):
+    """Fix broken hyphens from word-by-word format: 'software- dependent' -> 'software-dependent'."""
+    return re.sub(r'(\w)- (\w)', r'\1-\2', text)
+
+
 def words_to_paragraphs(words, max_paragraphs=3):
-    """Convert word array to list of paragraph strings."""
+    """Convert word array to list of paragraph strings.
+
+    p:heading marks the last word of a heading block.
+    p:paragraph marks the last word of a paragraph block.
+    """
     paragraphs = []
     current = []
-    in_heading = False
 
     for obj in words:
         w = obj.get("w", "")
         p = obj.get("p", "")
 
-        if p == "heading":
-            # If we've accumulated words, flush them
-            if current:
-                text = " ".join(current).strip()
-                if text:
-                    paragraphs.append(text)
-                current = []
-                if len(paragraphs) >= max_paragraphs:
-                    break
-            in_heading = True
-            continue
-
-        in_heading = False
         current.append(w)
 
-        if p == "paragraph":
-            text = " ".join(current).strip()
+        if p == "heading":
+            # Everything accumulated is heading text — discard
+            current = []
+        elif p == "paragraph":
+            text = fix_hyphens(" ".join(current).strip())
             if text:
                 paragraphs.append(text)
             current = []
             if len(paragraphs) >= max_paragraphs:
                 break
-
-    if current and len(paragraphs) < max_paragraphs:
-        text = " ".join(current).strip()
-        if text:
-            paragraphs.append(text)
 
     return paragraphs[:max_paragraphs]
 
@@ -75,7 +61,6 @@ def make_description(paragraphs, max_len=155):
     if not paragraphs:
         return ""
     text = re.sub(r'\s+', ' ', paragraphs[0]).strip()
-    # Escape HTML entities for meta tags
     text = html.escape(text, quote=True)
     if len(text) > max_len:
         text = text[:max_len - 3].rsplit(' ', 1)[0] + "..."
@@ -90,11 +75,7 @@ def generate_chapter_html(book_meta, chapter, paragraphs, prev_ch, next_ch, book
     author = book_meta["author"]
     ch_id = chapter["id"]
 
-    if ch_num:
-        display_title = f"Chapter {ch_num}: {title}"
-    else:
-        display_title = title
-
+    display_title = f"Chapter {ch_num}: {title}" if ch_num else title
     page_title = html.escape(f"{display_title} — {book_title} by {author}")
     desc = make_description(paragraphs)
     ch_slug = slugify(title)
@@ -103,10 +84,8 @@ def generate_chapter_html(book_meta, chapter, paragraphs, prev_ch, next_ch, book
     og_image = f"{DOMAIN}/{book_slug}/og-image.png"
 
     excerpt_html = "\n".join(f"<p>{html.escape(p)}</p>" for p in paragraphs)
-
     part_html = f'\n  <p class="part">{html.escape(part)}</p>' if part else ''
 
-    # Navigation
     nav_links = []
     if prev_ch:
         ps = slugify(prev_ch["title"])
@@ -114,15 +93,12 @@ def generate_chapter_html(book_meta, chapter, paragraphs, prev_ch, next_ch, book
         nav_links.append(f'<a href="../{ps}/">&larr; {html.escape(pl)}</a>')
     else:
         nav_links.append('<span></span>')
-
     if next_ch:
         ns = slugify(next_ch["title"])
         nl = f'Chapter {next_ch["chapterNum"]}' if next_ch.get("chapterNum") else next_ch["title"]
         nav_links.append(f'<a href="../{ns}/">{html.escape(nl)} &rarr;</a>')
     else:
         nav_links.append('<span></span>')
-
-    nav_html = f'<div class="nav">{nav_links[0]}{nav_links[1]}</div>'
 
     json_ld = json.dumps({
         "@context": "https://schema.org",
@@ -131,11 +107,7 @@ def generate_chapter_html(book_meta, chapter, paragraphs, prev_ch, next_ch, book
         "isPartOf": {
             "@type": "Book",
             "name": book_title,
-            "author": {
-                "@type": "Person",
-                "name": author,
-                "url": "https://www.linkedin.com/in/adrianmcphee/"
-            },
+            "author": {"@type": "Person", "name": author, "url": "https://www.linkedin.com/in/adrianmcphee/"},
             "url": f"{DOMAIN}/{book_slug}/"
         },
         "url": canonical,
@@ -210,7 +182,7 @@ def generate_chapter_html(book_meta, chapter, paragraphs, prev_ch, next_ch, book
     <a href="{reader_url}">Read this chapter</a>
   </div>
 
-  {nav_html}
+  <div class="nav">{nav_links[0]}{nav_links[1]}</div>
 
   <footer>
     <p>&copy; {html.escape(author)} 2026 &middot;
@@ -221,17 +193,7 @@ def generate_chapter_html(book_meta, chapter, paragraphs, prev_ch, next_ch, book
 """
 
 
-def generate_sitemap_entries(all_chapters):
-    """Return list of (url, priority) tuples for sitemap."""
-    entries = []
-    for url in all_chapters:
-        entries.append((url, "0.7"))
-    return entries
-
-
 def main():
-    all_chapter_urls = []
-
     for book in BOOKS:
         slug = book["slug"]
         data_dir = os.path.join(SITE_DIR, slug, "data")
@@ -240,51 +202,32 @@ def main():
         with open(os.path.join(data_dir, "meta.json")) as f:
             meta = json.load(f)
 
-        chapters = meta["chapters"]
-
-        # Skip "About the Author" - too short, just a bio
-        chapters_to_generate = [c for c in chapters if c["title"] != "About the Author"]
-
+        chapters = [c for c in meta["chapters"] if c["title"] != "About the Author"]
         os.makedirs(chapters_dir, exist_ok=True)
 
-        for i, ch in enumerate(chapters_to_generate):
+        for i, ch in enumerate(chapters):
             ch_file = os.path.join(data_dir, f"ch{ch['id']:02d}.json")
             if not os.path.exists(ch_file):
-                print(f"  Skipping {ch['title']}: no data file")
                 continue
-
             with open(ch_file) as f:
                 words = json.load(f)
-
             paragraphs = words_to_paragraphs(words, max_paragraphs=3)
             if not paragraphs:
-                print(f"  Skipping {ch['title']}: no paragraphs extracted")
                 continue
 
-            prev_ch = chapters_to_generate[i - 1] if i > 0 else None
-            next_ch = chapters_to_generate[i + 1] if i < len(chapters_to_generate) - 1 else None
+            prev_ch = chapters[i - 1] if i > 0 else None
+            next_ch = chapters[i + 1] if i < len(chapters) - 1 else None
 
             ch_slug = slugify(ch["title"])
             ch_dir = os.path.join(chapters_dir, ch_slug)
             os.makedirs(ch_dir, exist_ok=True)
 
-            html_content = generate_chapter_html(meta, ch, paragraphs, prev_ch, next_ch, slug)
-            out_path = os.path.join(ch_dir, "index.html")
-            with open(out_path, "w") as f:
-                f.write(html_content)
+            content = generate_chapter_html(meta, ch, paragraphs, prev_ch, next_ch, slug)
+            with open(os.path.join(ch_dir, "index.html"), "w") as f:
+                f.write(content)
+            print(f"  {slug}/chapters/{ch_slug}/")
 
-            url = f"{DOMAIN}/{slug}/chapters/{ch_slug}/"
-            all_chapter_urls.append(url)
-            print(f"  Generated: {slug}/chapters/{ch_slug}/")
-
-    # Write chapter URLs to a file for sitemap integration
-    urls_file = os.path.join(SITE_DIR, ".chapter-urls.txt")
-    with open(urls_file, "w") as f:
-        for url in all_chapter_urls:
-            f.write(url + "\n")
-
-    print(f"\nGenerated {len(all_chapter_urls)} chapter pages.")
-    print(f"Chapter URLs written to .chapter-urls.txt")
+    print("Done.")
 
 
 if __name__ == "__main__":
