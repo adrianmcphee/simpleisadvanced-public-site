@@ -188,7 +188,7 @@
     }
 
     // First visit: show title card instead of Author's Note
-    var hasURL = window.location.search.indexOf("ch=") >= 0 || window.location.search.indexOf("w=") >= 0;
+    var hasURL = window.location.search.indexOf("ch=") >= 0 || window.location.search.indexOf("w=") >= 0 || window.location.hash.length > 1;
     if (pos === 0 && !hasURL) {
       titleCard = true;
       showTitleCard();
@@ -498,6 +498,14 @@
   function closeTOC() { tocOverlay.classList.add("hidden"); }
 
   // --- URL deep linking ---
+  function slugify(title) {
+    return title.toLowerCase()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/[\s_]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+
   function applyURLParams() {
     var params = new URLSearchParams(window.location.search);
     if (params.has("ch")) {
@@ -510,6 +518,16 @@
       var wIdx = parseInt(params.get("w"), 10);
       if (wIdx >= 0 && wIdx < totalWords) {
         pos = wIdx;
+      }
+    }
+    // Handle hash fragment deep links (e.g. #the-transition-and-its-failure-modes)
+    var hash = window.location.hash.replace(/^#/, "");
+    if (hash) {
+      for (var i = 0; i < chapters.length; i++) {
+        if (slugify(chapters[i].title) === hash) {
+          pos = chapterOffsets[i];
+          break;
+        }
       }
     }
   }
