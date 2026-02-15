@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /illusions-of-work/data/
-Disallow: /ai-illusions-in-the-boardroom/data/
+Disallow: /illusions-in-the-boardroom/data/
+Disallow: /ai-illusions-in-the-boardroom/
 
 Sitemap: https://simpleisadvanced.com/sitemap.xml

@@ -11,7 +11,7 @@ DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = [
     {"slug": "illusions-of-work"},
-    {"slug": "ai-illusions-in-the-boardroom"},
+    {"slug": "illusions-in-the-boardroom"},
 ]
 
 
