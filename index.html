@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple is Advanced — Books by Adrian McPhee</title>
+  <meta name="description" content="Two companion books by Adrian McPhee on AI and structural honesty in software-dependent organisations. Illusions in the Boardroom (for executives and boards) and Illusions of Work (for engineers and CTOs). Why AI forces the gap between narrative and reality to become measurable, and what governance structures must change. Read online for free.">
+  <meta name="author" content="Adrian McPhee">
+  <link rel="canonical" href="https://simpleisadvanced.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Simple is Advanced — Books by Adrian McPhee">
+  <meta property="og:description" content="Two companion books on AI and structural honesty in software-dependent organisations. Illusions in the Boardroom (for executives and boards) and Illusions of Work (for engineers and CTOs). When machines can read what you say alongside what your systems do, the gap between narrative and reality becomes measurable.">
+  <meta property="og:image" content="https://simpleisadvanced.com/illusions-in-the-boardroom/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://simpleisadvanced.com/">
+  <meta property="og:site_name" content="Simple is Advanced">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Simple is Advanced — Books by Adrian McPhee">
+  <meta name="twitter:description" content="Two companion books on AI and structural honesty in software-dependent organisations. Illusions in the Boardroom (for executives and boards) and Illusions of Work (for engineers and CTOs). Read online for free.">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/illusions-in-the-boardroom/og-image.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Simple is Advanced",
+        "url": "https://simpleisadvanced.com/",
+        "description": "Books by Adrian McPhee on AI and structural honesty in software-dependent organisations.",
+        "author": { "@id": "#author" }
+      },
+      {
+        "@type": "Person",
+        "@id": "#author",
+        "name": "Adrian McPhee",
+        "url": "https://www.linkedin.com/in/adrianmcphee/",
+        "jobTitle": "Author",
+        "sameAs": ["https://www.linkedin.com/in/adrianmcphee/"]
+      },
+      {
+        "@type": "Book",
+        "name": "Illusions in the Boardroom",
+        "subtitle": "How AI Forces Structural Honesty",
+        "author": { "@id": "#author" },
+        "description": "Why most large organisations cannot use AI for anything other than faster narrative, and what structural changes make reconciliation possible. For executives, board members, and senior leaders.",
+        "url": "https://simpleisadvanced.com/illusions-in-the-boardroom/",
+        "image": "https://simpleisadvanced.com/illusions-in-the-boardroom/og-image.png",
+        "inLanguage": "en",
+        "genre": ["Business", "Technology", "Corporate Governance"],
+        "bookFormat": "https://schema.org/EBook",
+        "publisher": { "@type": "Organization", "name": "Simple is Advanced" }
+      },
+      {
+        "@type": "Book",
+        "name": "Illusions of Work",
+        "subtitle": "In the Age of AI, Reality Is No Longer Optional",
+        "author": { "@id": "#author" },
+        "description": "Inside every software-dependent corporate, a small number of people know how the systems actually work. AI does not fix organisations. It changes the economics of clarity. For engineers, architects, and CTOs.",
+        "url": "https://simpleisadvanced.com/illusions-of-work/",
+        "image": "https://simpleisadvanced.com/illusions-of-work/og-image.png",
+        "inLanguage": "en",
+        "genre": ["Business", "Technology", "Software Engineering"],
+        "bookFormat": "https://schema.org/EBook",
+        "publisher": { "@type": "Organization", "name": "Simple is Advanced" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-0ytLBSTECJdL8sUA_8nHO.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #fafafa;
+      color: #71717a;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .heading {
+      margin-bottom: 3rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #18181b;
+      letter-spacing: -0.03em;
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .book {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: background 0.3s ease;
+    }
+
+    .book:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .book-cover {
+      width: min(240px, 100%);
+      aspect-ratio: 2 / 3;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.10),
+        0 0 0 1px rgba(0, 0, 0, 0.04);
+      margin-bottom: 1.5rem;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .book:hover .book-cover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.04);
+    }
+
+    .book-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #18181b;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .book-subtitle {
+      font-size: 0.75rem;
+      color: #71717a;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .book-audience {
+      font-size: 0.7rem;
+      color: #a1a1aa;
+      letter-spacing: 0.01em;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    .book-cta {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(4px);
+    }
+
+    .book:hover .book-cta {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .book-iow .book-cta {
+      color: #ef4444;
+      border: 1px solid #ef444433;
+    }
+
+    .book-iow:hover .book-cta {
+      background: #ef444410;
+      border-color: #ef4444;
+    }
+
+    .book-ai .book-cta {
+      color: #115e59;
+      border: 1px solid #115e5933;
+    }
+
+    .book-ai:hover .book-cta {
+      background: #115e5910;
+      border-color: #115e59;
+    }
+
+    @media (max-width: 540px) {
+      .books {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .book-cover {
+        width: min(200px, 70vw);
+      }
+
+      .book-cta {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="heading">Select your book</h1>
+
+  <div class="books">
+    <a class="book book-ai" href="/illusions-in-the-boardroom/">
+      <img class="book-cover" src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom">
+      <div class="book-title">Illusions in the Boardroom</div>
+      <div class="book-subtitle">How AI Forces Structural Honesty</div>
+      <div class="book-audience">For executives, board members, and senior leaders</div>
+      <span class="book-cta">Read now</span>
+    </a>
+
+    <a class="book book-iow" href="/illusions-of-work/">
+      <img class="book-cover" src="/illusions-of-work/cover.png" alt="Illusions of Work">
+      <div class="book-title">Illusions of Work</div>
+      <div class="book-subtitle">In the Age of AI, Reality Is No Longer Optional</div>
+      <div class="book-audience">For engineers, architects, and CTOs</div>
+      <span class="book-cta">Read now</span>
+    </a>
+  </div>
+
+
+</body>
+</html>
