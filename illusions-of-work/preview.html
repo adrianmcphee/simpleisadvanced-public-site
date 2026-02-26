@@ -291,28 +291,42 @@
 <p class="continue"><a href="./#the-first-unit">Continue reading →</a></p>
 </section>
 <section id="ch-19">
-<h2><a href="./#from-pretence-to-autonomy">Chapter 18: From Pretence to Autonomy</a></h2>
+<h2><a href="./#the-authority-to-decompose">Chapter 18: The Authority to Decompose</a></h2>
+<p>The CTO of a Nordic insurer had the first autonomous unit running for four months. Claims resolution time was down 31\</p>
+<p>She opened the budget request for the payments unit. The decomposition work required EUR 1.4 million over six months: untangling the shared database that five product lines wrote to directly, establishing contract boundaries with three adjacent services, staffing the unit with a domain expert and two engineers who understood the payments regulatory landscape. The CFO’s question was reasonable: which business unit’s P\&amp;L should absorb the cost? Payments was shared across four product lines. No single product owner would fund decomposition that benefited the other three. The investment that would make the payments unit possible did not fit inside any existing budget line, because the budget model priced departments, not processes, and the payments process did not belong to any department.</p>
+<p>She escalated. The CEO agreed the investment was necessary. The CFO agreed in principle. The process to secure cross-business-unit funding took eleven weeks. By the time the budget was approved, the senior engineer she had identified for the payments unit lead had accepted an offer elsewhere. He had been carrying twelve years of payments domain knowledge that the organisation had never asked him to write down. The window for the second unit moved from Q2 to Q4. The claims unit continued to operate, producing evidence that made the surrounding dysfunction visible. The surrounding dysfunction continued to operate, producing evidence that it could outlast any change that required its own budget model to fund it.</p>
+<p class="continue"><a href="./#the-authority-to-decompose">Continue reading →</a></p>
+</section>
+<section id="ch-20">
+<h2><a href="./#pull-not-push">Chapter 19: Pull, Not Push</a></h2>
+<p>The CISO of a European retail bank had rolled out a container scanning tool across all development teams eighteen months earlier. The tool was mandated by information security policy, integrated into every CI pipeline, and reported weekly compliance metrics to the executive team. Compliance stood at 94\</p>
+<p>An internal audit of the payments team, which was six months into operating as an autonomous unit, revealed something the compliance dashboard could not show: the team had integrated the scanner but configured it to auto-approve all findings below critical severity, because the default thresholds produced four hundred false positives per week and the team had no relationship with the security function through which to resolve them. The scanner ran, the pipeline was green, and the security posture was unchanged.</p>
+<p>The motor insurance unit, which had been autonomous for nine months, had a different relationship with the same capability. The unit owned its process risk, was audited against its policy commitments, and had identified that its payment card handling required specific security controls the unit lacked the expertise to build. The unit lead had contacted the security team, negotiated a service agreement, and integrated the scanning tool with custom thresholds tuned to the unit’s actual risk profile. The same tool, consumed through demand rather than mandate, was producing genuine security improvement rather than dashboard compliance.</p>
+<p class="continue"><a href="./#pull-not-push">Continue reading →</a></p>
+</section>
+<section id="ch-21">
+<h2><a href="./#from-pretence-to-autonomy">Chapter 20: From Pretence to Autonomy</a></h2>
 <p>The claims management unit ran for fourteen months. For the first eight, it was the CTO’s best argument: resolution times down thirty-one percent, customer satisfaction from 3.2 to 4.1, the gap between how claims were supposed to work and how they actually worked narrower than the organisation had ever achieved. Three other teams had asked how to adopt the model.</p>
 <p>Then the CTO was promoted to a group role. His replacement came from the consulting division, capable and respected but focused on other priorities, with no particular investment in the autonomous unit model.</p>
 <p>The encroachments arrived individually, each framed as procedural: line-item visibility, standard performance reviews, quarterly priority presentations. Without the sponsor’s backing, each charter reference produced a conversation rather than a resolution. By month eleven, the unit lead was spending more time defending the model than operating it.</p>
 <p class="continue"><a href="./#from-pretence-to-autonomy">Continue reading →</a></p>
 </section>
-<section id="ch-20">
-<h2><a href="./#feeding-ai-healing-the-organisation">Chapter 19: Feeding AI, Healing the Organisation</a></h2>
+<section id="ch-22">
+<h2><a href="./#feeding-ai-healing-the-organisation">Chapter 21: Feeding AI, Healing the Organisation</a></h2>
 <p>Autonomous business units remove the need for coordination as governance, but they do not remove the need for shared understanding. What changes is the medium: coherence is maintained not by heroic individuals or social negotiation, but by AI systems that read versioned artefacts continuously and produce synthesis on demand. This chapter describes the artefacts, the synthesis layer, and the controls that connect them.</p>
 <p>In an organisation built around autonomous business units, four categories of artefact form the substrate of coherence. Each must be precise enough to be read by a machine. Each must be versioned. Each must be owned.</p>
 <p>Versioned process definitions. Each unit maintains a structured description of the business process it owns. This description specifies states, transitions, decision points, invariants, and failure modes. It is precise enough to be tested against the system’s actual behaviour. It is versioned, so that changes are tracked and previous states can be compared.</p>
 <p class="continue"><a href="./#feeding-ai-healing-the-organisation">Continue reading →</a></p>
 </section>
 <h2 class="part">What It Looks Like</h2>
-<section id="ch-21">
-<h2><a href="./#what-this-looks-like">Chapter 20: What This Looks Like</a></h2>
+<section id="ch-23">
+<h2><a href="./#what-this-looks-like">Chapter 22: What This Looks Like</a></h2>
 <p>This chapter describes a year in the life of an organisation that has made the transition. Not a utopia. A realistic picture, with remaining tensions, trade-offs, and difficulties acknowledged. The point is to show that the problems change in kind, and that the new problems are the kind that capable people can solve.</p>
 <p>This chapter is drawn from real transitions, composited and fictionalised as elsewhere in the book. Not every one succeeded fully. Some stalled when political will ran out. What follows is what happens when the structural commitment holds.</p>
 <p>A European insurance company with approximately 2,000 employees, of whom around 400 work in technology. It sells motor, home, and health insurance through direct and broker channels. Its core processes are mediated entirely through software. It is, by any measure, a software-dependent corporate.</p>
 <p class="continue"><a href="./#what-this-looks-like">Continue reading →</a></p>
 </section>
-<section id="ch-22">
+<section id="ch-24">
 <h2><a href="./#conclusion">Conclusion</a></h2>
 <p>\addtocontentstoc\protect\addvspace0.5em</p>
 <p>The engineer holding two contradictory models in her head at three in the morning has been doing so for years. She knows which architecture diagrams are fiction. She knows which processes are performed for compliance rather than followed in practice. She knows, with the specificity that comes from reading error logs and tracing database queries, what the gap between the documented system and the real one actually costs. She has been saying so, in various ways, for most of her career. The organisation has found ways not to hear it.</p>
@@ -321,14 +335,14 @@
 <p>The economics of that refusal have shifted. Explicit, machine-readable, versioned descriptions of how the organisation works are now cheaper to maintain than the social infrastructure required to sustain the alternative. The gap between organisations that can describe themselves clearly and those that cannot will compound, because AI multiplies the value of structural coherence the same way it multiplies everything else it is pointed at.</p>
 <p>The work required to get there is not a transformation programme. It is a process definition committed to a repository, a contract published to an adjacent team, a synthesis cycle that runs on Tuesday and produces evidence by Wednesday. The engineer who has carried the real system in her head for years already knows what needs to be written down. She has been waiting for a structure that can receive it.</p>
 </section>
-<section id="ch-23">
+<section id="ch-25">
 <h2><a href="./#appendix-extended-process-definition">Appendix: Extended Process Definition</a></h2>
-<p>The following is the full extended process definition for claims management, referenced in Chapter 19. It illustrates the sub-process decomposition, system and data traceability, and contract dependencies that a mature unit maintains.</p>
+<p>The following is the full extended process definition for claims management, referenced in Chapter 21. It illustrates the sub-process decomposition, system and data traceability, and contract dependencies that a mature unit maintains.</p>
 <p>[fontsize=\small] process: claims_management owner: claims_management_unit</p>
 <p>sub_processes: - name: first_notification entry_state: submitted exit_state: triaged - name: assessment entry_state: triaged exit_state: assessed - name: settlement entry_state: assessed exit_state: closed</p>
 <p class="continue"><a href="./#appendix-extended-process-definition">Continue reading →</a></p>
 </section>
-<section id="ch-24">
+<section id="ch-26">
 <h2><a href="./#about-the-author">About the Author</a></h2>
 <p>Adrian McPhee has spent more than twenty years as an engineer, architect, and CTO inside software-dependent corporates across fintech, retail, and mobility, including a unicorn fintech, a leading ecommerce marketplace, and a multinational with €10 billion turnover. He has led organisations of up to a thousand people, delivered global platforms, and redirected more than €200M of product and technology investment. He watched the same structural dysfunctions repeat across every organisation he entered, and eventually learned to dismantle them.</p>
 <p>As a founder and entrepreneur, he has used AI to create successful new ventures and helped leading companies adopt it for product development at scale. It is the same discipline this book argues for: explicit structure, reconciled with reality, that a machine can actually read.</p>
