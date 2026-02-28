@@ -79,6 +79,10 @@
 <p>AI does not introduce truth; it removes the insulation that allowed illusions to persist.</p>
 <p>A large European telecoms operator decides to pilot an AI assistant for its technology leadership. The brief is modest: given access to the company&#x27;s strategy documents, architecture diagrams, and codebase, the assistant should produce a summary of the organisation&#x27;s technology landscape and its alignment with stated strategic priorities.</p>
 <p>The CTO is supportive. The experiment is sanctioned. A small team spends two weeks feeding the assistant the relevant artefacts: the annual strategy deck (94 slides), the technology vision document (38 pages), the architecture reference model (last updated fourteen months ago), the current service catalogue, and read access to the primary code repositories.</p>
+<p>The assistant produces a twelve-page synthesis that is calm, precise, and completely devastating.</p>
+<p>It notes that the strategy deck identifies “digital self-service for enterprise customers” as a top-three priority, but that only two of its forty-seven services have any self-service provisioning logic, and both are experimental prototypes with no production traffic. It observes that the architecture reference model describes a domain-driven decomposition into eight bounded contexts, but that the actual service topology follows a different structure entirely: one organised around legacy database schemas rather than business domains. It identifies fourteen services that share a single relational database, contradicting the reference model&#x27;s assertion of data ownership.</p>
+<p>It flags that the technology vision document commits to “API-first design,” but that 62% of inter-service communication uses direct database reads. It notes that the stated strategic priority of “operational excellence” has no corresponding process definitions, SLAs, or monitoring in any of the codebases it can access.</p>
+<p>The summary does not editorialise. It simply reconciles what the organisation says with what the organisation does, and lists the contradictions.</p>
   <p class="ellipsis">...</p>
 
   <div class="cta">
