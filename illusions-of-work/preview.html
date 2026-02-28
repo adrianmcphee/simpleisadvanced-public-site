@@ -343,9 +343,9 @@
 </section>
 <section id="ch-24">
 <h2><a href="./#appendix-extended-process-definition">Appendix: Extended Process Definition</a></h2>
-<p>The following is the full extended process definition for claims management, referenced in Chapter 20. It illustrates the sub-process decomposition, system and data traceability, and contract dependencies that a mature unit maintains.</p>
+<p>The following is the full extended process definition for claims management, referenced in the preceding chapter. It illustrates what the binding artefacts described throughout Part VII look like at full resolution: every state named, every transition specified with its trigger and invariants, every failure mode explicit with its escalation path, and every dependency on another unit traced to a versioned contract.</p>
+<p>Read it as a contract the organisation makes with itself. Each line removes an option: if the system reaches this state and this condition holds, this is what happens, and this is who is responsible. The vocabulary is technical, but the function is organisational. This is what an organisation produces when it writes reality down in sufficient detail that both humans and machines can read it, test it, and hold the organisation to account against it. The discomfort it may provoke, a sense that it is too specific, too constraining, is the same discomfort described in Chapter 8. That discomfort is the point. A process definition that does not provoke it has not yet reached the precision where it constrains anything.</p>
 <p>[fontsize=\small] process: claims_management owner: claims_management_unit</p>
-<p>sub_processes: - name: first_notification entry_state: submitted exit_state: triaged - name: assessment entry_state: triaged exit_state: assessed - name: settlement entry_state: assessed exit_state: closed</p>
 <p class="continue"><a href="./#appendix-extended-process-definition">Continue reading →</a></p>
 </section>
 <section id="ch-25">
