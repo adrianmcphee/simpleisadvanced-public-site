@@ -81,6 +81,9 @@
     plausible.init()
   </script>
 
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -100,11 +103,18 @@
     }
 
     .heading {
-      margin-bottom: 3rem;
+      margin-bottom: 0.4rem;
       font-size: 1.4rem;
       font-weight: 600;
       color: #18181b;
       letter-spacing: -0.03em;
+    }
+
+    .subheading {
+      margin-bottom: 3rem;
+      font-size: 0.85rem;
+      color: #a1a1aa;
+      letter-spacing: 0.01em;
     }
 
     .books {
@@ -212,6 +222,25 @@
       border-color: #115e59;
     }
 
+    footer {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: #a1a1aa;
+    }
+
+    footer a {
+      color: #a1a1aa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #71717a;
+    }
+
+    footer span {
+      margin: 0 0.3rem;
+    }
+
     @media (max-width: 540px) {
       .books {
         grid-template-columns: 1fr;
@@ -231,30 +260,32 @@
   </style>
 </head>
 <body>
-  <h1 class="heading">Select your book</h1>
+  <h1 class="heading">Simple is Advanced — Books</h1>
+  <p class="subheading">Select your book</p>
 
   <div class="books">
     <a class="book book-ai" href="/illusions-in-the-boardroom/">
       <img class="book-cover" src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom">
-      <div class="book-title">Illusions in the Boardroom</div>
-      <div class="book-subtitle">How AI Forces Structural Honesty</div>
-      <div class="book-audience">For executives, board members, and senior leaders</div>
+      <h2 class="book-title">Illusions in the Boardroom</div>
+      <p class="book-subtitle">How AI Forces Structural Honesty</div>
+      <p class="book-audience">For executives, board members, and senior leaders</div>
       <span class="book-cta">Read now</span>
     </a>
 
     <a class="book book-iow" href="/illusions-of-work/">
       <img class="book-cover" src="/illusions-of-work/cover.png" alt="Illusions of Work">
-      <div class="book-title">Illusions of Work</div>
-      <div class="book-subtitle">AI Has Made Reality Non-Negotiable</div>
-      <div class="book-audience">For engineers, architects, and CTOs</div>
+      <h2 class="book-title">Illusions of Work</div>
+      <p class="book-subtitle">AI Has Made Reality Non-Negotiable</div>
+      <p class="book-audience">For engineers, architects, and CTOs</div>
       <span class="book-cta">Read now</span>
     </a>
   </div>
 
-  <nav aria-label="Book contents" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
-    <a href="/illusions-in-the-boardroom/contents.html">Illusions in the Boardroom — Contents</a>
-    <a href="/illusions-of-work/contents.html">Illusions of Work — Contents</a>
-  </nav>
+  <footer>
+    <a href="/illusions-in-the-boardroom/contents.html">Boardroom — Contents</a>
+    <span>&middot;</span>
+    <a href="/illusions-of-work/contents.html">Work — Contents</a>
+  </footer>
 
 </body>
 </html>
