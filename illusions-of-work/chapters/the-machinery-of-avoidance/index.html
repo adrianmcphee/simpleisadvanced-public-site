@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 12: The Machinery of Avoidance — Illusions of Work by Adrian McPhee</title>
+  <meta name="description" content="A retail bank with a ten-year-old microservices estate invests € 1.2 million in a shared platform capability: a unified event bus that would allow its...">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/illusions-of-work/chapters/the-machinery-of-avoidance/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Chapter 12: The Machinery of Avoidance — Illusions of Work by Adrian McPhee">
+  <meta property="og:description" content="A retail bank with a ten-year-old microservices estate invests € 1.2 million in a shared platform capability: a unified event bus that would allow its...">
+  <meta property="og:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <meta property="og:url" content="https://simpleisadvanced.com/illusions-of-work/chapters/the-machinery-of-avoidance/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chapter 12: The Machinery of Avoidance — Illusions of Work by Adrian McPhee">
+  <meta name="twitter:description" content="A retail bank with a ten-year-old microservices estate invests € 1.2 million in a shared platform capability: a unified event bus that would allow its...">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "name": "Chapter 12: The Machinery of Avoidance",
+    "isPartOf": {
+        "@type": "Book",
+        "name": "Illusions of Work",
+        "author": {
+            "@type": "Person",
+            "name": "Adrian McPhee",
+            "url": "https://www.linkedin.com/in/adrianmcphee/"
+        },
+        "url": "https://simpleisadvanced.com/illusions-of-work/"
+    },
+    "url": "https://simpleisadvanced.com/illusions-of-work/chapters/the-machinery-of-avoidance/",
+    "position": 13
+}
+  </script>
+  <script async src="https://plausible.io/js/pa-0ytLBSTECJdL8sUA_8nHO.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .book-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .book-link:hover { color: #222; }
+    p { margin: 0.8em 0; }
+    .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
+    .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
+            border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
+    .cta a { display: inline-block; padding: 0.7em 2em; background: #222; color: #fff;
+             text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9em; }
+    .cta a:hover { background: #444; }
+    .cta p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
+  <p class="part">Why Nothing Changes</p>
+  <h1>Chapter 12: The Machinery of Avoidance</h1>
+
+  <p>A retail bank with a ten-year-old microservices estate invests € 1.2 million in a shared platform capability: a unified event bus that would allow its mortgage, payments, and savings teams to publish and consume domain events independently, replacing a fragile point-to-point integration layer that causes an average of three incidents per month.</p>
+<p>The platform team delivers a working prototype in four months. It is technically sound. The three consuming teams are willing to migrate. The projected incident reduction, based on the integration team&#x27;s own data, is 70–80%.</p>
+<p>The CFO kills the investment in the annual budget review. The platform “does not show ROI in year one.” The cost is visible: € 1.2 million in engineering salaries and infrastructure. The benefit is diffuse: fewer incidents, faster change, reduced coordination overhead. None of these benefits appear as a line item in any business unit&#x27;s P&amp;L, because the costs they would reduce are distributed across departments and reported as operational expense rather than as integration failure.</p>
+<p>Over the following eighteen months, the point-to-point integrations cause nine major incidents. Two of them affect customers directly, triggering regulatory scrutiny. The total cost, including incident response, remediation, customer compensation, and regulatory reporting, is approximately € 2.1 million. These costs are attributed to “engineering quality” in the quarterly review. Nobody connects them to the cancelled platform investment.</p>
+<p>The following year&#x27;s budget includes a line item for “integration resilience.” It is funded at € 400,000, one third of the original investment, insufficient to do the work properly. The platform team has since been disbanded. Its lead engineer has left the company. Illusions of work are sustained not by inertia alone but by specific power structures that benefit from them, structures concentrated in three functions that have learned to rule through lag: finance, human resources, and budgeting.</p>
+<p>These are mechanisms, not conspiracies. They incentivise avoidance because they operate on lagging representations of reality rather than on leading indicators of system behaviour.</p>
+<p>In software-dependent corporates, finance often occupies a position of unquestioned authority.</p>
+<p>This authority rarely announces itself as power; it presents as prudence, stewardship, and inevitability, where numbers are framed as neutral and decisions as unavoidable. The CFO does not say “I am overruling your technical judgement.” The CFO says “the numbers don&#x27;t support it,” and the conversation ends, because numbers have achieved a kind of conversational finality that no other medium commands.</p>
+  <p class="ellipsis">...</p>
+
+  <div class="cta">
+    <p>Continue reading in the interactive reader</p>
+    <a href="/illusions-of-work/#the-machinery-of-avoidance">Read this chapter</a>
+  </div>
+
+  <div class="nav"><a href="../the-alignment-industrial-complex/">&larr; Chapter 11</a><a href="../the-rate-has-changed/">Chapter 13 &rarr;</a></div>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+</body>
+</html>

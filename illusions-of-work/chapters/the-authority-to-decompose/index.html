@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 17: The Authority to Decompose — Illusions of Work by Adrian McPhee</title>
+  <meta name="description" content="The CTO of a Nordic insurer had the first autonomous unit running for four months. Claims resolution time was down 31%. Deployment frequency had...">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/illusions-of-work/chapters/the-authority-to-decompose/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Chapter 17: The Authority to Decompose — Illusions of Work by Adrian McPhee">
+  <meta property="og:description" content="The CTO of a Nordic insurer had the first autonomous unit running for four months. Claims resolution time was down 31%. Deployment frequency had...">
+  <meta property="og:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <meta property="og:url" content="https://simpleisadvanced.com/illusions-of-work/chapters/the-authority-to-decompose/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chapter 17: The Authority to Decompose — Illusions of Work by Adrian McPhee">
+  <meta name="twitter:description" content="The CTO of a Nordic insurer had the first autonomous unit running for four months. Claims resolution time was down 31%. Deployment frequency had...">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "name": "Chapter 17: The Authority to Decompose",
+    "isPartOf": {
+        "@type": "Book",
+        "name": "Illusions of Work",
+        "author": {
+            "@type": "Person",
+            "name": "Adrian McPhee",
+            "url": "https://www.linkedin.com/in/adrianmcphee/"
+        },
+        "url": "https://simpleisadvanced.com/illusions-of-work/"
+    },
+    "url": "https://simpleisadvanced.com/illusions-of-work/chapters/the-authority-to-decompose/",
+    "position": 18
+}
+  </script>
+  <script async src="https://plausible.io/js/pa-0ytLBSTECJdL8sUA_8nHO.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .book-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .book-link:hover { color: #222; }
+    p { margin: 0.8em 0; }
+    .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
+    .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
+            border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
+    .cta a { display: inline-block; padding: 0.7em 2em; background: #222; color: #fff;
+             text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9em; }
+    .cta a:hover { background: #444; }
+    .cta p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
+  <p class="part">The Fix</p>
+  <h1>Chapter 17: The Authority to Decompose</h1>
+
+  <p>The CTO of a Nordic insurer had the first autonomous unit running for four months. Claims resolution time was down 31%. Deployment frequency had tripled. The evidence was unambiguous, and she needed three more units by end of year to reach the tipping point described in the previous chapter: the point at which the autonomous model becomes self-evidently better than what it replaced, and the question shifts from “should we restructure?” to “why does everything else still work the old way?”</p>
+<p>She opened the budget request for the payments unit. The decomposition work required EUR 1.4 million over six months: untangling the shared database that five product lines wrote to directly, establishing contract boundaries with three adjacent services, staffing the unit with a domain expert and two engineers who understood the payments regulatory landscape. The CFO&#x27;s question was reasonable: which business unit&#x27;s P&amp;L should absorb the cost? Payments was shared across four product lines. No single product owner would fund decomposition that benefited the other three. The investment that would make the payments unit possible did not fit inside any existing budget line, because the budget model priced departments, not processes, and the payments process did not belong to any department.</p>
+<p>She escalated. The CEO agreed the investment was necessary. The CFO agreed in principle. The process to secure cross-business-unit funding took eleven weeks. By the time the budget was approved, the senior engineer she had identified for the payments unit lead had accepted an offer elsewhere. He had been carrying twelve years of payments domain knowledge that the organisation had never asked him to write down. The window for the second unit moved from Q2 to Q4. The claims unit continued to operate, producing evidence that made the surrounding dysfunction visible. The surrounding dysfunction continued to operate, producing evidence that it could outlast any change that required its own budget model to fund it. The previous chapter described how to launch one autonomous unit: selecting the process, drafting the governance charter, protecting the unit&#x27;s autonomy through the first ninety days. This chapter describes the budget and authority structure that makes the transition from one unit to twelve possible within the window where executive attention holds.</p>
+<p>Consider what the CTO&#x27;s conversation with the CFO looks like when she arrives not with a budget request routed through the normal cycle but with a ring-fenced reconstruction fund, pre-authorised by the CEO, sized to the decomposition work required.</p>
+<p>The CFO&#x27;s first objection is structural rather than financial: which P&amp;L absorbs the cost? The payments decomposition benefits four product lines. No product owner will fund work that benefits the other three. The cost has to sit somewhere, and the CFO&#x27;s reporting model requires that somewhere to have a name.</p>
+<p>The CEO answers the objection directly. The P&amp;L question is precisely what the fund resolves. No business unit funds cross-cutting decomposition because no business unit owns the cross-cut. The fund sits under the CTO&#x27;s authority for a bounded period, ring-fenced from the annual budget cycle, with a twelve-month cap and a decline curve that transfers operational cost to the units as they become self-sustaining. The CFO&#x27;s reporting obligation is met: the fund has a line, a cap, a taper schedule, and measurable outcomes attached to each draw. What it does not have is a product owner, because the work it funds is structural, and structural investment that requires a product owner to justify it will never be justified, which is why the payments unit does not yet exist.</p>
+<p>When the CFO asks what happens if the twelve months produce insufficient working units, the answer is the one she expects: the fund closes. The CTO accepts that constraint because she knows the alternative. An open-ended fund becomes a permanent dependency. A capped fund forces sequencing discipline: the hardest decomposition first, the boundaries that unlock the most subsequent units, the work that cannot wait.</p>
+<p>The payments unit began decomposition the following Monday.</p>
+  <p class="ellipsis">...</p>
+
+  <div class="cta">
+    <p>Continue reading in the interactive reader</p>
+    <a href="/illusions-of-work/#the-authority-to-decompose">Read this chapter</a>
+  </div>
+
+  <div class="nav"><a href="../the-first-unit/">&larr; Chapter 16</a><a href="../pull-not-push/">Chapter 18 &rarr;</a></div>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+</body>
+</html>

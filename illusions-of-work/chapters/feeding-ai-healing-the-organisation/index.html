@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 20: Feeding AI, Healing the Organisation — Illusions of Work by Adrian McPhee</title>
+  <meta name="description" content="The first synthesis run produces seventy-three discrepancies. The unit lead reads the output on a Tuesday morning, scrolling through a list that is...">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/illusions-of-work/chapters/feeding-ai-healing-the-organisation/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Chapter 20: Feeding AI, Healing the Organisation — Illusions of Work by Adrian McPhee">
+  <meta property="og:description" content="The first synthesis run produces seventy-three discrepancies. The unit lead reads the output on a Tuesday morning, scrolling through a list that is...">
+  <meta property="og:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <meta property="og:url" content="https://simpleisadvanced.com/illusions-of-work/chapters/feeding-ai-healing-the-organisation/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chapter 20: Feeding AI, Healing the Organisation — Illusions of Work by Adrian McPhee">
+  <meta name="twitter:description" content="The first synthesis run produces seventy-three discrepancies. The unit lead reads the output on a Tuesday morning, scrolling through a list that is...">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/illusions-of-work/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Chapter",
+    "name": "Chapter 20: Feeding AI, Healing the Organisation",
+    "isPartOf": {
+        "@type": "Book",
+        "name": "Illusions of Work",
+        "author": {
+            "@type": "Person",
+            "name": "Adrian McPhee",
+            "url": "https://www.linkedin.com/in/adrianmcphee/"
+        },
+        "url": "https://simpleisadvanced.com/illusions-of-work/"
+    },
+    "url": "https://simpleisadvanced.com/illusions-of-work/chapters/feeding-ai-healing-the-organisation/",
+    "position": 21
+}
+  </script>
+  <script async src="https://plausible.io/js/pa-0ytLBSTECJdL8sUA_8nHO.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .book-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .book-link:hover { color: #222; }
+    p { margin: 0.8em 0; }
+    .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
+    .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
+            border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
+    .cta a { display: inline-block; padding: 0.7em 2em; background: #222; color: #fff;
+             text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 0.9em; }
+    .cta a:hover { background: #444; }
+    .cta p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
+  <p class="part">The Fix</p>
+  <h1>Chapter 20: Feeding AI, Healing the Organisation</h1>
+
+  <p>The first synthesis run produces seventy-three discrepancies. The unit lead reads the output on a Tuesday morning, scrolling through a list that is longer than she expected and noisier than she hoped. Most of the flags are definitional: states the process definition names that the code handles differently, transitions the code implements that the definition omits. She triages for forty minutes before she finds the first real one: the settlement calculation applies a discount threshold that the process definition does not mention, because the threshold was added eleven months ago by an engineer who updated the code but not the definition. The settlement has been silently discounting claims above a certain value. Nobody noticed because the output looked plausible.</p>
+<p>She marks the flag, opens the process definition, and adds the threshold as an explicit decision point. It is the first time the artefact has corrected the system rather than the other way around. Autonomous business units remove the need for coordination as governance, but they do not remove the need for shared understanding. What changes is the medium: coherence is maintained not by heroic individuals or social negotiation, but by AI systems that read versioned artefacts continuously and produce synthesis on demand. This chapter describes the artefacts, the synthesis layer, and the controls that connect them.</p>
+<p>The artefacts sit within a structural hierarchy, and each level derives from the one above it. Strategy produces a small set of falsifiable commitments. The process catalogue maps those commitments to the organisation&#x27;s value-creating processes and assigns ownership. Autonomous units implement the processes they own, each within a bounded context that defines what data, services, and decisions belong to the unit. Operational data lives inside the boundary; it serves the process, not the reporting layer. Contracts govern what crosses the boundary: versioned, machine-readable interfaces through which units interact without coupling. The analytical domain sits downstream, consuming what units publish through data contracts, never dictating what they store. AI reconciliation reads the full chain continuously, from strategic commitment through process definition through system telemetry, and reports where the chain breaks. When any level is implicit, everything below it degrades into social negotiation, and the AI reader has nothing to reconcile against.</p>
+<p>The structural distance from the inherited model is visible in the contrast:</p>
+<p>[t]0.46 Old model</p>
+<p>Strategy (narrative)\ $$\ Portfolio governance\ $$\ Shared systems\ $$\ Shared data\ $$\ Coordination\ $$\ Narrative reporting</p>
+<p>New model</p>
+<p>Falsifiable strategy\ $$\ Process catalogue\ $$\ Autonomous business units\ $$\ Bounded contexts\ $$\ Operational data\ $$\ Contracts\ $$\ Analytical domain\ $$\ AI reconciliation</p>
+  <p class="ellipsis">...</p>
+
+  <div class="cta">
+    <p>Continue reading in the interactive reader</p>
+    <a href="/illusions-of-work/#feeding-ai-healing-the-organisation">Read this chapter</a>
+  </div>
+
+  <div class="nav"><a href="../from-pretence-to-autonomy/">&larr; Chapter 19</a><a href="../what-this-looks-like/">Chapter 21 &rarr;</a></div>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+</body>
+</html>
