@@ -1,4 +1,11 @@
 /* RSVP Reader — Illusions in the Boardroom */
+// Extract version from script tag for cache-busting data fetches
+var _bookVersion = (function () {
+  var s = document.currentScript;
+  if (s && s.src) { var m = s.src.match(/[?&]v=([^&]*)/); if (m) return m[1]; }
+  return "" + Date.now();
+})();
+
 (function () {
   "use strict";
 
@@ -141,7 +148,7 @@
       return loadingChapters[chId] || Promise.resolve();
     }
     var file = "data/ch" + String(chId).padStart(2, "0") + ".json";
-    var p = fetch("./" + file)
+    var p = fetch("./" + file + "?v=" + _bookVersion)
       .then(function (r) { return r.json(); })
       .then(function (words) {
         chapterWords[chId] = words;
@@ -169,7 +176,7 @@
     cacheDom();
 
     try {
-      var resp = await fetch("./data/meta.json");
+      var resp = await fetch("./data/meta.json?v=" + _bookVersion);
       meta = await resp.json();
       chapters = meta.chapters;
       totalWords = meta.totalWords;
@@ -427,12 +434,14 @@
   // --- Navigation ---
   function skipWords(n) {
     pause();
+    titleCard = false;
     pos = Math.max(0, Math.min(totalWords - 1, pos + n));
     ensureChaptersAround(pos).then(function () { showWord(); });
   }
 
   function goToChapter(idx) {
     pause();
+    titleCard = false;
     if (idx >= 0 && idx < chapters.length) {
       pos = chapterOffsets[idx];
       trackChapterStart(idx);
@@ -577,6 +586,7 @@
     var rect = bar.getBoundingClientRect();
     var pct = (e.clientX - rect.left) / rect.width;
     pause();
+    titleCard = false;
     pos = Math.floor(pct * totalWords);
     ensureChaptersAround(pos).then(function () { showWord(); });
   }
