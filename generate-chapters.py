@@ -10,8 +10,8 @@ SITE_DIR = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = [
-    {"slug": "illusions-of-work"},
-    {"slug": "illusions-in-the-boardroom"},
+    {"slug": "illusions-of-work", "max_paragraphs": 8},
+    {"slug": "illusions-in-the-boardroom", "max_paragraphs": 6},
 ]
 
 
@@ -211,7 +211,7 @@ def main():
                 continue
             with open(ch_file) as f:
                 words = json.load(f)
-            paragraphs = words_to_paragraphs(words, max_paragraphs=8)
+            paragraphs = words_to_paragraphs(words, max_paragraphs=book.get("max_paragraphs", 8))
             if not paragraphs:
                 continue
 
