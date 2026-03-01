@@ -1,0 +1,92 @@
+# simpleisadvanced.com — Public Site
+
+## What This Is
+
+The deployed GitHub Pages site for Simple is Advanced. Serves both books as RSVP speed readers plus SEO infrastructure that drives organic search traffic into the readers.
+
+## Repository Structure
+
+```
+site/
+├── index.html                          # Homepage (hand-edited)
+├── robots.txt                          # Crawler directives (hand-edited)
+├── sitemap.xml                         # Assembled from book fragments (semi-automated)
+├── og-image.png                        # Homepage OG image (both book titles)
+├── 404.html                            # Custom 404 (noindex)
+├── tests/
+│   └── test_seo.py                     # SEO verification (local + production)
+├── illusions-of-work/                  # Book 1 (copied from book1/web/public/ by pre-commit hook)
+│   ├── index.html                      # RSVP reader (JS SPA)
+│   ├── contents.html                   # Human navigation (links to reader via #hash)
+│   ├── preview.html                    # SEO hub (links to all chapter pages)
+│   ├── chapters/{slug}/index.html      # SEO landing pages (47 total across both books)
+│   ├── sitemap-fragment.xml            # Fragment assembled into sitemap.xml
+│   └── data/                           # Chapter JSON (blocked in robots.txt)
+└── illusions-in-the-boardroom/         # Book 2 (same structure)
+```
+
+## SEO Funnel Strategy
+
+The RSVP reader is the destination -- all SEO exists to drive humans there.
+
+**Three-tier funnel:**
+1. **Chapter pages** (`chapters/{slug}/index.html`) -- Static HTML with excerpts + hand-written meta descriptions + Chapter schema + BreadcrumbList. What Google indexes and ranks. CTA: "Read this chapter" links to RSVP reader.
+2. **Preview hub** (`preview.html`) -- Links to ALL chapter pages with one-sentence summaries. SEO distribution hub: main source of link equity to chapter pages.
+3. **Contents page** (`contents.html`) -- Links to RSVP reader via `#hash` fragments. Human navigation, NOT for SEO.
+4. **RSVP reader** (`index.html`) -- JS SPA. The goal. Not for SEO.
+
+**Traffic flow:** Google → Chapter page → CTA → RSVP reader
+
+Do NOT optimise the RSVP reader pages for SEO -- they are for humans.
+
+## What Is Generated vs Hand-Edited
+
+**Hand-edited (in this repo):**
+- `index.html` (homepage)
+- `robots.txt`
+- `404.html`
+- `og-image.png`
+
+**Generated (by Python scripts in each book repo, copied here by pre-commit hooks):**
+- Everything under `illusions-of-work/` and `illusions-in-the-boardroom/`
+- `sitemap.xml` is assembled from `*/sitemap-fragment.xml` during `make web-publish`
+
+**Important:** The pre-commit hooks in the book repos copy files and commit/push this repo, but do NOT reassemble `sitemap.xml`. The sitemap is only reassembled by running `make web-publish` from a book repo. If you change sitemap fragment content (e.g. priorities), you need to manually reassemble.
+
+## SEO Tests
+
+```bash
+cd site/
+python3 tests/test_seo.py              # Local only (60 checks)
+python3 tests/test_seo.py --live       # Local + production (76 checks)
+```
+
+The test verifies:
+- Meta descriptions within character limits
+- Structured data (Chapter schema, BreadcrumbList) on chapter pages
+- Hand-written SEO descriptions present
+- article:published_time and article:author meta tags
+- Sitemap priorities and URL counts
+- robots.txt directives
+- OG image references and availability
+- Production matches local build output
+
+Run `--live` after any deploy to verify parity.
+
+## Sitemap Priorities
+
+| Page type | Priority |
+|-----------|----------|
+| Homepage | 1.0 |
+| RSVP readers | 0.9 |
+| Contents pages | 0.8 |
+| Preview hubs | 0.8 |
+| Chapter pages | 0.7 |
+
+## Rules
+
+- Do not add files to `illusions-of-work/` or `illusions-in-the-boardroom/` directly -- they are overwritten by book repo pre-commit hooks
+- Do not create subdirectory robots.txt or sitemap.xml files
+- Keep `robots.txt` blocking `/data/` directories (JSON word arrays, not for crawlers)
+- All meta descriptions must be <= 155 characters
+- The homepage OG image should show both book titles
