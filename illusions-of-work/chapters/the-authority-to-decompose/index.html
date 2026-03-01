@@ -87,6 +87,8 @@
     .book-link { font-size: 0.85em; color: #999; text-decoration: none;
                   font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .book-link:hover { color: #222; }
+    .chapter-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
     p { margin: 0.8em 0; }
     .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
     .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
@@ -111,6 +113,7 @@
   <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
   <p class="part">The Fix</p>
   <h1>Chapter 17: The Authority to Decompose</h1>
+  <p class="chapter-summary">Scaling from one autonomous unit to many requires a transitional fund ring-fenced from the annual budget cycle and a CTO-CEO decision pair that collapses boundary decisions to two people. The chapter specifies how the CTO is measured and what remains central after the transition.</p>
 
   <p>The CTO of a Nordic insurer had the first autonomous unit running for four months. Claims resolution time was down 31%. Deployment frequency had tripled. The evidence was unambiguous, and she needed three more units by end of year to reach the tipping point described in the previous chapter: the point at which the autonomous model becomes self-evidently better than what it replaced, and the question shifts from “should we restructure?” to “why does everything else still work the old way?”</p>
 <p>She opened the budget request for the payments unit. The decomposition work required EUR 1.4 million over six months: untangling the shared database that five product lines wrote to directly, establishing contract boundaries with three adjacent services, staffing the unit with a domain expert and two engineers who understood the payments regulatory landscape. The CFO&#x27;s question was reasonable: which business unit&#x27;s P&amp;L should absorb the cost? Payments was shared across four product lines. No single product owner would fund decomposition that benefited the other three. The investment that would make the payments unit possible did not fit inside any existing budget line, because the budget model priced departments, not processes, and the payments process did not belong to any department.</p>

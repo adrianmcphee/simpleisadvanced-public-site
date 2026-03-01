@@ -87,6 +87,8 @@
     .book-link { font-size: 0.85em; color: #999; text-decoration: none;
                   font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .book-link:hover { color: #222; }
+    .chapter-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
     p { margin: 0.8em 0; }
     .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
     .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
@@ -111,6 +113,7 @@
   <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
   <p class="part">The Fix</p>
   <h1>Chapter 20: Feeding AI, Healing the Organisation</h1>
+  <p class="chapter-summary">Autonomous units remove coordination as governance but do not remove the need for shared understanding. The medium changes: coherence is maintained by AI systems that read versioned artefacts continuously and produce synthesis on demand.</p>
 
   <p>The first synthesis run produces seventy-three discrepancies. The unit lead reads the output on a Tuesday morning, scrolling through a list that is longer than she expected and noisier than she hoped. Most of the flags are definitional: states the process definition names that the code handles differently, transitions the code implements that the definition omits. She triages for forty minutes before she finds the first real one: the settlement calculation applies a discount threshold that the process definition does not mention, because the threshold was added eleven months ago by an engineer who updated the code but not the definition. The settlement has been silently discounting claims above a certain value. Nobody noticed because the output looked plausible.</p>
 <p>She marks the flag, opens the process definition, and adds the threshold as an explicit decision point. It is the first time the artefact has corrected the system rather than the other way around. Autonomous business units remove the need for coordination as governance, but they do not remove the need for shared understanding. What changes is the medium: coherence is maintained not by heroic individuals or social negotiation, but by AI systems that read versioned artefacts continuously and produce synthesis on demand. This chapter describes the artefacts, the synthesis layer, and the controls that connect them.</p>

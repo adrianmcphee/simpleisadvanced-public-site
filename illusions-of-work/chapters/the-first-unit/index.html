@@ -87,6 +87,8 @@
     .book-link { font-size: 0.85em; color: #999; text-decoration: none;
                   font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .book-link:hover { color: #222; }
+    .chapter-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
     p { margin: 0.8em 0; }
     .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
     .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
@@ -111,6 +113,7 @@
   <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
   <p class="part">The Fix</p>
   <h1>Chapter 16: The First Unit</h1>
+  <p class="chapter-summary">The first autonomous unit is a permanent structural change, not a pilot. One unit operating with genuine autonomy creates selection pressure that shifts the question from “should we restructure?” to “why does everything else still work the old way?”</p>
 
   <p>The unit lead sits down with the domain expert and two engineers to write the process definition for claims management. It is the first working session. The whiteboard is clean.</p>
 <p>Within thirty minutes, they find the first discrepancy. The domain expert describes a triage step: incoming claims are assessed for complexity and routed to the appropriate handler based on claim type, value, and regulatory category. The senior engineer pulls up the service. The triage logic is a hard-coded routing table, last updated nineteen months ago, before a regulatory change that added two new claim categories. The categories were applied in the code as exception handlers that bypass the routing table entirely. The domain expert has never seen the exception handlers. The engineer has never seen the triage logic the domain expert describes.</p>

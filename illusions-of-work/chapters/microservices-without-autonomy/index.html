@@ -87,6 +87,8 @@
     .book-link { font-size: 0.85em; color: #999; text-decoration: none;
                   font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .book-link:hover { color: #222; }
+    .chapter-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
     p { margin: 0.8em 0; }
     .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
     .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
@@ -111,6 +113,7 @@
   <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
   <p class="part">What the Machines See</p>
   <h1>Chapter 6: Microservices Without Autonomy</h1>
+  <p class="chapter-summary">When the monolith was split, the coupling did not disappear; it migrated into shared schemas, shared databases, and undocumented inter-service dependencies. The core error was decomposing services by technical layer rather than by business process.</p>
 
   <p>Microservices Without Autonomy The change is straightforward. A logistics company needs to add a new delivery status, “held at customs,” to the tracking flow visible to customers. The status already exists in the customs clearance system. It needs to propagate to the shipment tracking service, which feeds the customer-facing portal.</p>
 <p>In a system with real boundaries and owned contracts, this is two days of work. One team adds the status to its published event contract. The consuming team reads the new event and renders it in the portal. Both teams can do this independently, on their own release schedules, with a versioned contract governing the interaction. In practice, however, the actual sequence unfolds very differently.</p>

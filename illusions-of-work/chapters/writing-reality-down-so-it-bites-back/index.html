@@ -87,6 +87,8 @@
     .book-link { font-size: 0.85em; color: #999; text-decoration: none;
                   font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .book-link:hover { color: #222; }
+    .chapter-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
     p { margin: 0.8em 0; }
     .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
     .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
@@ -111,6 +113,7 @@
   <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
   <p class="part">What Was Never Written Down</p>
   <h1>Chapter 8: Writing Reality Down So It Bites Back</h1>
+  <p class="chapter-summary">Most organisations suffer not from a lack of documentation but from a lack of documents that are structurally permitted to be true. An artefact only matters if it removes options, collapses ambiguity, and forces consequences.</p>
 
   <p>The new senior engineer spends her first week reading. The team lead has been thorough: a shared drive with architecture diagrams, a Confluence space with process descriptions, a wiki with onboarding guides. There is an operating model document, updated seven months ago, that describes the end-to-end vehicle configuration-to-delivery pipeline in careful detail.</p>
 <p>By her third day she has questions. The operating model describes an automated validation step for customer configurations that checks battery options, drivetrain compatibility, and regional compliance before the order enters the manufacturing queue. The system she has been given access to does not contain this step. There is a comment in the code, dated two years ago, that says “validation bypassed pending new battery config rules.” The rules were never written. The automated validation exists in the documentation and in the quarterly metrics report, which lists configuration validation rates as a KPI. It does not exist in production.</p>

@@ -87,6 +87,8 @@
     .book-link { font-size: 0.85em; color: #999; text-decoration: none;
                   font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .book-link:hover { color: #222; }
+    .chapter-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
     p { margin: 0.8em 0; }
     .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
     .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
@@ -111,6 +113,7 @@
   <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
   <p class="part">What the Machines See</p>
   <h1>Chapter 5: Architecture That Avoids Accountability</h1>
+  <p class="chapter-summary">Architecture in software-dependent corporates often functions as a source of avoidance rather than control. Organisations adopt the vocabulary of modern architectural styles without adopting the structural commitments that give those concepts force.</p>
 
   <p>The architecture review board meets every second Thursday. A team presents a proposal to extract a pricing calculation from a monolith into a dedicated service. The board evaluates it against a reference model last updated eight months ago. Forty-five minutes are spent debating which bounded context the service belongs in. In the codebase, sixty-three services follow a team structure from a reorganisation that predates the reference model by two years. The reference model describes nothing real.</p>
 <p>The board grants conditional approval. The team lead will name the service to match the model, update the Wiki, and build exactly what she originally proposed. The board will not verify the implementation. Both parties are aware of this. In software-dependent corporates, architecture is often presented as a source of control. Diagrams promise clarity. Reference models suggest foresight. In practice, much of this architectural activity exists to avoid accountability.</p>

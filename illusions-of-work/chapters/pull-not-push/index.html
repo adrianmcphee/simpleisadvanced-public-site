@@ -87,6 +87,8 @@
     .book-link { font-size: 0.85em; color: #999; text-decoration: none;
                   font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .book-link:hover { color: #222; }
+    .chapter-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
     p { margin: 0.8em 0; }
     .ellipsis { color: #999; font-size: 1.2em; letter-spacing: 0.3em; margin: 1.5em 0; }
     .cta { text-align: center; margin: 2.5em 0; padding: 1.5em; background: #f9f9f9;
@@ -111,6 +113,7 @@
   <a class="book-link" href="/illusions-of-work/">&larr; Illusions of Work</a>
   <p class="part">The Fix</p>
   <h1>Chapter 18: Pull, Not Push</h1>
+  <p class="chapter-summary">Central functions that mandate adoption produce compliance without substance. When autonomous units own their process risk, they pull for capabilities they genuinely need rather than performing compliance with tools they did not choose.</p>
 
   <p>The CISO of a European retail bank had rolled out a container scanning tool across all development teams eighteen months earlier. The tool was mandated by information security policy, integrated into every CI pipeline, and reported weekly compliance metrics to the executive team. Compliance stood at 94%.</p>
 <p>An internal audit of the payments team, which was six months into operating as an autonomous unit, revealed something the compliance dashboard could not show: the team had integrated the scanner but configured it to auto-approve all findings below critical severity, because the default thresholds produced four hundred false positives per week and the team had no relationship with the security function through which to resolve them. The scanner ran, the pipeline was green, and the security posture was unchanged.</p>
