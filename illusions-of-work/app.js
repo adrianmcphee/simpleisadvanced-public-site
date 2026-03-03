@@ -574,10 +574,10 @@ var _bookVersion = (function () {
     showToast("Link copied");
   }
 
-  function comingSoon(e) {
+  function buyBook(e) {
     e.preventDefault();
     track('Buy Click', { chapter: chapterLabel(chapterForPos(pos)) });
-    showToast("Available soon");
+    window.open("https://shipper.demandops.com/book/illusions-of-work", "_blank", "noopener");
   }
 
   // --- Progress bar click ---
@@ -660,10 +660,10 @@ var _bookVersion = (function () {
     document.getElementById("toc-btn").addEventListener("click", openTOC);
     document.getElementById("replay-btn").addEventListener("click", replayChapter);
     document.getElementById("share-btn-footer").addEventListener("click", shareLink);
-    document.getElementById("buy-link").addEventListener("click", comingSoon);
-    document.getElementById("buy-link-mobile").addEventListener("click", comingSoon);
-    document.getElementById("buy-link-toc").addEventListener("click", comingSoon);
-    document.getElementById("cover-thumb").addEventListener("click", comingSoon);
+    document.getElementById("buy-link").addEventListener("click", buyBook);
+    document.getElementById("buy-link-mobile").addEventListener("click", buyBook);
+    document.getElementById("buy-link-toc").addEventListener("click", buyBook);
+    document.getElementById("cover-thumb").addEventListener("click", buyBook);
     document.getElementById("contact-link").addEventListener("click", function () {
       track('Contact Click', { chapter: chapterLabel(chapterForPos(pos)) });
     });
