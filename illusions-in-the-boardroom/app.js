@@ -55,9 +55,7 @@ var _bookVersion = (function () {
   var sessionStart = Date.now();
 
   function track(event, props) {
-    if (typeof plausible === 'function') {
-      plausible(event, props ? { props: props } : undefined);
-    }
+    // analytics removed
   }
 
   function chapterLabel(idx) {
