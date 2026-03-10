@@ -6,7 +6,7 @@
   <title>Operational and Regulatory Exposure — Illusions in the Boardroom</title>
   <meta name="description" content="Architectural coupling produces regulatory exposure: a change requiring three days of code takes four months because it propagates across nine teams.">
   <meta name="author" content="Adrian McPhee">
-  <meta name="book-version" content="1.5.19">
+  <meta name="book-version" content="1.5.20">
   <meta name="robots" content="max-snippet:300">
   <link rel="canonical" href="https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/operational-and-regulatory-exposure/">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -112,7 +112,7 @@
   <p class="chapter-summary">Architectural coupling produces regulatory exposure: a change requiring three days of code takes four months because it propagates across nine teams. Once reconciliation is available at negligible cost, the absence of reconciliation becomes a discoverable governance choice.</p>
 
   <p>A European insurer receives notice of a regulatory change: all policies above € 25,000 annual premium must observe a mandatory 48-hour cooling-off period before activation. During this window, payment may be collected, the policy may be cancelled without penalty, claims are not valid, and risk exposure must not be recognised on the balance sheet.</p>
-<p>This is a fundamental change to the policy lifecycle rather than a simple feature request.</p>
+<p>A mandatory cooling-off period is a fundamental change to the policy lifecycle rather than a simple feature request.</p>
 <p>Given that the insurer has five hundred services in its technology estate, “activation” is not managed by a single system but spans five: quoting, payments, the policy record, claims eligibility, and broker commissions. Each of these feeds data to dozens of other systems, with the policy record alone being consumed by fifty-seven.</p>
 <p>Adding a cooling-off period fundamentally alters the definition of an “active” policy, meaning that every system that previously assumed a policy was either active or inactive must now account for a third state. The change requires updates across five systems and their dependants, including handling for policies already in progress, rigorous testing across financial reporting, and coordinated releases across nine teams.</p>
 <p>While the actual code change takes only three days, the resulting dependency negotiation takes four months.</p>

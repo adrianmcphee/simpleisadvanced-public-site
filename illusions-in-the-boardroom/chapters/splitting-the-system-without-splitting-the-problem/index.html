@@ -6,7 +6,7 @@
   <title>Splitting the System Without Splitting the Problem — Illusions in the Boardroom</title>
   <meta name="description" content="The system was split into independently deployable services, but the business processes were not decomposed into genuinely owned units.">
   <meta name="author" content="Adrian McPhee">
-  <meta name="book-version" content="1.5.19">
+  <meta name="book-version" content="1.5.20">
   <meta name="robots" content="max-snippet:300">
   <link rel="canonical" href="https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/splitting-the-system-without-splitting-the-problem/">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -112,8 +112,8 @@
   <p class="chapter-summary">The system was split into independently deployable services, but the business processes were not decomposed into genuinely owned units. A two-day change takes six weeks because of dependencies that decomposition was supposed to eliminate.</p>
 
   <p>A logistics company needs to add a new delivery status, “held at customs,” to the tracking flow visible to customers. The status already exists in the customs clearance system. It needs to propagate to the shipment tracking service, which feeds the customer-facing portal.</p>
-<p>In a system with real boundaries and owned contracts, this is two days of work. One team adds the status to its published event contract. The consuming team reads the new event and renders it in the portal. Both teams can do this independently, on their own release schedules, with a versioned contract governing the interaction.</p>
-<p>In this organisation, however, none of that applies.</p>
+<p>In a system with real boundaries and owned contracts, adding the new status is two days of work. One team adds the status to its published event contract. The consuming team reads the new event and renders it in the portal. Both teams can do this independently, on their own release schedules, with a versioned contract governing the interaction.</p>
+<p>In the logistics company, none of those conditions apply.</p>
 <p>The shipment tracking service does not own its own data model. It reads from a shared database maintained by a “data platform” team. The data platform team has a change request process that requires approval from three service owners, because any change to the database structure affects all consumers. Team A submits a change request. The data platform team determines that the new status value conflicts with a field used by the returns service. They open a discussion with Team B (returns). Team B, however, is mid-cycle on a different priority and cannot engage for two weeks.</p>
 <p>Weeks pass. Four teams are involved across seven meetings before the work can begin. The two-day change takes six weeks. The six-week delay on a two-day change is not an engineering failure but the cost of a structural decision: the system was split without splitting the problem. The board sees this as a change velocity problem; the cause is ownership. The shared database at the centre of the vignette is the structural equivalent of a shared ledger that five departments report from: any modification to its structure requires the consent of every reader, regardless of whether the modification affects them.</p>
 <p>Microservices were adopted to enable independent deployment inside an organisational structure that could not otherwise move. The promise: split the system into many smaller pieces, each deployed on its own schedule. The theory suggested that teams would move faster and changes would stay contained.</p>

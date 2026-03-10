@@ -6,7 +6,7 @@
   <title>Contracts, Not Committees — Illusions in the Boardroom</title>
   <meta name="description" content="Versioned, machine-readable contracts between units replace committees.">
   <meta name="author" content="Adrian McPhee">
-  <meta name="book-version" content="1.5.19">
+  <meta name="book-version" content="1.5.20">
   <meta name="robots" content="max-snippet:300">
   <link rel="canonical" href="https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/contracts-not-committees/">
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -112,11 +112,11 @@
   <p class="chapter-summary">Versioned, machine-readable contracts between units replace committees. A contract violation is detected automatically, attributed to a specific party, and resolved in eighty-six minutes between two people, with no bridge call and no responsibility debate.</p>
 
   <p>The payments unit&#x27;s contract requires consuming units to submit payment requests with fully validated customer and account data. This division of responsibility is structurally correct, as the payments process should not validate data it does not own.</p>
-<p>The consuming units experience this differently. Motor origination finds that validating account data at point of sale adds delay that customers feel. Claims discovers that claimants who have changed banks require a re-verification step that its process definition does not accommodate. Both units face the same incentive: minimise their own validation costs and let the payments unit reject what it cannot process.</p>
+<p>The contract feels different to the consuming units. Motor origination finds that validating account data at point of sale adds delay that customers feel. Claims discovers that claimants who have changed banks require a re-verification step that its process definition does not accommodate. Both units face the same incentive: minimise their own validation costs and let the payments unit reject what it cannot process.</p>
 <p>The payments unit tightens its contract: stricter formats, more required fields, faster rejection of anything that does not comply. The consuming units add workarounds and automatic retries to handle the rejections. Within six months, the interaction has produced coordination overhead encoded in contracts rather than in meetings, but coordination overhead nonetheless. Payment failures increase and resolution times lengthen.</p>
-<p>The fix is structural. The three units redesign the contract together. Validation responsibilities are split: each unit validates what it owns. A shared checking step, published by the payments unit, allows other units to verify payment-specific fields before submitting. The arms race stops. The customer experience recovers within a quarter.</p>
-<p>The model produced the failure. The model also produced the fix, but only because the structural incentive changed: each unit became accountable for its own validation rather than attempting to pass it across the boundary. Coordination between teams is managed through committees: steering groups, dependency boards, change advisory boards, and what the alignment-industrial complex terms “cross-functional ceremonies.” These committees exist because no explicit mechanism governs how one team&#x27;s output becomes another team&#x27;s input. The interaction is negotiated socially, in meetings, and the negotiation must be repeated whenever conditions change.</p>
-<p>Contracts replace this negotiation with a structural mechanism.</p>
+<p>Only a structural redesign fixes the problem. The three units redesign the contract together. Validation responsibilities are split: each unit validates what it owns. A shared checking step, published by the payments unit, allows other units to verify payment-specific fields before submitting. The arms race stops. The customer experience recovers within a quarter.</p>
+<p>The operating model produced the failure. It also produced the fix, but only after the structural incentive changed: each unit became accountable for its own validation rather than attempting to pass it across the boundary. Coordination between teams is managed through committees: steering groups, dependency boards, change advisory boards, and what the alignment-industrial complex terms “cross-functional ceremonies.” These committees exist because no explicit mechanism governs how one team&#x27;s output becomes another team&#x27;s input. The interaction is negotiated socially, in meetings, and the negotiation must be repeated whenever conditions change.</p>
+<p>Contracts replace repeated negotiation with a structural mechanism.</p>
   <p class="ellipsis">...</p>
 
   <div class="cta">
