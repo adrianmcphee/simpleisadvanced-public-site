@@ -108,16 +108,21 @@
     table.article-table th { font-weight: 600; }
     ol, ul { padding-left: 1.5em; }
     li { margin: 0.5em 0; }
-    .cta-box { text-align: center; margin: 2.5em 0; padding: 1.8em; background: #f9f9f9;
-                border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
-    .cta-box p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
-    .cta-box .cta-buttons { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; }
-    .cta-box a { display: inline-block; padding: 0.7em 1.8em; text-decoration: none;
-                  border-radius: 4px; font-weight: 600; font-size: 0.9em; }
-    .cta-box a.cta-primary { background: #222; color: #fff; }
-    .cta-box a.cta-primary:hover { background: #444; }
-    .cta-box a.cta-secondary { background: #fff; color: #222; border: 1px solid #ccc; }
-    .cta-box a.cta-secondary:hover { background: #f0f0f0; }
+    .book-promo { margin: 3em 0; display: flex; flex-direction: column; gap: 1em;
+                   font-family: 'Inter', system-ui, sans-serif; }
+    .book-card { display: flex; align-items: center; gap: 1.2em; padding: 1.2em;
+                  background: #f9f9f9; border-radius: 8px; text-decoration: none; color: #222;
+                  transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .book-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .book-cover { width: 80px; height: 120px; object-fit: cover; border-radius: 4px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.12); flex-shrink: 0; }
+    .book-info { display: flex; flex-direction: column; gap: 0.2em; }
+    .book-info strong { font-size: 0.95em; }
+    .book-desc { font-size: 0.8em; color: #666; line-height: 1.4; }
+    .book-label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.08em;
+                   color: #059669; font-weight: 600; }
+    .book-cta { font-size: 0.8em; color: #999; margin-top: 0.3em; }
+    .book-card:hover .book-cta { color: #222; }
     .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
             border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
     .nav a { color: #999; text-decoration: none; }
@@ -176,11 +181,16 @@
 
 <p>That evidence is less soothing than a board pack. It is also attached to reality, which is a property the board pack has never reliably possessed.</p>
 
-  <div class="cta-box">
-    <p>I wrote a free book about how this pattern plays out at board level</p>
-    <div class="cta-buttons">
-      <a class="cta-primary" href="/illusions-in-the-boardroom/">Read Illusions in the Boardroom</a>
-    </div>
+  <div class="book-promo">
+    <a href="/illusions-in-the-boardroom/" class="book-card">
+      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom" class="book-cover">
+      <div class="book-info">
+        <span class="book-label">Free</span>
+        <strong>Illusions in the Boardroom</strong>
+        <span class="book-desc">How AI Forces Structural Honesty. The board-level diagnosis.</span>
+        <span class="book-cta">Read now &rarr;</span>
+      </div>
+    </a>
   </div>
 
   <div class="nav"><a href="/articles/the-brochureware-moment/">&larr; The Brochureware Moment</a><a href="/articles/fake-boundaries/">Fake Boundaries &rarr;</a></div>
