@@ -217,6 +217,69 @@
       border-color: #115e59;
     }
 
+    .articles {
+      max-width: 520px;
+      width: 100%;
+      margin: 2.5rem auto 0;
+      padding: 1.25rem 1.5rem;
+      border-top: 1px solid #e4e4e7;
+      text-align: center;
+    }
+
+    .articles a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .articles a:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .articles-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #18181b;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    .articles-desc {
+      font-size: 0.78rem;
+      color: #71717a;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .articles-cta {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #6b7280;
+      border: 1px solid #6b728033;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(4px);
+    }
+
+    .articles a:hover .articles-cta {
+      opacity: 1;
+      transform: translateY(0);
+      background: #6b728010;
+      border-color: #6b7280;
+    }
+
+    @media (max-width: 540px) {
+      .articles-cta {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     footer {
       margin-top: 3rem;
       font-size: 0.75rem;
@@ -273,6 +336,14 @@
       <p class="book-subtitle">AI Has Made Reality Non-Negotiable</p>
       <p class="book-audience">For engineers, architects, and CTOs</p>
       <span class="book-cta">Read now</span>
+    </a>
+  </div>
+
+  <div class="articles">
+    <a href="/articles/">
+      <h2 class="articles-title">Articles</h2>
+      <p class="articles-desc">How software-dependent corporates built structures that reward the appearance of productivity over actual productivity, and why AI changes the economics.</p>
+      <span class="articles-cta">Read the series &rarr;</span>
     </a>
   </div>
 

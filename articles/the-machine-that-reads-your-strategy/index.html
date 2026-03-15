@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Machine That Reads Your Strategy &mdash; Simple is Advanced</title>
+  <meta name="description" content="A CTO asks an AI to reconcile the strategy document against the architecture model and the codebase. The contradictions appear in minutes. The CEO asks for silence.">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/articles/the-machine-that-reads-your-strategy/">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Machine That Reads Your Strategy &mdash; Simple is Advanced">
+  <meta property="og:description" content="A CTO asks an AI to reconcile the strategy document against the architecture model and the codebase. The contradictions appear in minutes. The CEO asks for silence.">
+  <meta property="og:image" content="https://simpleisadvanced.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://simpleisadvanced.com/articles/the-machine-that-reads-your-strategy/">
+  <meta property="og:site_name" content="Simple is Advanced">
+  <meta property="article:published_time" content="2026-03-15">
+  <meta property="article:author" content="Adrian McPhee">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Machine That Reads Your Strategy &mdash; Simple is Advanced">
+  <meta name="twitter:description" content="A CTO asks an AI to reconcile the strategy document against the architecture model and the codebase. The contradictions appear in minutes. The CEO asks for silence.">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Machine That Reads Your Strategy",
+    "description": "A CTO asks an AI to reconcile the strategy document against the architecture model and the codebase. The contradictions appear in minutes. The CEO asks for silence.",
+    "author": {
+        "@type": "Person",
+        "name": "Adrian McPhee",
+        "url": "https://www.linkedin.com/in/adrianmcphee/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Simple is Advanced"
+    },
+    "url": "https://simpleisadvanced.com/articles/the-machine-that-reads-your-strategy/",
+    "datePublished": "2026-03-15",
+    "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Simple is Advanced",
+        "description": "Articles by Adrian McPhee"
+    }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://simpleisadvanced.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "https://simpleisadvanced.com/articles/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Machine That Reads Your Strategy"
+        }
+    ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    h2 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.2em; margin-top: 2em;
+          letter-spacing: -0.01em; }
+    h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05em; margin-top: 1.5em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .series-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .series-link:hover { color: #222; }
+    .article-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
+    p { margin: 0.8em 0; }
+    hr.story-sep { border: none; text-align: center; margin: 2em 0; }
+    hr.story-sep::after { content: "* \00a0\00a0 * \00a0\00a0 *"; color: #999; font-size: 1.1em;
+                           letter-spacing: 0.2em; }
+    .diagram-placeholder { background: #f9f9f9; border: 1px solid #e5e5e5; border-radius: 8px;
+                            padding: 1.5em; margin: 1.5em 0; text-align: center; }
+    .diagram-placeholder p { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    pre { background: #f5f5f0; border-radius: 6px; padding: 1.2em; overflow-x: auto;
+           font-size: 0.82em; line-height: 1.5; margin: 1.5em 0; }
+    code { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; }
+    table.article-table { border-collapse: collapse; width: 100%; margin: 1.5em 0;
+                           font-size: 0.88em; font-family: 'Inter', system-ui, sans-serif; }
+    table.article-table th, table.article-table td { text-align: left; padding: 0.5em 0.8em;
+                                                      border-bottom: 1px solid #e5e5e5; }
+    table.article-table th { font-weight: 600; }
+    ol, ul { padding-left: 1.5em; }
+    li { margin: 0.5em 0; }
+    .cta-box { text-align: center; margin: 2.5em 0; padding: 1.8em; background: #f9f9f9;
+                border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
+    .cta-box p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
+    .cta-box .cta-buttons { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; }
+    .cta-box a { display: inline-block; padding: 0.7em 1.8em; text-decoration: none;
+                  border-radius: 4px; font-weight: 600; font-size: 0.9em; }
+    .cta-box a.cta-primary { background: #222; color: #fff; }
+    .cta-box a.cta-primary:hover { background: #444; }
+    .cta-box a.cta-secondary { background: #fff; color: #222; border: 1px solid #ccc; }
+    .cta-box a.cta-secondary:hover { background: #f0f0f0; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    .also { font-size: 0.8em; color: #999; margin-top: 2em; font-family: 'Inter', system-ui, sans-serif; }
+    .also a { color: #999; text-decoration: none; }
+    .also a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <a class="series-link" href="/articles/">&larr; Articles</a>
+  <p class="part">Then AI Arrived</p>
+  <h1>The Machine That Reads Your Strategy</h1>
+  <p class="article-summary">A CTO gives an AI the strategy document, the architecture model, and the codebase. The contradictions appear in minutes. What had lived in his head for years is now inspectable evidence. The CEO asks for silence.</p>
+
+<p>David has spent years carrying two models of his organisation in his head: the one he presents to the board and the one he knows is real.</p>
+
+<p>The board model has a clean architecture, a self-service strategy, and a modernisation programme that is progressing. The real model has legacy services glued together by local knowledge, customer capabilities that exist mostly in presentations, and a modernisation programme whose milestones have been edited often enough to remain technically on schedule.</p>
+
+<p>David is not unusual. He is a normal CTO operating inside a structure with no routine mechanism for reconciling story and system.</p>
+
+<p>On a Tuesday in October, he runs an experiment. He gives an AI system access to the strategy document, the architecture model, the service catalogue, and the codebase. He asks for a reconciliation report: compare what these artefacts claim against what the system appears to do.</p>
+
+<p>The report takes minutes. David reads it in his office with the door closed.</p>
+
+<hr class="story-sep">
+
+<p>The reconciliation is not subtle.</p>
+
+<p>The strategy names self-service as a top priority. The code shows only thin fragments of self-service logic, most of it experimental. The architecture is described as API-first. The code and configurations show widespread direct database coupling. The platform migration is presented as advancing. The deployed services show something much patchier and slower.</p>
+
+<p>David already knew this. That is not the point.</p>
+
+<p>The reconciliation report had converted what lived only in David&rsquo;s head, assembled over years from code reviews, incidents, corridor conversations, and accumulated unease, into something written down in one place and attributed line by line. What used to be private judgement has become inspectable evidence.</p>
+
+<p>He sends the report to the CEO. She replies the next day and asks that it not be shared further because &ldquo;the board narrative is different, and we are not ready to reconcile.&rdquo;</p>
+
+<p>David reads that sentence twice.</p>
+
+<p>David was not expecting applause. He was not even expecting gratitude. But he had still been holding onto a quiet fantasy that once the contradictions were written down cleanly enough, attached tightly enough to the code, and stripped of enough personal interpretation, the organisation would be relieved to have them named.</p>
+
+<p>Instead, the report has crossed an invisible line. What was previously tacit, deniable, and privately burdensome has become formal enough to threaten the governance story itself.</p>
+
+<h2>What changed</h2>
+
+<p>The CEO&rsquo;s request for silence is the moment where the argument of the book becomes painfully concrete.</p>
+
+<p>The CEO does not dispute the findings. She does not ask whether the analysis is directionally right. She does not ask David to rerun it with better prompts. She asks for silence.</p>
+
+<p>That response is rational inside the structure she occupies. There is no graceful path from &ldquo;the strategy is on track&rdquo; to &ldquo;the strategy describes a system that does not exist.&rdquo; Reconciliation would force questions about past commitments, past decisions, past reporting, and who knew what when. It would turn a private tension into a public governance problem.</p>
+
+<p>The absence of a reconciliation mechanism is the point at which many discussions about corporate dishonesty become too moral and not structural enough. The CEO is not suppressing the report because she enjoys fiction. She is suppressing it because the organisation has built no normal mechanism for introducing reality once reality contradicts the narrative already consumed by the board.</p>
+
+<p>A board that discovers a multi-year gap between strategy and system is unlikely to experience that as an interesting operational nuance. More often, it becomes a loss-of-confidence event. The larger the gap, the more dangerous the reconciliation becomes. The more dangerous the reconciliation becomes, the stronger the incentive to keep it private. The structure makes truth more expensive the longer it is deferred.</p>
+
+<h2>Why now</h2>
+
+<p>Organisations have had tools that could inspect fragments of reality for years. Observability can show runtime behaviour. Static analysis can inspect code. Dashboards can show metrics. Audit functions can compare documents. What most organisations have not had is a cheap, flexible way to compare many artefacts against each other fast enough for ordinary management use.</p>
+
+<p>Cheap, flexible cross-artefact comparison is what changed.</p>
+
+<p>The reader path uses AI to compare artefacts that describe the business against artefacts that constitute the business. Strategy against code. Process definition against configuration. Architecture model against deployed services. Budget choice against incident history. The output is not more narrative. The output is a list of contradictions.</p>
+
+<p>The writer path uses the same underlying technology to produce more content: summaries, updates, board-pack sections, strategy prose, well-formed explanations. If the inputs are disconnected from reality, the outputs are disconnected from reality more quickly and more elegantly than before.</p>
+
+<p>Same tools. Different governing logic.</p>
+
+<p>David&rsquo;s experiment worked because the artefacts were precise enough to test. Somebody had claimed API-first. Somebody had claimed self-service. Somebody had claimed migration progress. The machine could compare those claims against code, deployments, and configurations. That is why this chapter matters for readers whose organisations are nowhere near the ideal model described later. You do not need perfection to start. You need claims specific enough to embarrass.</p>
+
+<h2>The folder on David&rsquo;s laptop</h2>
+
+<p>David still works at the telecoms operator. He still builds the board pack. He still carries the private map between the official story and the actual system. The difference is that one of those maps now lives in a folder on his laptop labelled &ldquo;synthesis.&rdquo;</p>
+
+<p>That folder is not a solution. It is a diagnosis.</p>
+
+<p>It is also a burden. David now knows two things with greater certainty than before: first, that his own reading of the organisation was broadly correct; second, that the organisation prefers the private reconciliation to remain private. The report did not create the gap. It converted the gap from lonely knowledge into documented knowledge, and that is exactly what made it dangerous.</p>
+
+<p>At the competitor, there is no private folder because there is no private reconciliation. The reconciliation runs routinely against process definitions, contracts, deployments, and code. The discrepancies are reviewed, attributed, and resolved as part of operations rather than hidden as a threat to them.</p>
+
+<p>David&rsquo;s competitor does not have a braver CTO. It has a structure that makes honesty operational instead of heroic.</p>
+
+  <div class="cta-box">
+    <p>From the <em>Simple is Advanced</em> series by Adrian McPhee</p>
+    <div class="cta-buttons">
+      <a class="cta-primary" href="/illusions-in-the-boardroom/">Read the free book</a>
+      <a class="cta-secondary" href="/illusions-of-work/">The operator manual</a>
+    </div>
+  </div>
+
+  <div class="nav"><a href="/articles/the-people-who-knew/">&larr; The People Who Knew</a><a href="/articles/the-polished-lie/">The Polished Lie &rarr;</a></div>
+
+  <p class="also">See also: <a href="/articles/">All articles</a> &middot; <a href="/illusions-in-the-boardroom/preview.html">Illusions in the Boardroom</a> &middot; <a href="/illusions-of-work/preview.html">Illusions of Work</a></p>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+
+  <script defer data-domain="simpleisadvanced.com" src="https://api.hectic.demandops.com/js/analytics.js"></script>
+</body>
+</html>

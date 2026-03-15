@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The CFO Who Killed the Platform &mdash; Simple is Advanced</title>
+  <meta name="description" content="A European insurer kills a shared integration platform because it doesn&#x27;t show ROI in year one. The incidents arrive months later, attributed to engineering quality.">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/articles/the-cfo-who-killed-the-platform/">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The CFO Who Killed the Platform &mdash; Simple is Advanced">
+  <meta property="og:description" content="A European insurer kills a shared integration platform because it doesn&#x27;t show ROI in year one. The incidents arrive months later, attributed to engineering quality.">
+  <meta property="og:image" content="https://simpleisadvanced.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://simpleisadvanced.com/articles/the-cfo-who-killed-the-platform/">
+  <meta property="og:site_name" content="Simple is Advanced">
+  <meta property="article:published_time" content="2026-03-15">
+  <meta property="article:author" content="Adrian McPhee">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The CFO Who Killed the Platform &mdash; Simple is Advanced">
+  <meta name="twitter:description" content="A European insurer kills a shared integration platform because it doesn&#x27;t show ROI in year one. The incidents arrive months later, attributed to engineering quality.">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The CFO Who Killed the Platform",
+    "description": "A European insurer kills a shared integration platform because it doesn&#x27;t show ROI in year one. The incidents arrive months later, attributed to engineering quality.",
+    "author": {
+        "@type": "Person",
+        "name": "Adrian McPhee",
+        "url": "https://www.linkedin.com/in/adrianmcphee/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Simple is Advanced"
+    },
+    "url": "https://simpleisadvanced.com/articles/the-cfo-who-killed-the-platform/",
+    "datePublished": "2026-03-15",
+    "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Simple is Advanced",
+        "description": "Articles by Adrian McPhee"
+    }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://simpleisadvanced.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "https://simpleisadvanced.com/articles/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The CFO Who Killed the Platform"
+        }
+    ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    h2 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.2em; margin-top: 2em;
+          letter-spacing: -0.01em; }
+    h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05em; margin-top: 1.5em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .series-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .series-link:hover { color: #222; }
+    .article-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
+    p { margin: 0.8em 0; }
+    hr.story-sep { border: none; text-align: center; margin: 2em 0; }
+    hr.story-sep::after { content: "* \00a0\00a0 * \00a0\00a0 *"; color: #999; font-size: 1.1em;
+                           letter-spacing: 0.2em; }
+    .diagram-placeholder { background: #f9f9f9; border: 1px solid #e5e5e5; border-radius: 8px;
+                            padding: 1.5em; margin: 1.5em 0; text-align: center; }
+    .diagram-placeholder p { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    pre { background: #f5f5f0; border-radius: 6px; padding: 1.2em; overflow-x: auto;
+           font-size: 0.82em; line-height: 1.5; margin: 1.5em 0; }
+    code { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; }
+    table.article-table { border-collapse: collapse; width: 100%; margin: 1.5em 0;
+                           font-size: 0.88em; font-family: 'Inter', system-ui, sans-serif; }
+    table.article-table th, table.article-table td { text-align: left; padding: 0.5em 0.8em;
+                                                      border-bottom: 1px solid #e5e5e5; }
+    table.article-table th { font-weight: 600; }
+    ol, ul { padding-left: 1.5em; }
+    li { margin: 0.5em 0; }
+    .cta-box { text-align: center; margin: 2.5em 0; padding: 1.8em; background: #f9f9f9;
+                border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
+    .cta-box p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
+    .cta-box .cta-buttons { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; }
+    .cta-box a { display: inline-block; padding: 0.7em 1.8em; text-decoration: none;
+                  border-radius: 4px; font-weight: 600; font-size: 0.9em; }
+    .cta-box a.cta-primary { background: #222; color: #fff; }
+    .cta-box a.cta-primary:hover { background: #444; }
+    .cta-box a.cta-secondary { background: #fff; color: #222; border: 1px solid #ccc; }
+    .cta-box a.cta-secondary:hover { background: #f0f0f0; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    .also { font-size: 0.8em; color: #999; margin-top: 2em; font-family: 'Inter', system-ui, sans-serif; }
+    .also a { color: #999; text-decoration: none; }
+    .also a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <a class="series-link" href="/articles/">&larr; Articles</a>
+  <p class="part">How Busy Work Sustains Itself</p>
+  <h1>The CFO Who Killed the Platform</h1>
+  <p class="article-summary">A CFO kills a platform investment because it doesn&#x27;t show ROI in year one. The cost is a visible line item. The benefits are diffuse and don&#x27;t appear in any P&amp;L. The incidents arrive months later, attributed to the wrong cause.</p>
+
+<p>A European insurer invested a seven-figure sum in a shared integration layer for its claims process: a common event infrastructure that would let the claims, policy, and payments teams exchange information independently, replacing a fragile web of direct connections between services that caused regular incidents.</p>
+
+<p>The platform team built a working prototype. The consuming teams were willing to migrate. The projected incident reduction was substantial. The technical case was sound.</p>
+
+<p>The CFO killed the investment in the annual budget review. &ldquo;Does not show ROI in year one.&rdquo;</p>
+
+<hr class="story-sep">
+
+<p>Within the instruments available to him, the CFO&rsquo;s decision was rational.</p>
+
+<p>The cost of the platform was visible: a line item in the technology budget, charged against the current fiscal year. The benefit was diffuse: fewer incidents, faster change, reduced coordination overhead. None of these benefits appeared in any business unit&rsquo;s P&amp;L. The incidents were attributed to &ldquo;engineering quality&rdquo; in the quarterly review. The coordination overhead was distributed across departments. The slower change velocity was invisible because nobody measured the time between a business decision and its implementation in the system.</p>
+
+<p>Finance&rsquo;s tools cannot see the connection, because the connection runs through system architecture, and finance has no instrument for observing system architecture. Finance prices departments. Value gets created at process boundaries. Nobody mapped the relationship between the two, so the CFO&rsquo;s spreadsheet is structurally blind to the thing that determines whether his decisions work.</p>
+
+<h2>What happened next</h2>
+
+<p>Over the following year and a half, the direct connections between systems that the platform would have replaced caused a series of major incidents. Two affected customers directly, triggering regulatory scrutiny. A commercial fleet operator waited more than a week for a claim that should have settled in two days. His broker emailed the CEO. The CEO asked the COO. The COO asked the CTO. The CTO traced the failure to the integration point that the cancelled platform would have replaced.</p>
+
+<p>The CTO did not mention the cancelled platform, because the failure had already been attributed to a &ldquo;data synchronisation issue&rdquo; in the incident log. The incident log follows the incident, not the decision that made the incident inevitable. The broker filed a complaint with the industry ombudsman. The compliance function requested a root cause report. The report described the technical failure accurately. The report did not mention the investment decision that caused it.</p>
+
+<p>The CFO never saw the ombudsman&rsquo;s letter. The complaint was handled two levels below him, in a function with no reporting line to the person who made the decision that caused it.</p>
+
+<p>The total cost of those incidents, including incident response, remediation, customer compensation, and regulatory reporting, exceeded the original platform investment. These costs were attributed to &ldquo;engineering quality&rdquo; in the quarterly review. Nobody connected them to the cancelled investment.</p>
+
+<p>A year later, the budget included a smaller follow-on allocation for &ldquo;integration resilience,&rdquo; insufficient to do the work properly. The platform team had been disbanded. Its lead engineer had left the company.</p>
+
+<h2>The pricing error</h2>
+
+<p>The vignette illustrates a pattern that repeats with remarkable consistency across software-dependent corporates, a pattern worth naming: the deferred investment trace. The benefit of a rejected structural investment accrues to budgets the CFO does not control, while the cost of rejection distributes across departments that cannot trace it to the original decision. The cost is real, measurable, and attributable, but only in retrospect, and only by someone willing to trace the chain from the budget decision to the incidents it made inevitable.</p>
+
+<p>Engineers see value being created through changes in system behaviour, yet failures emerge from architectural constraints, unclear ownership, and underfunded infrastructure. They know that the outcomes visible today were determined months earlier by decisions whose consequences are only now arriving. Hindsight is the only language that matters, and hindsight has no vocabulary for &ldquo;the decision the CFO made last year caused the incident we resolved last Tuesday.&rdquo;</p>
+
+<h2>The regulator who asked the wrong question</h2>
+
+<p>The competitive pressure is market-driven. The regulatory pressure is not, and for organisations in financial services, insurance, and banking, the regulatory pressure may arrive first.</p>
+
+<p>Operational resilience frameworks in the EU under DORA and in the UK under the FCA&rsquo;s operational resilience regime ask not whether the firm has documentation but whether it can demonstrate end-to-end understanding of its critical business processes: who owns each process, how quickly the process can be changed when a regulatory requirement shifts, and whether the firm can trace a change through the process to the running system.</p>
+
+<p>Consider the insurer from the vignette. A regulator asks: &ldquo;How long would it take to implement a cooling-off-period change across your claims process?&rdquo; The honest answer is months, because the process spans multiple teams, the change requires coordination across several services, and the regulatory requirement touches shared data models. The CTO cannot say this, because the answer reveals that the organisation does not own the process it operates. The CTO says &ldquo;integration testing and risk validation,&rdquo; which is accurate enough to be unchallengeable and vague enough to be unexamined.</p>
+
+<p>What those months look like from the inside: weeks to identify which services are affected, because no map exists that traces the regulation through the system. Weeks waiting for impact assessments, change advisory boards, integration testing, regression testing. The regulatory deadline passes. The insurer requests an extension, citing &ldquo;technical complexity.&rdquo; The actual code change, when it is finally deployed, takes a developer half a day.</p>
+
+<p>At the competitor, the claims unit owns the process. The change takes days, because the unit contains everything needed to implement it: the process definition, the code, the data, and the people who understand both.</p>
+
+<p>The regulatory exposure is structural, and it compounds alongside the competitive exposure. The reconciliation report that the competitor produces weekly is exactly the evidence the regulator is looking for. The narrative that the busy-work organisation produces quarterly is exactly the evidence the regulator has learned to distrust.</p>
+
+  <div class="cta-box">
+    <p>I wrote a free book about how this pattern plays out at board level</p>
+    <div class="cta-buttons">
+      <a class="cta-primary" href="/illusions-in-the-boardroom/">Read Illusions in the Boardroom</a>
+    </div>
+  </div>
+
+  <div class="nav"><a href="/articles/the-meeting-that-replaced-the-work/">&larr; The Meeting That Replaced the Work</a><a href="/articles/the-people-who-knew/">The People Who Knew &rarr;</a></div>
+
+  <p class="also">See also: <a href="/articles/">All articles</a> &middot; <a href="/illusions-in-the-boardroom/preview.html">Illusions in the Boardroom</a> &middot; <a href="/illusions-of-work/preview.html">Illusions of Work</a></p>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+
+  <script defer data-domain="simpleisadvanced.com" src="https://api.hectic.demandops.com/js/analytics.js"></script>
+</body>
+</html>

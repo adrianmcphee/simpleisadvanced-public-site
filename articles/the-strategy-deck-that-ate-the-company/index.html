@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Strategy Deck That Ate the Company &mdash; Simple is Advanced</title>
+  <meta name="description" content="A CTO spends four days building a board pack that describes a cleaner organisation than he actually runs. At each management level, ambiguity resolves in favour of narrative.">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/articles/the-strategy-deck-that-ate-the-company/">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Strategy Deck That Ate the Company &mdash; Simple is Advanced">
+  <meta property="og:description" content="A CTO spends four days building a board pack that describes a cleaner organisation than he actually runs. At each management level, ambiguity resolves in favour of narrative.">
+  <meta property="og:image" content="https://simpleisadvanced.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://simpleisadvanced.com/articles/the-strategy-deck-that-ate-the-company/">
+  <meta property="og:site_name" content="Simple is Advanced">
+  <meta property="article:published_time" content="2026-03-15">
+  <meta property="article:author" content="Adrian McPhee">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Strategy Deck That Ate the Company &mdash; Simple is Advanced">
+  <meta name="twitter:description" content="A CTO spends four days building a board pack that describes a cleaner organisation than he actually runs. At each management level, ambiguity resolves in favour of narrative.">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Strategy Deck That Ate the Company",
+    "description": "A CTO spends four days building a board pack that describes a cleaner organisation than he actually runs. At each management level, ambiguity resolves in favour of narrative.",
+    "author": {
+        "@type": "Person",
+        "name": "Adrian McPhee",
+        "url": "https://www.linkedin.com/in/adrianmcphee/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Simple is Advanced"
+    },
+    "url": "https://simpleisadvanced.com/articles/the-strategy-deck-that-ate-the-company/",
+    "datePublished": "2026-03-15",
+    "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Simple is Advanced",
+        "description": "Articles by Adrian McPhee"
+    }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://simpleisadvanced.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "https://simpleisadvanced.com/articles/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Strategy Deck That Ate the Company"
+        }
+    ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    h2 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.2em; margin-top: 2em;
+          letter-spacing: -0.01em; }
+    h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05em; margin-top: 1.5em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .series-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .series-link:hover { color: #222; }
+    .article-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
+    p { margin: 0.8em 0; }
+    hr.story-sep { border: none; text-align: center; margin: 2em 0; }
+    hr.story-sep::after { content: "* \00a0\00a0 * \00a0\00a0 *"; color: #999; font-size: 1.1em;
+                           letter-spacing: 0.2em; }
+    .diagram-placeholder { background: #f9f9f9; border: 1px solid #e5e5e5; border-radius: 8px;
+                            padding: 1.5em; margin: 1.5em 0; text-align: center; }
+    .diagram-placeholder p { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    pre { background: #f5f5f0; border-radius: 6px; padding: 1.2em; overflow-x: auto;
+           font-size: 0.82em; line-height: 1.5; margin: 1.5em 0; }
+    code { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; }
+    table.article-table { border-collapse: collapse; width: 100%; margin: 1.5em 0;
+                           font-size: 0.88em; font-family: 'Inter', system-ui, sans-serif; }
+    table.article-table th, table.article-table td { text-align: left; padding: 0.5em 0.8em;
+                                                      border-bottom: 1px solid #e5e5e5; }
+    table.article-table th { font-weight: 600; }
+    ol, ul { padding-left: 1.5em; }
+    li { margin: 0.5em 0; }
+    .cta-box { text-align: center; margin: 2.5em 0; padding: 1.8em; background: #f9f9f9;
+                border-radius: 8px; font-family: 'Inter', system-ui, sans-serif; }
+    .cta-box p { font-size: 0.85em; color: #666; margin-bottom: 0.8em; }
+    .cta-box .cta-buttons { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; }
+    .cta-box a { display: inline-block; padding: 0.7em 1.8em; text-decoration: none;
+                  border-radius: 4px; font-weight: 600; font-size: 0.9em; }
+    .cta-box a.cta-primary { background: #222; color: #fff; }
+    .cta-box a.cta-primary:hover { background: #444; }
+    .cta-box a.cta-secondary { background: #fff; color: #222; border: 1px solid #ccc; }
+    .cta-box a.cta-secondary:hover { background: #f0f0f0; }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    .also { font-size: 0.8em; color: #999; margin-top: 2em; font-family: 'Inter', system-ui, sans-serif; }
+    .also a { color: #999; text-decoration: none; }
+    .also a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <a class="series-link" href="/articles/">&larr; Articles</a>
+  <p class="part">It&#x27;s 1999 Again</p>
+  <h1>The Strategy Deck That Ate the Company</h1>
+  <p class="article-summary">A CTO spends four days building a board pack that describes a cleaner organisation than he runs. At each management level, ambiguity resolves in favour of narrative. The deck becomes the thing the organisation manages.</p>
+
+<p>Every quarter, David spends four days building a board pack.</p>
+
+<p>David is CTO of a European telecoms operator. He understands the systems, the business, and the distance between the two. The board pack does not describe that distance. The board pack describes a cleaner, calmer, more coherent organisation than the one David actually runs.</p>
+
+<p>Slide 3: &ldquo;Platform Modernisation: On Track.&rdquo; The milestones were redefined in month four to match the pace of delivery rather than the original plan. Slide 7: &ldquo;Tech Debt Reduction: Progressing.&rdquo; The metric counts Jira tickets closed, not architectural coupling removed. Slide 11: &ldquo;Headcount: Within Plan.&rdquo; Three senior engineers left last quarter. Their replacements are contractors who are nominally in the same roles and nothing like them in practice.</p>
+
+<p>Each slide is individually defensible. Each number came from somewhere. Each sentence can survive challenge. The pack is not fraudulent. It is structurally misleading: a smart reader who saw only the pack would form a picture of the organisation materially different from the one David describes to his direct reports behind closed doors.</p>
+
+<p>David&rsquo;s Friday afternoon is spent on the private reconciliation. What does the system actually look like? What can the board safely be told? Which problems are serious enough to mention? Which ones can be translated into &ldquo;amber&rdquo; without triggering questions nobody is ready to answer? He does not think of this as corruption. He thinks of it as part of the job. Every CTO he knows does some version of the same thing.</p>
+
+<hr class="story-sep">
+
+<p>The slide deck is the earliest and most durable form of busy work in these organisations. Meetings, OKRs, and alignment rituals did not create the pattern; they accumulated around a governing habit that already treated representation as the thing to be managed.</p>
+
+<p>Once an organisation commits to governing through slides, the slides become the product. The company no longer optimises for system behaviour. It optimises for a narrative about system behaviour. Better updates. Better status language. More meetings to ensure the finance story, the technology story, the operations story, and the risk story all sound compatible long enough to survive the board meeting.</p>
+
+<p>The board reads four parallel descriptions of the organisation and assumes they describe the same one. Technology says the migration is progressing. Finance says costs are rising. Operations says incidents are stable. Risk says several items are amber but manageable. Taken together, these claims are often contradictory. Nobody asks whether they are consistent because the pack is not designed for consistency. It is designed for presentation.</p>
+
+<h2>The recursive filter</h2>
+
+<p>The substitution of narrative for reality operates at every level, not just the board. The engineering team produces sprint metrics for the delivery lead. The delivery lead produces status for the programme manager. The programme manager produces portfolio language for David. David produces board language for the CEO. At each step, ambiguity is resolved in favour of the narrative. Delays become replanning. Failures become risks. Missing capabilities become work in progress.</p>
+
+<p>By the time the signal reaches the board, it has been filtered often enough that it still sounds informed while no longer carrying the information it was meant to carry.</p>
+
+<p>The recursive filter explains why problems obvious to engineers take quarters to reach the board. The engineer says the migration is stalled. The next layer says it is amber. The next says it is on track with risks. The final version says it is on track. Nobody in the chain is necessarily lying. Each participant is making the story more survivable for the next reader.</p>
+
+<div class="diagram-placeholder"><p><em>Four board sections. One private reconciliation. No structural mechanism to connect them.</em></p></div>
+
+<h2>Why the deck eats the company</h2>
+
+<p>The real cost is not David&rsquo;s time, though that is real. The real cost is that the reconciliation lives in David&rsquo;s head rather than in an artefact the organisation can inspect. When David leaves, the private mapping between narrative and reality leaves with him. The next executive inherits the deck, assumes it describes the system, and the organisation becomes less capable of knowing that it does not know.</p>
+
+<p>The deck eats the company by becoming the thing the organisation manages. It does not merely waste time. Once the deck becomes the governing object, every other layer aligns to the representation rather than the system itself.</p>
+
+<p>In 1999, the brochure website replaced the business at the level of public image. The strategy deck does the same thing at the level of governance. It describes a strategically aligned, digitally advancing organisation while the underlying system continues operating exactly as before.</p>
+
+<p>The competitor that stops faking chooses a different governing object. Not the slide deck, but the artefact: process definitions, contracts, deployment records, reconciliation reports. The competitor&rsquo;s board does not read a polished description of progress. It reads evidence produced by comparing what the organisation claims against what the system shows.</p>
+
+<p>That evidence is less soothing than a board pack. It is also attached to reality, which is a property the board pack has never reliably possessed.</p>
+
+  <div class="cta-box">
+    <p>I wrote a free book about how this pattern plays out at board level</p>
+    <div class="cta-buttons">
+      <a class="cta-primary" href="/illusions-in-the-boardroom/">Read Illusions in the Boardroom</a>
+    </div>
+  </div>
+
+  <div class="nav"><a href="/articles/the-brochureware-moment/">&larr; The Brochureware Moment</a><a href="/articles/fake-boundaries/">Fake Boundaries &rarr;</a></div>
+
+  <p class="also">See also: <a href="/articles/">All articles</a> &middot; <a href="/illusions-in-the-boardroom/preview.html">Illusions in the Boardroom</a> &middot; <a href="/illusions-of-work/preview.html">Illusions of Work</a></p>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+
+  <script defer data-domain="simpleisadvanced.com" src="https://api.hectic.demandops.com/js/analytics.js"></script>
+</body>
+</html>
