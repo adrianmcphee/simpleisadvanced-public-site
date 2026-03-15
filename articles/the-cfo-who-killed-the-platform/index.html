@@ -123,6 +123,23 @@
                    color: #059669; font-weight: 600; }
     .book-cta { font-size: 0.8em; color: #999; margin-top: 0.3em; }
     .book-card:hover .book-cta { color: #222; }
+    .floating-books { display: none; }
+    @media (min-width: 1200px) {
+      .floating-books { display: flex; flex-direction: column; gap: 0.8em; position: fixed;
+                         top: 2em; right: 2em; z-index: 10; font-family: 'Inter', system-ui, sans-serif; }
+      .floating-book { display: flex; align-items: center; gap: 0.7em; padding: 0.6em 0.8em;
+                        background: #fff; border: 1px solid #e5e5e5; border-radius: 8px;
+                        text-decoration: none; color: #222; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                        transition: transform 0.15s ease, box-shadow 0.15s ease; width: 220px; }
+      .floating-book:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .floating-book img { width: 36px; height: 54px; object-fit: cover; border-radius: 3px;
+                            box-shadow: 0 1px 4px rgba(0,0,0,0.15); flex-shrink: 0; }
+      .floating-book-info { display: flex; flex-direction: column; }
+      .floating-book-info strong { font-size: 0.72em; line-height: 1.3; }
+      .floating-book-info span { font-size: 0.62em; color: #999; }
+      .floating-book-free { font-size: 0.58em; text-transform: uppercase; letter-spacing: 0.06em;
+                             color: #059669; font-weight: 600; }
+    }
     .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
             border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
     .nav a { color: #999; text-decoration: none; }
@@ -136,6 +153,24 @@
   </style>
 </head>
 <body>
+  <div class="floating-books">
+    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener">
+      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom">
+      <div class="floating-book-info">
+        <span class="floating-book-free">Free</span>
+        <strong>Illusions in the Boardroom</strong>
+        <span>The board-level diagnosis</span>
+      </div>
+    </a>
+    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-of-work" target="_blank" rel="noopener">
+      <img src="/illusions-of-work/cover.png" alt="Illusions of Work">
+      <div class="floating-book-info">
+        <strong>Illusions of Work</strong>
+        <span>The operator manual</span>
+      </div>
+    </a>
+  </div>
+
   <a class="series-link" href="/articles/">&larr; Articles</a>
   <p class="part">How Busy Work Sustains Itself</p>
   <h1>The CFO Who Killed the Platform</h1>
@@ -188,7 +223,7 @@
 <p>The regulatory exposure is structural, and it compounds alongside the competitive exposure. The reconciliation report that the competitor produces weekly is exactly the evidence the regulator is looking for. The narrative that the busy-work organisation produces quarterly is exactly the evidence the regulator has learned to distrust.</p>
 
   <div class="book-promo">
-    <a href="/illusions-in-the-boardroom/" class="book-card">
+    <a href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener" class="book-card">
       <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom" class="book-cover">
       <div class="book-info">
         <span class="book-label">Free</span>
