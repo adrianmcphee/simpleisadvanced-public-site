@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drive vs Drift &mdash; Simple is Advanced</title>
+  <meta name="description" content="The old default was that planning was expensive, synthesis was manual, and coordination overhead was normal. AI changes the economics. The right unit of management is no longer the backlog. It is the milestone artifact, the proof loop, and the weekly judgement about whether Drive is beating Drift.">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/articles/drive-vs-drift/">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Drive vs Drift &mdash; Simple is Advanced">
+  <meta property="og:description" content="AI changes the economics of execution. The right unit of management is no longer the backlog. It is the milestone artifact, the proof loop, and the weekly judgement about whether Drive is beating Drift.">
+  <meta property="og:image" content="https://simpleisadvanced.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://simpleisadvanced.com/articles/drive-vs-drift/">
+  <meta property="og:site_name" content="Simple is Advanced">
+  <meta property="article:published_time" content="2026-03-17">
+  <meta property="article:author" content="Adrian McPhee">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Drive vs Drift &mdash; Simple is Advanced">
+  <meta name="twitter:description" content="AI changes the economics of execution. The right unit of management is no longer the backlog. It is the milestone artifact, the proof loop, and the weekly judgement about whether Drive is beating Drift.">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Drive vs Drift",
+    "description": "AI changes the economics of execution. The right unit of management is no longer the backlog. It is the milestone artifact, the proof loop, and the weekly judgement about whether Drive is beating Drift.",
+    "author": {
+        "@type": "Person",
+        "name": "Adrian McPhee",
+        "url": "https://www.linkedin.com/in/adrianmcphee/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Simple is Advanced"
+    },
+    "url": "https://simpleisadvanced.com/articles/drive-vs-drift/",
+    "datePublished": "2026-03-17",
+    "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Simple is Advanced",
+        "description": "Articles by Adrian McPhee"
+    }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://simpleisadvanced.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "https://simpleisadvanced.com/articles/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Drive vs Drift"
+        }
+    ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    h2 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.2em; margin-top: 2em;
+          letter-spacing: -0.01em; }
+    h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05em; margin-top: 1.5em; }
+    .series-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .series-link:hover { color: #222; }
+    .article-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
+    p { margin: 0.8em 0; }
+    hr.story-sep { border: none; text-align: center; margin: 2em 0; }
+    hr.story-sep::after { content: "* \00a0\00a0 * \00a0\00a0 *"; color: #999; font-size: 1.1em;
+                           letter-spacing: 0.2em; }
+    .diagram-placeholder { background: #f9f9f9; border: 1px solid #e5e5e5; border-radius: 8px;
+                            padding: 1.5em; margin: 1.5em 0; text-align: center; }
+    .diagram-placeholder p { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    pre { background: #f5f5f0; border-radius: 6px; padding: 1.2em; overflow-x: auto;
+           font-size: 0.82em; line-height: 1.5; margin: 1.5em 0; }
+    code { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; }
+    table.article-table { border-collapse: collapse; width: 100%; margin: 1.5em 0;
+                           font-size: 0.88em; font-family: 'Inter', system-ui, sans-serif; }
+    table.article-table th, table.article-table td { text-align: left; padding: 0.5em 0.8em;
+                                                      border-bottom: 1px solid #e5e5e5; }
+    table.article-table th { font-weight: 600; }
+    ol, ul { padding-left: 1.5em; }
+    li { margin: 0.5em 0; }
+    .book-promo { margin: 3em 0; display: flex; flex-direction: column; gap: 1em;
+                   font-family: 'Inter', system-ui, sans-serif; }
+    .book-card { display: flex; align-items: center; gap: 1.2em; padding: 1.2em;
+                  background: #f9f9f9; border-radius: 8px; text-decoration: none; color: #222;
+                  transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .book-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .book-cover { width: 80px; height: 120px; object-fit: cover; border-radius: 4px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.12); flex-shrink: 0; }
+    .book-info { display: flex; flex-direction: column; gap: 0.2em; }
+    .book-info strong { font-size: 0.95em; }
+    .book-desc { font-size: 0.8em; color: #666; line-height: 1.4; }
+    .book-label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.08em;
+                   color: #059669; font-weight: 600; }
+    .book-cta { font-size: 0.8em; color: #999; margin-top: 0.3em; }
+    .book-card:hover .book-cta { color: #222; }
+    .floating-books { display: none; }
+    @media (min-width: 1200px) {
+      .floating-books { display: flex; flex-direction: column; gap: 0.8em; position: fixed;
+                         top: 2em; right: 2em; z-index: 10; font-family: 'Inter', system-ui, sans-serif; }
+      .floating-book { display: flex; align-items: center; gap: 0.7em; padding: 0.6em 0.8em;
+                        background: #fff; border: 1px solid #e5e5e5; border-radius: 8px;
+                        text-decoration: none; color: #222; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                        transition: transform 0.15s ease, box-shadow 0.15s ease; width: 220px; }
+      .floating-book:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .floating-book img { width: 36px; height: 54px; object-fit: cover; border-radius: 3px;
+                            box-shadow: 0 1px 4px rgba(0,0,0,0.15); flex-shrink: 0; }
+      .floating-book-info { display: flex; flex-direction: column; }
+      .floating-book-info strong { font-size: 0.72em; line-height: 1.3; }
+      .floating-book-info span { font-size: 0.62em; color: #999; }
+      .floating-book-free { font-size: 0.58em; text-transform: uppercase; letter-spacing: 0.06em;
+                             color: #059669; font-weight: 600; }
+    }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    .also { font-size: 0.8em; color: #999; margin-top: 2em; font-family: 'Inter', system-ui, sans-serif; }
+    .also a { color: #999; text-decoration: none; }
+    .also a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <div class="floating-books">
+    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener">
+      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom">
+      <div class="floating-book-info">
+        <span class="floating-book-free">Free</span>
+        <strong>Illusions in the Boardroom</strong>
+        <span>The board-level diagnosis</span>
+      </div>
+    </a>
+    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-of-work" target="_blank" rel="noopener">
+      <img src="/illusions-of-work/cover.png" alt="Illusions of Work">
+      <div class="floating-book-info">
+        <strong>Illusions of Work</strong>
+        <span>The operator manual</span>
+      </div>
+    </a>
+  </div>
+
+  <a class="series-link" href="/articles/">&larr; Articles</a>
+
+  <h1>Drive vs Drift</h1>
+  <p class="article-summary">AI does not just make coding faster. It makes synthesis, gap analysis, and proof management cheap enough to run continuously. The right unit of management is no longer the pre-baked backlog. It is the milestone artifact, the proof loop, and the weekly judgement about whether Drive is beating Drift.</p>
+
+<p>The old default in software was that planning was expensive, synthesis was manual, and coordination overhead was treated as normal. Teams spent a significant amount of time turning an objective into a roadmap, then into epics, then into stories, then into estimates, and then into a set of ceremonies designed to keep everyone aligned with a plan that was already going stale. That made sense when the cost of understanding the gap between current reality and desired outcome was high. It makes much less sense now.</p>
+
+<p>AI changes the economics of synthesis. It does not merely make coding faster. Coding is only part of the work and, in many cases, not the binding constraint. A team can automate large parts of implementation and still get very little real benefit if the target is vague, the context is muddled, the product logic is weak, or the work is drifting away from the actual milestone. If you do not know what you are trying to deliver, why it matters, how the user experiences it, what the domain model is, where the conversion moments are, and how the system should behave as a coherent whole, then AI will just help you produce misaligned output faster.</p>
+
+<p>The real leverage in AI-native execution sits further upstream than coding automation. It comes from reducing the cost of turning strategic intent into a clear milestone artifact, reducing the cost of continuously synthesising the gap between where you are and where you need to be, and reducing the cost of deciding what the next few workstreams should be. Once that is in place, AI can help with coding very effectively, but the coding gains only compound if the upstream thinking is sound.</p>
+
+<h2>The Strategic Context Stack</h2>
+
+<p>The <a href="/articles/the-strategic-context-stack/">Strategic Context Stack</a> sits above this method and has to be coherent before the method can work properly. Purpose, vision, mission, goals, strategy, bets, OKRs, and KPIs are not interchangeable management words. Each layer has a different job, a different time horizon, and a different relationship to the layers above and below it. The stack matters because the milestone cannot be judged in isolation. A release can have strong local coherence and still be pointed at the wrong thing if it is not properly nested inside the strategic context.</p>
+
+<p>Drive vs Drift assumes that the organisation can distinguish long-horizon direction from the current strategic mechanism, the active bets being placed, the instrumentation that tests those bets, and the operational health signals that keep the machine honest.</p>
+
+<h2>The milestone artifact</h2>
+
+<p>The milestone artifact is where the Strategic Context Stack becomes operational for a specific delivery. It is not a separate slogan or a fourth moving part. Its role is to set and stabilise the target so Drive and Drift can be judged properly. Execution without a clear milestone artifact is just efficient wandering, and execution against an unstable milestone artifact is disguised replanning.</p>
+
+<p>In practice this means writing a milestone scope document that is specific enough to constrain implementation. It needs to define the user outcome, the key flows, the payoff moments, the domain language, the sequencing, the boundaries, the things that are explicitly not in scope, and the alignment rules across product, code, tests, and reporting. That artifact is not a decorative plan. It is the source of truth against which movement and deviation are judged.</p>
+
+<h2>Drive</h2>
+
+<p>Drive is the measure of net directional gain. I do not judge a week by performative productivity, ticket count, or visible busyness. I judge it by what became newly true that materially advances the milestone. Did we remove ambiguity from the critical path? Did we make the user journey more real? Did we turn a vague concept into a functioning capability? Did we create evidence that the milestone is becoming deliverable?</p>
+
+<p>A team can look active while making little meaningful progress, and equally a week can look modest while actually producing a major increase in future velocity by resolving a hard constraint or restoring coherence. Drive is about movement towards the milestone, not motion for its own sake.</p>
+
+<h2>Drift</h2>
+
+<p>Drift is the measure of deviation from the intended milestone. Most teams think of drift only as scope creep, but the real forms of drift are broader and more dangerous:</p>
+
+<ul>
+<li><strong>UX drift</strong>, where the experience no longer matches the intended user journey.</li>
+<li><strong>Terminology drift</strong>, where domain language fragments and the product stops making conceptual sense.</li>
+<li><strong>Architecture drift</strong>, where implementation decisions weaken the shape of the release.</li>
+<li><strong>Verification drift</strong>, where systems appear complete but the evidence is shallow or misleading.</li>
+<li><strong>Alignment drift</strong>, where docs, mobile, backend, analytics, and tests stop matching.</li>
+</ul>
+
+<p>A team can generate a lot of drive while also accumulating drift, and that is one of the main ways delivery slows down without people admitting it.</p>
+
+<h2>Why the contest matters</h2>
+
+<p>The reason I call the method Drive vs Drift is that weekly execution is ultimately a contest between those two forces. A high-Drive and high-Drift week is usually worse than a lower-Drive and lower-Drift week if the drift introduced will have to be paid back with interest. Net directional gain is not raw movement. It is movement minus deviation. Fast progress that weakens the release shape, fragments the model, or creates fake completion is not really progress.</p>
+
+<p>The method only works if people are willing to say that some weeks which felt productive were, in fact, net negative.</p>
+
+<h2>Proof Synthesis</h2>
+
+<p>Proof Synthesis is the day-to-day evidence loop that keeps the method honest. The milestone artifact defines what must become true. Proof Synthesis tracks what is actually true now. Without that distinction, teams slide very quickly into a mush of assertions, local confidence, half-passing checks, and screenshots that look reassuring without really proving continuity.</p>
+
+<p>Proof Synthesis is not a generic status update. It is a structured reconciliation between the milestone artifact, the current state of the product, and the evidence that exists right now. It should say clearly:</p>
+
+<ul>
+<li>What is now <strong>proven</strong>: something concrete has passed, rendered, re-run, regenerated, or otherwise been evidenced in a form that can be pointed to.</li>
+<li>What is still <strong>open</strong>: the milestone still requires something that has not yet been demonstrated.</li>
+<li>What is <strong>partially evidenced</strong>: some touched flow or local proof exists, but the canonical or end-to-end proof is not yet complete.</li>
+<li>What remains <strong>blocked</strong>.</li>
+<li>What the <strong>next highest-yield move</strong> is.</li>
+</ul>
+
+<p>That distinction matters because many releases appear healthier than they are when local proof is mistaken for full proof.</p>
+
+<h3>A concrete example</h3>
+
+<p>A useful Proof Synthesis might say that typecheck passed, release alignment checks passed, targeted flow reruns passed, and regenerated screenshots now show the intended non-zero planning range and the saved reference gallery state. It might then say that a full maintained screenshot pack is still pending, that reference-to-brief-to-reveal continuity is not yet fully evidenced, that launch-readiness blockers remain unchanged, and that the next highest-yield move is to finish the remaining media work and then run the full canonical evidence pack.</p>
+
+<p>That is not project management theatre. It is a disciplined statement of what is now proven, what is still open, and what next most improves the state of proof.</p>
+
+<h2>AI in the proof loop</h2>
+
+<p>The practical value of AI in this loop is that it can keep current state, evidence, and milestone intent in active reconciliation. Instead of asking vaguely what to do next, I ask for a proof-oriented synthesis of current state against the milestone. That conversation should not explode into a new planning exercise. It should produce a crisp answer to a narrower set of questions: What is now proven? What is still open? Which blockers are unchanged? Where is continuity still missing? What is the next highest-yield move that would most improve the state of proof?</p>
+
+<p>The value of this is that it keeps execution anchored in evidence rather than sentiment. The milestone can remain stable while the proof picture becomes sharper every day.</p>
+
+<h2>When to change the milestone</h2>
+
+<p>The method only works if there is discipline around the stability of the milestone artifact. If AI makes synthesis cheap, people can easily mistake that for permission to keep rewriting the milestone. That would just recreate planning overhead in a more continuous and less honest form. The milestone artifact should usually stay stable while Proof Synthesis remains fluid.</p>
+
+<p>You do not change the milestone because new work appeared, implementation is harder than expected, or a fresh idea sounds attractive. You change it when:</p>
+
+<ul>
+<li>The strategic context changed.</li>
+<li>The milestone promise has been shown to be wrong.</li>
+<li>A critical dependency was genuinely missing from scope.</li>
+<li>The artifact contains a contradiction that prevents coherent delivery.</li>
+<li>Early proof shows that the milestone is technically achievable but no longer worth the effort at that level of investment.</li>
+</ul>
+
+<p>That last case matters because value recalibration is real. A team can learn that the target is possible and still decide that the return no longer justifies the path. That is not drift. That is a legitimate change in the milestone artifact.</p>
+
+<h2>The operating model</h2>
+
+<p>The practical operating model is straightforward. The Strategic Context Stack sets the governing frame. The milestone artifact turns that frame into a concrete target for the release. AI then helps synthesise the gap between current state and desired state so the next three to five workstreams become clear. I am not trying to plan every task in advance, and I am not pretending I can forecast all dependencies cleanly upfront. I am trying to keep the next layer of work sharply grounded in the milestone and in reality.</p>
+
+<p>During execution, I repeatedly run Proof Synthesis so I know what is genuinely evidenced, what remains open, and where the next highest-yield move sits. At the end of the week, I assess whether Drive outpaced Drift and whether the milestone artifact still deserves to hold.</p>
+
+<h2>Why this works now</h2>
+
+<p>This method works now because AI allows synthesis to happen continuously rather than ceremonially. It is now cheap enough to re-evaluate the gap between current reality and desired outcome several times a week without freezing the organisation in planning rituals. It is also cheap enough to keep a running state of proof rather than relying on vague confidence and lagging reports.</p>
+
+<p>The right unit of management is no longer the pre-baked backlog. It is the milestone artifact anchored in the Strategic Context Stack, the proof loop wrapped around current execution, and the weekly judgement about whether Drive is beating Drift. The point is not to abandon discipline. It is to move discipline to the place where it now has the highest leverage.</p>
+
+<hr class="story-sep">
+
+<p>The gains from this approach do not come from treating AI as a faster programmer. They come from using AI to make synthesis, design integration, proof management, and execution steering dramatically cheaper, while holding a clear target and refusing to drift away from it.</p>
+
+<p>If the Strategic Context Stack is incoherent, the milestone artifact will be weak. If the milestone is weak, Drive and Drift cannot be judged properly. If Proof Synthesis is weak, the team will confuse confidence with evidence. If all three are sound, the result is not just faster coding. The result is a much tighter execution system.</p>
+
+  <div class="book-promo">
+    <a href="https://shipper.demandops.com/book/illusions-of-work" target="_blank" rel="noopener" class="book-card">
+      <img src="/illusions-of-work/cover.png" alt="Illusions of Work" class="book-cover">
+      <div class="book-info">
+        <strong>Illusions of Work</strong>
+        <span class="book-desc">AI Has Made Reality Non-Negotiable. The operator manual for CTOs and VPs of Engineering.</span>
+        <span class="book-cta">Read now &rarr;</span>
+      </div>
+    </a>
+    <a href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener" class="book-card">
+      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom" class="book-cover">
+      <div class="book-info">
+        <span class="book-label">Free</span>
+        <strong>Illusions in the Boardroom</strong>
+        <span class="book-desc">How AI Forces Structural Honesty. The board-level diagnosis.</span>
+        <span class="book-cta">Read now &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="nav"><a href="/articles/the-diagnostic-toolkit/">&larr; The Diagnostic Toolkit</a><span></span></div>
+
+  <p class="also">See also: <a href="/articles/">All articles</a> &middot; <a href="/articles/the-strategic-context-stack/">The Strategic Context Stack</a> &middot; <a href="/illusions-of-work/preview.html">Illusions of Work</a></p>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+
+  <script defer data-domain="simpleisadvanced.com" src="https://api.hectic.demandops.com/js/analytics.js"></script>
+</body>
+</html>
