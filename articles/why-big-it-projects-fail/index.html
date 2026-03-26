@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Big IT Projects Fail &mdash; Simple is Advanced</title>
+  <meta name="description" content="Big IT projects fail because they are big and because they are IT projects. The label repackages business change as technology delivery, guarantees failure, and ensures IT gets blamed.">
+  <meta name="author" content="Adrian McPhee">
+  <meta name="robots" content="max-snippet:300">
+  <link rel="canonical" href="https://simpleisadvanced.com/articles/why-big-it-projects-fail/">
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Why Big IT Projects Fail &mdash; Simple is Advanced">
+  <meta property="og:description" content="Big IT projects fail because they are big and because they are IT projects. The label repackages business change as technology delivery, guarantees failure, and ensures IT gets blamed.">
+  <meta property="og:image" content="https://simpleisadvanced.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://simpleisadvanced.com/articles/why-big-it-projects-fail/">
+  <meta property="og:site_name" content="Simple is Advanced">
+  <meta property="article:published_time" content="2026-03-26">
+  <meta property="article:author" content="Adrian McPhee">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Big IT Projects Fail &mdash; Simple is Advanced">
+  <meta name="twitter:description" content="Big IT projects fail because they are big and because they are IT projects. The label repackages business change as technology delivery, guarantees failure, and ensures IT gets blamed.">
+  <meta name="twitter:image" content="https://simpleisadvanced.com/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Big IT Projects Fail",
+    "description": "Big IT projects fail because they are big and because they are IT projects. The label repackages business change as technology delivery, guarantees failure, and ensures IT gets blamed.",
+    "author": {
+        "@type": "Person",
+        "name": "Adrian McPhee",
+        "url": "https://www.linkedin.com/in/adrianmcphee/"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Simple is Advanced"
+    },
+    "url": "https://simpleisadvanced.com/articles/why-big-it-projects-fail/",
+    "datePublished": "2026-03-26",
+    "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "Simple is Advanced",
+        "description": "Articles by Adrian McPhee"
+    }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://simpleisadvanced.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles",
+            "item": "https://simpleisadvanced.com/articles/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Why Big IT Projects Fail"
+        }
+    ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
+           line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+          letter-spacing: -0.02em; }
+    h2 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.2em; margin-top: 2em;
+          letter-spacing: -0.01em; }
+    h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05em; margin-top: 1.5em; }
+    .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
+             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+    .series-link { font-size: 0.85em; color: #999; text-decoration: none;
+                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+    .series-link:hover { color: #222; }
+    .article-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
+                         margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
+    p { margin: 0.8em 0; }
+    hr.story-sep { border: none; text-align: center; margin: 2em 0; }
+    hr.story-sep::after { content: "* \00a0\00a0 * \00a0\00a0 *"; color: #999; font-size: 1.1em;
+                           letter-spacing: 0.2em; }
+    .diagram-placeholder { background: #f9f9f9; border: 1px solid #e5e5e5; border-radius: 8px;
+                            padding: 1.5em; margin: 1.5em 0; text-align: center; }
+    .diagram-placeholder p { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    pre { background: #f5f5f0; border-radius: 6px; padding: 1.2em; overflow-x: auto;
+           font-size: 0.82em; line-height: 1.5; margin: 1.5em 0; }
+    code { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; }
+    table.article-table { border-collapse: collapse; width: 100%; margin: 1.5em 0;
+                           font-size: 0.88em; font-family: 'Inter', system-ui, sans-serif; }
+    table.article-table th, table.article-table td { text-align: left; padding: 0.5em 0.8em;
+                                                      border-bottom: 1px solid #e5e5e5; }
+    table.article-table th { font-weight: 600; }
+    ol, ul { padding-left: 1.5em; }
+    li { margin: 0.5em 0; }
+    .book-promo { margin: 3em 0; display: flex; flex-direction: column; gap: 1em;
+                   font-family: 'Inter', system-ui, sans-serif; }
+    .book-card { display: flex; align-items: center; gap: 1.2em; padding: 1.2em;
+                  background: #f9f9f9; border-radius: 8px; text-decoration: none; color: #222;
+                  transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .book-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .book-cover { width: 80px; height: 120px; object-fit: cover; border-radius: 4px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.12); flex-shrink: 0; }
+    .book-info { display: flex; flex-direction: column; gap: 0.2em; }
+    .book-info strong { font-size: 0.95em; }
+    .book-desc { font-size: 0.8em; color: #666; line-height: 1.4; }
+    .book-label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.08em;
+                   color: #059669; font-weight: 600; }
+    .book-cta { font-size: 0.8em; color: #999; margin-top: 0.3em; }
+    .book-card:hover .book-cta { color: #222; }
+    .floating-books { display: none; }
+    @media (min-width: 1200px) {
+      .floating-books { display: flex; flex-direction: column; gap: 0.8em; position: fixed;
+                         top: 2em; right: 2em; z-index: 10; font-family: 'Inter', system-ui, sans-serif; }
+      .floating-book { display: flex; align-items: center; gap: 0.7em; padding: 0.6em 0.8em;
+                        background: #fff; border: 1px solid #e5e5e5; border-radius: 8px;
+                        text-decoration: none; color: #222; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                        transition: transform 0.15s ease, box-shadow 0.15s ease; width: 220px; }
+      .floating-book:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .floating-book img { width: 36px; height: 54px; object-fit: cover; border-radius: 3px;
+                            box-shadow: 0 1px 4px rgba(0,0,0,0.15); flex-shrink: 0; }
+      .floating-book-info { display: flex; flex-direction: column; }
+      .floating-book-info strong { font-size: 0.72em; line-height: 1.3; }
+      .floating-book-info span { font-size: 0.62em; color: #999; }
+      .floating-book-free { font-size: 0.58em; text-transform: uppercase; letter-spacing: 0.06em;
+                             color: #059669; font-weight: 600; }
+    }
+    .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
+            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .nav a { color: #999; text-decoration: none; }
+    .nav a:hover { color: #222; }
+    .also { font-size: 0.8em; color: #999; margin-top: 2em; font-family: 'Inter', system-ui, sans-serif; }
+    .also a { color: #999; text-decoration: none; }
+    .also a:hover { color: #222; }
+    footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
+             padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+  <div class="floating-books">
+    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener">
+      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom">
+      <div class="floating-book-info">
+        <span class="floating-book-free">Free</span>
+        <strong>Illusions in the Boardroom</strong>
+        <span>The board-level diagnosis</span>
+      </div>
+    </a>
+    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-of-work" target="_blank" rel="noopener">
+      <img src="/illusions-of-work/cover.png" alt="Illusions of Work">
+      <div class="floating-book-info">
+        <strong>Illusions of Work</strong>
+        <span>The operator manual</span>
+      </div>
+    </a>
+  </div>
+
+  <a class="series-link" href="/articles/">&larr; Articles</a>
+  <p class="part">Reference</p>
+  <h1>Why Big IT Projects Fail</h1>
+  <p class="article-summary">Big IT projects fail for two reasons: they are big, and they are IT projects. The first creates coordination overhead. The second repackages a business redesign as a delivery exercise, guarantees failure, deposits legacy, and ensures IT absorbs the blame.</p>
+
+<p>Big IT projects fail for two reasons: they are big, and they are IT projects.</p>
+
+<p>When the programme fails, and it will, the label determines where the blame lands. Not on the executives who packaged a business redesign as a technology delivery. Not on the governance that split authority from knowledge. On IT, the function that was handed a problem it was never equipped to solve and held accountable for an outcome it was never authorised to design.</p>
+
+<p>The label is not incidental to the failure. The label is the mechanism.</p>
+
+<h2>The repackaging</h2>
+
+<p>A company decides to change how it processes claims, or fulfils orders, or onboards customers. The change requires redesigning a business process: who decides what, in what sequence, using what information, with what authority. That is an operating decision. It belongs to the people who run the business.</p>
+
+<p>Instead, the company packages the change as an IT project. This is only possible because the organisation already treats the people who build its systems as a separate function from the people who run its business. That separation, described in <a href="/articles/the-separation/">The Separation</a>, is the precondition. The IT project label exploits it. Requirements are written by people who will not build the system and handed to people who will not use it. A programme is created. Workstreams are defined. Governance is established. The actual design question, how should this process work, is never asked in a room where both the authority and the knowledge are present, because the label has assigned them to separate functions with separate reporting lines.</p>
+
+<p>The repackaging is not a management failure. It is a governance convenience, and it determines in advance who will be blamed when the change does not arrive.</p>
+
+<h2>Who the label protects</h2>
+
+<p>&ldquo;The business&rdquo; avoids owning the redesign. Redesigning a business process means an executive must decide how work should flow, which roles are necessary, and what should be measured. Those decisions are specific, testable, and attributable. They carry career risk. &ldquo;We gave IT our requirements&rdquo; transfers that risk to a function whose failure the organisation already knows how to process. The executive who sponsors the programme is accountable for securing budget and attending steering committees, not for deciding how the process should work. When the programme fails, the sponsor&rsquo;s narrative is ready: IT did not deliver against the requirements. The requirements were sound. The design was never the problem.</p>
+
+<p>Programme governance gets funded. A programme management office, consulting firms, integration partners, testing specialists, change advisory boards: an entire apparatus is created because the repackaging produces complexity that requires management. Each participant has a rational interest in the continued existence of the complexity. &ldquo;Improve cross-functional programme governance&rdquo; is a sellable engagement. &ldquo;Collapse the structure that makes the programme necessary&rdquo; is not. The supply chain is self-reinforcing: the consultancy recommends, the agency delivers appearance of delivery, the consultancy returns to assess. No firm in that chain can sell a recommendation that removes the need for the rest of the chain. When the programme fails, the consulting firms are already positioned to diagnose the failure, which produces the next engagement.</p>
+
+<p>Finance gets a budget line. IT projects have costs, timelines, and milestones. Business redesign is open-ended and harder to price. The IT label makes the change legible to the annual budget cycle, governable through instruments finance already controls: capital allocation, quarterly reviews, benefit realisation frameworks. None of those instruments can see whether the business process actually changed, and finance has no reason to ask. When the programme fails, finance attributes the write-down to technology investment. The decision to repackage business change as technology delivery does not appear in the post-mortem, because finance has no category for it.</p>
+
+<p>The board gets a survivable story. &ldquo;The IT project failed to deliver&rdquo; is a sentence the board can process. It implies a fixable cause: better vendors, better methodology, better programme management next time. &ldquo;We never designed the process change because nobody in the room had both the authority and the knowledge&rdquo; is not a sentence any steering committee will produce, because the steering committee is the structure that prevents both from being in the same room. The board commissions a lessons-learned review. The review recommends stronger governance. The next programme begins.</p>
+
+<p>Nobody is exposed, because the blame has designated absorbers. The CIO carries the executive accountability for a change the business refused to own. The systems integrator carries the delivery accountability for a design nobody specified. The consulting firm that ran QA carries the quality accountability for requirements that were never tested against the process they were supposed to change. The vendor carries the product accountability for a product that was selected to solve an organisational problem no product can solve. Each absorber is replaceable. When the programme fails, the CIO is moved on, the integrator is replaced, the consulting firm is rotated, the vendor is swapped. The structure that produced the failure remains untouched, because the structure was never blamed. IT absorbs the blame, because absorbing blame from the rest of the organisation is what IT was set up to do the moment the company decided that the people who build the systems are not part of &ldquo;the business.&rdquo;</p>
+
+<h2>What the label produces</h2>
+
+<p>Once the business change has been labelled an IT project, the organisation stops managing the change and starts managing the programme. Requirements documents, architecture diagrams, status reports, and RAG dashboards are produced with increasing sophistication. The programme&rsquo;s success criteria are defined in terms of its own output: deliverables completed, environments provisioned, milestones achieved. The dashboard shows green because the programme is delivering what the programme was set up to deliver. The business process has not changed. The dashboard cannot see this, because the dashboard measures the programme, and the programme measures itself.</p>
+
+<p>Scale reinforces the effect. Add a PMO to track status across workstreams. Add a steering committee to hear summaries of what the PMO has summarised. Add a change advisory board to govern what the steering committee has approved. Each layer is individually defensible. The cumulative effect is a structure whose primary output is the management of its own complexity. The larger the programme grows, the more it resembles real work. The resemblance is the problem.</p>
+
+<h2>What the label leaves behind</h2>
+
+<p>Each failed IT programme leaves a residue. The programme did not change the business process, but it did produce technical artefacts: a partially migrated database, an integration layer that connects to systems on both sides of an abandoned cutover, new services running alongside the old ones they were supposed to replace, configuration that nobody fully understands because the team that built it was disbanded when the programme was closed.</p>
+
+<p>This residue is what organisations call &ldquo;legacy.&rdquo;</p>
+
+<p>It is not old technology but the sediment of business changes that were repackaged as IT projects and never completed. Each programme deposits a layer. Each layer makes the next change harder, because the next programme must navigate not only the original process but the accumulated debris of every previous attempt to change it. The system grows more complex with each failed programme, and the growing complexity is cited as evidence that the next programme needs to be bigger: more workstreams, more governance, more coordination. The cycle compounds.</p>
+
+<p>An organisation with three decades of &ldquo;legacy IT&rdquo; is not an organisation that failed to modernise. It is an organisation that packaged business change as technology delivery three or four times per decade, failed to change the process each time, and accumulated the technical residue of each attempt. The legacy is the product of the last failure, not the cause of the next one.</p>
+
+<p>The trap is that the legacy cannot be modernised incrementally, because the conditions for incremental improvement do not exist. Nobody owns the legacy systems, because ownership was never assigned to a person or a process; it was assigned to a programme that was closed. The business processes the systems implement are not documented, because the programmes that built them documented requirements and deliverables, not the process itself. &ldquo;The business&rdquo; cannot improve the systems, because it does not consider them its responsibility. IT cannot improve the process, because it does not have the authority to change how the process works.</p>
+
+<p>Incumbent vendors compound the trap. They operate in two modes, both rational, neither helpful. The first is to protect recurring revenue: managed service contracts, support agreements, and maintenance retainers scoped around the existing complexity. A vendor maintaining a partially migrated estate with three integration layers and two generations of middleware has no commercial interest in the structural simplification that would halve the scope of its own contract. The second is to sell the next big programme: a managed migration, phased over three years, governed through a joint steering committee, using the vendor&rsquo;s own tooling. The recommendation is structurally identical to the programme that created the legacy in the first place. Neither mode produces incremental improvement, because simplification would reduce both the recurring revenue and the case for the next programme.</p>
+
+<p>The only intervention that can get funded is a new programme: large enough to justify a business case, labelled as IT so it fits the budget model, governed through the same structures that failed last time. Building a business case for incremental modernisation is nearly impossible when nobody can describe what the system does, who depends on it, or what the process is supposed to achieve. The business case requires precisely the ownership and documentation that the organisation has never produced. So it produces another programme instead. The cycle does not repeat because organisations are slow to learn. It repeats because the structure that produces the failure also produces the only available response to it.</p>
+
+<h2>Why the label persists</h2>
+
+<p>The IT project label has survived decades of evidence against it because the failure it produces is organisationally useful.</p>
+
+<p>When a business redesign fails, someone must explain why the process has not changed despite years of investment. That conversation is dangerous: it leads to questions about authority, ownership, and whether the people governing the change understood the thing they were changing. When an IT project fails, the conversation is contained: vendors underperformed, requirements were complex, integration was harder than expected. The vocabulary of IT failure is mature, familiar, and blame-absorbing. The vocabulary of business design failure does not exist in most organisations, because the organisations have never tried to have the conversation.</p>
+
+<p>The label persists because it converts a structural failure into a delivery failure, and delivery failures have a known remediation path: try again, with better governance, a different methodology, and a new set of consultants. The structure that caused the failure is never examined, because the label has already explained the failure in terms the organisation can act on without changing anything.</p>
+
+<h2>The alternative the structure prevents</h2>
+
+<p>The big IT project exists because the organisation has no mechanism for small change. The business cannot improve a process it considers IT&rsquo;s problem. IT cannot redesign a process it has no authority over. The only thing that can cross the gap between them is a programme, and programmes are big by definition.</p>
+
+<p>The alternative is a structure that does not need a programme. When a single unit owns a business process end to end, including the people, the systems, the data, and the authority to change how the process works, incremental improvement becomes routine. The unit does not need a business case to fix a broken notification workflow, because the unit owns the workflow. It does not need a programme to change a decision sequence, because the people who understand the decision and the people who can change the system sit in the same team. Change is small, continuous, and owned. There is nothing to repackage.</p>
+
+<p>The companion volumes, <em>Illusions of Work</em> and <em>Illusions in the Boardroom</em>, describe this structure in detail: what makes the unit real, what governance it requires, and where the model is hardest.</p>
+
+<h2>What changes</h2>
+
+<p>The IT project label survived for two decades because checking whether the programme&rsquo;s artefacts matched operational reality was expensive enough to defer. AI changes that cost. A machine that reads the programme&rsquo;s deliverables alongside the codebase, the deployment history, and the operational metrics can produce a reconciliation in hours. The gap between what the programme claims and what the system does becomes visible and attributable.</p>
+
+<p>The question that follows is not &ldquo;why did the IT project fail?&rdquo; It is &ldquo;why did we call it an IT project?&rdquo;</p>
+
+  <div class="book-promo">
+    <a href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener" class="book-card">
+      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom" class="book-cover">
+      <div class="book-info">
+        <span class="book-label">Free</span>
+        <strong>Illusions in the Boardroom</strong>
+        <span class="book-desc">How AI Forces Structural Honesty. The board-level diagnosis.</span>
+        <span class="book-cta">Read now &rarr;</span>
+      </div>
+    </a>
+    <a href="https://shipper.demandops.com/book/illusions-of-work" target="_blank" rel="noopener" class="book-card">
+      <img src="/illusions-of-work/cover.png" alt="Illusions of Work" class="book-cover">
+      <div class="book-info">
+        <strong>Illusions of Work</strong>
+        <span class="book-desc">AI Has Made Reality Non-Negotiable. The operator manual for CTOs.</span>
+        <span class="book-cta">Read now &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="nav"><a href="/articles/the-diagnostic-toolkit/">&larr; The Diagnostic Toolkit</a><span></span></div>
+
+  <p class="also">See also: <a href="/articles/">All articles</a> &middot; <a href="/illusions-in-the-boardroom/preview.html">Illusions in the Boardroom</a> &middot; <a href="/illusions-of-work/preview.html">Illusions of Work</a></p>
+
+  <footer>
+    <p>&copy; Adrian McPhee 2026 &middot;
+    <a href="https://www.linkedin.com/in/adrianmcphee/">Contact</a></p>
+  </footer>
+
+  <script defer data-domain="simpleisadvanced.com" src="https://api.hectic.demandops.com/js/analytics.js"></script>
+</body>
+</html>
