@@ -176,7 +176,7 @@
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/activity-without-reality/index.html": {
-    "hash": "51c51f09188bccb43befa16ea2d35caf76fdf13057e73ec377a8b63c1edb7bf7",
+    "hash": "3dcd9321425cd115c243210d8956c8f6d0fcca658f7a2897f31be0965925409e",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/ai-as-the-unforgiving-reader/index.html": {
@@ -184,7 +184,7 @@
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/architecture-that-avoids-accountability/index.html": {
-    "hash": "9124aa1f1e98bdd80741a6c80899cf583420ee1778dda7984979589a1281dd77",
+    "hash": "82a9146119dfc0382e7db5c92e10f9e1d03d6e6829245c742a9526b62a18b903",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/authors-note/index.html": {
@@ -192,7 +192,7 @@
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/conclusion/index.html": {
-    "hash": "924f542fa1e0ae8f68f7b86836dd11fbbddd763b018bf6806afbc6eca3e3f2eb",
+    "hash": "9dba53c01f9d9ff4e774c7df572d88b6bd31fed370426995cc85e94c1dceab6c",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/customer-journeys-are-business-processes/index.html": {
@@ -200,7 +200,7 @@
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/fake-products-and-the-buffer-class/index.html": {
-    "hash": "1340dd6b962425d8ac3c6b9e01bd39890e64d6697f9c2adb7b31b987f69582ef",
+    "hash": "473561064af3a1d3ed848ff324c972875757081d70ffbdd584c8c7b51eb313a9",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/feeding-ai-healing-the-organisation/index.html": {
@@ -211,8 +211,12 @@
     "hash": "2d53012e456b1bccd693c9c0c9b3a06799fb22358c4beff59e60a566fd903727",
     "lastmod": "2026-06-10"
   },
+  "illusions-of-work/chapters/how-to-catch-this-book-being-wrong/index.html": {
+    "hash": "e89829e48a31a86eb2e882a8c81d430415cc5a85db579b6bf782e5b9ba0316ae",
+    "lastmod": "2026-06-10"
+  },
   "illusions-of-work/chapters/if-you-are-the-ceo/index.html": {
-    "hash": "c6f3b4f5eca3d01d62a18bbeaff06c18d9f23d98d4263cd46724dbc9217cef98",
+    "hash": "47bda42d889c8b96e9d8232c91f5ffd5fa3ade1ed6773aec7a012bc32a41c53a",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/introduction/index.html": {
@@ -232,11 +236,11 @@
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/the-authority-to-decompose/index.html": {
-    "hash": "56575919fa1dd9ba5b0ca7dc9f9f3d219513b675818c0352ad11f047815b44d2",
+    "hash": "904df99d14016b803fbf08e44a9edb1ece05c580caa6ad8a7931c1dc65f439d9",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/the-first-unit/index.html": {
-    "hash": "337f2c4e71db1a25a91f751331110ac1f0b511e2d99633d427f2a7661b319ce3",
+    "hash": "f60214b24443fcf91edcb87de6c495eb37602fcb958eb1b6d88126488777ad26",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/the-machinery-of-avoidance/index.html": {
@@ -272,23 +276,23 @@
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/why-people-closest-to-reality-suffer/index.html": {
-    "hash": "aa1e295ca96deec58e2b84534464071d60bad3a13eafa893504c4d4d1efe12ce",
+    "hash": "a2832bc81ddfcf94b255ce44ed9c9869fc3638e4c1774bff2603925348bfbdec",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/chapters/writing-reality-down-so-it-bites-back/index.html": {
-    "hash": "7f06c50377d0ce4146f896fe5674637a02cf6aba0e127ec20ad8af0b0885bd63",
+    "hash": "c6fe7c3d64072654ea2162bbc88828a661ad4f4f705fa63f9c957256b4a37c99",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/contents.html": {
-    "hash": "49291ed8beab6579fb8b781cce1648bdd5dcfc6f18be626adf553c828baf1bfd",
+    "hash": "0031392763fb214c1b7656b09a73a19ea55449532ef8632c99fb037e568c7d52",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/index.html": {
-    "hash": "627de6400e53e708f7d5e31b76466fd07b5467376a73bee3010b2de4d576564d",
+    "hash": "c1b7f809d0c6374733302b316c76fe096fd271b80c4cf6905f5d0ecc5df86b00",
     "lastmod": "2026-06-10"
   },
   "illusions-of-work/preview.html": {
-    "hash": "e213f98a83588f6488ceca0343df8165e8d83c1e2538a43ec6ca0027492c41e9",
+    "hash": "fcc466048084a6b5d8c01f96c2b5d68d4321c4c89ec06f0e1c823b33066c6349",
     "lastmod": "2026-06-10"
   },
   "index.html": {
