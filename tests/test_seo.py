@@ -12,14 +12,15 @@ import json
 import sys
 import urllib.request
 import urllib.error
+from datetime import date
 from pathlib import Path
 
 SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
-    "illusions-of-work": {"title": "Illusions of Work", "chapters": 25},
-    "illusions-in-the-boardroom": {"title": "Illusions in the Boardroom", "chapters": 22},
+    "illusions-of-work": {"title": "Illusions of Work", "chapters": 26},
+    "illusions-in-the-boardroom": {"title": "Illusions in the Boardroom", "chapters": 23},
 }
 
 
@@ -121,6 +122,53 @@ def check_local(r):
             sitemap.count("<priority>0.8</priority>") >= 2)
     url_count = len(re.findall(r"<url>", sitemap))
     r.check("Sitemap: has 50+ URLs", url_count >= 50, f"{url_count}")
+
+    # --- Sitemap completeness (catches stale fragments) ---
+    locs = re.findall(r"<loc>(.*?)</loc>", sitemap)
+    r.check("Sitemap: no duplicate URLs", len(locs) == len(set(locs)))
+
+    article_dirs = sorted(d.name for d in (SITE_DIR / "articles").iterdir()
+                          if d.is_dir() and (d / "index.html").exists())
+    missing = [a for a in article_dirs if f"{DOMAIN}/articles/{a}/" not in locs]
+    r.check("Sitemap: every article present", not missing,
+            ", ".join(missing) if missing else f"{len(article_dirs)} articles")
+
+    missing_ch = []
+    for slug in BOOKS:
+        ch_dir = SITE_DIR / slug / "chapters"
+        if not ch_dir.exists():
+            continue
+        for ch_path in sorted(ch_dir.iterdir()):
+            if ch_path.is_dir() and f"{DOMAIN}/{slug}/chapters/{ch_path.name}/" not in locs:
+                missing_ch.append(f"{slug}/{ch_path.name}")
+    r.check("Sitemap: every chapter present", not missing_ch,
+            ", ".join(missing_ch) if missing_ch else "all OK")
+
+    unresolved = []
+    for loc in locs:
+        rel = loc[len(DOMAIN):].lstrip("/")
+        if rel == "" or rel.endswith("/"):
+            rel += "index.html"
+        if not (SITE_DIR / rel).exists():
+            unresolved.append(loc)
+    r.check("Sitemap: all URLs resolve to local files", not unresolved,
+            ", ".join(unresolved) if unresolved else "all OK")
+
+    lastmods = re.findall(r"<lastmod>(.*?)</lastmod>", sitemap)
+    today = date.today().isoformat()
+    bad_dates = [d for d in lastmods
+                 if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) or d > today]
+    r.check("Sitemap: lastmod dates valid and not in the future", not bad_dates,
+            ", ".join(bad_dates) if bad_dates else "all OK")
+
+    # --- Articles fragment matches articles/ directory ---
+    frag = (SITE_DIR / "articles" / "sitemap-fragment.xml").read_text()
+    frag_locs = set(re.findall(r"<loc>(.*?)</loc>", frag))
+    expected = {f"{DOMAIN}/articles/"} | {f"{DOMAIN}/articles/{a}/" for a in article_dirs}
+    drift = sorted(frag_locs.symmetric_difference(expected))
+    r.check("Articles fragment: matches articles/ directory", not drift,
+            "; run scripts/build_articles_sitemap_fragment.py — " + ", ".join(drift)
+            if drift else f"{len(article_dirs)} articles")
 
     # --- Per-book checks ---
     for slug, info in BOOKS.items():
