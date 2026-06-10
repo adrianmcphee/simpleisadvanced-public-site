@@ -19,7 +19,7 @@ SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
-    "illusions-of-work": {"title": "Illusions of Work", "chapters": 26},
+    "illusions-of-work": {"title": "Illusions of Work", "chapters": 27},
     "illusions-in-the-boardroom": {"title": "Illusions in the Boardroom", "chapters": 23},
 }
 
