@@ -161,6 +161,18 @@ def check_local(r):
     r.check("Sitemap: lastmod dates valid and not in the future", not bad_dates,
             ", ".join(bad_dates) if bad_dates else "all OK")
 
+    # --- RSS feed matches articles/ directory ---
+    feed_path = SITE_DIR / "articles" / "feed.xml"
+    r.check("Feed: articles/feed.xml exists", feed_path.exists())
+    if feed_path.exists():
+        feed = feed_path.read_text()
+        feed_links = set(re.findall(r"<link>(.*?)</link>", feed))
+        missing_feed = [a for a in article_dirs
+                        if f"{DOMAIN}/articles/{a}/" not in feed_links]
+        r.check("Feed: every article present", not missing_feed,
+                "; run scripts/build_articles_feed.py — " + ", ".join(missing_feed)
+                if missing_feed else f"{len(article_dirs)} articles")
+
     # --- Articles fragment matches articles/ directory ---
     frag = (SITE_DIR / "articles" / "sitemap-fragment.xml").read_text()
     frag_locs = set(re.findall(r"<loc>(.*?)</loc>", frag))

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simple is Advanced — Articles</title>
+    <link>https://simpleisadvanced.com/articles/</link>
+    <atom:link href="https://simpleisadvanced.com/articles/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>How software-dependent corporates built structures that reward the appearance of productivity over actual productivity, and why AI changes the economics. Articles by Adrian McPhee.</description>
+    <language>en</language>
+    <item>
+      <title>Why Big IT Projects Fail</title>
+      <link>https://simpleisadvanced.com/articles/why-big-it-projects-fail/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/why-big-it-projects-fail/</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Big IT projects fail because they are big and because they are IT projects. The label repackages business change as technology delivery, guarantees failure, and ensures IT gets blamed.</description>
+    </item>
+    <item>
+      <title>Drive vs Drift</title>
+      <link>https://simpleisadvanced.com/articles/drive-vs-drift/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/drive-vs-drift/</guid>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <description>AI changes the economics of execution. The right unit of management is no longer the backlog. It is the milestone artefact, the proof loop, and the weekly judgement about whether Drive is beating Drift.</description>
+    </item>
+    <item>
+      <title>Where This Is Hard</title>
+      <link>https://simpleisadvanced.com/articles/where-this-is-hard/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/where-this-is-hard/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>The strongest objections: irreducible complexity, scale, legacy, why large firms centralised in the first place, and how political immune systems kill reform.</description>
+    </item>
+    <item>
+      <title>What Happens Next</title>
+      <link>https://simpleisadvanced.com/articles/what-happens-next/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/what-happens-next/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>The gap between organisations that reconcile and those that narrate will become visible in cost, speed, truthfulness, and willingness of the best people to stay.</description>
+    </item>
+    <item>
+      <title>The Strategy Deck That Ate the Company</title>
+      <link>https://simpleisadvanced.com/articles/the-strategy-deck-that-ate-the-company/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-strategy-deck-that-ate-the-company/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>A CTO spends four days building a board pack that describes a cleaner organisation than he actually runs. At each management level, ambiguity resolves in favour of narrative.</description>
+    </item>
+    <item>
+      <title>The Strategic Context Stack</title>
+      <link>https://simpleisadvanced.com/articles/the-strategic-context-stack/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-strategic-context-stack/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Purpose, vision, mission, strategy, goals, OKRs, KPIs: what each word is supposed to mean, why most organisations use them interchangeably, and why AI exposes the confusion.</description>
+    </item>
+    <item>
+      <title>The Separation</title>
+      <link>https://simpleisadvanced.com/articles/the-separation/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-separation/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Software-dependent corporates learned to manage descriptions of work instead of the work itself. AI changes the cost of discovering whether those descriptions match reality.</description>
+    </item>
+    <item>
+      <title>The Process Is the Product</title>
+      <link>https://simpleisadvanced.com/articles/the-process-is-the-product/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-process-is-the-product/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>What happens when a single business process gets a real owner, a structured definition, and a machine that checks whether the definition matches production every week.</description>
+    </item>
+    <item>
+      <title>The Polished Lie</title>
+      <link>https://simpleisadvanced.com/articles/the-polished-lie/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-polished-lie/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>A European retailer deploys AI to answer leadership questions about operational metrics. For three months, nobody checks whether the answers are true.</description>
+    </item>
+    <item>
+      <title>The People Who Knew</title>
+      <link>https://simpleisadvanced.com/articles/the-people-who-knew/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-people-who-knew/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Lisa is a senior engineer who sees incoherence before anyone else. The organisation selects against her structurally. When she leaves, years of accumulated context leave with her.</description>
+    </item>
+    <item>
+      <title>The Meeting That Replaced the Work</title>
+      <link>https://simpleisadvanced.com/articles/the-meeting-that-replaced-the-work/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-meeting-that-replaced-the-work/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Twelve people attend a cross-functional alignment session to coordinate a change that should take two days. It will take seven weeks. Nobody owns the process end-to-end.</description>
+    </item>
+    <item>
+      <title>The Machine That Reads Your Strategy</title>
+      <link>https://simpleisadvanced.com/articles/the-machine-that-reads-your-strategy/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-machine-that-reads-your-strategy/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>A CTO asks an AI to reconcile the strategy document against the architecture model and the codebase. The contradictions appear in minutes. The CEO asks for silence.</description>
+    </item>
+    <item>
+      <title>The Fork in the Road</title>
+      <link>https://simpleisadvanced.com/articles/the-fork-in-the-road/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-fork-in-the-road/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Two insurers start in the same place. One uses AI to write a better board pack. The other uses AI to discover whether the board pack matches reality. Twelve months later, they are in different worlds.</description>
+    </item>
+    <item>
+      <title>The Diagnostic Toolkit</title>
+      <link>https://simpleisadvanced.com/articles/the-diagnostic-toolkit/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-diagnostic-toolkit/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Five questions for boards, a writer-vs-reader scorecard, a 90-day launch sequence, a glossary of corporate euphemism, and sample process definitions.</description>
+    </item>
+    <item>
+      <title>The CFO Who Killed the Platform</title>
+      <link>https://simpleisadvanced.com/articles/the-cfo-who-killed-the-platform/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-cfo-who-killed-the-platform/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>A European insurer kills a shared integration platform because it doesn&amp;#x27;t show ROI in year one. The incidents arrive months later, attributed to engineering quality.</description>
+    </item>
+    <item>
+      <title>The Brochureware Moment</title>
+      <link>https://simpleisadvanced.com/articles/the-brochureware-moment/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/the-brochureware-moment/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>In 1998, a British retailer built an impressive website that couldn&amp;#x27;t process a single order. Most companies are doing the same thing with AI today.</description>
+    </item>
+    <item>
+      <title>Fake Boundaries</title>
+      <link>https://simpleisadvanced.com/articles/fake-boundaries/</link>
+      <guid isPermaLink="true">https://simpleisadvanced.com/articles/fake-boundaries/</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <description>&amp;quot;Customer Engagement&amp;quot; has a roadmap, a budget, and a quarterly review. It does not have a coherent system boundary. The product does not exist as a thing that can be built or measured.</description>
+    </item>
+  </channel>
+</rss>
