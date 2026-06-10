@@ -66,7 +66,7 @@ def build_feed():
     OUT_PATH.write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Simple is Advanced — Articles</title>
+    <title>Simple is Advanced - Articles</title>
     <link>{DOMAIN}/articles/</link>
     <atom:link href="{DOMAIN}/articles/feed.xml" rel="self" type="application/rss+xml"/>
     <description>{escape(CHANNEL_DESCRIPTION)}</description>

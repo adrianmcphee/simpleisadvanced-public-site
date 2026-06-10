@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Simple is Advanced — Articles</title>
+    <title>Simple is Advanced - Articles</title>
     <link>https://simpleisadvanced.com/articles/</link>
     <atom:link href="https://simpleisadvanced.com/articles/feed.xml" rel="self" type="application/rss+xml"/>
     <description>How software-dependent corporates built structures that reward the appearance of productivity over actual productivity, and why AI changes the economics. Articles by Adrian McPhee.</description>
