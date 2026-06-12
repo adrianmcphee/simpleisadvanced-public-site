@@ -76,8 +76,8 @@
     "lastmod": "2026-06-10"
   },
   "illusions-in-the-boardroom/chapters/conclusion/index.html": {
-    "hash": "eba4bb45b04b7076ac2087cafbe92b37699d90de11a626fd4938c2047ee892c8",
-    "lastmod": "2026-06-10"
+    "hash": "5f76fa080f1b4d699aa858300568fba9ae2aeebce2720e4d868782b40520d5c3",
+    "lastmod": "2026-06-12"
   },
   "illusions-in-the-boardroom/chapters/contracts-not-committees/index.html": {
     "hash": "de46c04af87ca2e5bb761d8c7d40f24f9550d3989279c1f2826f2ec87b0885ea",
@@ -96,8 +96,8 @@
     "lastmod": "2026-06-10"
   },
   "illusions-in-the-boardroom/chapters/glossary/index.html": {
-    "hash": "87433c52f6952f1a5101ddb5714dae442d88a6bc660132754a10d2bd9050d5f9",
-    "lastmod": "2026-06-10"
+    "hash": "8f9f42b20cdaef8df53e08c97461ea97cbb5325915f0d07c7d83bc8bdb288b27",
+    "lastmod": "2026-06-12"
   },
   "illusions-in-the-boardroom/chapters/if-you-are-the-cto/index.html": {
     "hash": "aee747f913b3e6fcbd8262c1eb73262825d562f58aa13462e09981fc207480f0",
@@ -108,8 +108,8 @@
     "lastmod": "2026-06-12"
   },
   "illusions-in-the-boardroom/chapters/operational-and-regulatory-exposure/index.html": {
-    "hash": "51fd9335211554818e9c56164ab097cc8a0e0abae9728c452c15f47fe0b744d3",
-    "lastmod": "2026-06-10"
+    "hash": "c150d6ce3f83abfff1beade67eda8d95c9b7a498cc8c42fdbcaf7c7e7be00e9e",
+    "lastmod": "2026-06-12"
   },
   "illusions-in-the-boardroom/chapters/portfolio-labels-that-do-not-exist-in-code/index.html": {
     "hash": "b606c664b4b1df3404e82695ef1f77295a2a8a2662343bc88d9e9a0836212d20",
@@ -134,6 +134,10 @@
   "illusions-in-the-boardroom/chapters/the-economics-of-structural-opacity/index.html": {
     "hash": "699d91df4d278d3d565d52cda23dc335e99d14561b897021ca845a892fbc7e50",
     "lastmod": "2026-06-10"
+  },
+  "illusions-in-the-boardroom/chapters/the-evidence-base/index.html": {
+    "hash": "87e1135cfaab143b6f13218efda1255e15c8b7605d038e338d7f0319a7a27010",
+    "lastmod": "2026-06-12"
   },
   "illusions-in-the-boardroom/chapters/the-transition-and-its-failure-modes/index.html": {
     "hash": "a701f2435474e5c54a693651a9d408d9ec4c71fdf2626ba2653c389bff7bbd3d",
@@ -164,16 +168,16 @@
     "lastmod": "2026-06-10"
   },
   "illusions-in-the-boardroom/contents.html": {
-    "hash": "ec6d2b09fca779542fab13958a2888138e649313ee6e7f375f0e47d1b43715ce",
-    "lastmod": "2026-06-10"
+    "hash": "a8338fdd0cc96c3704f008ae22fc050e0d0ba3e20bce935373c8df079a256032",
+    "lastmod": "2026-06-12"
   },
   "illusions-in-the-boardroom/index.html": {
     "hash": "9c2d30fd6f6f6c725a44724ebf0a0520ba6eb7cccf6fe4e833279b25c6cc64b3",
     "lastmod": "2026-06-10"
   },
   "illusions-in-the-boardroom/preview.html": {
-    "hash": "20b801d1991d7e8196b37dbc0bab6c688be060f1bb13324194ba68f6c972c407",
-    "lastmod": "2026-06-10"
+    "hash": "1e6628deeb0fe2fce9d2aaf8ce0bc5d230d007d85717e08fa6fbccfd46ec69ee",
+    "lastmod": "2026-06-12"
   },
   "illusions-of-work/chapters/activity-without-reality/index.html": {
     "hash": "3dcd9321425cd115c243210d8956c8f6d0fcca658f7a2897f31be0965925409e",
