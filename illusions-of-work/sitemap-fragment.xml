@@ -31,15 +31,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/fake-products-and-the-buffer-class/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://simpleisadvanced.com/illusions-of-work/chapters/architecture-that-avoids-accountability/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/microservices-without-autonomy/</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -71,11 +63,11 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/units-of-truth/</loc>
+    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-programme-that-wasnt-an-it-project/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/where-this-fails/</loc>
+    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/units-of-truth/</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -99,7 +91,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-programme-that-wasnt-an-it-project/</loc>
+    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/where-this-fails/</loc>
     <priority>0.7</priority>
   </url>
   <url>
