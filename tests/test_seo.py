@@ -19,9 +19,20 @@ SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
-    "illusions-of-work": {"title": "Illusions of Work", "chapters": 27},
-    "illusions-in-the-boardroom": {"title": "Illusions in the Boardroom", "chapters": 23},
+    "illusions-of-work": {"title": "Illusions of Work", "chapters": 25},
+    "illusions-in-the-boardroom": {"title": "Illusions in the Boardroom", "chapters": 24},
 }
+
+
+def is_redirect_stub(chapter_dir):
+    """A dissolved chapter slug kept as a noindex redirect to its surviving chapter.
+
+    Stubs are deliberately excluded from the sitemap and from the chapter count.
+    """
+    index = chapter_dir / "index.html"
+    if not index.exists():
+        return False
+    return 'content="noindex"' in index.read_text()
 
 
 class Results:
@@ -139,7 +150,9 @@ def check_local(r):
         if not ch_dir.exists():
             continue
         for ch_path in sorted(ch_dir.iterdir()):
-            if ch_path.is_dir() and f"{DOMAIN}/{slug}/chapters/{ch_path.name}/" not in locs:
+            if not ch_path.is_dir() or is_redirect_stub(ch_path):
+                continue
+            if f"{DOMAIN}/{slug}/chapters/{ch_path.name}/" not in locs:
                 missing_ch.append(f"{slug}/{ch_path.name}")
     r.check("Sitemap: every chapter present", not missing_ch,
             ", ".join(missing_ch) if missing_ch else "all OK")
@@ -207,7 +220,9 @@ def check_local(r):
 
         # Chapter pages
         ch_dir = book_dir / "chapters"
-        chapter_dirs = [d for d in ch_dir.iterdir() if d.is_dir()] if ch_dir.exists() else []
+        chapter_dirs = ([d for d in ch_dir.iterdir()
+                         if d.is_dir() and not is_redirect_stub(d)]
+                        if ch_dir.exists() else [])
         r.check(f"{slug} chapters: {expected_chapters} pages exist",
                 len(chapter_dirs) == expected_chapters,
                 f"found {len(chapter_dirs)}")
