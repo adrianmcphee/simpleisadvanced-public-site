@@ -19,6 +19,7 @@ SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
+    "the-end-of-alignment": {"title": "The End of Alignment", "chapters": 20},
     "illusions-of-work": {"title": "Illusions of Work", "chapters": 25},
     "illusions-in-the-boardroom": {"title": "Illusions in the Boardroom", "chapters": 24},
 }
@@ -113,12 +114,16 @@ def check_local(r):
     r.check("Homepage: OG image is /og-image.png",
             'content="https://simpleisadvanced.com/og-image.png"' in hp)
     r.check("Homepage: OG image file exists", (SITE_DIR / "og-image.png").exists())
+    r.check("Homepage: promotes the current book", "The End of Alignment" in hp)
+    r.check("Homepage: does not promote retired books",
+            "Illusions in the Boardroom" not in hp and "Illusions of Work" not in hp)
 
     # --- Robots.txt ---
     robots = (SITE_DIR / "robots.txt").read_text()
     r.check("Robots: no ai-illusions line", "ai-illusions" not in robots)
     r.check("Robots: blocks /illusions-of-work/data/", "/illusions-of-work/data/" in robots)
     r.check("Robots: blocks /illusions-in-the-boardroom/data/", "/illusions-in-the-boardroom/data/" in robots)
+    r.check("Robots: blocks /the-end-of-alignment/data/", "/the-end-of-alignment/data/" in robots)
     r.check("Robots: references sitemap", "simpleisadvanced.com/sitemap.xml" in robots)
 
     # --- Legacy directory deleted ---
@@ -308,6 +313,8 @@ def check_production(r):
 
     # --- Spot-check chapter pages ---
     spot_checks = [
+        ("the-end-of-alignment", "the-alignment-industrial-complex"),
+        ("the-end-of-alignment", "technical-field-guide-from-milestone-to-production"),
         ("illusions-of-work", "units-of-truth"),
         ("illusions-of-work", "ai-as-the-unforgiving-reader"),
         ("illusions-in-the-boardroom", "executive-summary"),
