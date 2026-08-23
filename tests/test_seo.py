@@ -19,7 +19,7 @@ SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
-    "the-end-of-alignment": {"title": "The End of Alignment", "chapters": 20},
+    "the-end-of-alignment": {"title": "The End of Alignment", "sample_chapters": 3},
 }
 
 RETIRED_BOOKS = ("illusions-of-work", "illusions-in-the-boardroom")
@@ -119,7 +119,15 @@ def check_local(r):
             "Illusions in the Boardroom" not in hp and "Illusions of Work" not in hp)
     r.check("Homepage: uses the shared editorial stylesheet", 'href="/site.css"' in hp)
     r.check("Homepage: carries the current subtitle",
-            "Survival Logic for Software-Dependent Corporates in the AI Era" in hp)
+            "New Operating Logic for Software-Dependent Corporates in the AI Era" in hp)
+    r.check("Homepage: links directly to the paid book",
+            'href="https://shipper.demandops.com"' in hp
+            and "Buy the ebook" in hp)
+    r.check("Homepage: links to a public sample",
+            'href="/the-end-of-alignment/"' in hp
+            and "Read the sample" in hp)
+    r.check("Homepage: uses the transparent SIA mark",
+            'src="/the-end-of-alignment/sia-black.png"' in hp)
     r.check("Homepage: does not claim the book is itself an operating model",
             "An operating model that joins" not in hp)
 
@@ -144,10 +152,11 @@ def check_local(r):
     sitemap = (SITE_DIR / "sitemap.xml").read_text()
     r.check("Sitemap: valid XML declaration", sitemap.startswith("<?xml"))
     r.check("Sitemap: no 0.6 priority", "<priority>0.6</priority>" not in sitemap)
-    r.check("Sitemap: current preview page at 0.8",
+    r.check("Sitemap: an index page is prioritised at 0.8",
             sitemap.count("<priority>0.8</priority>") >= 1)
     url_count = len(re.findall(r"<url>", sitemap))
-    r.check("Sitemap: has 35+ URLs", url_count >= 35, f"{url_count}")
+    r.check("Sitemap: has the homepage, articles and book sample",
+            url_count >= 20, f"{url_count}")
     r.check("Sitemap: retired books are absent",
             all(f"/{slug}/" not in sitemap for slug in RETIRED_BOOKS))
 
@@ -226,12 +235,43 @@ def check_local(r):
             all("/illusions-of-work/" not in page
                 and "/illusions-in-the-boardroom/" not in page
                 for page in article_pages))
+    r.check("Articles: every book card points to the paid ebook",
+            all('href="https://shipper.demandops.com"' in page
+                and "Buy the book" in page
+                for page in article_pages))
+
+    # --- Indexable page hygiene ---
+    indexable = []
+    for page_path in SITE_DIR.rglob("*.html"):
+        html = page_path.read_text()
+        if page_path.name == "404.html" or "noindex" in html:
+            continue
+        indexable.append((page_path, html))
+
+    long_descriptions = []
+    missing_canonicals = []
+    for page_path, html in indexable:
+        description = extract_meta(html, "description")
+        if description is None or len(description) > 160:
+            long_descriptions.append(
+                f"{page_path.relative_to(SITE_DIR)}: "
+                f"{len(description) if description else 'missing'}"
+            )
+        if 'rel="canonical" href="https://simpleisadvanced.com/' not in html:
+            missing_canonicals.append(str(page_path.relative_to(SITE_DIR)))
+
+    r.check("SEO: all indexable descriptions are present and <= 160 chars",
+            not long_descriptions,
+            "; ".join(long_descriptions) if long_descriptions else f"{len(indexable)} pages")
+    r.check("SEO: all indexable pages have an absolute canonical",
+            not missing_canonicals,
+            "; ".join(missing_canonicals) if missing_canonicals else f"{len(indexable)} pages")
 
     # --- Per-book checks ---
     for slug, info in BOOKS.items():
         book_dir = SITE_DIR / slug
         book_title = info["title"]
-        expected_chapters = info["chapters"]
+        expected_sample_chapters = info["sample_chapters"]
 
         # Preview page
         preview = (book_dir / "preview.html").read_text()
@@ -239,7 +279,9 @@ def check_local(r):
         r.check(f"{slug} preview: description exists", pdesc is not None)
         if pdesc:
             r.check(f"{slug} preview: description enriched",
-                    "Browse all chapters" in pdesc, f"{len(pdesc)} chars")
+                    "free sample" in pdesc.lower()
+                    and "complete contents" in pdesc.lower(),
+                    f"{len(pdesc)} chars")
             r.check(f"{slug} preview: description <= 160 chars",
                     len(pdesc) <= 160, f"{len(pdesc)}")
 
@@ -255,9 +297,20 @@ def check_local(r):
         chapter_dirs = ([d for d in ch_dir.iterdir()
                          if d.is_dir() and not is_redirect_stub(d)]
                         if ch_dir.exists() else [])
-        r.check(f"{slug} chapters: {expected_chapters} pages exist",
-                len(chapter_dirs) == expected_chapters,
+        r.check(f"{slug}: only the declared public sample chapters exist",
+                len(chapter_dirs) == expected_sample_chapters,
                 f"found {len(chapter_dirs)}")
+        data_chapters = sorted((book_dir / "data").glob("ch*.json"))
+        r.check(f"{slug}: reader data contains only the public sample",
+                len(data_chapters) == expected_sample_chapters,
+                f"found {len(data_chapters)}")
+        meta = json.loads((book_dir / "data" / "meta.json").read_text())
+        r.check(f"{slug}: reader declares itself as an excerpt",
+                meta.get("isExcerpt") is True
+                and len(meta.get("chapters", [])) == expected_sample_chapters)
+        r.check(f"{slug}: contents distinguish free and paid chapters",
+                contents.count("(free sample)") == expected_sample_chapters
+                and "(paid edition)" in contents)
 
         # Spot-check 3 chapter pages
         for ch_path in sorted(chapter_dirs)[:3]:
