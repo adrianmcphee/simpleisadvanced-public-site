@@ -120,6 +120,8 @@ def check_local(r):
     r.check("Homepage: uses the shared editorial stylesheet", 'href="/site.css"' in hp)
     r.check("Homepage: carries the current subtitle",
             "Survival Logic for Software-Dependent Corporates in the AI Era" in hp)
+    r.check("Homepage: does not claim the book is itself an operating model",
+            "An operating model that joins" not in hp)
 
     # --- Robots.txt ---
     robots = (SITE_DIR / "robots.txt").read_text()
