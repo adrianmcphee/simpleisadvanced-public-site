@@ -2,372 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://simpleisadvanced.com/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/fake-boundaries/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-brochureware-moment/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-cfo-who-killed-the-platform/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-diagnostic-toolkit/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-fork-in-the-road/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-machine-that-reads-your-strategy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-meeting-that-replaced-the-work/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-people-who-knew/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-polished-lie/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-process-is-the-product/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-separation/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-strategic-context-stack/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/the-strategy-deck-that-ate-the-company/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/what-happens-next/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/where-this-is-hard/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/drive-vs-drift/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/articles/why-big-it-projects-fail/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/contents.html</loc>
-    <lastmod>2026-06-12</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/preview.html</loc>
-    <lastmod>2026-06-12</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/executive-summary/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/introduction/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/ai-as-the-unforgiving-reader/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/when-ai-writes-the-illusion/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/the-board-narrative-and-the-system/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/portfolio-labels-that-do-not-exist-in-code/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/splitting-the-system-without-splitting-the-problem/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/the-economics-of-structural-opacity/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/talent-decay-as-structural-fragility/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/operational-and-regulatory-exposure/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/who-loses-when-clarity-wins/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/units-of-truth/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/contracts-not-committees/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/data-as-outputs-not-a-shared-substrate/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/what-to-demand-before-anything-else/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/the-transitional-authority/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/pull-not-push/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/the-transition-and-its-failure-modes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/what-the-sceptical-board-member-asks/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/for-your-cto/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/if-you-are-the-cto/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/conclusion/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/the-evidence-base/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-in-the-boardroom/chapters/glossary/</loc>
-    <lastmod>2026-06-12</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/contents.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/preview.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/authors-note/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/readers-map/</loc>
-    <lastmod>2026-07-10</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/introduction/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/when-the-business-isnt-the-business/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/why-people-closest-to-reality-suffer/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/activity-without-reality/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/architecture-that-avoids-accountability/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/customer-journeys-are-business-processes/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/writing-reality-down-so-it-bites-back/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/ai-as-the-unforgiving-reader/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/when-clarity-becomes-cheaper-than-pretence/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-alignment-industrial-complex/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-machinery-of-avoidance/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-rate-has-changed/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-programme-that-wasnt-an-it-project/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/units-of-truth/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-first-unit/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/the-authority-to-decompose/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/from-pretence-to-autonomy/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/feeding-ai-healing-the-organisation/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/where-this-fails/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/what-this-looks-like/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/conclusion/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/if-you-are-the-ceo/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://simpleisadvanced.com/illusions-of-work/chapters/how-to-catch-this-book-being-wrong/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

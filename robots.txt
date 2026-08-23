@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /illusions-of-work/data/
-Disallow: /illusions-in-the-boardroom/data/
 Disallow: /the-end-of-alignment/data/
 
 Sitemap: https://simpleisadvanced.com/sitemap.xml

@@ -75,19 +75,18 @@
 }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     body { max-width: 42em; margin: 2em auto; padding: 0 1.5em; font-family: Georgia, serif;
            line-height: 1.7; color: #222; background: #fff; }
-    h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
+    h1 { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 1.6em; margin-bottom: 0.3em;
           letter-spacing: -0.02em; }
-    h2 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.2em; margin-top: 2em;
+    h2 { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 1.2em; margin-top: 2em;
           letter-spacing: -0.01em; }
-    h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.05em; margin-top: 1.5em; }
+    h3 { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 1.05em; margin-top: 1.5em; }
     .part { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.1em;
-             color: #999; margin-bottom: 0; font-family: 'Inter', system-ui, sans-serif; }
+             color: #999; margin-bottom: 0; font-family: 'Instrument Sans', system-ui, sans-serif; }
     .series-link { font-size: 0.85em; color: #999; text-decoration: none;
-                  font-family: 'Inter', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
+                  font-family: 'Instrument Sans', system-ui, sans-serif; display: inline-block; margin-bottom: 2em; }
     .series-link:hover { color: #222; }
     .article-summary { font-size: 0.9em; color: #666; font-style: italic; line-height: 1.6;
                          margin: 0 0 1.5em; padding-bottom: 1.5em; border-bottom: 1px solid #e5e5e5; }
@@ -97,19 +96,19 @@
                            letter-spacing: 0.2em; }
     .diagram-placeholder { background: #f9f9f9; border: 1px solid #e5e5e5; border-radius: 8px;
                             padding: 1.5em; margin: 1.5em 0; text-align: center; }
-    .diagram-placeholder p { margin: 0; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+    .diagram-placeholder p { margin: 0; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.85em; }
     pre { background: #f5f5f0; border-radius: 6px; padding: 1.2em; overflow-x: auto;
            font-size: 0.82em; line-height: 1.5; margin: 1.5em 0; }
     code { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace; }
     table.article-table { border-collapse: collapse; width: 100%; margin: 1.5em 0;
-                           font-size: 0.88em; font-family: 'Inter', system-ui, sans-serif; }
+                           font-size: 0.88em; font-family: 'Instrument Sans', system-ui, sans-serif; }
     table.article-table th, table.article-table td { text-align: left; padding: 0.5em 0.8em;
                                                       border-bottom: 1px solid #e5e5e5; }
     table.article-table th { font-weight: 600; }
     ol, ul { padding-left: 1.5em; }
     li { margin: 0.5em 0; }
     .book-promo { margin: 3em 0; display: flex; flex-direction: column; gap: 1em;
-                   font-family: 'Inter', system-ui, sans-serif; }
+                   font-family: 'Instrument Sans', system-ui, sans-serif; }
     .book-card { display: flex; align-items: center; gap: 1.2em; padding: 1.2em;
                   background: #f9f9f9; border-radius: 8px; text-decoration: none; color: #222;
                   transition: transform 0.15s ease, box-shadow 0.15s ease; }
@@ -126,7 +125,7 @@
     .floating-books { display: none; }
     @media (min-width: 1200px) {
       .floating-books { display: flex; flex-direction: column; gap: 0.8em; position: fixed;
-                         top: 2em; right: 2em; z-index: 10; font-family: 'Inter', system-ui, sans-serif; }
+                         top: 2em; right: 2em; z-index: 10; font-family: 'Instrument Sans', system-ui, sans-serif; }
       .floating-book { display: flex; align-items: center; gap: 0.7em; padding: 0.6em 0.8em;
                         background: #fff; border: 1px solid #e5e5e5; border-radius: 8px;
                         text-decoration: none; color: #222; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -141,36 +140,21 @@
                              color: #059669; font-weight: 600; }
     }
     .nav { display: flex; justify-content: space-between; margin-top: 2em; padding-top: 1.5em;
-            border-top: 1px solid #e5e5e5; font-family: 'Inter', system-ui, sans-serif; font-size: 0.85em; }
+            border-top: 1px solid #e5e5e5; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.85em; }
     .nav a { color: #999; text-decoration: none; }
     .nav a:hover { color: #222; }
-    .also { font-size: 0.8em; color: #999; margin-top: 2em; font-family: 'Inter', system-ui, sans-serif; }
+    .also { font-size: 0.8em; color: #999; margin-top: 2em; font-family: 'Instrument Sans', system-ui, sans-serif; }
     .also a { color: #999; text-decoration: none; }
     .also a:hover { color: #222; }
     footer { text-align: center; color: #999; font-size: 0.85em; margin-top: 2em;
              padding-top: 1.5em; border-top: 1px solid #e5e5e5; }
     footer a { color: #999; }
   </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
 </head>
-<body>
-  <div class="floating-books">
-    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener">
-      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom">
-      <div class="floating-book-info">
-        <span class="floating-book-free">Free</span>
-        <strong>Illusions in the Boardroom</strong>
-        <span>The board-level diagnosis</span>
-      </div>
-    </a>
-    <a class="floating-book" href="https://shipper.demandops.com/book/illusions-of-work" target="_blank" rel="noopener">
-      <img src="/illusions-of-work/cover.png" alt="Illusions of Work">
-      <div class="floating-book-info">
-        <strong>Illusions of Work</strong>
-        <span>The operator manual</span>
-      </div>
-    </a>
-  </div>
-
+<body class="article-page">
   <a class="series-link" href="/articles/">&larr; Articles</a>
   <p class="part">Reference</p>
   <h1>The Strategic Context Stack</h1>
@@ -184,10 +168,10 @@
 
 <p>This matters for the argument here because busy work does not begin with the meetings or the slide decks. It begins earlier, in the absence of a coherent governing structure. When an organisation does not know the difference between a purpose and a vision, or between a strategy and a plan, or between an OKR and a KPI, it cannot govern itself through those concepts. It can only perform them.</p>
 
-<p>What follows is what I think these words are supposed to mean, not as management philosophy, but as operational architecture. Each layer has a specific job, a specific horizon, a specific owner, and a specific relationship to the layers above and below it. None of this is revolutionary. Most of it is recoverable from the original intentions behind these concepts, before decades of corporate usage eroded them into decoration. As you read, ask yourself how clearly your organisation distinguishes between them.</p>
+<p>What follows is what I think these words are supposed to mean, not as management philosophy, but as operational architecture. Each layer has a specific job, a specific horizon, a specific authority, and a specific relationship to the layers above and below it. The horizons are defaults, not a corporate calendar: a regulated infrastructure company and a young consumer product will revise them at different rates. What matters is that the slower layers constrain the faster ones, while each layer has a named authority and a declared reason to change.</p>
 
 <table class="article-table">
-<tr><th><strong>Layer</strong></th><th><strong>Horizon</strong></th><th><strong>Question</strong></th><th><strong>Owner</strong></th><th><strong>Changes when</strong></th></tr><tr><td>Purpose</td><td>Permanent</td><td>Why do we exist?</td><td>Founder / Board</td><td>Almost never</td></tr><tr><td>Vision</td><td>15&ndash;20 yr</td><td>What are we creating over the coming decades?</td><td>Board / CEO</td><td>Rarely</td></tr><tr><td>Mission</td><td>5 yr</td><td>What are we becoming?</td><td>CEO</td><td>Market shifts</td></tr><tr><td>Goals</td><td>2&ndash;3 yr</td><td>What does success look like?</td><td>Leadership</td><td>Mission progresses</td></tr><tr><td>Strategy</td><td>12&ndash;18 mo</td><td>Which mechanism, and why?</td><td>Cross-functional</td><td>Hypothesis falsified</td></tr><tr><td>Bets</td><td>Quarterly</td><td>Which initiatives test it?</td><td>Teams (bottom-up)</td><td>Evidence demands it</td></tr><tr><td>OKRs</td><td>Rolling</td><td>Are the bets working?</td><td>Teams</td><td>Each bet cycle</td></tr><tr><td>KPIs</td><td>Continuous</td><td>Is the machine healthy?</td><td>Operations</td><td>Separate from above</td></tr>
+<tr><th><strong>Layer</strong></th><th><strong>Horizon</strong></th><th><strong>Question</strong></th><th><strong>Authority</strong></th><th><strong>Changes when</strong></th></tr><tr><td>Purpose</td><td>Enduring</td><td>Why do we exist?</td><td>Founder or board</td><td>Almost never</td></tr><tr><td>Vision</td><td>10&ndash;20 yr</td><td>What future are we creating?</td><td>Board and CEO</td><td>Rarely</td></tr><tr><td>Mission</td><td>About 5 yr</td><td>What must we become in this era?</td><td>CEO</td><td>The era or destination changes</td></tr><tr><td>Goals</td><td>1&ndash;3 yr</td><td>What outcomes demonstrate progress?</td><td>Accountable executives</td><td>Evidence or mission progress demands it</td></tr><tr><td>Strategy</td><td>12&ndash;18 mo</td><td>Which mechanism, and why?</td><td>Relevant operating authorities</td><td>The causal hypothesis is falsified</td></tr><tr><td>Bets</td><td>Quarter-scale</td><td>Which bounded tests deserve capital?</td><td>Portfolio, product or unit authority</td><td>Evidence or capital allocation changes</td></tr><tr><td>OKRs</td><td>Bet cycle</td><td>Are the predicted signals moving?</td><td>Unit</td><td>The bet changes or concludes</td></tr><tr><td>KPIs</td><td>Continuous</td><td>Is the running process healthy?</td><td>Process owner</td><td>The process or metric definition changes</td></tr>
 </table>
 
 <h2>Purpose: the permanent layer</h2>
@@ -200,7 +184,7 @@
 
 <p>Purpose rarely appears in operational planning, which is why it is easy to dismiss as decorative. Its structural job is to resolve tie-breaks at the top of the stack. When two visions are equally plausible, purpose settles which one the organisation should pursue. When it is absent or vague, those tie-breaks are settled by politics, inertia, or whoever is loudest in the room.</p>
 
-<h2>Vision: the fifteen-to-twenty-year horizon</h2>
+<h2>Vision: the ten-to-twenty-year horizon</h2>
 
 <p>A vision is not a motivational sentence. It is a claim about what the world looks like if the organisation succeeds over a generational timeframe. It is directional rather than measurable, which is appropriate for its horizon. You cannot set a KPI for twenty years from now. You can articulate a direction that makes subsequent choices legible.</p>
 
@@ -216,7 +200,7 @@
 
 <p>The most common error is conflating mission with vision, treating them as two names for the same thing. Vision describes what the organisation is creating over the coming decades. Mission describes what it does in the next five years to advance that picture. One is directional. The other is operational.</p>
 
-<h2>Goals: the two-to-three-year horizon</h2>
+<h2>Goals: the one-to-three-year horizon</h2>
 
 <p>Goals are the specific outcomes that define what mission success looks like. They translate the mission into measurable commitments. A mission that cannot be broken into goals is probably still too abstract to govern anything.</p>
 
@@ -252,7 +236,9 @@
 
 <p>The distinction changes accountability. When a project fails, someone has not delivered. When a bet does not pay off, the organisation has learned something. An organisation that treats every initiative as a project cannot fail safely and therefore cannot learn safely.</p>
 
-<p>Bets should be proposable from the bottom up. If the strategy is sufficiently articulate, teams at every level can read it and ask: does this initiative move one of the levers the strategy depends on? This is how alignment works without becoming compliance. Teams do not follow orders. They understand the logic well enough to generate their own ideas that fit.</p>
+<p>Bets should be proposable from anywhere. If the strategy is sufficiently articulate, people throughout the organisation can ask whether an initiative moves one of the levers on which the strategy depends. The relevant portfolio, product, or unit authority then decides whether the bet deserves capital and what it displaces. Direction is readable without becoming a centrally prescribed task list.</p>
+
+<p>Not every legitimate milestone begins as a strategic bet. An incident, legal duty, control failure, service-health threshold, customer promise, or contract can create an operating obligation that requires action. The obligation should name its source, owner, urgency, and evidence rather than being disguised as a strategic initiative. Otherwise the stack becomes another way to make necessary operational work compete in a theatre of priorities.</p>
 
 <h2>OKRs: the instrumentation layer</h2>
 
@@ -297,28 +283,20 @@
 <p>The gap between these two organisations is not a question of AI capability. The tools are identical. The gap is structural, and it compounds at the rate of every reconciliation cycle that one runs and the other cannot, because the other has nothing coherent for the machine to read.</p>
 
   <div class="book-promo">
-    <a href="https://shipper.demandops.com/book/illusions-in-the-boardroom" target="_blank" rel="noopener" class="book-card">
-      <img src="/illusions-in-the-boardroom/cover.png" alt="Illusions in the Boardroom" class="book-cover">
+    <a href="/the-end-of-alignment/" class="book-card">
+      <img src="/the-end-of-alignment/cover.png" alt="The End of Alignment" class="book-cover">
       <div class="book-info">
-        <span class="book-label">Free</span>
-        <strong>Illusions in the Boardroom</strong>
-        <span class="book-desc">AI and the End of Plausible Deniability. The board-level diagnosis.</span>
-        <span class="book-cta">Read now &rarr;</span>
-      </div>
-    </a>
-    <a href="https://shipper.demandops.com/book/illusions-of-work" target="_blank" rel="noopener" class="book-card">
-      <img src="/illusions-of-work/cover.png" alt="Illusions of Work" class="book-cover">
-      <div class="book-info">
-        <strong>Illusions of Work</strong>
-        <span class="book-desc">AI and the Economics of Clarity. The operator manual for CTOs.</span>
-        <span class="book-cta">Read now &rarr;</span>
+        <span class="book-label">Read online</span>
+        <strong>The End of Alignment</strong>
+        <span class="book-desc">Survival Logic for Software-Dependent Corporates in the AI Era.</span>
+        <span class="book-cta">Read the book &rarr;</span>
       </div>
     </a>
   </div>
 
   <div class="nav"><a href="/articles/what-happens-next/">&larr; What Happens Next</a><a href="/articles/the-diagnostic-toolkit/">The Diagnostic Toolkit &rarr;</a></div>
 
-  <p class="also">See also: <a href="/articles/">All articles</a> &middot; <a href="/illusions-in-the-boardroom/preview.html">Illusions in the Boardroom</a> &middot; <a href="/illusions-of-work/preview.html">Illusions of Work</a></p>
+  <p class="also">See also: <a href="/articles/">All articles</a> &middot; <a href="/the-end-of-alignment/contents.html">Book contents</a></p>
 
   <footer>
     <p>&copy; Adrian McPhee 2026 &middot;

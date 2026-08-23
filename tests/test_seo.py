@@ -20,9 +20,9 @@ DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
     "the-end-of-alignment": {"title": "The End of Alignment", "chapters": 20},
-    "illusions-of-work": {"title": "Illusions of Work", "chapters": 25},
-    "illusions-in-the-boardroom": {"title": "Illusions in the Boardroom", "chapters": 24},
 }
+
+RETIRED_BOOKS = ("illusions-of-work", "illusions-in-the-boardroom")
 
 
 def is_redirect_stub(chapter_dir):
@@ -117,27 +117,37 @@ def check_local(r):
     r.check("Homepage: promotes the current book", "The End of Alignment" in hp)
     r.check("Homepage: does not promote retired books",
             "Illusions in the Boardroom" not in hp and "Illusions of Work" not in hp)
+    r.check("Homepage: uses the shared editorial stylesheet", 'href="/site.css"' in hp)
+    r.check("Homepage: carries the current subtitle",
+            "Survival Logic for Software-Dependent Corporates in the AI Era" in hp)
 
     # --- Robots.txt ---
     robots = (SITE_DIR / "robots.txt").read_text()
     r.check("Robots: no ai-illusions line", "ai-illusions" not in robots)
-    r.check("Robots: blocks /illusions-of-work/data/", "/illusions-of-work/data/" in robots)
-    r.check("Robots: blocks /illusions-in-the-boardroom/data/", "/illusions-in-the-boardroom/data/" in robots)
     r.check("Robots: blocks /the-end-of-alignment/data/", "/the-end-of-alignment/data/" in robots)
     r.check("Robots: references sitemap", "simpleisadvanced.com/sitemap.xml" in robots)
 
     # --- Legacy directory deleted ---
     r.check("Legacy: ai-illusions-in-the-boardroom/ gone",
             not (SITE_DIR / "ai-illusions-in-the-boardroom").exists())
+    for slug in RETIRED_BOOKS:
+        retired = (SITE_DIR / slug / "index.html").read_text()
+        r.check(f"Retired book: {slug} is noindex", 'content="noindex,follow"' in retired)
+        r.check(f"Retired book: {slug} points to the current book",
+                "/the-end-of-alignment/" in retired)
+        r.check(f"Retired book: {slug} has no published chapters",
+                not (SITE_DIR / slug / "chapters").exists())
 
     # --- Sitemap ---
     sitemap = (SITE_DIR / "sitemap.xml").read_text()
     r.check("Sitemap: valid XML declaration", sitemap.startswith("<?xml"))
     r.check("Sitemap: no 0.6 priority", "<priority>0.6</priority>" not in sitemap)
-    r.check("Sitemap: preview pages at 0.8",
-            sitemap.count("<priority>0.8</priority>") >= 2)
+    r.check("Sitemap: current preview page at 0.8",
+            sitemap.count("<priority>0.8</priority>") >= 1)
     url_count = len(re.findall(r"<url>", sitemap))
-    r.check("Sitemap: has 50+ URLs", url_count >= 50, f"{url_count}")
+    r.check("Sitemap: has 35+ URLs", url_count >= 35, f"{url_count}")
+    r.check("Sitemap: retired books are absent",
+            all(f"/{slug}/" not in sitemap for slug in RETIRED_BOOKS))
 
     # --- Sitemap completeness (catches stale fragments) ---
     locs = re.findall(r"<loc>(.*?)</loc>", sitemap)
@@ -199,6 +209,21 @@ def check_local(r):
     r.check("Articles fragment: matches articles/ directory", not drift,
             "; run scripts/build_articles_sitemap_fragment.py — " + ", ".join(drift)
             if drift else f"{len(article_dirs)} articles")
+
+    stylesheet = (SITE_DIR / "site.css").read_text()
+    r.check("Design: editorial fonts are declared",
+            '"Instrument Sans"' in stylesheet and '"Newsreader"' in stylesheet)
+    r.check("Design: article tables scroll locally",
+            ".article-page table.article-table" in stylesheet
+            and "overflow-x: auto" in stylesheet)
+    article_pages = [(SITE_DIR / "articles" / slug / "index.html").read_text()
+                     for slug in article_dirs]
+    r.check("Articles: all use the shared stylesheet",
+            all('href="/site.css"' in page for page in article_pages))
+    r.check("Articles: retired-book promotions are gone",
+            all("/illusions-of-work/" not in page
+                and "/illusions-in-the-boardroom/" not in page
+                for page in article_pages))
 
     # --- Per-book checks ---
     for slug, info in BOOKS.items():
@@ -315,10 +340,6 @@ def check_production(r):
     spot_checks = [
         ("the-end-of-alignment", "the-alignment-industrial-complex"),
         ("the-end-of-alignment", "technical-field-guide-from-milestone-to-production"),
-        ("illusions-of-work", "units-of-truth"),
-        ("illusions-of-work", "ai-as-the-unforgiving-reader"),
-        ("illusions-in-the-boardroom", "executive-summary"),
-        ("illusions-in-the-boardroom", "glossary"),
     ]
 
     for book_slug, ch_slug in spot_checks:
@@ -340,6 +361,10 @@ def check_production(r):
         local_prev = (SITE_DIR / book_slug / "preview.html").read_text()
         r.check(f"LIVE {book_slug}/preview: description matches local",
                 extract_meta(live_prev, "description") == extract_meta(local_prev, "description"))
+
+    for slug in RETIRED_BOOKS:
+        retired = fetch(f"{DOMAIN}/{slug}/")
+        r.check(f"LIVE retired book: {slug} is noindex", 'content="noindex,follow"' in retired)
 
 
 # ---------------------------------------------------------------------------

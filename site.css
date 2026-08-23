@@ -1,0 +1,548 @@
+:root {
+  --paper: #f3efe6;
+  --paper-deep: #e9e2d6;
+  --ink: #151311;
+  --muted: #6d665e;
+  --faint: #938b81;
+  --rule: #d6cec1;
+  --accent: #d43b24;
+  --sans: "Instrument Sans", system-ui, sans-serif;
+  --serif: "Newsreader", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+}
+
+body.home-page,
+body.articles-index,
+body.article-page {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, transparent 0, transparent calc(50% - 35rem), rgba(21, 19, 17, 0.025) calc(50% - 35rem), rgba(21, 19, 17, 0.025) calc(50% - 34.94rem), transparent calc(50% - 34.94rem)),
+    var(--paper);
+  font-family: var(--serif);
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.home-page a,
+body.articles-index a,
+body.article-page a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+body.home-page ::selection,
+body.articles-index ::selection,
+body.article-page ::selection {
+  color: var(--ink);
+  background: rgba(212, 59, 36, 0.2);
+}
+
+/* Homepage */
+
+body.home-page {
+  min-height: 100vh;
+  display: block;
+  padding: 0 1.5rem 3rem;
+}
+
+.home-page > .heading,
+.home-page > .subheading,
+.home-page > .books,
+.home-page > .about,
+.home-page > .articles,
+.home-page > footer {
+  width: min(100%, 58rem);
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-page .heading {
+  display: flex;
+  align-items: center;
+  gap: 0.58rem;
+  margin: 3.2rem auto 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.home-page .heading img {
+  width: 1.15rem;
+  height: 1.15rem;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+.home-page .subheading {
+  margin-top: 0.45rem;
+  margin-bottom: 3.8rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.025em;
+}
+
+.home-page .books {
+  display: block;
+}
+
+.home-page .book {
+  display: grid;
+  grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr);
+  grid-template-rows: repeat(4, auto) 1fr;
+  column-gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+  padding: 0;
+  color: inherit;
+  border-radius: 0;
+}
+
+.home-page .book:hover {
+  background: transparent;
+}
+
+.home-page .book-cover {
+  grid-column: 1;
+  grid-row: 1 / 6;
+  width: 100%;
+  margin: 0;
+  border-radius: 2px;
+  box-shadow: 0 1.6rem 3.8rem rgba(27, 22, 18, 0.16), 0 0 0 1px rgba(21, 19, 17, 0.08);
+}
+
+.home-page .book:hover .book-cover {
+  transform: translateY(-4px);
+  box-shadow: 0 2rem 4.5rem rgba(27, 22, 18, 0.2), 0 0 0 1px rgba(21, 19, 17, 0.08);
+}
+
+.home-page .book-title {
+  grid-column: 2;
+  margin: 1rem 0 0.65rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.8vw, 3.65rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.home-page .book-subtitle {
+  grid-column: 2;
+  max-width: 34rem;
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.94rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.home-page .book-audience {
+  grid-column: 2;
+  margin: 0 0 1.5rem;
+  color: var(--faint);
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.home-page .book-cta {
+  grid-column: 2;
+  justify-self: start;
+  margin-top: 0.3rem;
+  padding: 0.72rem 1rem;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 1;
+  transform: none;
+}
+
+.home-page .book-eoa .book-cta,
+.home-page .book-eoa:hover .book-cta {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.home-page .about,
+.home-page .articles {
+  padding-left: min(22rem, 38%);
+}
+
+.home-page .about {
+  margin-top: 4.5rem;
+}
+
+.home-page .about p {
+  margin: 0 0 1.15rem;
+  color: #47413b;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.home-page .about a {
+  color: var(--ink);
+  text-decoration-color: var(--accent);
+}
+
+.home-page .articles {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top-color: var(--rule);
+}
+
+.home-page .articles-title {
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.home-page .articles-desc,
+.home-page .article-list a,
+.home-page .articles-all {
+  font-family: var(--sans);
+}
+
+.home-page .articles-desc {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.home-page .article-list li {
+  margin: 0.55rem 0;
+}
+
+.home-page .article-list a,
+.home-page .articles-all {
+  color: var(--ink);
+  text-decoration-color: var(--rule);
+}
+
+.home-page .articles-all {
+  color: var(--accent);
+}
+
+.home-page > footer {
+  padding-left: min(22rem, 38%);
+  color: var(--faint);
+  font-family: var(--sans);
+  text-align: left;
+}
+
+/* Articles and article index */
+
+body.articles-index,
+body.article-page {
+  width: auto;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  font-size: 18.5px;
+  line-height: 1.68;
+}
+
+.article-page h2,
+.article-page h3,
+.articles-index ol li a,
+.articles-index .part-header,
+.articles-index .home-link,
+.article-page .series-link,
+.article-page .nav,
+.article-page .also,
+.article-page footer,
+.articles-index footer,
+.book-card,
+.cta-box {
+  font-family: var(--sans);
+}
+
+.articles-index h1,
+.article-page h1 {
+  font-family: var(--serif);
+}
+
+.articles-index h1,
+.article-page h1 {
+  margin-top: 1.5rem;
+  color: var(--ink);
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.article-page h2 {
+  margin: 2.6rem 0 0.75rem;
+  color: var(--ink);
+  font-size: 1.34rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.article-page h3 {
+  color: var(--ink);
+}
+
+.articles-index .home-link,
+.article-page .series-link {
+  margin-bottom: 2.8rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.articles-index .home-link:hover,
+.article-page .series-link:hover {
+  color: var(--accent);
+}
+
+.articles-index .subtitle {
+  color: var(--muted);
+}
+
+.articles-index .intro {
+  margin-bottom: 2.8rem;
+  padding-bottom: 2rem;
+  border-bottom-color: var(--rule);
+  font-size: 1.08rem;
+}
+
+.articles-index ol li {
+  margin: 1.25rem 0;
+}
+
+.articles-index ol li a {
+  color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.articles-index ol li a:hover {
+  color: var(--accent);
+}
+
+.articles-index .summary {
+  margin-top: 0.32rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.articles-index .part-header {
+  margin-top: 2.8rem !important;
+  padding-top: 0.75rem;
+  color: var(--accent);
+  border-top-color: var(--rule);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.article-page .part {
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.article-page .article-summary {
+  margin: 1.2rem 0 2rem;
+  padding: 0.15rem 0 0.15rem 1.15rem;
+  color: #4d463f;
+  border: 0;
+  border-left: 3px solid var(--accent);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-style: normal;
+  line-height: 1.58;
+}
+
+.article-page p {
+  margin: 0.95rem 0;
+}
+
+.article-page hr.story-sep::after {
+  content: "";
+  display: inline-block;
+  width: 2.4rem;
+  border-top: 2px solid var(--accent);
+  letter-spacing: 0;
+}
+
+.article-page pre {
+  max-width: 100%;
+  color: #28231e;
+  background: var(--paper-deep);
+  border-radius: 0;
+}
+
+.article-page table.article-table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.35);
+  border-top: 1px solid var(--ink);
+  font-family: var(--sans);
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-page table.article-table th,
+.article-page table.article-table td {
+  min-width: 6.4rem;
+  padding: 0.68rem 0.75rem;
+  border-bottom-color: var(--rule);
+  vertical-align: top;
+}
+
+.article-page .diagram-placeholder {
+  background: var(--paper-deep);
+  border-color: var(--rule);
+  border-radius: 0;
+}
+
+.article-page .floating-books {
+  display: none !important;
+}
+
+.article-page .book-promo,
+.articles-index .cta-box {
+  margin: 3.5rem 0 2rem;
+  padding: 0;
+  background: transparent;
+}
+
+.article-page .book-card {
+  align-items: center;
+  padding: 1rem 0;
+  color: var(--ink);
+  background: transparent;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+}
+
+.article-page .book-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.article-page .book-cover {
+  border-radius: 1px;
+}
+
+.article-page .book-label {
+  color: var(--accent);
+}
+
+.article-page .book-cta {
+  color: var(--accent);
+}
+
+.articles-index .cta-box {
+  text-align: left;
+  border-top: 1px solid var(--ink);
+  border-radius: 0;
+}
+
+.articles-index .cta-box p {
+  margin: 0.8rem 0 0.6rem;
+  color: var(--muted);
+}
+
+.articles-index .cta-box a.cta-primary {
+  padding: 0;
+  color: var(--accent);
+  background: transparent;
+  border-radius: 0;
+}
+
+.article-page .nav,
+.article-page footer,
+.articles-index footer {
+  border-top-color: var(--rule);
+}
+
+.article-page .nav a,
+.article-page .also,
+.article-page .also a,
+.article-page footer,
+.article-page footer a,
+.articles-index footer,
+.articles-index footer a {
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  body.home-page {
+    padding: 0 1.25rem 2.5rem;
+  }
+
+  .home-page .heading {
+    margin-top: 2.2rem;
+  }
+
+  .home-page .subheading {
+    margin-bottom: 2.5rem;
+  }
+
+  .home-page .book {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-page .book-cover {
+    width: min(13.5rem, 68vw);
+    align-self: center;
+    margin-bottom: 2.2rem;
+  }
+
+  .home-page .book-title {
+    margin-top: 0;
+    font-size: clamp(2.2rem, 12vw, 3.4rem);
+  }
+
+  .home-page .about,
+  .home-page .articles,
+  .home-page > footer {
+    padding-left: 0;
+  }
+
+  .home-page .about {
+    margin-top: 3.4rem;
+  }
+
+  body.articles-index,
+  body.article-page {
+    padding: 2rem 1.25rem 4rem;
+    font-size: 17.5px;
+  }
+
+  .articles-index h1,
+  .article-page h1 {
+    overflow-wrap: anywhere;
+  }
+}

@@ -1,299 +1,79 @@
 {
   "articles/drive-vs-drift/index.html": {
-    "hash": "013c7d5830ca57241f751b40fe64faa8fcab6d67a5f212e202507dd396acc01d",
-    "lastmod": "2026-06-10"
+    "hash": "60a84a55dd951d077a474e8adde7f0279ef544048b35c50e455fc8e16e5bc52b",
+    "lastmod": "2026-08-23"
   },
   "articles/fake-boundaries/index.html": {
-    "hash": "4b96b07f1585164715bbd68c6df23c1f935018872d62f90877537a15fbbb4f19",
-    "lastmod": "2026-06-10"
+    "hash": "1fdff03206b91ca44652df92c96cf7d9a0566bd0dadc68bc5c53c092417c525a",
+    "lastmod": "2026-08-23"
   },
   "articles/index.html": {
-    "hash": "6703584fffefc2d4cd2adbd9ae35e9b1de5579d263a6e32859b5fd6c49e9bef5",
-    "lastmod": "2026-06-10"
+    "hash": "a93d85db107d4553ce6667170baa61ec7d5c9c8486456e89f9159d6cca832f88",
+    "lastmod": "2026-08-23"
   },
   "articles/the-brochureware-moment/index.html": {
-    "hash": "115eedafdeb0eeb3edf09e966d594a6a5e6ad3dd255a6349df2b336fe074cfe3",
-    "lastmod": "2026-06-10"
+    "hash": "bc1dcd0e949ed86d10a01084fa80a0b1ff5a3249eb1bbe5ad01a0031a388d561",
+    "lastmod": "2026-08-23"
   },
   "articles/the-cfo-who-killed-the-platform/index.html": {
-    "hash": "69f9e97b807b458d813aeaa1c44d1dd95896ad74346fff855008df5922ccd13c",
-    "lastmod": "2026-06-10"
+    "hash": "4da82313d2c20e2be97b60ae0210707e72c1ec5600fbb242ef5e2e45f1316f06",
+    "lastmod": "2026-08-23"
   },
   "articles/the-diagnostic-toolkit/index.html": {
-    "hash": "85ff17e55fb1477251d78c65d9265af2f87a7e27a4b75ee7845566555ebc2c55",
-    "lastmod": "2026-06-10"
+    "hash": "5002675efff66fb7bf0382079547ed4f6f092c8dfe0eccb5fba7943d62551a68",
+    "lastmod": "2026-08-23"
   },
   "articles/the-fork-in-the-road/index.html": {
-    "hash": "4fe1f2d9844903a9f3625fe1eb5a1c47435ae52b6917ff0a261d8b12f93e9045",
-    "lastmod": "2026-06-10"
+    "hash": "a6f43265e5c68dcdc22b25e2f67d961a3889cacec2e295838e083ab343604c3b",
+    "lastmod": "2026-08-23"
   },
   "articles/the-machine-that-reads-your-strategy/index.html": {
-    "hash": "c356f26a243646231ea2573174a711fd27cd888c16a2f2851d2078dbcd7e485a",
-    "lastmod": "2026-06-10"
+    "hash": "f2ab04a4494272acd4c78a3022a4d197c3416bfe2286fe24ac0543d75fa20c36",
+    "lastmod": "2026-08-23"
   },
   "articles/the-meeting-that-replaced-the-work/index.html": {
-    "hash": "15b27fbec5ea00d8bac282f460b18983fa8b3ff7c125d953c075c7816664551c",
-    "lastmod": "2026-06-10"
+    "hash": "1479f49f0e6d01af1a41884dd08b30879da9cfbe87499f173a1859a7c04f69ff",
+    "lastmod": "2026-08-23"
   },
   "articles/the-people-who-knew/index.html": {
-    "hash": "8340e95c4c3c52ee733947e3f311d1f81086dcdb7a59b6a89ea8b50e7477d9e1",
-    "lastmod": "2026-06-10"
+    "hash": "803e213ac41568355eb81dc87b6406e519337389fffa0954d99004b6465d2742",
+    "lastmod": "2026-08-23"
   },
   "articles/the-polished-lie/index.html": {
-    "hash": "d3f365d1a97d244fe7e2d5daa7729d4ba4e761cf91676195d52a2501c55b06d0",
-    "lastmod": "2026-06-10"
+    "hash": "16e65a9a95943cab573a1474d3e15b451beb452abd422fb28e9b9ee1b31b144a",
+    "lastmod": "2026-08-23"
   },
   "articles/the-process-is-the-product/index.html": {
-    "hash": "e43770f47efd14aa4b17b850bc3a2db250de849d9fee1db758883e941f5a58f0",
-    "lastmod": "2026-06-10"
+    "hash": "f17630093e15ec7d2c3bd83f51a4746a6a8338d81a23f9eff1693d22373d9bd9",
+    "lastmod": "2026-08-23"
   },
   "articles/the-separation/index.html": {
-    "hash": "e068da531bcc107c239cfa7f2c2bd421363bf47c7c8d359b6c0bea3b0dd5658a",
-    "lastmod": "2026-06-10"
+    "hash": "a1058d267e35dc74fd086225d6c94d23bc6d98b24b24bff622edcda11f804196",
+    "lastmod": "2026-08-23"
   },
   "articles/the-strategic-context-stack/index.html": {
-    "hash": "90b71662ad8e00a80ebafd357272c251c95533caf3fe64ba732e3b76e2a28344",
-    "lastmod": "2026-06-10"
+    "hash": "2712867414be8a1e280b9d8c40c72265b1c698d7b0c521856a883f4bad04e384",
+    "lastmod": "2026-08-23"
   },
   "articles/the-strategy-deck-that-ate-the-company/index.html": {
-    "hash": "19037d846ffcac67bf234e6eaf69253df2a5bf900d7f3ef335e6f9752ce65d05",
-    "lastmod": "2026-06-10"
+    "hash": "77aeb5b96278ae84dc09e42c4c6c8a0dc18f707ae125a731f3b14b319c44b1de",
+    "lastmod": "2026-08-23"
   },
   "articles/what-happens-next/index.html": {
-    "hash": "89fdaa7b5c8609c12fd3c821bea6ead4b5b5c7ac2946ca75a10cea55f08730db",
-    "lastmod": "2026-06-10"
+    "hash": "33fc08dca7ece64ddb1da022a138a6783945833776f2d0760a06082c02f7538e",
+    "lastmod": "2026-08-23"
   },
   "articles/where-this-is-hard/index.html": {
-    "hash": "99fb30d0fe94bd2b3318a8017c5ece1647ed82dbcf6666978e71fb06574add3a",
-    "lastmod": "2026-06-10"
+    "hash": "77d187c66105f2d5fe8daffcebfffea75e7fc363b0976d79ec59cbb580018faf",
+    "lastmod": "2026-08-23"
   },
   "articles/why-big-it-projects-fail/index.html": {
-    "hash": "670fea97483a9a6ad2724406a354da33b45098ab08e8a161e08106296b6d803d",
-    "lastmod": "2026-06-10"
-  },
-  "illusions-in-the-boardroom/chapters/ai-as-the-unforgiving-reader/index.html": {
-    "hash": "3d68ce8b732a63c509ad530b8ceb4543bdb883b192d51aad71d5ee5400f9ad93",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/conclusion/index.html": {
-    "hash": "3b1235ce23d41cb0ccfc03bf5c8f81952ad057a1b1697056d7f09b86cbbff02a",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/contracts-not-committees/index.html": {
-    "hash": "efc538a7e58a431fb2c6101f9d6fb00dd9b733934de4b5b6cb7ee600c1c399f6",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/data-as-outputs-not-a-shared-substrate/index.html": {
-    "hash": "f5bfee459a5386812d7f76730182f890f3e4385ffc73b2d96f6cca80ec8ffd7d",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/executive-summary/index.html": {
-    "hash": "0476092ecc73acabca87f4ab79103b1c9da13cbd1850ab0690ffb410353b5271",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/for-your-cto/index.html": {
-    "hash": "763bef1ed654097881408a14bcea85b356849c5213df819bbddeedcf26c2f4c2",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/glossary/index.html": {
-    "hash": "8f9f42b20cdaef8df53e08c97461ea97cbb5325915f0d07c7d83bc8bdb288b27",
-    "lastmod": "2026-06-12"
-  },
-  "illusions-in-the-boardroom/chapters/if-you-are-the-cto/index.html": {
-    "hash": "2866087a96c6cec9812984304e8eafba945865f2057172858a7762916710c057",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/introduction/index.html": {
-    "hash": "fd88deabc15522b6b4a3f2edd546acf35fd0fb158371912af204934f4aed1f0f",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/operational-and-regulatory-exposure/index.html": {
-    "hash": "01b7dedd7803f304070d20d3b8549089abb1d23d348ee4c821a518f910bbfc39",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/portfolio-labels-that-do-not-exist-in-code/index.html": {
-    "hash": "8f98179f7e22919ef6da50c04160b77888a9c402f78af5821553f9785f05c8e2",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/pull-not-push/index.html": {
-    "hash": "e3a122ba5072fef752054815124f9314d5ccf858e36dd69287593090b6f40f3a",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/splitting-the-system-without-splitting-the-problem/index.html": {
-    "hash": "caef221bc988077e51abce72ace74c5840b78a893fc429cd31ddc93688bc31f9",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/talent-decay-as-structural-fragility/index.html": {
-    "hash": "37d5a3f8dd24f38f248ac6d6def71647723586c3afac4930679da94239eb5088",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/the-board-narrative-and-the-system/index.html": {
-    "hash": "20f44b9b8d3e5bbbd23336a0a02f6bfc72090f400825e1675811e97354baa837",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/the-economics-of-structural-opacity/index.html": {
-    "hash": "0b9628628df9fc06dc193a69cc62548f83f942ab5e4981b7bceeca5c41937b74",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/the-evidence-base/index.html": {
-    "hash": "b1011009cf7a0c198e17c5d1193ff6dd679f5a13e256f5376a792c238ec7fb68",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/the-transition-and-its-failure-modes/index.html": {
-    "hash": "95a861616503f61d03042159c9b502c62d4107ca7422d25197d178fe19847131",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/the-transitional-authority/index.html": {
-    "hash": "88ded5a193c6fe75d92070695b70e594d62ab83109313854b0df3312bcfefa50",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/units-of-truth/index.html": {
-    "hash": "7d09bd227b35ef17f557e2c45b8f9fb974554470e61633f31ec7ce7af358d84a",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/what-the-sceptical-board-member-asks/index.html": {
-    "hash": "1935931704fca71cbfa9e217b3ead80878f99c528f72a1e3db9340e5240a2cda",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/what-to-demand-before-anything-else/index.html": {
-    "hash": "277ea905627bf0ba7cd4f0e801fd0d8a263a3b5677ff3cc0bd7f32de82ddd4e4",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/when-ai-writes-the-illusion/index.html": {
-    "hash": "17b002d46451bf86c9e94e8dc33c393c9e26a67bba5d95c75c4ca7baf66fb17d",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/chapters/who-loses-when-clarity-wins/index.html": {
-    "hash": "332a6e01fd41db6052efc37866744c40e6bd9c3e81abcc30899759216f40234e",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-in-the-boardroom/contents.html": {
-    "hash": "a8338fdd0cc96c3704f008ae22fc050e0d0ba3e20bce935373c8df079a256032",
-    "lastmod": "2026-06-12"
-  },
-  "illusions-in-the-boardroom/index.html": {
-    "hash": "9c2d30fd6f6f6c725a44724ebf0a0520ba6eb7cccf6fe4e833279b25c6cc64b3",
-    "lastmod": "2026-06-10"
-  },
-  "illusions-in-the-boardroom/preview.html": {
-    "hash": "1e6628deeb0fe2fce9d2aaf8ce0bc5d230d007d85717e08fa6fbccfd46ec69ee",
-    "lastmod": "2026-06-12"
-  },
-  "illusions-of-work/chapters/activity-without-reality/index.html": {
-    "hash": "110b8577c1d3e0846c33a3a5fb593df6fe9c2df8ffd1af98935ec670b7c3e0b9",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/ai-as-the-unforgiving-reader/index.html": {
-    "hash": "522eb6b1a78117664fdeae3cdd2c839c96d4ae7388ad9f1ad96cf9e3d9b9e80d",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/architecture-that-avoids-accountability/index.html": {
-    "hash": "f7cf69b04817e1a4b1c6d7c03352006946200b92967239b5de55757fea69f073",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/authors-note/index.html": {
-    "hash": "1cd735df84c78b49c8d3c38a60b2931843e905465159c70dc34ae6667cfad335",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/conclusion/index.html": {
-    "hash": "3314cecc9c361b79a5cb71b8945d8cfba080eaf46024cfd88153e0a313f9953f",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/customer-journeys-are-business-processes/index.html": {
-    "hash": "871b6a68c1793f9d5c3b3e9f462039d0f53ab6ec91a573178737e67bc575e589",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/feeding-ai-healing-the-organisation/index.html": {
-    "hash": "4ffc54aa3353fa79f5a7d8614b4ebdbbb21bfdb5fa7513c64e3a85755d2dfe5e",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/from-pretence-to-autonomy/index.html": {
-    "hash": "390838a1aaeb8be2f86de34a3279271eacd9f7c2c920325494f4dc35bdefae9e",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/how-to-catch-this-book-being-wrong/index.html": {
-    "hash": "986be6ab6d1c174107c8fbf99cec536826277819bde2cab66b3ce5cb7af3ead0",
-    "lastmod": "2026-07-05"
-  },
-  "illusions-of-work/chapters/if-you-are-the-ceo/index.html": {
-    "hash": "7fe474d7263d6d224ebb8cde3631367ceec5d3b0819de2160adec88d6e91e15d",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/introduction/index.html": {
-    "hash": "cbb35635bb81654c05cc3f4d015d6f8232a1e375c68a57a9f98f10eee019ca1f",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/readers-map/index.html": {
-    "hash": "aac0d2766a0c3c905fee4c7eb659de546d888a759ae4a9cb17fbe5c956d13036",
-    "lastmod": "2026-07-10"
-  },
-  "illusions-of-work/chapters/the-alignment-industrial-complex/index.html": {
-    "hash": "1706a018a73f1ffad14e80fce6d423ea7d784c8400b110cf44e80f28f2c4841d",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/the-authority-to-decompose/index.html": {
-    "hash": "274eb91ad6a505a61b7eec9d6d05fbf53f5edd4bd5bb579f46987f11763bfc32",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/the-first-unit/index.html": {
-    "hash": "f5e1dfaf219bd509562822bb978869fedbf24607e86d0a1584c2077d34b4fe3c",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/the-machinery-of-avoidance/index.html": {
-    "hash": "fc3e4cd0059dc7f9029d2fff4a14294659feb01610341bd84b5bdbf1b08571f7",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/the-programme-that-wasnt-an-it-project/index.html": {
-    "hash": "47e249a94ec05fa90bd6e7edd7493273e606135da3abc9d187f35cc8d52f5586",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/the-rate-has-changed/index.html": {
-    "hash": "7b106d28f4f4e8cb8d4d8fa9b37a5ca87c4e1a4d958d3b17944208785a0fcd4c",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/units-of-truth/index.html": {
-    "hash": "c644b02c3011efb3263dd093e765e5028d95b7b73aa7bb3d1b9a7505a9a07d45",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/what-this-looks-like/index.html": {
-    "hash": "d7190d868e77b4e22f24f2d64249dae87ae980c42cbbff79cf51ca9ecbced3d4",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/when-clarity-becomes-cheaper-than-pretence/index.html": {
-    "hash": "e6370af448618d8bbd2db47e59515386e8fde92c012ef73097be40d20d5bf3de",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/when-the-business-isnt-the-business/index.html": {
-    "hash": "e9dbbd2f6c3165243a3137d863b849c842470a259ac0c21cb473f899f8dd6cec",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/where-this-fails/index.html": {
-    "hash": "12a2058102d37afbe139bc87187162f4fb248e8c9412909a15d96344cfc7a42e",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/why-people-closest-to-reality-suffer/index.html": {
-    "hash": "61a0e3385e842f96dff38d923d7836bd385ccf5491b51cc6892acc5ba27d8c0f",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/chapters/writing-reality-down-so-it-bites-back/index.html": {
-    "hash": "29af9fcfb344e963e516bdee1838b755459713a489e2b5f35097a1a300a93c8c",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/contents.html": {
-    "hash": "5d7d3bfe38621cd307ddb4673d9bcca4679a1f9c76f5ed41eb793c9dbf47b72a",
-    "lastmod": "2026-07-10"
-  },
-  "illusions-of-work/index.html": {
-    "hash": "66d894dae29b4b49e32002c048e7b90baf2a5c2a9c18c1868e461654fdd257e9",
-    "lastmod": "2026-08-18"
-  },
-  "illusions-of-work/preview.html": {
-    "hash": "d81b7241b4e81a75e042d159b36f2b8156dce1e6bb3dc6892d3c64b4084f054a",
-    "lastmod": "2026-07-10"
+    "hash": "ba270b123605cd986f895340069821c89407ce682bb677eca2b8afe73eb9453e",
+    "lastmod": "2026-08-23"
   },
   "index.html": {
-    "hash": "097d669a48f2a9e4b399d9fbf43015c9f06e31fb5ee71a047ff381ded989df56",
-    "lastmod": "2026-08-22"
+    "hash": "87ca8b76e8f2f8d1065c61edadd30b371bc08892074436bbeaad1684ffdc7f54",
+    "lastmod": "2026-08-23"
   },
   "the-end-of-alignment/chapters/abolish-central-people-strategy/index.html": {
     "hash": "e560b3d565c06aedb356bea7bc27454637c1bcedebe8f2b9f30a0cb83e3bf663",
