@@ -27,7 +27,8 @@ var _bookVersion = (function () {
   var fontSize = "medium";
 
   // --- DOM refs ---
-  var wordPre, wordOrp, wordPost, chapterTitle, chapterSubtitle,
+  var wordPre, wordOrp, wordPost, wordContainer, focusGuides, titleCardEl,
+      titleCardSubtitle, titleCardAuthor, chapterTitle, chapterSubtitle,
       progressFill, playBtn, wpmDisplay, tocOverlay,
       tocList, display, iconPlay, iconPause, timeCurrent, timeTotal;
 
@@ -35,6 +36,11 @@ var _bookVersion = (function () {
     wordPre = document.getElementById("word-pre");
     wordOrp = document.getElementById("word-orp");
     wordPost = document.getElementById("word-post");
+    wordContainer = document.getElementById("word-container");
+    focusGuides = document.getElementById("focus-guides");
+    titleCardEl = document.getElementById("title-card");
+    titleCardSubtitle = document.getElementById("title-card-subtitle");
+    titleCardAuthor = document.getElementById("title-card-author");
     chapterTitle = document.getElementById("chapter-title");
     chapterSubtitle = document.getElementById("chapter-subtitle");
     progressFill = document.getElementById("progress-fill");
@@ -219,11 +225,17 @@ var _bookVersion = (function () {
   }
 
   // --- Title card ---
+  function setTitleCardVisible(visible) {
+    titleCardEl.classList.toggle("hidden", !visible);
+    wordContainer.classList.toggle("hidden", visible);
+    focusGuides.classList.toggle("hidden", visible);
+  }
+
   function showTitleCard() {
-    wordPre.textContent = "";
-    wordOrp.textContent = "";
-    wordPost.textContent = meta.title;
-    chapterTitle.textContent = meta.subtitle || "";
+    setTitleCardVisible(true);
+    titleCardSubtitle.textContent = meta.subtitle || "";
+    titleCardAuthor.textContent = meta.author;
+    chapterTitle.textContent = meta.title;
     chapterSubtitle.textContent = "by " + meta.author;
     updateProgress();
   }
@@ -231,6 +243,7 @@ var _bookVersion = (function () {
   // --- Display ---
   function showWord() {
     if (!totalWords) return;
+    setTitleCardVisible(false);
     if (pos >= totalWords) pos = totalWords - 1;
     if (pos < 0) pos = 0;
 
@@ -694,6 +707,7 @@ var _bookVersion = (function () {
     });
 
     display.addEventListener("click", function (e) {
+      if (titleCard) { togglePlay(); return; }
       var rect = display.getBoundingClientRect();
       var x = (e.clientX - rect.left) / rect.width;
       if (x < 0.33) { skipWords(-10); }

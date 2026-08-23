@@ -1,5 +1,64 @@
 /* RSVP Reader: The End of Alignment */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+.title-card-kicker {
+  margin: 0 0 0.45rem;
+  color: rgb(82 82 91);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: clamp(0.78rem, 2vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.title-card-wordmark {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: clamp(0.35rem, 1.2vw, 0.8rem);
+  margin: 0;
+  color: rgb(24 24 27);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: clamp(3rem, 11vw, 7.6rem);
+  font-weight: 600;
+  line-height: 0.86;
+  letter-spacing: -0.075em;
+}
+
+.title-card-rule {
+  width: clamp(2px, 0.35vw, 4px);
+  margin: -0.06em 0 0.02em;
+  background: rgb(239 68 68);
+}
+
+.title-card-subtitle {
+  max-width: 42rem;
+  margin: clamp(2rem, 5vh, 3.4rem) auto 0;
+  color: rgb(82 82 91);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: clamp(0.92rem, 2.2vw, 1.12rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.title-card-author {
+  margin: 1.2rem 0 0;
+  color: rgb(161 161 170);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+[data-theme="dark"] .title-card-kicker,
+[data-theme="dark"] .title-card-subtitle {
+  color: rgb(161 161 170);
+}
+
+[data-theme="dark"] .title-card-wordmark {
+  color: rgb(244 244 245);
+}
 
 /* RSVP word sizing by data-fontsize attribute */
 /* Mobile-first: viewport-relative so words never overflow */
