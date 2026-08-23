@@ -9,6 +9,7 @@ Usage:
 
 import re
 import json
+import hashlib
 import sys
 import urllib.request
 import urllib.error
@@ -360,6 +361,11 @@ def fetch(url):
     return urllib.request.urlopen(req).read().decode()
 
 
+def fetch_bytes(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    return urllib.request.urlopen(req).read()
+
+
 def fetch_head(url):
     req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"})
     return urllib.request.urlopen(req)
@@ -371,6 +377,11 @@ def check_production(r):
     local_hp = (SITE_DIR / "index.html").read_text()
     r.check("LIVE homepage: description matches local",
             extract_meta(hp, "description") == extract_meta(local_hp, "description"))
+    r.check("LIVE homepage: carries the current subtitle",
+            "New Operating Logic for Software-Dependent Corporates in the AI Era" in hp)
+    r.check("LIVE homepage: links to paid book and public sample",
+            'href="https://shipper.demandops.com"' in hp
+            and 'href="/the-end-of-alignment/"' in hp)
     r.check("LIVE homepage: OG image serves OK",
             fetch_head(f"{DOMAIN}/og-image.png").status == 200)
 
@@ -394,7 +405,7 @@ def check_production(r):
     # --- Spot-check chapter pages ---
     spot_checks = [
         ("the-end-of-alignment", "the-alignment-industrial-complex"),
-        ("the-end-of-alignment", "technical-field-guide-from-milestone-to-production"),
+        ("the-end-of-alignment", "prologue-meet-the-enemy"),
     ]
 
     for book_slug, ch_slug in spot_checks:
@@ -416,6 +427,23 @@ def check_production(r):
         local_prev = (SITE_DIR / book_slug / "preview.html").read_text()
         r.check(f"LIVE {book_slug}/preview: description matches local",
                 extract_meta(live_prev, "description") == extract_meta(local_prev, "description"))
+
+    live_meta = json.loads(fetch(f"{DOMAIN}/the-end-of-alignment/data/meta.json"))
+    r.check("LIVE reader: declares a three-chapter excerpt",
+            live_meta.get("isExcerpt") is True
+            and len(live_meta.get("chapters", [])) == 3)
+
+    local_cover = (SITE_DIR / "the-end-of-alignment" / "cover.png").read_bytes()
+    live_cover = fetch_bytes(f"{DOMAIN}/the-end-of-alignment/cover.png")
+    r.check("LIVE reader: cover pixels match local publication asset",
+            hashlib.sha256(live_cover).digest() == hashlib.sha256(local_cover).digest())
+
+    try:
+        fetch(f"{DOMAIN}/the-end-of-alignment/chapters/make-the-company-readable/")
+        r.check("LIVE reader: paid-only chapter is not published", False, "got 200")
+    except urllib.error.HTTPError as e:
+        r.check("LIVE reader: paid-only chapter is not published",
+                e.code == 404, f"HTTP {e.code}")
 
     for slug in RETIRED_BOOKS:
         retired = fetch(f"{DOMAIN}/{slug}/")
