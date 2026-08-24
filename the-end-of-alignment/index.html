@@ -30,34 +30,31 @@
   <meta name="twitter:image" content="https://simpleisadvanced.com/the-end-of-alignment/og-image.png">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "The End of Alignment",
-    "subtitle": "New Operating Logic for Software-Dependent Corporates in the AI Era",
-    "author": {
-      "@type": "Person",
-      "name": "Adrian McPhee",
-      "url": "https://www.linkedin.com/in/adrianmcphee/"
-    },
-    "description": "Practice-led system design for companies whose products and operations depend on software, joining process ownership, technical delivery and continuous reconciliation.",
-    "url": "https://simpleisadvanced.com/the-end-of-alignment/",
-    "image": "https://simpleisadvanced.com/the-end-of-alignment/og-image.png",
-    "inLanguage": "en",
-    "genre": ["Business", "Technology", "Corporate Governance"],
-    "bookFormat": "https://schema.org/EBook",
-    "offers": {
-      "@type": "Offer",
-      "url": "https://shipper.demandops.com",
-      "price": "29.00",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Simple is Advanced"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The End of Alignment",
+  "subtitle": "New Operating Logic for Software-Dependent Corporates in the AI Era",
+  "author": {
+    "@type": "Person",
+    "name": "Adrian McPhee",
+    "url": "https://www.linkedin.com/in/adrianmcphee/"
+  },
+  "description": "Practice-led system design for companies whose products and operations depend on software, joining process ownership, technical delivery and continuous reconciliation.",
+  "url": "https://simpleisadvanced.com/the-end-of-alignment/",
+  "image": "https://simpleisadvanced.com/the-end-of-alignment/og-image.png",
+  "inLanguage": "en",
+  "genre": [
+    "Business",
+    "Technology",
+    "Corporate Governance"
+  ],
+  "bookFormat": "https://schema.org/EBook",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Simple is Advanced"
   }
+}
   </script>
 
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -82,10 +79,8 @@
     </button>
 
     <div class="hidden md:flex items-center gap-3">
-      <a href="https://shipper.demandops.com"
-         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm hover:shadow text-xs font-medium transition-all">
-        Buy · €29
-      </a>
+      <span data-paid-cta data-paid-label="short"
+         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm hover:shadow text-xs font-medium transition-all" aria-disabled="true">Coming soon</span>
       <a id="contact-link" href="https://www.linkedin.com/in/adrianmcphee/" target="_blank" rel="noopener"
          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-sm hover:shadow text-xs font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all">
         <i data-lucide="message-circle" class="w-3.5 h-3.5 stroke-[1.5]"></i>
@@ -134,10 +129,8 @@
   <footer class="fixed bottom-0 left-0 right-0 p-3 sm:p-6 flex flex-col items-center z-50 pointer-events-none">
     <!-- Mobile-only action buttons above controller -->
     <div class="md:hidden flex justify-between w-full max-w-2xl px-2 mb-2 pointer-events-auto">
-      <a href="https://shipper.demandops.com"
-         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm text-xs font-medium">
-        Buy · €29
-      </a>
+      <span data-paid-cta data-paid-label="short"
+         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm text-xs font-medium" aria-disabled="true">Coming soon</span>
       <a id="contact-link-mobile" href="https://www.linkedin.com/in/adrianmcphee/" target="_blank" rel="noopener"
          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border border-zinc-200 dark:border-zinc-700 shadow-sm text-xs font-medium text-zinc-500 dark:text-zinc-400">
         <i data-lucide="message-circle" class="w-3.5 h-3.5 stroke-[1.5]"></i>
@@ -231,7 +224,7 @@
             Browse chapters
           </a>
           <a href="technical-field-guide.pdf" class="block mt-1.5 text-[11px] font-medium text-red-500 hover:text-red-600">Download the free Technical Field Guide</a>
-          <a href="https://shipper.demandops.com" class="block mt-1.5 text-[11px] font-semibold text-zinc-800 dark:text-zinc-200">Buy the complete book · €29</a>
+          <span data-paid-cta data-paid-label="long" class="block mt-1.5 text-[11px] font-semibold text-zinc-800 dark:text-zinc-200" aria-disabled="true">Coming soon</span>
         </div>
       </div>
       <ul id="toc-list" class="px-2 py-2"></ul>
