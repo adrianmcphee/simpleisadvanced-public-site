@@ -75,28 +75,36 @@
     "hash": "24d9c43aa7c24dd1eede5fd4ca5ee8e19e72a8fc388f4b735ba8fb376478dd74",
     "lastmod": "2026-08-23"
   },
-  "the-end-of-alignment/chapters/how-to-read-this-book/index.html": {
-    "hash": "83b552deb50a11ec8af857e0f6b6139e99f3dcb8911ac1c322f1d06d78b39806",
+  "the-end-of-alignment/chapters/evidence-and-test/index.html": {
+    "hash": "092f72de6119349f18aef75d8139ec207ff53a23caa35fac84b4a83d6692dd90",
+    "lastmod": "2026-08-24"
+  },
+  "the-end-of-alignment/chapters/how-the-logic-is-derived/index.html": {
+    "hash": "0d0950148c674314b3df66c926aa43088da769718a99e45868895e98d9eea906",
     "lastmod": "2026-08-24"
   },
   "the-end-of-alignment/chapters/preface-who-this-is-for/index.html": {
-    "hash": "8d2ec47119df9a53bea9fbcd0a2e71cfcd1ad75f787a12119fd3352861292107",
+    "hash": "5896f0f99919f38d12838cf521aa5c560933ca2bc79173ee67b15264e7a94a7e",
     "lastmod": "2026-08-24"
   },
   "the-end-of-alignment/chapters/prologue-meet-the-enemy/index.html": {
-    "hash": "f912b44d15fccd129b57e014c9040a83c04ba93824ce878b76737eca73114f57",
-    "lastmod": "2026-08-23"
+    "hash": "bfd37395842fca6168cf8e18ef3a998aa8c55feefee20553055502403121a26f",
+    "lastmod": "2026-08-24"
   },
   "the-end-of-alignment/chapters/the-alignment-industrial-complex/index.html": {
-    "hash": "990c6a87f7d455068be14d35bb7a9f97f181224ab710f807e6ea8d1483d44cab",
+    "hash": "872cc74fe4f247045df178946227c1bbdc12934789abff5f170c8845d07ceddf",
+    "lastmod": "2026-08-24"
+  },
+  "the-end-of-alignment/chapters/the-argument-in-one-page/index.html": {
+    "hash": "55b7e23052e959ebb74b03a8f8aeece356eafc4834bfed0e6c05e181f9efa0d8",
     "lastmod": "2026-08-24"
   },
   "the-end-of-alignment/contents.html": {
-    "hash": "31c66071887bff0c41c8ceb7faa6fd2d413c133fc3956fed6fcdf06793342a2e",
+    "hash": "ba9df4b10002b328885a85ea3db41bd9eaaf53fde0f3640c94afaa6382e6831e",
     "lastmod": "2026-08-24"
   },
   "the-end-of-alignment/index.html": {
-    "hash": "522535188a3aae13ba6c9940ff6da60bd1f7b58c39c0e19d5a9f55006a322303",
+    "hash": "f2a836f411eba9a5f5cca735a3b258580833ebecb99bfda43082440b13136514",
     "lastmod": "2026-08-24"
   }
 }
