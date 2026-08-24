@@ -102,12 +102,17 @@
   </url>
   <url>
     <loc>https://simpleisadvanced.com/the-end-of-alignment/contents.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://simpleisadvanced.com/the-end-of-alignment/chapters/preface-who-this-is-for/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://simpleisadvanced.com/the-end-of-alignment/chapters/how-to-read-this-book/</loc>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -117,7 +122,7 @@
   </url>
   <url>
     <loc>https://simpleisadvanced.com/the-end-of-alignment/chapters/the-alignment-industrial-complex/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
