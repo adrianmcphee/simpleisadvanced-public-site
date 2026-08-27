@@ -21,9 +21,9 @@ OUT_PATH = ARTICLES_DIR / "feed.xml"
 
 DOMAIN = "https://simpleisadvanced.com"
 CHANNEL_DESCRIPTION = (
-    "How software-dependent corporates built structures that reward the "
-    "appearance of productivity over actual productivity, and why AI "
-    "changes the economics. Articles by Adrian McPhee."
+    "Essays on fragmented authority, organisation design, and why AI leverage "
+    "becomes outcomes in some companies and queues in others. Articles by "
+    "Adrian McPhee."
 )
 
 

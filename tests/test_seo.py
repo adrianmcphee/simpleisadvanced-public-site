@@ -20,10 +20,17 @@ SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
-    "the-end-of-alignment": {"title": "The End of Alignment", "sample_chapters": 3},
+    "the-end-of-alignment": {
+        "title": "The End of Alignment",
+        "sample_chapters": 4,
+        "version": "1.1.5",
+    },
 }
 
 RETIRED_BOOKS = ("illusions-of-work", "illusions-in-the-boardroom")
+CURRENT_SUBTITLE = "New Operating Logic for the AI Era"
+RETIRED_SUBTITLE = "New Operating Logic for Software-Dependent Corporates in the AI Era"
+BOOK_URL = "https://shipper.demandops.com/book/the-end-of-alignment"
 
 
 def is_redirect_stub(chapter_dir):
@@ -120,9 +127,11 @@ def check_local(r):
             "Illusions in the Boardroom" not in hp and "Illusions of Work" not in hp)
     r.check("Homepage: uses the shared editorial stylesheet", 'href="/site.css"' in hp)
     r.check("Homepage: carries the current subtitle",
-            "New Operating Logic for Software-Dependent Corporates in the AI Era" in hp)
+            CURRENT_SUBTITLE in hp and RETIRED_SUBTITLE not in hp)
+    r.check("Homepage: carries the current AI and alignment hook",
+            "AI makes output abundant. Alignment keeps outcomes scarce." in hp)
     r.check("Homepage: links directly to the paid book",
-            'href="https://shipper.demandops.com"' in hp
+            f'href="{BOOK_URL}"' in hp
             and "Buy the ebook" in hp)
     r.check("Homepage: links to a public sample",
             'href="/the-end-of-alignment/"' in hp
@@ -237,8 +246,11 @@ def check_local(r):
                 and "/illusions-in-the-boardroom/" not in page
                 for page in article_pages))
     r.check("Articles: every book card points to the paid ebook",
-            all('href="https://shipper.demandops.com"' in page
+            all(f'href="{BOOK_URL}"' in page
                 and "Buy the book" in page
+                for page in article_pages))
+    r.check("Articles: every book card carries the current subtitle",
+            all(CURRENT_SUBTITLE in page and RETIRED_SUBTITLE not in page
                 for page in article_pages))
 
     # --- Indexable page hygiene ---
@@ -309,6 +321,11 @@ def check_local(r):
         r.check(f"{slug}: reader declares itself as an excerpt",
                 meta.get("isExcerpt") is True
                 and len(meta.get("chapters", [])) == expected_sample_chapters)
+        r.check(f"{slug}: reader version matches the current publication",
+                meta.get("version") == info["version"],
+                str(meta.get("version")))
+        r.check(f"{slug}: reader carries the current subtitle",
+                meta.get("subtitle") == CURRENT_SUBTITLE)
         r.check(f"{slug}: contents distinguish free and paid chapters",
                 contents.count("(free sample)") == expected_sample_chapters
                 and "(paid edition)" in contents)
@@ -378,9 +395,9 @@ def check_production(r):
     r.check("LIVE homepage: description matches local",
             extract_meta(hp, "description") == extract_meta(local_hp, "description"))
     r.check("LIVE homepage: carries the current subtitle",
-            "New Operating Logic for Software-Dependent Corporates in the AI Era" in hp)
+            CURRENT_SUBTITLE in hp and RETIRED_SUBTITLE not in hp)
     r.check("LIVE homepage: links to paid book and public sample",
-            'href="https://shipper.demandops.com"' in hp
+            f'href="{BOOK_URL}"' in hp
             and 'href="/the-end-of-alignment/"' in hp)
     r.check("LIVE homepage: OG image serves OK",
             fetch_head(f"{DOMAIN}/og-image.png").status == 200)
@@ -404,8 +421,9 @@ def check_production(r):
 
     # --- Spot-check chapter pages ---
     spot_checks = [
+        ("the-end-of-alignment", "preface-who-this-is-for"),
         ("the-end-of-alignment", "the-alignment-industrial-complex"),
-        ("the-end-of-alignment", "prologue-meet-the-enemy"),
+        ("the-end-of-alignment", "make-the-company-readable"),
     ]
 
     for book_slug, ch_slug in spot_checks:
@@ -429,9 +447,12 @@ def check_production(r):
                 extract_meta(live_prev, "description") == extract_meta(local_prev, "description"))
 
     live_meta = json.loads(fetch(f"{DOMAIN}/the-end-of-alignment/data/meta.json"))
-    r.check("LIVE reader: declares a three-chapter excerpt",
+    r.check("LIVE reader: declares the current four-part sample",
             live_meta.get("isExcerpt") is True
-            and len(live_meta.get("chapters", [])) == 3)
+            and len(live_meta.get("chapters", [])) == 4)
+    r.check("LIVE reader: version matches the current publication",
+            live_meta.get("version") == BOOKS["the-end-of-alignment"]["version"],
+            str(live_meta.get("version")))
 
     local_cover = (SITE_DIR / "the-end-of-alignment" / "cover.png").read_bytes()
     live_cover = fetch_bytes(f"{DOMAIN}/the-end-of-alignment/cover.png")
@@ -439,7 +460,7 @@ def check_production(r):
             hashlib.sha256(live_cover).digest() == hashlib.sha256(local_cover).digest())
 
     try:
-        fetch(f"{DOMAIN}/the-end-of-alignment/chapters/make-the-company-readable/")
+        fetch(f"{DOMAIN}/the-end-of-alignment/chapters/draw-boundaries-around-complete-processes/")
         r.check("LIVE reader: paid-only chapter is not published", False, "got 200")
     except urllib.error.HTTPError as e:
         r.check("LIVE reader: paid-only chapter is not published",
