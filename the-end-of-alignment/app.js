@@ -573,7 +573,7 @@ var _bookVersion = (function () {
     var toast = document.getElementById("toast");
     toast.textContent = msg;
     toast.classList.remove("hidden");
-    setTimeout(function () { toast.classList.add("hidden"); }, 2000);
+    setTimeout(function () { toast.classList.add("hidden"); }, 3200);
   }
 
   function shareLink() {
@@ -670,6 +670,13 @@ var _bookVersion = (function () {
     });
     document.getElementById("contact-link-mobile").addEventListener("click", function () {
       track('Contact Click', { chapter: chapterLabel(chapterForPos(pos)) });
+    });
+    document.querySelectorAll("[data-paid-unavailable]").forEach(function (button) {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        track('Paid Edition Interest', { chapter: chapterLabel(chapterForPos(pos)) });
+        showToast("Paid edition available for sale soon. The free sample is ready to read now.");
+      });
     });
     var brandClickTimer = null;
     document.getElementById("sia-brand").addEventListener("click", function () {

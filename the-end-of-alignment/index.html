@@ -79,8 +79,8 @@
     </button>
 
     <div class="hidden md:flex items-center gap-3">
-      <span data-paid-cta data-paid-label="short"
-         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm hover:shadow text-xs font-medium transition-all" aria-disabled="true">Coming soon</span>
+      <button type="button" data-paid-cta data-paid-label="short"
+         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border-0 cursor-pointer bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm hover:shadow text-xs font-medium transition-all" data-paid-unavailable title="Paid edition available for sale soon">Buy · €29</button>
       <a id="contact-link" href="https://www.linkedin.com/in/adrianmcphee/" target="_blank" rel="noopener"
          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-sm hover:shadow text-xs font-medium text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all">
         <i data-lucide="message-circle" class="w-3.5 h-3.5 stroke-[1.5]"></i>
@@ -129,8 +129,8 @@
   <footer class="fixed bottom-0 left-0 right-0 p-3 sm:p-6 flex flex-col items-center z-50 pointer-events-none">
     <!-- Mobile-only action buttons above controller -->
     <div class="md:hidden flex justify-between w-full max-w-2xl px-2 mb-2 pointer-events-auto">
-      <span data-paid-cta data-paid-label="short"
-         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm text-xs font-medium" aria-disabled="true">Coming soon</span>
+      <button type="button" data-paid-cta data-paid-label="short"
+         class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border-0 cursor-pointer bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 shadow-sm text-xs font-medium" data-paid-unavailable title="Paid edition available for sale soon">Buy · €29</button>
       <a id="contact-link-mobile" href="https://www.linkedin.com/in/adrianmcphee/" target="_blank" rel="noopener"
          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border border-zinc-200 dark:border-zinc-700 shadow-sm text-xs font-medium text-zinc-500 dark:text-zinc-400">
         <i data-lucide="message-circle" class="w-3.5 h-3.5 stroke-[1.5]"></i>
@@ -225,7 +225,7 @@
           </a>
           <a href="technical-field-guide.pdf" class="block mt-1.5 text-[11px] font-medium text-red-500 hover:text-red-600">Download the free Technical Field Guide</a>
           <a href="technical-field-guide-source.zip" class="block mt-1.5 text-[11px] font-medium text-red-500 hover:text-red-600">Download the machine-readable source</a>
-          <span data-paid-cta data-paid-label="long" class="block mt-1.5 text-[11px] font-semibold text-zinc-800 dark:text-zinc-200" aria-disabled="true">Coming soon</span>
+          <button type="button" data-paid-cta data-paid-label="long" class="block mt-1.5 p-0 border-0 bg-transparent cursor-pointer text-left text-[11px] font-semibold text-zinc-800 dark:text-zinc-200" data-paid-unavailable title="Paid edition available for sale soon">Buy the complete book · €29</button>
         </div>
       </div>
       <ul id="toc-list" class="px-2 py-2"></ul>
@@ -238,7 +238,7 @@
   </div>
 
   <a href="preview.html" style="display:none;">Preview chapters</a>
-  <script src="app.js?v=1.0.8"></script>
+  <script src="app.js?v=1.1.0"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>
