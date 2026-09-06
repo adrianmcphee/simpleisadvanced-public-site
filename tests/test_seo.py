@@ -142,7 +142,7 @@ def check_local(r):
             and "Every week, 250 customers call this insurer to correct their mileage." in hp
             and "Customers want it. Shareholders have been promised digital transformation. Management calls it a priority." in hp
             and "Two years later, the calls are still coming." in hp
-            and "Two years of bonuses have been paid in full." in hp
+            and "The bonuses have been paid in full." in hp
             and "The agreed improvement is better alignment." in hp)
     paid_enabled = f'href="{BOOK_URL}"' in hp
     r.check("Homepage: paid offer uses the current destination or states sales are pending",
@@ -437,7 +437,7 @@ def check_production(r):
             and "Every week, 250 customers call this insurer to correct their mileage." in hp
             and "Customers want it. Shareholders have been promised digital transformation. Management calls it a priority." in hp
             and "Two years later, the calls are still coming." in hp
-            and "Two years of bonuses have been paid in full." in hp)
+            and "The bonuses have been paid in full." in hp)
     r.check("LIVE homepage: OG image serves OK",
             fetch_head(f"{DOMAIN}/og-image.png").status == 200)
 
