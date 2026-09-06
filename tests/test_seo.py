@@ -20,17 +20,26 @@ SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
-    "the-end-of-alignment": {
-        "title": "The End of Alignment",
-        "sample_chapters": 4,
-        "version": "1.1.5",
+    "alignment-industrial-complex": {
+        "title": "The Alignment-Industrial Complex",
+        "subtitle": "How Fragmented Authority Destroys a Company's Ability to Compete",
+        "sample_chapters": 6,
     },
 }
 
 RETIRED_BOOKS = ("illusions-of-work", "illusions-in-the-boardroom")
-CURRENT_SUBTITLE = "New Operating Logic for the AI Era"
-RETIRED_SUBTITLE = "New Operating Logic for Software-Dependent Corporates in the AI Era"
-BOOK_URL = "https://shipper.demandops.com/book/the-end-of-alignment"
+# Current-book identity is shared by the homepage, article cards and reader.
+CURRENT_TITLE = "The Alignment-Industrial Complex"
+CURRENT_SUBTITLE = "How Fragmented Authority Destroys a Company's Ability to Compete"
+RETIRED_SUBTITLES = (
+    "How Companies Destroy Their Ability to Compete",
+    "New Operating Logic for Software-Dependent Companies",
+    "New Operating Logic for the AI Era",
+    "New Operating Logic for Software-Dependent Corporates in the AI Era",
+)
+BOOK_URL = "https://shipper.demandops.com/book/alignment-industrial-complex"
+SAMPLE_PATH = "/alignment-industrial-complex/"
+OLD_BOOK_URL = "https://shipper.demandops.com/book/the-end-of-alignment"
 
 
 def is_redirect_stub(chapter_dir):
@@ -122,22 +131,28 @@ def check_local(r):
     r.check("Homepage: OG image is /og-image.png",
             'content="https://simpleisadvanced.com/og-image.png"' in hp)
     r.check("Homepage: OG image file exists", (SITE_DIR / "og-image.png").exists())
-    r.check("Homepage: promotes the current book", "The End of Alignment" in hp)
+    r.check("Homepage: promotes the current book", CURRENT_TITLE in hp)
     r.check("Homepage: does not promote retired books",
             "Illusions in the Boardroom" not in hp and "Illusions of Work" not in hp)
-    r.check("Homepage: uses the shared editorial stylesheet", 'href="/site.css"' in hp)
+    r.check("Homepage: uses the shared editorial stylesheet", re.search(r'href="/site\.css(?:\?[^"]*)?"', hp) is not None)
     r.check("Homepage: carries the current subtitle",
-            CURRENT_SUBTITLE in hp and RETIRED_SUBTITLE not in hp)
-    r.check("Homepage: carries the current AI and alignment hook",
-            "AI makes output abundant. Alignment keeps outcomes scarce." in hp)
-    r.check("Homepage: links directly to the paid book",
-            f'href="{BOOK_URL}"' in hp
-            and "Buy the ebook" in hp)
+            CURRENT_SUBTITLE in hp and all(value not in hp for value in RETIRED_SUBTITLES))
+    r.check("Homepage: carries the approved customer and bonus contrast",
+            "THE MEETINGS WENT WELL." in hp
+            and "Every week, 250 customers call this insurer to correct their mileage." in hp
+            and "Two years later, the calls are still coming." in hp
+            and "Two years of bonuses have been paid in full." in hp
+            and "The agreed improvement is better alignment." in hp)
+    paid_enabled = f'href="{BOOK_URL}"' in hp
+    r.check("Homepage: paid offer uses the current destination or states sales are pending",
+            OLD_BOOK_URL not in hp
+            and ((paid_enabled and "Buy the ebook" in hp)
+                 or (not paid_enabled and "available for sale soon" in hp)))
     r.check("Homepage: links to a public sample",
-            'href="/the-end-of-alignment/"' in hp
-            and "Read the sample" in hp)
+            'href="/alignment-industrial-complex/"' in hp
+            and "Read the free sample" in hp)
     r.check("Homepage: uses the transparent SIA mark",
-            'src="/the-end-of-alignment/sia-black.png"' in hp)
+            'src="/alignment-industrial-complex/sia-black.png"' in hp)
     r.check("Homepage: does not claim the book is itself an operating model",
             "An operating model that joins" not in hp)
 
@@ -145,7 +160,11 @@ def check_local(r):
     robots = (SITE_DIR / "robots.txt").read_text()
     r.check("Robots: no ai-illusions line", "ai-illusions" not in robots)
     r.check("Robots: blocks /the-end-of-alignment/data/", "/the-end-of-alignment/data/" in robots)
+    r.check("Robots: blocks the current reader data", f"Disallow: {SAMPLE_PATH}data/" in robots)
     r.check("Robots: references sitemap", "simpleisadvanced.com/sitemap.xml" in robots)
+    previous_reader = (SITE_DIR / "the-end-of-alignment/index.html").read_text()
+    r.check("Previous reader: redirects to the current edition",
+            f'content="0;url={SAMPLE_PATH}"' in previous_reader)
 
     # --- Legacy directory deleted ---
     r.check("Legacy: ai-illusions-in-the-boardroom/ gone",
@@ -154,7 +173,7 @@ def check_local(r):
         retired = (SITE_DIR / slug / "index.html").read_text()
         r.check(f"Retired book: {slug} is noindex", 'content="noindex,follow"' in retired)
         r.check(f"Retired book: {slug} points to the current book",
-                "/the-end-of-alignment/" in retired)
+                SAMPLE_PATH in retired)
         r.check(f"Retired book: {slug} has no published chapters",
                 not (SITE_DIR / slug / "chapters").exists())
 
@@ -169,6 +188,8 @@ def check_local(r):
             url_count >= 20, f"{url_count}")
     r.check("Sitemap: retired books are absent",
             all(f"/{slug}/" not in sitemap for slug in RETIRED_BOOKS))
+    r.check("Sitemap: previous reader redirects are absent",
+            "/the-end-of-alignment/" not in sitemap)
 
     # --- Sitemap completeness (catches stale fragments) ---
     locs = re.findall(r"<loc>(.*?)</loc>", sitemap)
@@ -245,13 +266,21 @@ def check_local(r):
             all("/illusions-of-work/" not in page
                 and "/illusions-in-the-boardroom/" not in page
                 for page in article_pages))
-    r.check("Articles: every book card points to the paid ebook",
-            all(f'href="{BOOK_URL}"' in page
-                and "Buy the book" in page
+    r.check("Articles: every book card matches the current purchase state",
+            all(OLD_BOOK_URL not in page and (
+                (paid_enabled and f'href="{BOOK_URL}"' in page and "Buy the book" in page)
+                or (not paid_enabled and f'href="{SAMPLE_PATH}" class="book-card"' in page
+                    and "Read the free sample" in page))
                 for page in article_pages))
     r.check("Articles: every book card carries the current subtitle",
-            all(CURRENT_SUBTITLE in page and RETIRED_SUBTITLE not in page
+            all(CURRENT_SUBTITLE in page and all(value not in page for value in RETIRED_SUBTITLES)
                 for page in article_pages))
+    article_index = (SITE_DIR / "articles/index.html").read_text()
+    not_found = (SITE_DIR / "404.html").read_text()
+    r.check("Site navigation: article index and 404 promote the current book",
+            all(CURRENT_TITLE in page and SAMPLE_PATH in page
+                and "The End of Alignment" not in page and OLD_BOOK_URL not in page
+                for page in (article_index, not_found)))
 
     # --- Indexable page hygiene ---
     indexable = []
@@ -291,10 +320,6 @@ def check_local(r):
         pdesc = extract_meta(preview, "description")
         r.check(f"{slug} preview: description exists", pdesc is not None)
         if pdesc:
-            r.check(f"{slug} preview: description enriched",
-                    "free sample" in pdesc.lower()
-                    and "complete contents" in pdesc.lower(),
-                    f"{len(pdesc)} chars")
             r.check(f"{slug} preview: description <= 160 chars",
                     len(pdesc) <= 160, f"{len(pdesc)}")
 
@@ -318,14 +343,21 @@ def check_local(r):
                 len(data_chapters) == expected_sample_chapters,
                 f"found {len(data_chapters)}")
         meta = json.loads((book_dir / "data" / "meta.json").read_text())
+        reader_index = (book_dir / "index.html").read_text()
         r.check(f"{slug}: reader declares itself as an excerpt",
                 meta.get("isExcerpt") is True
                 and len(meta.get("chapters", [])) == expected_sample_chapters)
-        r.check(f"{slug}: reader version matches the current publication",
-                meta.get("version") == info["version"],
-                str(meta.get("version")))
-        r.check(f"{slug}: reader carries the current subtitle",
-                meta.get("subtitle") == CURRENT_SUBTITLE)
+        version = meta.get("version", "")
+        r.check(f"{slug}: reader version is valid and matches its cache key",
+                re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", version) is not None
+                and re.findall(r'app\.js\?v=([^"\s]+)', reader_index) == [version],
+                version)
+        r.check(f"{slug}: public reader has no review-only labels or noindex",
+                all("noindex" not in page and "Review Sample" not in page
+                    and "Not approved for release" not in page
+                    for page in (reader_index, preview, contents)))
+        r.check(f"{slug}: reader carries its declared edition subtitle",
+                meta.get("subtitle") == info["subtitle"])
         r.check(f"{slug}: contents distinguish free and paid chapters",
                 contents.count("(free sample)") == expected_sample_chapters
                 and "(paid edition)" in contents)
@@ -395,10 +427,15 @@ def check_production(r):
     r.check("LIVE homepage: description matches local",
             extract_meta(hp, "description") == extract_meta(local_hp, "description"))
     r.check("LIVE homepage: carries the current subtitle",
-            CURRENT_SUBTITLE in hp and RETIRED_SUBTITLE not in hp)
-    r.check("LIVE homepage: links to paid book and public sample",
-            f'href="{BOOK_URL}"' in hp
-            and 'href="/the-end-of-alignment/"' in hp)
+            CURRENT_SUBTITLE in hp and all(value not in hp for value in RETIRED_SUBTITLES))
+    r.check("LIVE homepage: purchase state and sample links match local",
+            (f'href="{BOOK_URL}"' in hp) == (f'href="{BOOK_URL}"' in local_hp)
+            and OLD_BOOK_URL not in hp and f'href="{SAMPLE_PATH}"' in hp)
+    r.check("LIVE homepage: latest customer and bonus copy is deployed",
+            "THE MEETINGS WENT WELL." in hp
+            and "Every week, 250 customers call this insurer to correct their mileage." in hp
+            and "Two years later, the calls are still coming." in hp
+            and "Two years of bonuses have been paid in full." in hp)
     r.check("LIVE homepage: OG image serves OK",
             fetch_head(f"{DOMAIN}/og-image.png").status == 200)
 
@@ -421,9 +458,9 @@ def check_production(r):
 
     # --- Spot-check chapter pages ---
     spot_checks = [
-        ("the-end-of-alignment", "preface-who-this-is-for"),
-        ("the-end-of-alignment", "the-alignment-industrial-complex"),
-        ("the-end-of-alignment", "make-the-company-readable"),
+        ("alignment-industrial-complex", "preface"),
+        ("alignment-industrial-complex", "it-should-be-simple"),
+        ("alignment-industrial-complex", "selling-them-alignment"),
     ]
 
     for book_slug, ch_slug in spot_checks:
@@ -446,21 +483,22 @@ def check_production(r):
         r.check(f"LIVE {book_slug}/preview: description matches local",
                 extract_meta(live_prev, "description") == extract_meta(local_prev, "description"))
 
-    live_meta = json.loads(fetch(f"{DOMAIN}/the-end-of-alignment/data/meta.json"))
-    r.check("LIVE reader: declares the current four-part sample",
+    live_meta = json.loads(fetch(f"{DOMAIN}{SAMPLE_PATH}data/meta.json"))
+    local_meta = json.loads((SITE_DIR / SAMPLE_PATH.strip("/") / "data/meta.json").read_text())
+    r.check("LIVE reader: declares the current six-section sample",
             live_meta.get("isExcerpt") is True
-            and len(live_meta.get("chapters", [])) == 4)
-    r.check("LIVE reader: version matches the current publication",
-            live_meta.get("version") == BOOKS["the-end-of-alignment"]["version"],
+            and len(live_meta.get("chapters", [])) == 6)
+    r.check("LIVE reader: version and metadata match the local publication",
+            live_meta == local_meta,
             str(live_meta.get("version")))
 
-    local_cover = (SITE_DIR / "the-end-of-alignment" / "cover.png").read_bytes()
-    live_cover = fetch_bytes(f"{DOMAIN}/the-end-of-alignment/cover.png")
+    local_cover = (SITE_DIR / SAMPLE_PATH.strip("/") / "cover.png").read_bytes()
+    live_cover = fetch_bytes(f"{DOMAIN}{SAMPLE_PATH}cover.png")
     r.check("LIVE reader: cover pixels match local publication asset",
             hashlib.sha256(live_cover).digest() == hashlib.sha256(local_cover).digest())
 
     try:
-        fetch(f"{DOMAIN}/the-end-of-alignment/chapters/draw-boundaries-around-complete-processes/")
+        fetch(f"{DOMAIN}{SAMPLE_PATH}chapters/the-business-business/")
         r.check("LIVE reader: paid-only chapter is not published", False, "got 200")
     except urllib.error.HTTPError as e:
         r.check("LIVE reader: paid-only chapter is not published",

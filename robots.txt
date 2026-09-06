@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /the-end-of-alignment/data/
+Disallow: /alignment-industrial-complex/data/
 
 Sitemap: https://simpleisadvanced.com/sitemap.xml

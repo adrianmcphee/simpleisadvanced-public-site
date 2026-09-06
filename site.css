@@ -856,7 +856,7 @@ body.article-page {
   }
 
   .home-page .home-book h1 {
-    font-size: clamp(3.4rem, 19vw, 5.6rem);
+    font-size: clamp(2.8rem, 16.5vw, 5.6rem);
   }
 
   .home-page .home-section {

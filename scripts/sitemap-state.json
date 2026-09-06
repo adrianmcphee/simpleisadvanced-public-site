@@ -1,102 +1,110 @@
 {
+  "alignment-industrial-complex/chapters/essay-why-simple-changes-become-programmes/index.html": {
+    "hash": "70ff3ad7bf20faf4388dc65b95a58ae2ee7ff23d7b452584ea1bd44c28475f53",
+    "lastmod": "2026-09-06"
+  },
+  "alignment-industrial-complex/chapters/it-should-be-simple/index.html": {
+    "hash": "43401113524a72ab070c0fa0e8b67e234c093bd53790cb4b3d6aea42dbf31e4e",
+    "lastmod": "2026-09-06"
+  },
+  "alignment-industrial-complex/chapters/no-design-is-bad-design/index.html": {
+    "hash": "3d7de4815498f179d7de44052781c41c200e23464e07e6389b5c2cd5bad02d65",
+    "lastmod": "2026-09-06"
+  },
+  "alignment-industrial-complex/chapters/preface/index.html": {
+    "hash": "5de004ac3c60d437358cf7bff9217f92e9d41633eb71cecaac32357c6ec93d13",
+    "lastmod": "2026-09-06"
+  },
+  "alignment-industrial-complex/chapters/selling-them-alignment/index.html": {
+    "hash": "c2f10aa010adb3d36a9049babd7a059f54972043f620faae7d58299f7e87a958",
+    "lastmod": "2026-09-06"
+  },
+  "alignment-industrial-complex/chapters/the-meeting-worked/index.html": {
+    "hash": "1ea4cc1e400917111382b358547dd0b4bf84d85683a65f27f997cd9b81e4ef0b",
+    "lastmod": "2026-09-06"
+  },
+  "alignment-industrial-complex/contents.html": {
+    "hash": "a500bd3274d6a231ec4f31457fb0dc1b10a6e1d90799f419a6ea8c1c5daf1234",
+    "lastmod": "2026-09-06"
+  },
+  "alignment-industrial-complex/index.html": {
+    "hash": "d3ed58feb4cdc7fa81a3cbef7c83134c24c47cc5c98c4aa250efbab888eaf179",
+    "lastmod": "2026-09-06"
+  },
   "articles/drive-vs-drift/index.html": {
-    "hash": "243d5af848ad765565f6ac4dc2bb01e17ac9281d3e4b30768ea8ae925ca65208",
-    "lastmod": "2026-08-27"
+    "hash": "100c26b6a727a64a0c67b86977a147fa853a8d21f2e77eb26253c7da8e658956",
+    "lastmod": "2026-09-06"
   },
   "articles/fake-boundaries/index.html": {
-    "hash": "d588c31c80441388f98d3443e0488af4f65173bdff68441b38c0f673743b12c5",
-    "lastmod": "2026-08-27"
+    "hash": "91ff64337ecfd0902a8dd444cd43dba914898605a93cf5513000ae78e83509f6",
+    "lastmod": "2026-09-06"
   },
   "articles/index.html": {
-    "hash": "d211cd8adb7c2e9ad4943ba4785e5912335d752288a876682722d41cd2a9afac",
-    "lastmod": "2026-08-27"
+    "hash": "edfef5cecbb2d817a77596cec19776a1806f5d62eedc876aed1fa7142c1a4bfb",
+    "lastmod": "2026-09-06"
   },
   "articles/the-brochureware-moment/index.html": {
-    "hash": "e1e58c33f4ad39ad0ff0c692d0acfb06e6bc84f7ea0d6273a95727aa7911a78d",
-    "lastmod": "2026-08-27"
+    "hash": "ae84c58c28929031a80d27e182a327c63238c71c4b7bf6f57ed784f58032e894",
+    "lastmod": "2026-09-06"
   },
   "articles/the-cfo-who-killed-the-platform/index.html": {
-    "hash": "b0510b3cb3668fba32f37734cd34dac7f00d6c952d383761068d17f63da2a57a",
-    "lastmod": "2026-08-27"
+    "hash": "f784d032a7e8b0529bf12f8736a3c3f191e1c6395e4a068d26590ea09a85ffd9",
+    "lastmod": "2026-09-06"
   },
   "articles/the-diagnostic-toolkit/index.html": {
-    "hash": "88a00e6284b12044bb6664d33482ee28cff2166edaad4665158eaf5bdb15a290",
-    "lastmod": "2026-08-27"
+    "hash": "789a6bbc1f44939dc2c82338ca60b5f0ec12170b1e2af6a622c6a1c89d87685a",
+    "lastmod": "2026-09-06"
   },
   "articles/the-fork-in-the-road/index.html": {
-    "hash": "c75e7ac7b55fa44e1e208f32621c9c10f1694d33fce6cd311359c8457396df7f",
-    "lastmod": "2026-08-27"
+    "hash": "b003f3fb9a80c7fd77d8cb9269967318e4ec2fcccb2bd027ae24208d5f2c95e5",
+    "lastmod": "2026-09-06"
   },
   "articles/the-machine-that-reads-your-strategy/index.html": {
-    "hash": "8d888c4e42b2936dedfb8271188f37cf79a998a9713ed35c873eeebe048a7f6d",
-    "lastmod": "2026-08-27"
+    "hash": "7919f2db43c4372c14c90397707cad9bd6020862621c576a4517723f30b56b60",
+    "lastmod": "2026-09-06"
   },
   "articles/the-meeting-that-replaced-the-work/index.html": {
-    "hash": "e7a834e1ef92975e8f45c95668e5ba05ff2febebe2d3354e320082b6a1146827",
-    "lastmod": "2026-08-27"
+    "hash": "7df58282dd1ab00ac2a87a1f15cf00adf61684a83f8a6d934185748a2630d258",
+    "lastmod": "2026-09-06"
   },
   "articles/the-people-who-knew/index.html": {
-    "hash": "fde3080d82694cb9f88ad1e4f5ee39209c2cbd6d425c7acb1ed4e2cdfad00963",
-    "lastmod": "2026-08-27"
+    "hash": "1bf900924a6b9b667c93306a20661379645241e2fb035ffae9e8fbbf3eecdc80",
+    "lastmod": "2026-09-06"
   },
   "articles/the-polished-lie/index.html": {
-    "hash": "431fd31212d5bfb320664444c197f792a30f16409bf70b3328f6aea58d10b2b7",
-    "lastmod": "2026-08-27"
+    "hash": "8857b46eb055c77d2ad589e0add526f486249d5a78c5e4053884a3c7ac64e30c",
+    "lastmod": "2026-09-06"
   },
   "articles/the-process-is-the-product/index.html": {
-    "hash": "d7edfb6d4a0e162e45f9cbb85bae962f8e2c9586dae35481030aa845a1ad351b",
-    "lastmod": "2026-08-27"
+    "hash": "7627eda65ad009bc3eb453e9e3e3fd9d9309d5fab22b902aaa668f6d1cd651ca",
+    "lastmod": "2026-09-06"
   },
   "articles/the-separation/index.html": {
-    "hash": "48845e2fe8d68318ae1c5260e04ffb0b65633a5f3831d071b82a8c8cd63d1ad3",
-    "lastmod": "2026-08-27"
+    "hash": "0e46c8f05f0830703877e0c6519d172be3e2b786d4a5562aa9b093d6e96c19ca",
+    "lastmod": "2026-09-06"
   },
   "articles/the-strategic-context-stack/index.html": {
-    "hash": "1ab60b8e59ebd8afc491e8ff5a64d8c8e2d70192aaa02be094549bf4513fe15b",
-    "lastmod": "2026-08-27"
+    "hash": "5a2c641dcc164aede7d76e34b23a0f6d7475902ac90d755de22ec722738e68a9",
+    "lastmod": "2026-09-06"
   },
   "articles/the-strategy-deck-that-ate-the-company/index.html": {
-    "hash": "f11ff2a08280022a1b9bfe935abd17fe4a531b05eaed2ca634661f41f0d21c5c",
-    "lastmod": "2026-08-27"
+    "hash": "a70500dd184a057e39e93830309c8ad246ed658b484a686f59ab440126e4acdc",
+    "lastmod": "2026-09-06"
   },
   "articles/what-happens-next/index.html": {
-    "hash": "8ff29b2314e63985627b2b1fe885ce3d8dc3ee2d1a33c3f7115b9f6b41b3830e",
-    "lastmod": "2026-08-27"
+    "hash": "19510137457431786a34c957632139af42d1869a3c9663e62791e37b781c5dc2",
+    "lastmod": "2026-09-06"
   },
   "articles/where-this-is-hard/index.html": {
-    "hash": "ed425b3afa75071659ffcdfff93bbbbcd15e55332dae54da3c35440bdce4bd2c",
-    "lastmod": "2026-08-27"
+    "hash": "c8e5dba95bb69ae7b68a0dc3851aa782a8386257b48c690b41c46c7ecd68a8f0",
+    "lastmod": "2026-09-06"
   },
   "articles/why-big-it-projects-fail/index.html": {
-    "hash": "9076fa0b659dd3b175a05a7123369e08e4dd4e45221b51133127a1a2f8089375",
-    "lastmod": "2026-08-27"
+    "hash": "b3a8e195f3f46b276f671a21c280fdb7fe09b4faee8e16d771c535ac0b98c286",
+    "lastmod": "2026-09-06"
   },
   "index.html": {
-    "hash": "1a76c31497fbd71c3dceb18f1422e18930af2c5d0c8916025e53f05e7e0d3cae",
-    "lastmod": "2026-08-27"
-  },
-  "the-end-of-alignment/chapters/end-the-business/index.html": {
-    "hash": "ceec972fdefd99b45883cb4b028ac0b44309ebb91c46606ed8a66865c8449936",
-    "lastmod": "2026-08-27"
-  },
-  "the-end-of-alignment/chapters/make-the-company-readable/index.html": {
-    "hash": "3fc30b99e635d2a1d3ec5a9a12ac45b5e2d6af05d0a1c6cb9c7336fdafe0b9cb",
-    "lastmod": "2026-08-27"
-  },
-  "the-end-of-alignment/chapters/preface-who-this-is-for/index.html": {
-    "hash": "badcca0c2d1720430955cfad3e85ec103134e093a81a6d96affd465352a9ad55",
-    "lastmod": "2026-08-27"
-  },
-  "the-end-of-alignment/chapters/the-alignment-industrial-complex/index.html": {
-    "hash": "82a004025038f70d01fa10ce032a6a1b7fa761da42cc67721e3cec01c86716a7",
-    "lastmod": "2026-08-27"
-  },
-  "the-end-of-alignment/contents.html": {
-    "hash": "607fdb88a70e996769a48a9f8cf79470f82a3e19992813841e3280731f9422f3",
-    "lastmod": "2026-08-27"
-  },
-  "the-end-of-alignment/index.html": {
-    "hash": "f2f55009c096938068d0c7b8b4c07c37ff0fb7ee612d943ea7f251163572be0c",
-    "lastmod": "2026-08-27"
+    "hash": "c8712ef1713155e4078815ce65020f1d1cc08bb395a31cbd5055d7e2a2a74789",
+    "lastmod": "2026-09-06"
   }
 }
