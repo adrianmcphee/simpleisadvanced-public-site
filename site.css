@@ -366,7 +366,7 @@ body.home-page {
   font-family: var(--serif);
   font-size: clamp(3.2rem, 7.5vw, 6.4rem);
   font-weight: 500;
-  line-height: 0.86;
+  line-height: 1.05;
   letter-spacing: -0.06em;
 }
 
