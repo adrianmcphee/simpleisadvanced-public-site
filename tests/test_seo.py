@@ -23,7 +23,7 @@ BOOKS = {
     "alignment-industrial-complex": {
         "title": "The Alignment-Industrial Complex",
         "subtitle": "How Fragmented Authority Destroys a Company's Ability to Compete",
-        "sample_chapters": 4,
+        "sample_chapters": 28,
     },
 }
 
@@ -150,9 +150,9 @@ def check_local(r):
             and ((paid_enabled and "Buy the ebook" in hp)
                  or (not paid_enabled and "available for sale soon" in hp)))
     r.check("Homepage: links to a public sample",
-            'href="/alignment-industrial-complex/chapters/it-should-be-simple/"' in hp
+            'href="/alignment-industrial-complex/contents.html"' in hp
             and 'href="/alignment-industrial-complex/"' in hp
-            and "Read the free sample" in hp)
+            and "Browse chapter previews" in hp)
     r.check("Homepage: uses the transparent SIA mark",
             'src="/alignment-industrial-complex/sia-black.png"' in hp)
     r.check("Homepage: does not claim the book is itself an operating model",
@@ -360,18 +360,31 @@ def check_local(r):
                     for page in (reader_index, preview, contents)))
         r.check(f"{slug}: reader carries its declared edition subtitle",
                 meta.get("subtitle") == info["subtitle"])
-        r.check(f"{slug}: contents distinguish free and paid chapters",
-                contents.count("(free sample)") == expected_sample_chapters
-                and "(paid edition)" in contents)
+        r.check(f"{slug}: contents link every short chapter preview",
+                len(re.findall(r'href="chapters/[^" ]+/"', contents)) == expected_sample_chapters
+                and "two and a half opening paragraphs" in contents)
 
         sample_pages = [book_dir / "chapters" / re.sub(r"[^a-z0-9]+", "-", chapter["title"].lower()).strip("-") / "index.html"
                         for chapter in meta["chapters"]]
         r.check(f"{slug}: sample chapters provide a continuous reading path",
                 all('rel="next"' in path.read_text() for path in sample_pages[:-1])
                 and all('rel="prev"' in path.read_text() for path in sample_pages[1:]))
+        from html import unescape
+        preview_lengths = []
+        for path in sample_pages:
+            match = re.search(r'<div class="chapter-excerpt">(.*?)</div>', path.read_text(), re.DOTALL)
+            plain = unescape(re.sub(r"<[^>]+>", " ", match.group(1))) if match else ""
+            preview_lengths.append(len(plain.split()))
+        r.check(f"{slug}: all chapter bodies stay within the short-preview limit",
+                all(0 < length <= 180 for length in preview_lengths)
+                and meta.get("previewPolicy") == {"full_paragraphs": 2, "next_paragraph_fraction": 0.5, "maximum_words": 180},
+                f"{min(preview_lengths)}–{max(preview_lengths)} words")
         final_sample = sample_pages[-1].read_text()
-        r.check(f"{slug}: sample ends with contents and the current acquisition offer",
-                "Continue with the full book" in final_sample
+        r.check(f"{slug}: every preview offers the complete book",
+                all("This is a short preview" in path.read_text() and
+                    ((f'href="{BOOK_URL}"' in path.read_text()) == paid_enabled)
+                    for path in sample_pages)
+                and "Continue reading" in final_sample
                 and 'href="../../contents.html"' in final_sample
                 and ((f'href="{BOOK_URL}"' in final_sample) == paid_enabled)
                 and 'rel="next"' not in final_sample)
@@ -500,9 +513,11 @@ def check_production(r):
 
     live_meta = json.loads(fetch(f"{DOMAIN}{SAMPLE_PATH}data/meta.json"))
     local_meta = json.loads((SITE_DIR / SAMPLE_PATH.strip("/") / "data/meta.json").read_text())
-    r.check("LIVE reader: declares the Preface and first three chapters",
+    r.check("LIVE reader: previews every chapter and supporting section",
             live_meta.get("isExcerpt") is True
-            and [chapter.get("chapterNum") for chapter in live_meta.get("chapters", [])] == [None, 1, 2, 3])
+            and len(live_meta.get("chapters", [])) == 28
+            and [chapter["chapterNum"] for chapter in live_meta["chapters"] if chapter.get("chapterNum")] == list(range(1, 19))
+            and all(chapter.get("isExcerpt") is True for chapter in live_meta["chapters"]))
     r.check("LIVE reader: version and metadata match the local publication",
             live_meta == local_meta,
             str(live_meta.get("version")))
@@ -512,12 +527,11 @@ def check_production(r):
     r.check("LIVE reader: cover pixels match local publication asset",
             hashlib.sha256(live_cover).digest() == hashlib.sha256(local_cover).digest())
 
-    try:
-        fetch(f"{DOMAIN}{SAMPLE_PATH}chapters/the-business-business/")
-        r.check("LIVE reader: paid-only chapter is not published", False, "got 200")
-    except urllib.error.HTTPError as e:
-        r.check("LIVE reader: paid-only chapter is not published",
-                e.code == 404, f"HTTP {e.code}")
+    live_preview = fetch(f"{DOMAIN}{SAMPLE_PATH}chapters/the-business-business/")
+    local_preview = (SITE_DIR / SAMPLE_PATH.strip("/") / "chapters/the-business-business/index.html").read_text()
+    r.check("LIVE reader: later chapter serves its qualified short preview",
+            live_preview == local_preview and 'class="chapter-excerpt"' in live_preview
+            and "This is a short preview" in live_preview)
 
     for slug in RETIRED_BOOKS:
         retired = fetch(f"{DOMAIN}/{slug}/")

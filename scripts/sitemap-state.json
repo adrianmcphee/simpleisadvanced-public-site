@@ -1,26 +1,122 @@
 {
+  "alignment-industrial-complex/chapters/autonomy-without-verbs/index.html": {
+    "hash": "5a5c8dbce7634b8fc503fbc56d168de3f9e8dcdc0f4307d46bfcaade0806d8f4",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/delivered-to-nobody/index.html": {
+    "hash": "ba45d50ef9be04837de220258e457ff9027486fa8624f63ab1a9be92cdb203ff",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/eligible-to-wait/index.html": {
+    "hash": "052a2104a2631e0835724b988adfb9b1e553b8197db6b7e3bef67301bd61aab4",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/epilogue-felix-returns/index.html": {
+    "hash": "d8b37c7bbbcaedbe4e84e0f7723d8634976d486540fa2ee3d30b6fa679123f40",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/essay-retirement/index.html": {
+    "hash": "4a67fc6d7d56a7b165a92b6d13cf3d642b08ced9a92287de55c194d7abefbc34",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/essay-the-boundary/index.html": {
+    "hash": "b51045772e8e792868ea56b7f1be7398781ecc31564f10fc99067e8c2f688168",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/essay-the-represented-company/index.html": {
+    "hash": "32f2388641177219fbede20a9d19cc8dc315dc8d5dbf9b09719dc37a867adadf",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/essay-why-simple-changes-become-programmes/index.html": {
+    "hash": "c8b465c4b6f1b00cb9f50b3a080d78c892e9bc1c0e7a2904b22ee26059dc3fce",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/four-layers-down/index.html": {
+    "hash": "b352813bdbf4c680cec3f1b500f0d72fcf78d73c8f2091dd4bee2beac913e4e8",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/glossary/index.html": {
+    "hash": "4e497d0653906ef41dd577d444be33e4fe0cab114220dc689e9515cf8d7f7a48",
+    "lastmod": "2026-09-07"
+  },
   "alignment-industrial-complex/chapters/it-should-be-simple/index.html": {
-    "hash": "59604213f3a1327f52132b52882ab898219300ff47a67f89aa25bf83e6abd194",
+    "hash": "881112364c214425a18a9c16cbeb8d746816d09015b8a082d9b0df3013f1343d",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/no-design-is-bad-design/index.html": {
+    "hash": "8937d605368fca1b5208e4734e04e4cdb14598dc8ce8c42ddc01b0582df574aa",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/chapters/preface/index.html": {
-    "hash": "80d18dfa421c3a35c0422f85146020d67942fd6db88f046f1b7ce0dce7b9c151",
+    "hash": "0d57042d83ac3dcfe9a91fdf9c3f0605f2aec051f8a78d37ebcfb021b78084b1",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/chapters/selling-them-alignment/index.html": {
-    "hash": "0fb4123156b0dfc17df13300a6e53c32485238638af470420d9085040b764a07",
+    "hash": "d84cf3efea084ef0317580145928437db9d6562a895692ffaefe0259cff99591",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/sources-and-evidence/index.html": {
+    "hash": "16181ce35ab9e7c5abfdb5e5c5f2fcf55591753e77f6d62cc50c35d22cd5f33f",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-business-business/index.html": {
+    "hash": "c78e1f4cd42b2e65469b50e05b908b0eb612a13938d7db9a28456217afea068b",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-centre-says-no/index.html": {
+    "hash": "798e6e8efc3f2fd726897de061321988b355db0cb83318e2dfa785a8841e1836",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-company-is-green/index.html": {
+    "hash": "31ddb3ca5df517781f1570ee65cb8113ffe7ce67c8847482d4eb1c78e5141720",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-contract-was-right/index.html": {
+    "hash": "8515655581519410de0c10934c811ebbaeb7c707cebfd37c61b7b0c0e59e3fb9",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-data-gate/index.html": {
+    "hash": "97f2df36877f54675089b2cda9267704af7a61c8b71b590674bc814d6db90318",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-desk-was-slow/index.html": {
+    "hash": "453ad1706e538648923e731453b20fc18d475465203e43929884f276317f8ade",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-interest-rate/index.html": {
+    "hash": "f6cf6640144db7a62f4bea46a911c108c2e6be105b5d3f2672992b9fc458dee8",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/chapters/the-meeting-worked/index.html": {
-    "hash": "0cd77a2b97a59683cce4d2a1d3713a2e968be41f25cfcec4f9b25026a103fe31",
+    "hash": "4db4dd123ca9613f65aa8e16dba2a51c321ab827099ab37d3333a7fefe52fec6",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-second-unit-is-political/index.html": {
+    "hash": "f4808c92a2bd9521f0413d7f4a24e7cb24e1d8bda7d1a77771a346b9cc71a9ce",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-trough/index.html": {
+    "hash": "a68bbf3e358b394d91e75b58ddc5adb901f76923b4bf78f087fe0d68d7dd1328",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/the-unit-fails-well/index.html": {
+    "hash": "02562b00b79340c9ffbd3d811daf8160b0f45993e4cc345c8992d2017eadc171",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/what-to-do-on-monday/index.html": {
+    "hash": "325b34f69332ab864726b057b07975d1b60fed37166d485e8dbcda70603b2ed3",
+    "lastmod": "2026-09-07"
+  },
+  "alignment-industrial-complex/chapters/works-cited/index.html": {
+    "hash": "a6b7e0e6ac43704ef63665508618b5cec9a90792240599d368681967ba1dc641",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/contents.html": {
-    "hash": "bd32b71f16e0187076c4218f268c1a1575eefc25484951963614a5b6a2c7623e",
+    "hash": "c0eedf71e4a0611f2c1e3d58b39a5c010a52d3c1ff3c91fd82e12ad18348b6e5",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/index.html": {
-    "hash": "f9186ebdf584077a9fc963f4bb8651aa14b95729c30e333ec88be7e2cdaa449b",
+    "hash": "53a437dfa3a7a035e365b3548b457c3910ef571e40745bfda6bcd625382b075a",
     "lastmod": "2026-09-07"
   },
   "articles/drive-vs-drift/index.html": {
@@ -32,7 +128,7 @@
     "lastmod": "2026-09-06"
   },
   "articles/index.html": {
-    "hash": "6976a2e6dfc7b142fc25c693ad6bc9c218ad1a3d80c1418036b7fbac7dfadc4f",
+    "hash": "4ed00ebb00c07b17171d51950ff26175f9c1be1501abda583a038ebd79e45644",
     "lastmod": "2026-09-07"
   },
   "articles/the-brochureware-moment/index.html": {
@@ -96,7 +192,7 @@
     "lastmod": "2026-09-06"
   },
   "index.html": {
-    "hash": "1820bf2398d3c4526e9ff6e4e4c5de633af94e7ad0605596d6529fa6280edf13",
+    "hash": "1e082929344553dd00a8428ed7ab873498531984b8cb7a49d29bec5badf781e1",
     "lastmod": "2026-09-07"
   }
 }

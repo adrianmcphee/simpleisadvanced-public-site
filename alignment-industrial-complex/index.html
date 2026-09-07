@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Alignment-Industrial Complex by Adrian McPhee - Free Sample</title>
+  <title>The Alignment-Industrial Complex by Adrian McPhee - Chapter Previews</title>
   <meta name="description" content="A business fable about fragmented authority. 250 customers a week call to correct mileage. Two years later, the calls are still coming.">
   <meta name="author" content="Adrian McPhee">
 
@@ -14,7 +14,7 @@
   <!-- Open Graph -->
   <link rel="canonical" href="https://simpleisadvanced.com/alignment-industrial-complex/">
   <meta property="og:type" content="book">
-  <meta property="og:title" content="The Alignment-Industrial Complex - Free Sample">
+  <meta property="og:title" content="The Alignment-Industrial Complex - Chapter Previews">
   <meta property="og:description" content="A business fable about fragmented authority. 250 customers a week call to correct mileage. Two years later, the calls are still coming.">
   <meta property="og:image" content="https://simpleisadvanced.com/alignment-industrial-complex/og-image.png">
   <meta property="og:image:width" content="2400">
@@ -25,7 +25,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Alignment-Industrial Complex - Free Sample">
+  <meta name="twitter:title" content="The Alignment-Industrial Complex - Chapter Previews">
   <meta name="twitter:description" content="A business fable about fragmented authority. 250 customers a week call to correct mileage. Two years later, the calls are still coming.">
   <meta name="twitter:image" content="https://simpleisadvanced.com/alignment-industrial-complex/og-image.png">
 
@@ -68,7 +68,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="tailwind.css?v=2.0.39">
+  <link rel="stylesheet" href="tailwind.css?v=2.0.40">
   <link rel="stylesheet" href="styles.css">
   <style>
     #sample-end { max-height: calc(100dvh - 15rem); overflow-y: auto; overscroll-behavior: contain; }
@@ -121,7 +121,7 @@
       <p class="title-card-deck">Industrial Complex</p>
       <p id="title-card-subtitle" class="title-card-subtitle"></p>
       <p id="title-card-author" class="title-card-author"></p>
-      <p class="mt-5 text-sm text-zinc-500 dark:text-zinc-400"><a href="chapters/it-should-be-simple/" class="underline underline-offset-4 hover:text-zinc-900 dark:hover:text-zinc-100">Read the sample as pages</a></p>
+      <p class="mt-5 text-sm text-zinc-500 dark:text-zinc-400"><a href="contents.html" class="underline underline-offset-4 hover:text-zinc-900 dark:hover:text-zinc-100">Browse chapter previews</a></p>
     </section>
 
     <!-- Focus guides -->
@@ -138,13 +138,14 @@
     </div>
 
     <section id="sample-end" class="hidden relative z-10 w-full max-w-lg rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 sm:p-8 text-center cursor-auto" aria-labelledby="sample-end-title">
-      <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400" role="status">Free sample complete</p>
+      <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400" role="status">End of chapter preview</p>
       <h2 id="sample-end-title" class="mt-3 text-2xl font-semibold tracking-tight">Keep reading</h2>
       <p id="sample-end-next" class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300"></p>
       <a data-paid-cta data-paid-label="long" class="inline-block mt-5 rounded-lg bg-zinc-900 dark:bg-zinc-100 px-5 py-3 text-sm font-semibold text-white dark:text-zinc-900" href="https://shipper.demandops.com/book/alignment-industrial-complex">Buy the complete book · €29</a>
-      <nav class="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm text-zinc-600 dark:text-zinc-300" aria-label="After the sample">
+      <nav class="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm text-zinc-600 dark:text-zinc-300" aria-label="After this preview">
         <a href="contents.html" class="underline underline-offset-4">Full contents</a>
-        <button id="sample-restart-btn" type="button" class="underline underline-offset-4">Restart the sample</button>
+        <button id="sample-restart-btn" type="button" class="underline underline-offset-4">Replay this preview</button>
+        <button id="sample-next-btn" type="button" class="basis-full underline underline-offset-4"></button>
       </nav>
     </section>
   </main>
@@ -195,7 +196,7 @@
 
         <!-- Playback (center) -->
         <div class="flex items-center gap-2 sm:gap-3">
-          <button id="prev-btn" class="hidden sm:block text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors active:scale-90" aria-label="Previous chapter">
+          <button id="prev-btn" class="hidden sm:block text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors active:scale-90" aria-label="Previous chapter preview">
             <i data-lucide="skip-back" class="w-5 h-5 stroke-[1.5] fill-current opacity-40 hover:opacity-100"></i>
           </button>
           <button id="back-btn" class="text-zinc-800 dark:text-zinc-200 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors active:scale-90" aria-label="Skip back">
@@ -208,14 +209,14 @@
           <button id="fwd-btn" class="text-zinc-800 dark:text-zinc-200 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors active:scale-90" aria-label="Skip forward">
             <i data-lucide="fast-forward" class="w-6 h-6 stroke-[1.5]"></i>
           </button>
-          <button id="next-btn" class="hidden sm:block text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors active:scale-90" aria-label="Next chapter">
+          <button id="next-btn" class="hidden sm:block text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors active:scale-90" aria-label="Next chapter preview">
             <i data-lucide="skip-forward" class="w-5 h-5 stroke-[1.5] fill-current opacity-40 hover:opacity-100"></i>
           </button>
         </div>
 
         <!-- Secondary (right) -->
         <div class="flex items-center gap-1">
-          <button id="replay-btn" class="w-9 h-9 flex items-center justify-center rounded-lg text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors" title="Restart chapter">
+          <button id="replay-btn" class="w-9 h-9 flex items-center justify-center rounded-lg text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors" title="Restart chapter preview">
             <i data-lucide="rotate-ccw" class="w-4 h-4 stroke-[1.5]"></i>
           </button>
           <button id="share-btn-footer" class="w-9 h-9 flex items-center justify-center rounded-lg text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors" title="Share link">
@@ -231,7 +232,7 @@
   <div id="toc-overlay" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-start justify-center pt-16 sm:pt-20">
     <div class="bg-white dark:bg-zinc-900 rounded-xl shadow-2xl max-w-md w-[90%] max-h-[75vh] overflow-y-auto">
       <div class="flex justify-between items-center px-5 py-4 border-b border-zinc-100 dark:border-zinc-800 sticky top-0 bg-white dark:bg-zinc-900 rounded-t-xl">
-        <h2 class="text-sm font-semibold text-zinc-800 dark:text-zinc-200">Contents</h2>
+        <h2 class="text-sm font-semibold text-zinc-800 dark:text-zinc-200">Chapter previews</h2>
         <button class="close-btn p-1 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-md text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" aria-label="Close">
           <i data-lucide="x" class="w-5 h-5 stroke-[1.5]"></i>
         </button>
@@ -245,7 +246,7 @@
           <a id="contents-link-toc" href="contents.html"
              class="inline-flex items-center gap-1 mt-1.5 text-[11px] font-medium text-red-500 hover:text-red-600 cursor-pointer bg-transparent border-none p-0">
             <i data-lucide="book-open" class="w-3 h-3 stroke-[1.5]"></i>
-            Browse chapters
+            Browse all chapter previews
           </a>
           <a data-paid-cta data-paid-label="long" class="block mt-1.5 p-0 border-0 bg-transparent cursor-pointer text-left text-[11px] font-semibold text-zinc-800 dark:text-zinc-200" href="https://shipper.demandops.com/book/alignment-industrial-complex">Buy the complete book · €29</a>
         </div>
@@ -260,7 +261,7 @@
   </div>
 
   <a href="preview.html" style="display:none;">Preview chapters</a>
-  <script src="app.js?v=2.0.39"></script>
+  <script src="app.js?v=2.0.40"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

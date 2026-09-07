@@ -32,7 +32,7 @@ var _bookVersion = (function () {
       titleCardSubtitle, titleCardAuthor, chapterTitle, chapterSubtitle,
       progressFill, playBtn, wpmDisplay, tocOverlay,
       tocList, display, iconPlay, iconPause, timeCurrent, timeTotal,
-      sampleEnd, sampleEndNext;
+      sampleEnd, sampleEndTitle, sampleEndNext, sampleNextBtn;
 
   function cacheDom() {
     wordPre = document.getElementById("word-pre");
@@ -56,7 +56,9 @@ var _bookVersion = (function () {
     timeCurrent = document.getElementById("time-current");
     timeTotal = document.getElementById("time-total");
     sampleEnd = document.getElementById("sample-end");
+    sampleEndTitle = document.getElementById("sample-end-title");
     sampleEndNext = document.getElementById("sample-end-next");
+    sampleNextBtn = document.getElementById("sample-next-btn");
   }
 
   // --- Analytics ---
@@ -275,6 +277,7 @@ var _bookVersion = (function () {
 
     var display_words = [];
     for (var i = 0; i < chunkSize; i++) {
+      if (pos + i >= chapterEnd(chapterForPos(pos))) break;
       var wd = getWord(pos + i);
       if (wd) display_words.push(wd.w);
     }
@@ -304,8 +307,14 @@ var _bookVersion = (function () {
     }
   }
 
+  function chapterEnd(idx) {
+    return chapterOffsets[idx] + chapters[idx].wordCount;
+  }
+
   function updateProgress() {
-    var pct = sampleComplete ? 100 : (totalWords ? ((pos / totalWords) * 100) : 0);
+    var idx = chapterForPos(pos);
+    var count = chapters[idx] ? chapters[idx].wordCount : 0;
+    var pct = sampleComplete ? 100 : (count ? ((pos - chapterOffsets[idx]) / count) * 100 : 0);
     progressFill.style.width = pct + "%";
   }
 
@@ -318,7 +327,7 @@ var _bookVersion = (function () {
     var ch = currentChapter();
     if (ch) {
       chapterTitle.textContent = ch.chapterNum ? "Chapter " + ch.chapterNum + ": " + ch.title : ch.title;
-      chapterSubtitle.textContent = ch.part || "";
+      chapterSubtitle.textContent = "Chapter preview" + (ch.part ? " · " + ch.part : "");
     }
   }
 
@@ -331,8 +340,10 @@ var _bookVersion = (function () {
 
   function updateTimeDisplay() {
     if (!totalWords || !timeCurrent) return;
-    var currentMin = (sampleComplete ? totalWords : pos) / wpm;
-    var totalMin = totalWords / wpm;
+    var idx = chapterForPos(pos);
+    var count = chapters[idx].wordCount;
+    var currentMin = (sampleComplete ? count : pos - chapterOffsets[idx]) / wpm;
+    var totalMin = count / wpm;
     timeCurrent.textContent = formatTime(currentMin);
     timeTotal.textContent = formatTime(totalMin);
   }
@@ -351,8 +362,12 @@ var _bookVersion = (function () {
   }
 
   // --- Playback ---
-  function completionKey() {
-    return "rsvp-sample-complete:" + (meta.canonicalUrl || window.location.pathname);
+  function completionKey(idx) {
+    return "rsvp-preview-complete:" + (meta.canonicalUrl || window.location.pathname) + ":" + chapters[idx].id;
+  }
+
+  function resetCompletion(idx) {
+    try { localStorage.removeItem(completionKey(idx)); } catch (e) { /* ignore */ }
   }
 
   function completionEdition() {
@@ -361,27 +376,29 @@ var _bookVersion = (function () {
 
   function hideSampleEnd() {
     sampleEnd.classList.add("hidden");
-    if (!sampleComplete) return;
     sampleComplete = false;
-    try { localStorage.removeItem(completionKey()); } catch (e) { /* ignore */ }
   }
 
   function showSampleEnd() {
     pause();
     titleCard = false;
     sampleComplete = true;
-    pos = totalWords - 1;
+    var idx = chapterForPos(pos);
+    var ch = chapters[idx];
+    pos = chapterEnd(idx) - 1;
     titleCardEl.classList.add("hidden");
     wordContainer.classList.add("hidden");
     focusGuides.classList.add("hidden");
     sampleEnd.classList.remove("hidden");
-    var finalSampleId = chapters[chapters.length - 1].id;
-    var next = (meta.fullContents || []).find(function (chapter) {
-      return chapter.id > finalSampleId;
-    });
-    sampleEndNext.textContent = next
-      ? "Continue with " + (next.chapterNum ? "Chapter " + next.chapterNum + ": " : "") + next.title + "."
-      : "Continue reading the complete book.";
+    sampleEndTitle.textContent = ch.chapterNum
+      ? "Continue this chapter in the full book"
+      : "Continue reading in the full book";
+    sampleEndNext.textContent = (ch.chapterNum ? "Chapter " + ch.chapterNum + ": " : "") + ch.title;
+    var next = chapters[idx + 1];
+    sampleNextBtn.classList.toggle("hidden", !next);
+    sampleNextBtn.textContent = next
+      ? "Next preview: " + (next.chapterNum ? "Chapter " + next.chapterNum + ": " : "") + next.title
+      : "";
     if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
     var footer = document.querySelector("footer");
     if (footer) footer.classList.remove("controls-hidden");
@@ -389,7 +406,7 @@ var _bookVersion = (function () {
     updateChapterTitle();
     updateTimeDisplay();
     savePosition();
-    try { localStorage.setItem(completionKey(), completionEdition()); } catch (e) { /* ignore */ }
+    try { localStorage.setItem(completionKey(idx), completionEdition()); } catch (e) { /* ignore */ }
   }
 
   function baseInterval() {
@@ -398,8 +415,10 @@ var _bookVersion = (function () {
 
   function scheduleNext() {
     if (!playing) return;
-    var delay = baseInterval() * Math.min(chunkSize, totalWords - pos);
-    var lastPos = Math.min(pos + chunkSize - 1, totalWords - 1);
+    var idx = chapterForPos(pos);
+    var end = chapterEnd(idx);
+    var delay = baseInterval() * Math.min(chunkSize, end - pos);
+    var lastPos = Math.min(pos + chunkSize - 1, end - 1);
     var lastWord = getWord(lastPos);
     if (lastWord) {
       var pauseType = lastWord.p;
@@ -410,21 +429,12 @@ var _bookVersion = (function () {
 
     timer = setTimeout(function () {
       // Let the final word or chunk finish its normal display time first.
-      if (pos + chunkSize >= totalWords) {
-        trackChapterComplete(chapters.length - 1);
+      if (pos + chunkSize >= end) {
+        trackChapterComplete(idx);
         showSampleEnd();
         return;
       }
-      var prevCh = chapterForPos(pos);
       pos += chunkSize;
-      if (pos >= totalWords) pos = totalWords - 1;
-      var newCh = chapterForPos(pos);
-
-      // Detect chapter boundary crossing during playback
-      if (newCh !== prevCh) {
-        trackChapterComplete(prevCh);
-        trackChapterStart(newCh);
-      }
 
       // Check if word is available
       var w = getWord(pos);
@@ -445,8 +455,10 @@ var _bookVersion = (function () {
   function play() {
     if (!totalWords) return;
     if (sampleComplete) {
+      var idx = chapterForPos(pos);
+      resetCompletion(idx);
       hideSampleEnd();
-      pos = chapterOffsets[0];
+      pos = chapterOffsets[idx];
       ensureChaptersAround(pos).then(function () { showWord(); play(); });
       return;
     }
@@ -501,7 +513,9 @@ var _bookVersion = (function () {
   function skipWords(n) {
     pause();
     titleCard = false;
-    pos = Math.max(0, Math.min(totalWords - 1, pos + n));
+    var idx = chapterForPos(pos);
+    resetCompletion(idx);
+    pos = Math.max(chapterOffsets[idx], Math.min(chapterEnd(idx) - 1, pos + n));
     ensureChaptersAround(pos).then(function () { showWord(); });
   }
 
@@ -509,6 +523,7 @@ var _bookVersion = (function () {
     pause();
     titleCard = false;
     if (idx >= 0 && idx < chapters.length) {
+      resetCompletion(idx);
       pos = chapterOffsets[idx];
       trackChapterStart(idx);
       ensureChaptersAround(pos).then(function () { showWord(); });
@@ -562,10 +577,14 @@ var _bookVersion = (function () {
       }
       var li = document.createElement("li");
       var label = ch.chapterNum ? "Chapter " + ch.chapterNum + ": " + ch.title : ch.title;
-      li.appendChild(document.createTextNode(label));
-      li.addEventListener("click", (function (id) {
-        return function () { goToChapter(id); };
-      })(ch.id));
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "block w-full text-left bg-transparent border-0 cursor-pointer";
+      button.textContent = label + " · Preview";
+      button.addEventListener("click", (function (idx) {
+        return function () { goToChapter(idx); };
+      })(i));
+      li.appendChild(button);
       tocList.appendChild(li);
     }
   }
@@ -648,7 +667,9 @@ var _bookVersion = (function () {
     var pct = (e.clientX - rect.left) / rect.width;
     pause();
     titleCard = false;
-    pos = Math.floor(pct * totalWords);
+    var idx = chapterForPos(pos);
+    resetCompletion(idx);
+    pos = chapterOffsets[idx] + Math.max(0, Math.min(chapters[idx].wordCount - 1, Math.floor(pct * chapters[idx].wordCount)));
     ensureChaptersAround(pos).then(function () { showWord(); });
   }
 
@@ -690,7 +711,8 @@ var _bookVersion = (function () {
       if (savedTotal && parseInt(savedTotal, 10) === totalWords) {
         var p = localStorage.getItem("rsvp-position");
         if (p) pos = Math.min(parseInt(p, 10) || 0, totalWords - 1);
-        sampleComplete = pos === totalWords - 1 && localStorage.getItem(completionKey()) === completionEdition();
+        var idx = chapterForPos(pos);
+        sampleComplete = pos === chapterEnd(idx) - 1 && localStorage.getItem(completionKey(idx)) === completionEdition();
       } else {
         // Word count changed; discard the stale position
         localStorage.removeItem("rsvp-position");
@@ -721,7 +743,8 @@ var _bookVersion = (function () {
     document.getElementById("wpm-up").addEventListener("click", function () { adjustWPM(25); });
     document.getElementById("toc-btn").addEventListener("click", openTOC);
     document.getElementById("replay-btn").addEventListener("click", replayChapter);
-    document.getElementById("sample-restart-btn").addEventListener("click", function () { goToChapter(0); });
+    document.getElementById("sample-restart-btn").addEventListener("click", replayChapter);
+    sampleNextBtn.addEventListener("click", nextChapter);
     document.getElementById("share-btn-footer").addEventListener("click", shareLink);
     document.getElementById("contact-link").addEventListener("click", function () {
       track('Contact Click', { chapter: chapterLabel(chapterForPos(pos)) });
@@ -733,7 +756,7 @@ var _bookVersion = (function () {
       button.addEventListener("click", function (event) {
         event.preventDefault();
         track('Paid Edition Interest', { chapter: chapterLabel(chapterForPos(pos)) });
-        showToast("Paid edition available for sale soon. The free sample is ready to read now.");
+        showToast("Paid edition available for sale soon. The chapter previews are ready to read now.");
       });
     });
     var brandClickTimer = null;

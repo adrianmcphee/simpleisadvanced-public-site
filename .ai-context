@@ -3,10 +3,11 @@
 ## Purpose
 
 This is the deployed GitHub Pages site for Simple is Advanced. The current
-publication is `The Alignment-Industrial Complex`. Its free sample contains
-the Preface and first three numbered chapters, with normal chapter pages as
-the main reading path and an optional speed reader. The last sample chapter
-invites readers to acquire the complete book. Earlier books have transition
+publication is `The Alignment-Industrial Complex`. Its public reader offers
+about two and a half opening paragraphs of every chapter and supporting
+section, bounded at 180 body words. The contents page is the main entry point;
+normal pages and the optional speed reader use the same excerpt selection.
+Every preview invites readers to acquire the complete book. Earlier books have transition
 pages at their existing URLs; the homepage does not currently promote them.
 
 ## Repository structure
@@ -30,10 +31,10 @@ site/
 
 Static chapter pages provide normal reading, sequential navigation,
 accessibility, structured data and search entry points. The RSVP reader is an
-alternative way to read the same sample. Both paths end with an invitation to
-continue with the complete edition. `contents.html` shows the complete contents
-and links only the free chapters. Paid chapter bodies must not be included in
-public HTML or JSON. The generated reader data directories are blocked in
+alternative way to read the same short previews. Both paths stop after each
+excerpt and invite readers to continue with the complete edition.
+`contents.html` links every chapter preview. Public HTML and JSON must contain
+only the selected opening excerpt, never the remainder of any chapter. The generated reader data directories are blocked in
 `robots.txt` because raw word arrays are not web pages.
 
 ## Ownership
