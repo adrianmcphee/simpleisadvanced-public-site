@@ -68,8 +68,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="tailwind.css">
+  <link rel="stylesheet" href="tailwind.css?v=2.0.39">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    #sample-end { max-height: calc(100dvh - 15rem); overflow-y: auto; overscroll-behavior: contain; }
+    #sample-end a:focus-visible, #sample-end button:focus-visible { outline: 2px solid #ef4444; outline-offset: 4px; }
+  </style>
 </head>
 <body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans antialiased h-screen flex flex-col overflow-hidden selection:bg-red-100 selection:text-red-600">
 
@@ -117,6 +121,7 @@
       <p class="title-card-deck">Industrial Complex</p>
       <p id="title-card-subtitle" class="title-card-subtitle"></p>
       <p id="title-card-author" class="title-card-author"></p>
+      <p class="mt-5 text-sm text-zinc-500 dark:text-zinc-400"><a href="chapters/it-should-be-simple/" class="underline underline-offset-4 hover:text-zinc-900 dark:hover:text-zinc-100">Read the sample as pages</a></p>
     </section>
 
     <!-- Focus guides -->
@@ -131,6 +136,17 @@
       <span id="word-orp" class="w-[1ch] text-center text-red-500 relative flex justify-center"></span>
       <span id="word-post" class="text-left word-col text-zinc-800 dark:text-zinc-200"></span>
     </div>
+
+    <section id="sample-end" class="hidden relative z-10 w-full max-w-lg rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 sm:p-8 text-center cursor-auto" aria-labelledby="sample-end-title">
+      <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400" role="status">Free sample complete</p>
+      <h2 id="sample-end-title" class="mt-3 text-2xl font-semibold tracking-tight">Keep reading</h2>
+      <p id="sample-end-next" class="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300"></p>
+      <a data-paid-cta data-paid-label="long" class="inline-block mt-5 rounded-lg bg-zinc-900 dark:bg-zinc-100 px-5 py-3 text-sm font-semibold text-white dark:text-zinc-900" href="https://shipper.demandops.com/book/alignment-industrial-complex">Buy the complete book · €29</a>
+      <nav class="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm text-zinc-600 dark:text-zinc-300" aria-label="After the sample">
+        <a href="contents.html" class="underline underline-offset-4">Full contents</a>
+        <button id="sample-restart-btn" type="button" class="underline underline-offset-4">Restart the sample</button>
+      </nav>
+    </section>
   </main>
 
   <!-- Footer: floating dock controls -->
@@ -244,7 +260,7 @@
   </div>
 
   <a href="preview.html" style="display:none;">Preview chapters</a>
-  <script src="app.js?v=2.0.38"></script>
+  <script src="app.js?v=2.0.39"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>

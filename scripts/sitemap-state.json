@@ -1,34 +1,26 @@
 {
-  "alignment-industrial-complex/chapters/essay-why-simple-changes-become-programmes/index.html": {
-    "hash": "dc6cf49f2b5e3dd06b7fb6b9654b14b74bdc8a2d4968447b2261087c70f39393",
-    "lastmod": "2026-09-07"
-  },
   "alignment-industrial-complex/chapters/it-should-be-simple/index.html": {
-    "hash": "e2d5b16bf354599dce32ca682f900891292d49dda7ff7084dd7ffc3b9feb92f0",
+    "hash": "59604213f3a1327f52132b52882ab898219300ff47a67f89aa25bf83e6abd194",
     "lastmod": "2026-09-07"
-  },
-  "alignment-industrial-complex/chapters/no-design-is-bad-design/index.html": {
-    "hash": "9fe4d62158e92b22c2aea8a05bcc0bdf2d9bc4173b63bc291a8df4654f4a825b",
-    "lastmod": "2026-09-06"
   },
   "alignment-industrial-complex/chapters/preface/index.html": {
-    "hash": "38b106e1d39456f4749d8a585150e028ee4c203a16d3a08d8dd82b61086bd556",
+    "hash": "80d18dfa421c3a35c0422f85146020d67942fd6db88f046f1b7ce0dce7b9c151",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/chapters/selling-them-alignment/index.html": {
-    "hash": "81b0bd686affc3046aa4e9f79776a052955d15d631863e450a0d365447c96ec8",
-    "lastmod": "2026-09-06"
+    "hash": "0fb4123156b0dfc17df13300a6e53c32485238638af470420d9085040b764a07",
+    "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/chapters/the-meeting-worked/index.html": {
-    "hash": "15b2da9f419650d4c7b103a76697dd61441aa7a434f293f31d19571716992358",
+    "hash": "0cd77a2b97a59683cce4d2a1d3713a2e968be41f25cfcec4f9b25026a103fe31",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/contents.html": {
-    "hash": "2a70b39af010be42d830c2c30491e44c390cd48d8e41c59f7a51a15b132132c1",
+    "hash": "bd32b71f16e0187076c4218f268c1a1575eefc25484951963614a5b6a2c7623e",
     "lastmod": "2026-09-07"
   },
   "alignment-industrial-complex/index.html": {
-    "hash": "9107cd1aebaa504d8605221ea411a600779cb85d77e826fa7f6f8a151041024a",
+    "hash": "f9186ebdf584077a9fc963f4bb8651aa14b95729c30e333ec88be7e2cdaa449b",
     "lastmod": "2026-09-07"
   },
   "articles/drive-vs-drift/index.html": {
@@ -40,8 +32,8 @@
     "lastmod": "2026-09-06"
   },
   "articles/index.html": {
-    "hash": "edfef5cecbb2d817a77596cec19776a1806f5d62eedc876aed1fa7142c1a4bfb",
-    "lastmod": "2026-09-06"
+    "hash": "6976a2e6dfc7b142fc25c693ad6bc9c218ad1a3d80c1418036b7fbac7dfadc4f",
+    "lastmod": "2026-09-07"
   },
   "articles/the-brochureware-moment/index.html": {
     "hash": "ae84c58c28929031a80d27e182a327c63238c71c4b7bf6f57ed784f58032e894",
@@ -104,7 +96,7 @@
     "lastmod": "2026-09-06"
   },
   "index.html": {
-    "hash": "e1badaa6b97b1077adf6934492702acedf01547a8a807c35d3a636596c8f3698",
+    "hash": "1820bf2398d3c4526e9ff6e4e4c5de633af94e7ad0605596d6529fa6280edf13",
     "lastmod": "2026-09-07"
   }
 }

@@ -23,7 +23,7 @@ BOOKS = {
     "alignment-industrial-complex": {
         "title": "The Alignment-Industrial Complex",
         "subtitle": "How Fragmented Authority Destroys a Company's Ability to Compete",
-        "sample_chapters": 6,
+        "sample_chapters": 4,
     },
 }
 
@@ -150,7 +150,8 @@ def check_local(r):
             and ((paid_enabled and "Buy the ebook" in hp)
                  or (not paid_enabled and "available for sale soon" in hp)))
     r.check("Homepage: links to a public sample",
-            'href="/alignment-industrial-complex/"' in hp
+            'href="/alignment-industrial-complex/chapters/it-should-be-simple/"' in hp
+            and 'href="/alignment-industrial-complex/"' in hp
             and "Read the free sample" in hp)
     r.check("Homepage: uses the transparent SIA mark",
             'src="/alignment-industrial-complex/sia-black.png"' in hp)
@@ -363,6 +364,18 @@ def check_local(r):
                 contents.count("(free sample)") == expected_sample_chapters
                 and "(paid edition)" in contents)
 
+        sample_pages = [book_dir / "chapters" / re.sub(r"[^a-z0-9]+", "-", chapter["title"].lower()).strip("-") / "index.html"
+                        for chapter in meta["chapters"]]
+        r.check(f"{slug}: sample chapters provide a continuous reading path",
+                all('rel="next"' in path.read_text() for path in sample_pages[:-1])
+                and all('rel="prev"' in path.read_text() for path in sample_pages[1:]))
+        final_sample = sample_pages[-1].read_text()
+        r.check(f"{slug}: sample ends with contents and the current acquisition offer",
+                "Continue with the full book" in final_sample
+                and 'href="../../contents.html"' in final_sample
+                and ((f'href="{BOOK_URL}"' in final_sample) == paid_enabled)
+                and 'rel="next"' not in final_sample)
+
         # Spot-check 3 chapter pages
         for ch_path in sorted(chapter_dirs)[:3]:
             ch_html = (ch_path / "index.html").read_text()
@@ -487,9 +500,9 @@ def check_production(r):
 
     live_meta = json.loads(fetch(f"{DOMAIN}{SAMPLE_PATH}data/meta.json"))
     local_meta = json.loads((SITE_DIR / SAMPLE_PATH.strip("/") / "data/meta.json").read_text())
-    r.check("LIVE reader: declares the current six-section sample",
+    r.check("LIVE reader: declares the Preface and first three chapters",
             live_meta.get("isExcerpt") is True
-            and len(live_meta.get("chapters", [])) == 6)
+            and [chapter.get("chapterNum") for chapter in live_meta.get("chapters", [])] == [None, 1, 2, 3])
     r.check("LIVE reader: version and metadata match the local publication",
             live_meta == local_meta,
             str(live_meta.get("version")))

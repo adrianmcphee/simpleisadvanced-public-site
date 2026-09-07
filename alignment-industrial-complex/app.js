@@ -19,6 +19,7 @@ var _bookVersion = (function () {
   var pos = 0;
   var playing = false;
   var titleCard = false;  // true when showing initial title screen
+  var sampleComplete = false;
   var timer = null;
   var wpm = 350;
   var chunkSize = 1;
@@ -30,7 +31,8 @@ var _bookVersion = (function () {
   var wordPre, wordOrp, wordPost, wordContainer, focusGuides, titleCardEl,
       titleCardSubtitle, titleCardAuthor, chapterTitle, chapterSubtitle,
       progressFill, playBtn, wpmDisplay, tocOverlay,
-      tocList, display, iconPlay, iconPause, timeCurrent, timeTotal;
+      tocList, display, iconPlay, iconPause, timeCurrent, timeTotal,
+      sampleEnd, sampleEndNext;
 
   function cacheDom() {
     wordPre = document.getElementById("word-pre");
@@ -53,6 +55,8 @@ var _bookVersion = (function () {
     iconPause = document.getElementById("icon-pause");
     timeCurrent = document.getElementById("time-current");
     timeTotal = document.getElementById("time-total");
+    sampleEnd = document.getElementById("sample-end");
+    sampleEndNext = document.getElementById("sample-end-next");
   }
 
   // --- Analytics ---
@@ -205,7 +209,8 @@ var _bookVersion = (function () {
       showTitleCard();
     } else {
       await ensureChaptersAround(pos);
-      showWord();
+      if (sampleComplete && !hasURL) showSampleEnd();
+      else showWord();
     }
 
     buildTOC();
@@ -232,6 +237,7 @@ var _bookVersion = (function () {
   }
 
   function showTitleCard() {
+    hideSampleEnd();
     setTitleCardVisible(true);
     titleCardSubtitle.textContent = meta.subtitle || "";
     titleCardAuthor.textContent = meta.author;
@@ -243,6 +249,7 @@ var _bookVersion = (function () {
   // --- Display ---
   function showWord() {
     if (!totalWords) return;
+    hideSampleEnd();
     setTitleCardVisible(false);
     if (pos >= totalWords) pos = totalWords - 1;
     if (pos < 0) pos = 0;
@@ -298,7 +305,7 @@ var _bookVersion = (function () {
   }
 
   function updateProgress() {
-    var pct = totalWords ? ((pos / totalWords) * 100) : 0;
+    var pct = sampleComplete ? 100 : (totalWords ? ((pos / totalWords) * 100) : 0);
     progressFill.style.width = pct + "%";
   }
 
@@ -324,7 +331,7 @@ var _bookVersion = (function () {
 
   function updateTimeDisplay() {
     if (!totalWords || !timeCurrent) return;
-    var currentMin = pos / wpm;
+    var currentMin = (sampleComplete ? totalWords : pos) / wpm;
     var totalMin = totalWords / wpm;
     timeCurrent.textContent = formatTime(currentMin);
     timeTotal.textContent = formatTime(totalMin);
@@ -344,18 +351,54 @@ var _bookVersion = (function () {
   }
 
   // --- Playback ---
+  function completionKey() {
+    return "rsvp-sample-complete:" + (meta.canonicalUrl || window.location.pathname);
+  }
+
+  function completionEdition() {
+    return (meta.version || _bookVersion) + ":" + totalWords;
+  }
+
+  function hideSampleEnd() {
+    sampleEnd.classList.add("hidden");
+    if (!sampleComplete) return;
+    sampleComplete = false;
+    try { localStorage.removeItem(completionKey()); } catch (e) { /* ignore */ }
+  }
+
+  function showSampleEnd() {
+    pause();
+    titleCard = false;
+    sampleComplete = true;
+    pos = totalWords - 1;
+    titleCardEl.classList.add("hidden");
+    wordContainer.classList.add("hidden");
+    focusGuides.classList.add("hidden");
+    sampleEnd.classList.remove("hidden");
+    var finalSampleId = chapters[chapters.length - 1].id;
+    var next = (meta.fullContents || []).find(function (chapter) {
+      return chapter.id > finalSampleId;
+    });
+    sampleEndNext.textContent = next
+      ? "Continue with " + (next.chapterNum ? "Chapter " + next.chapterNum + ": " : "") + next.title + "."
+      : "Continue reading the complete book.";
+    if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    var footer = document.querySelector("footer");
+    if (footer) footer.classList.remove("controls-hidden");
+    updateProgress();
+    updateChapterTitle();
+    updateTimeDisplay();
+    savePosition();
+    try { localStorage.setItem(completionKey(), completionEdition()); } catch (e) { /* ignore */ }
+  }
+
   function baseInterval() {
     return 60000 / wpm;
   }
 
   function scheduleNext() {
     if (!playing) return;
-    if (pos >= totalWords - 1) {
-      pause();
-      return;
-    }
-
-    var delay = baseInterval() * chunkSize;
+    var delay = baseInterval() * Math.min(chunkSize, totalWords - pos);
     var lastPos = Math.min(pos + chunkSize - 1, totalWords - 1);
     var lastWord = getWord(lastPos);
     if (lastWord) {
@@ -366,6 +409,12 @@ var _bookVersion = (function () {
     }
 
     timer = setTimeout(function () {
+      // Let the final word or chunk finish its normal display time first.
+      if (pos + chunkSize >= totalWords) {
+        trackChapterComplete(chapters.length - 1);
+        showSampleEnd();
+        return;
+      }
       var prevCh = chapterForPos(pos);
       pos += chunkSize;
       if (pos >= totalWords) pos = totalWords - 1;
@@ -395,6 +444,12 @@ var _bookVersion = (function () {
 
   function play() {
     if (!totalWords) return;
+    if (sampleComplete) {
+      hideSampleEnd();
+      pos = chapterOffsets[0];
+      ensureChaptersAround(pos).then(function () { showWord(); play(); });
+      return;
+    }
     // From title card, jump to startChapter (skip Author's Note)
     if (titleCard) {
       titleCard = false;
@@ -474,7 +529,8 @@ var _bookVersion = (function () {
   function nextChapter() {
     var ch = currentChapter();
     if (!ch) return;
-    goToChapter(Math.min(chapters.length - 1, ch.id + 1));
+    if (ch.id === chapters[chapters.length - 1].id) showSampleEnd();
+    else goToChapter(ch.id + 1);
   }
 
   function replayChapter() {
@@ -634,6 +690,7 @@ var _bookVersion = (function () {
       if (savedTotal && parseInt(savedTotal, 10) === totalWords) {
         var p = localStorage.getItem("rsvp-position");
         if (p) pos = Math.min(parseInt(p, 10) || 0, totalWords - 1);
+        sampleComplete = pos === totalWords - 1 && localStorage.getItem(completionKey()) === completionEdition();
       } else {
         // Word count changed; discard the stale position
         localStorage.removeItem("rsvp-position");
@@ -664,6 +721,7 @@ var _bookVersion = (function () {
     document.getElementById("wpm-up").addEventListener("click", function () { adjustWPM(25); });
     document.getElementById("toc-btn").addEventListener("click", openTOC);
     document.getElementById("replay-btn").addEventListener("click", replayChapter);
+    document.getElementById("sample-restart-btn").addEventListener("click", function () { goToChapter(0); });
     document.getElementById("share-btn-footer").addEventListener("click", shareLink);
     document.getElementById("contact-link").addEventListener("click", function () {
       track('Contact Click', { chapter: chapterLabel(chapterForPos(pos)) });
@@ -702,6 +760,7 @@ var _bookVersion = (function () {
         if (e.key === "Escape") { closeTOC(); }
         return;
       }
+      if (e.target.closest("a, button, input, select, textarea")) return;
       switch (e.key) {
         case " ": e.preventDefault(); togglePlay(); break;
         case "ArrowLeft": skipWords(-10); break;
@@ -714,6 +773,7 @@ var _bookVersion = (function () {
     });
 
     display.addEventListener("click", function (e) {
+      if (e.target.closest("a, button") || sampleComplete) return;
       if (titleCard) { togglePlay(); return; }
       var rect = display.getBoundingClientRect();
       var x = (e.clientX - rect.left) / rect.width;
