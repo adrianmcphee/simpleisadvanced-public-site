@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /the-end-of-alignment/data/
 Disallow: /alignment-industrial-complex/data/
+Disallow: /good-progress/data/
+Disallow: /the-meetings-went-well/data/
 
 Sitemap: https://simpleisadvanced.com/sitemap.xml

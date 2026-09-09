@@ -1,0 +1,142 @@
+/* RSVP Reader: The Alignment-Industrial Complex */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+.title-card-kicker {
+  margin: 0 0 0.45rem;
+  color: rgb(82 82 91);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: clamp(0.78rem, 2vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.title-card-wordmark {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: clamp(0.35rem, 1.2vw, 0.8rem);
+  margin: 0;
+  color: rgb(24 24 27);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: clamp(3rem, 11vw, 7.6rem);
+  font-weight: 600;
+  line-height: 0.86;
+  letter-spacing: -0.075em;
+}
+
+.title-card-rule {
+  width: clamp(2px, 0.35vw, 4px);
+  margin: -0.06em 0 0.02em;
+  background: rgb(239 68 68);
+}
+
+.title-card-subtitle {
+  max-width: 42rem;
+  margin: clamp(2rem, 5vh, 3.4rem) auto 0;
+  color: rgb(82 82 91);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: clamp(0.92rem, 2.2vw, 1.12rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.title-card-deck {
+  margin: 0.8rem 0 0;
+  color: rgb(39 39 42);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.title-card-author {
+  margin: 1.2rem 0 0;
+  color: rgb(161 161 170);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+[data-theme="dark"] .title-card-kicker,
+[data-theme="dark"] .title-card-subtitle {
+  color: rgb(161 161 170);
+}
+
+[data-theme="dark"] .title-card-wordmark {
+  color: rgb(244 244 245);
+}
+
+[data-theme="dark"] .title-card-deck {
+  color: rgb(228 228 231);
+}
+
+/* RSVP word sizing by data-fontsize attribute */
+/* Mobile-first: viewport-relative so words never overflow */
+.rsvp-word { font-size: 7vw; }
+.word-col   { width: 36vw; }
+
+[data-fontsize="small"]  .rsvp-word { font-size: 5.5vw; }
+[data-fontsize="small"]  .word-col  { width: 30vw; }
+[data-fontsize="medium"] .rsvp-word { font-size: 7vw; }
+[data-fontsize="medium"] .word-col  { width: 36vw; }
+[data-fontsize="large"]  .rsvp-word { font-size: 9vw; }
+[data-fontsize="large"]  .word-col  { width: 40vw; }
+[data-fontsize="xlarge"] .rsvp-word { font-size: 11vw; }
+[data-fontsize="xlarge"] .word-col  { width: 44vw; }
+
+@media (min-width: 640px) {
+  .rsvp-word { font-size: 4.5rem; }
+  .word-col  { width: 320px; }
+  [data-fontsize="small"]  .rsvp-word { font-size: 3rem; }
+  [data-fontsize="small"]  .word-col  { width: 240px; }
+  [data-fontsize="medium"] .rsvp-word { font-size: 4.5rem; }
+  [data-fontsize="medium"] .word-col  { width: 320px; }
+  [data-fontsize="large"]  .rsvp-word { font-size: 6rem; }
+  [data-fontsize="large"]  .word-col  { width: 400px; }
+  [data-fontsize="xlarge"] .rsvp-word { font-size: 7.5rem; }
+  [data-fontsize="xlarge"] .word-col  { width: 500px; }
+}
+
+/* TOC list items */
+#toc-list li {
+  padding: 0.5rem 0.75rem;
+  margin: 0.125rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.15s;
+}
+
+#toc-list li:hover {
+  background-color: rgb(244 244 245); /* zinc-100 */
+}
+
+[data-theme="dark"] #toc-list li:hover {
+  background-color: rgb(39 39 42); /* zinc-800 */
+}
+
+/* Hide controls briefly after pressing play */
+footer {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+footer.controls-hidden {
+  opacity: 0;
+  transform: translateY(1rem);
+  pointer-events: none;
+}
+
+#toc-list li.toc-part-header {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  cursor: default;
+  pointer-events: none;
+}

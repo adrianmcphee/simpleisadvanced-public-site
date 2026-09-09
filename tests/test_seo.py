@@ -20,25 +20,25 @@ SITE_DIR = Path(__file__).resolve().parent.parent
 DOMAIN = "https://simpleisadvanced.com"
 
 BOOKS = {
-    "alignment-industrial-complex": {
-        "title": "The Alignment-Industrial Complex",
-        "subtitle": "How Fragmented Authority Destroys a Company's Ability to Compete",
-        "sample_chapters": 28,
+    "good-progress": {
+        "title": "Good Progress",
+        "subtitle": "Inside the Alignment-Industrial Complex",
+        "sample_chapters": 39,
     },
 }
 
 RETIRED_BOOKS = ("illusions-of-work", "illusions-in-the-boardroom")
 # Current-book identity is shared by the homepage, article cards and reader.
-CURRENT_TITLE = "The Alignment-Industrial Complex"
-CURRENT_SUBTITLE = "How Fragmented Authority Destroys a Company's Ability to Compete"
+CURRENT_TITLE = "Good Progress"
+CURRENT_SUBTITLE = "Inside the Alignment-Industrial Complex"
 RETIRED_SUBTITLES = (
     "How Companies Destroy Their Ability to Compete",
     "New Operating Logic for Software-Dependent Companies",
     "New Operating Logic for the AI Era",
     "New Operating Logic for Software-Dependent Corporates in the AI Era",
 )
-BOOK_URL = "https://shipper.demandops.com/book/alignment-industrial-complex"
-SAMPLE_PATH = "/alignment-industrial-complex/"
+BOOK_URL = "https://shipper.demandops.com/book/good-progress"
+SAMPLE_PATH = "/good-progress/"
 OLD_BOOK_URL = "https://shipper.demandops.com/book/the-end-of-alignment"
 
 
@@ -50,7 +50,7 @@ def is_redirect_stub(chapter_dir):
     index = chapter_dir / "index.html"
     if not index.exists():
         return False
-    return 'content="noindex"' in index.read_text()
+    return 'content="noindex' in index.read_text()
 
 
 class Results:
@@ -138,8 +138,7 @@ def check_local(r):
     r.check("Homepage: carries the current subtitle",
             CURRENT_SUBTITLE in hp and all(value not in hp for value in RETIRED_SUBTITLES))
     r.check("Homepage: carries the approved customer and bonus contrast",
-            "THE MEETINGS WENT WELL." in hp
-            and "Every week, 250 customers call this insurer to correct their mileage." in hp
+            "Every week, this insurer handles 250 calls about mileage corrections." in hp
             and "Customers want it. Shareholders have been promised digital transformation. Management calls it a priority." in hp
             and "Two years later, the calls are still coming." in hp
             and "The bonuses have been paid in full." in hp
@@ -150,11 +149,11 @@ def check_local(r):
             and ((paid_enabled and "Buy the ebook" in hp)
                  or (not paid_enabled and "available for sale soon" in hp)))
     r.check("Homepage: links to a public sample",
-            'href="/alignment-industrial-complex/contents.html"' in hp
-            and 'href="/alignment-industrial-complex/"' in hp
+            'href="/good-progress/contents.html"' in hp
+            and 'href="/good-progress/"' in hp
             and "Browse chapter previews" in hp)
     r.check("Homepage: uses the transparent SIA mark",
-            'src="/alignment-industrial-complex/sia-black.png"' in hp)
+            'src="/good-progress/sia-black.png"' in hp)
     r.check("Homepage: does not claim the book is itself an operating model",
             "An operating model that joins" not in hp)
 
@@ -376,8 +375,8 @@ def check_local(r):
             plain = unescape(re.sub(r"<[^>]+>", " ", match.group(1))) if match else ""
             preview_lengths.append(len(plain.split()))
         r.check(f"{slug}: all chapter bodies stay within the short-preview limit",
-                all(0 < length <= 180 for length in preview_lengths)
-                and meta.get("previewPolicy") == {"full_paragraphs": 2, "next_paragraph_fraction": 0.5, "maximum_words": 180},
+                all(0 < length <= 90 for length in preview_lengths)
+                and meta.get("previewPolicy") == {"full_paragraphs": 2, "next_paragraph_fraction": 0.5, "maximum_words": 90},
                 f"{min(preview_lengths)}–{max(preview_lengths)} words")
         final_sample = sample_pages[-1].read_text()
         r.check(f"{slug}: every preview offers the complete book",
@@ -459,8 +458,7 @@ def check_production(r):
             (f'href="{BOOK_URL}"' in hp) == (f'href="{BOOK_URL}"' in local_hp)
             and OLD_BOOK_URL not in hp and f'href="{SAMPLE_PATH}"' in hp)
     r.check("LIVE homepage: latest customer and bonus copy is deployed",
-            "THE MEETINGS WENT WELL." in hp
-            and "Every week, 250 customers call this insurer to correct their mileage." in hp
+            "Every week, this insurer handles 250 calls about mileage corrections." in hp
             and "Customers want it. Shareholders have been promised digital transformation. Management calls it a priority." in hp
             and "Two years later, the calls are still coming." in hp
             and "The bonuses have been paid in full." in hp)
@@ -486,9 +484,9 @@ def check_production(r):
 
     # --- Spot-check chapter pages ---
     spot_checks = [
-        ("alignment-industrial-complex", "preface"),
-        ("alignment-industrial-complex", "it-should-be-simple"),
-        ("alignment-industrial-complex", "selling-them-alignment"),
+        ("good-progress", "preface"),
+        ("good-progress", "it-should-be-simple"),
+        ("good-progress", "selling-them-alignment"),
     ]
 
     for book_slug, ch_slug in spot_checks:
@@ -515,8 +513,8 @@ def check_production(r):
     local_meta = json.loads((SITE_DIR / SAMPLE_PATH.strip("/") / "data/meta.json").read_text())
     r.check("LIVE reader: previews every chapter and supporting section",
             live_meta.get("isExcerpt") is True
-            and len(live_meta.get("chapters", [])) == 28
-            and [chapter["chapterNum"] for chapter in live_meta["chapters"] if chapter.get("chapterNum")] == list(range(1, 19))
+            and len(live_meta.get("chapters", [])) == 39
+            and [chapter["chapterNum"] for chapter in live_meta["chapters"] if chapter.get("chapterNum")] == list(range(1, 22))
             and all(chapter.get("isExcerpt") is True for chapter in live_meta["chapters"]))
     r.check("LIVE reader: version and metadata match the local publication",
             live_meta == local_meta,
