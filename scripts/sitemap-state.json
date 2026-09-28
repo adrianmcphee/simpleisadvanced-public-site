@@ -71,169 +71,105 @@
     "hash": "cf82a646ed3374f0a2560ce9eb1d76e1628f03ac9855d13a73ca43aef6bab083",
     "lastmod": "2026-09-09"
   },
-  "good-progress/chapters/a-completed-mileage-record/index.html": {
-    "hash": "cdce3c9911282b382f5c22220a274ee0e03e89b17d2bc3a736788ab10f161b9b",
-    "lastmod": "2026-09-09"
+  "good-progress/chapters/author-s-note/index.html": {
+    "hash": "80eae63997946f1e08fa6454c989cb95f0ce2e40f2a54ae44d7838b040be93af",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/autonomy-without-verbs/index.html": {
-    "hash": "84283b46f976782a5ad56c278259ef5242271407555063c2cb33f20101683d58",
-    "lastmod": "2026-09-09"
+    "hash": "af078348b51ae1022b26f62cf0d66b79a3b9302e5ea1713517049aa15ccf5522",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/delivered-to-nobody/index.html": {
-    "hash": "6b8bdb62497b2c19aee11832e3f816f1f06b947ad9e5cec58fe4003b9827d52b",
-    "lastmod": "2026-09-09"
+    "hash": "e2481d05158f4c3347d3a325ab92d3fae07ceb1a6f4563327e34397f077bb654",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/eligible-to-wait/index.html": {
-    "hash": "fd0bb23de89ca7d0df552c1b1a082854f6d85bdfdbff6725d12629dee4999717",
-    "lastmod": "2026-09-09"
+    "hash": "4b9230af52f9da1f22a90cbe865948292527cae0b17d1ebc0ef1de99895274fb",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/epilogue-felix-returns/index.html": {
-    "hash": "e0b0303537f5638becabd0531de7f54ca170814737ad2e16559a75a78e70dce3",
-    "lastmod": "2026-09-09"
+    "hash": "aa34f44184b60b4ec01673aa4a9a88e8d3b39a20d2321b8c5eafb07dd897c203",
+    "lastmod": "2026-09-28"
   },
-  "good-progress/chapters/essay-retirement/index.html": {
-    "hash": "adf3571031aeb1603ffb75b6b399208285ef6dc3127ece48a393e419853457b2",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/essay-the-boundary/index.html": {
-    "hash": "b33b3d68d2f160bf74c9d40157d2cc86b189991e08e4e76a05946abd3c43a9a5",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/essay-the-represented-company/index.html": {
-    "hash": "1b3fc99998f8a4cbdb504408010d36cbc2af9028f33029c5562058148ccb1ec7",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/essay-why-simple-changes-become-programmes/index.html": {
-    "hash": "23185c1ba56d1d93139bc09ea9b4132ba03dafc01fca6d706c2da653bd667e7e",
-    "lastmod": "2026-09-09"
+  "good-progress/chapters/evidence-or-right/index.html": {
+    "hash": "fb0e2b0a31855da5326a0a096d3ef3bbde2519638501d13f0bb9f48e44d0f195",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/four-layers-down/index.html": {
-    "hash": "2dd1f76f8c9e469ac3b305448758daa919d43c2f386f012d2971e4636953140a",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/glossary/index.html": {
-    "hash": "a574b66498ac93e4dfb7770608aec9611f6e296d0ac258705b1414e92d2ec394",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/if-you-can-move-rights/index.html": {
-    "hash": "04f8b29454437e45568f100f4ebeab8c5650db6c1bc933a219fb35c86c68876e",
-    "lastmod": "2026-09-09"
+    "hash": "6725890c017a0bdafc8796b77827b3627764a5f23df999d65004731574b37607",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/it-should-be-simple/index.html": {
-    "hash": "13fb47dbf2e2e8c09f7ef0bc9777d11de49c0046f0cf3b79401fea60d1204cab",
-    "lastmod": "2026-09-09"
+    "hash": "302b01d7d0f944f99ee3cfb0df7d29ae54542947945d8f4dc71c78b90d894964",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/no-design-is-bad-design/index.html": {
-    "hash": "03ac464dbcbdc6a2581c76f5949ae47a0b0ddedb9865a62cbb724d83e7efbb84",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/preface/index.html": {
-    "hash": "fb63a3f5f011d0243fa093c9bf516ad07e40f03b1699c3c4306d9185764d7594",
-    "lastmod": "2026-09-09"
+    "hash": "eae38f0a7988126844966df2af4268fb38dcdcc46ffd0b8c90c728cba4817913",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/selling-them-alignment/index.html": {
-    "hash": "87d5c92fb2b1a7ae6717550b3e09336e7473f2073dc64d4b9ccdfae2ee6f859d",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/sources-and-evidence/index.html": {
-    "hash": "a114aa5e49c72bbfba0b959d142a465a348dab5774056a9a47f0a13bba67fa39",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/the-argument/index.html": {
-    "hash": "32101c64aa10cfe91adb59ecc4416dcad539164a0d4e25ccd9b7900f8eef1691",
-    "lastmod": "2026-09-09"
+    "hash": "2283d6ec967d0d686267f91fab82259302122af5627a2dd57434adcb8da357f0",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-business-business/index.html": {
-    "hash": "13eee2b1a7980e8998a0f770098676152fce9b7942605163a028494ce29ff985",
-    "lastmod": "2026-09-09"
+    "hash": "849dd0160b13bb08a1f9c86e64717133301c913f2caa5e5e332c7b941d048390",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-calibration/index.html": {
-    "hash": "4f0ac4e64152a05c9d6a45945fa4997152caee9f6317ad670ea031f333f6111d",
-    "lastmod": "2026-09-09"
+    "hash": "c94b3569651f2199b08db8ceacef0a0a561a1eea88df8a11c30fff3c1d2b7e78",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-centre-says-no/index.html": {
-    "hash": "4009e7d411683128ce06f135fa7bab0993d42c548b51f047390a98cdb3511440",
-    "lastmod": "2026-09-09"
+    "hash": "ed58d2ed637fbd0f8ebfeb221ec30637b4e64efca7e1d49a47bd6919a99e9a69",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-clean-register/index.html": {
-    "hash": "7cb0aaf92596e85db3b4a4f351437dac5c3dc108852b6242095d2a2e4653ceee",
-    "lastmod": "2026-09-09"
+    "hash": "4aa99aec9e4407acde2484fdfb5e22ce5609fca5398cae58c13c5dad2babe096",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-company-is-green/index.html": {
-    "hash": "ad57349bbd3e4d2cb83a26447e62fc55bc35ba8b3ca0933e31df545068260b04",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/the-contract-was-right/index.html": {
-    "hash": "db738ea2d3b4621b904fedbb34d6301c6b439559087bbdcb49ef082bacf578b7",
-    "lastmod": "2026-09-09"
+    "hash": "d3d4e14291182c71cd6636eb0936450e20166f08dd8834629fd6a7e960c9f37d",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-customer/index.html": {
-    "hash": "f4efe93ca4a416cd78ef1aa492eb0b5571cf947c1023e9a0d487b832824546d0",
-    "lastmod": "2026-09-09"
+    "hash": "fd79acdc5b4c92d03556c5bdbf72d8dd4a5a7a6c37d205d5311bcba8b614e35b",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-data-gate/index.html": {
-    "hash": "3d88008561128bb3fddde9106bd309367fb5f21ebf41948a3ce183ad1341dd70",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/the-desk-was-slow/index.html": {
-    "hash": "a3a53d8e8f40e9b4af23668379aff1d27feea37b1dd23984dbd1b5028d9bf01d",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/the-interest-rate/index.html": {
-    "hash": "d5d382830c8326d8a918fe2526ef5053c21f544e810f03134869c2d2dd28d651",
-    "lastmod": "2026-09-09"
+    "hash": "3bf67422b67cbf435acce17ca021b52e9524309d482c7f513367da54701e613a",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-meeting-worked/index.html": {
-    "hash": "e2b38ffc84161c0409f098d1b580733f390c68289548398192e65c868a39e34c",
-    "lastmod": "2026-09-09"
+    "hash": "0ee4f2ddbd99cf2c6e2e48f7f7d2bde09bb60a2d5469e81235cdc321f2e934f9",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-report-stayed/index.html": {
-    "hash": "e63b367951c92d098c1544439c11c909acaa1cf9ee14dcd5f9f2babad3a5d448",
-    "lastmod": "2026-09-09"
+    "hash": "f5d25245dcdf47efa92a83666a68e343f09e8fa2c7645788bb7f8335c6e0ced2",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-second-unit-is-political/index.html": {
-    "hash": "49533465a619e9be7f46c8fb42b1c40d743618cce3fb1bf95458ad8e3e9a56fe",
-    "lastmod": "2026-09-09"
+    "hash": "43c8f43ea1b8b3fe61f46e68bab492e1ccc636e95493a9c5360c4923bbe3e7df",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-trough/index.html": {
-    "hash": "e51f33206a7dbbff56a6f4942f6ba95d467b3306a4b7de92ed4a269cacd8e64e",
-    "lastmod": "2026-09-09"
+    "hash": "c72ff71e55809895096a6ae336aaf9ba892f6ef567a63a5cb4a9bda3c2f4302b",
+    "lastmod": "2026-09-28"
   },
   "good-progress/chapters/the-unit-fails-well/index.html": {
-    "hash": "af0dc1a43d6ad643a47c6dd993e988e30b2f0816b407a84b33c4130f19491376",
-    "lastmod": "2026-09-09"
+    "hash": "ef5065294f38b068afda27160d336473f17e2837939bdffaef62c7d462bcb236",
+    "lastmod": "2026-09-28"
   },
-  "good-progress/chapters/what-to-do-on-monday/index.html": {
-    "hash": "61fc12168856e006bf8dbfdddfb356fce77f83eba3d9c4366e48a4d9acdb279b",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/works-cited/index.html": {
-    "hash": "633f9e94cc0030b321f310a547647d7b579af2e4666e877ac11cfafa6aeb7ec0",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/worksheet-decision-trace/index.html": {
-    "hash": "6071f773c47b5294faafc559cb133f36f626241d640a340ce0a94a2d98bf9990",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/worksheet-five-rights/index.html": {
-    "hash": "51913f52b99b51b2eb63d757102d28a69048a6c0960bac9c42aeb98bff90fa56",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/worksheet-owner/index.html": {
-    "hash": "5781ec907e4362b0245e12fd52734f9cd5d8d5d5b9f2e5395e3b0da8114f50a3",
-    "lastmod": "2026-09-09"
-  },
-  "good-progress/chapters/worksheet-reserved-right/index.html": {
-    "hash": "633ffc68e145868c566e81f0799d2f3fa875e34156e9bad8717433605183113b",
-    "lastmod": "2026-09-09"
+  "good-progress/chapters/upstream-data-quality/index.html": {
+    "hash": "5d048e6753b86eedf958e0d778ceb19ebf5ebfec267445fe21cef1420abdc905",
+    "lastmod": "2026-09-28"
   },
   "good-progress/contents.html": {
-    "hash": "c1719b457829a4466973ac485bf5313c642950808edf793d1b098b65bddb4b83",
-    "lastmod": "2026-09-09"
+    "hash": "bc670aa0f29813a700925235fddb6e2ed4dd84f575c3c14ed7689cf910426a82",
+    "lastmod": "2026-09-28"
   },
   "good-progress/index.html": {
-    "hash": "7b2c32b47ee02ac839cbeef1e10bbc5c39c9a6d14a7e7f6bef130043c6f35c9b",
-    "lastmod": "2026-09-09"
+    "hash": "bf981c6dc135f9da4e63943e18e018bed42b7d652ad3a841682a0551ea2062e2",
+    "lastmod": "2026-09-28"
   },
   "index.html": {
     "hash": "b06ec1257935104ee942a3ec8a4c9317a0cd6d9327e84f441d3ab54c5469cfa1",

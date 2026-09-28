@@ -23,7 +23,7 @@ BOOKS = {
     "good-progress": {
         "title": "Good Progress",
         "subtitle": "Inside the Alignment-Industrial Complex",
-        "sample_chapters": 39,
+        "sample_chapters": 23,
     },
 }
 
@@ -484,7 +484,7 @@ def check_production(r):
 
     # --- Spot-check chapter pages ---
     spot_checks = [
-        ("good-progress", "preface"),
+        ("good-progress", "the-customer"),
         ("good-progress", "it-should-be-simple"),
         ("good-progress", "selling-them-alignment"),
     ]
