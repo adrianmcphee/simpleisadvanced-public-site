@@ -513,8 +513,8 @@ def check_production(r):
     local_meta = json.loads((SITE_DIR / SAMPLE_PATH.strip("/") / "data/meta.json").read_text())
     r.check("LIVE reader: previews every chapter and supporting section",
             live_meta.get("isExcerpt") is True
-            and len(live_meta.get("chapters", [])) == 39
-            and [chapter["chapterNum"] for chapter in live_meta["chapters"] if chapter.get("chapterNum")] == list(range(1, 22))
+            and len(live_meta.get("chapters", [])) == BOOKS["good-progress"]["sample_chapters"]
+            and [chapter["chapterNum"] for chapter in live_meta["chapters"] if chapter.get("chapterNum")] == list(range(1, 21))
             and all(chapter.get("isExcerpt") is True for chapter in live_meta["chapters"]))
     r.check("LIVE reader: version and metadata match the local publication",
             live_meta == local_meta,
